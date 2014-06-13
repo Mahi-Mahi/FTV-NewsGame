@@ -9,9 +9,7 @@
     "angular-cookies": "1.2.15",
     "angular-sanitize": "1.2.15",
     "angular-route": "1.2.15",
-    "angular-kendo": "~1.0.3",
-    "kendo-ui": "git@github.com:Mahi-Mahi/bower-kendo-ui.git#2014.1.318",
-    "jQuery": "~2.1.1"
+    "angular-kendo": "git://github.com/Mahi-Mahi/angular-kendo.git#~1.1.4"
   },
   "devDependencies": {
     "angular-mocks": "1.2.15",
