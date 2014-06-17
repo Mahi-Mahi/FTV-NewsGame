@@ -1,24 +1,25 @@
 <div ng-controller="MainCtrl">
 
-  <ul>
-    <button ng-repeat="(id, win) in windows"
-            class="k-button"
-            ng-click="openWin(id)">
+  <ul id="windows-bar">
+    <li ng-repeat="(id, win) in windows">
+    <button class="k-button"
+            ng-click="toggleWin(id)">
       {{win.title}}
     </button>
   </ul>
 
   <div class="windows">
-
     <div  ng-repeat="(id, win) in windows"
           kendo-window="{{id}}"
           id="{{id}}"
           k-title="win.title"
           k-on-open="win.visible = true"
           k-on-close="win.visible = false"
-          k-resizable="false"
-          k-width="400"
-          k-height="300"
+          k-resizable="win.resizable"
+          k-visible="win.visible"
+          k-position="win.position"
+          k-width="win.width"
+          k-height="win.height"
           k-content="{url: '/views/_'+win.template+'.html'}">
     </div>
   </div>
