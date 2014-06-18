@@ -1,1 +1,8 @@
 <h3>Skoupe</h3>
+<ul>
+	<li ng-repeat="(id, contact) in contacts">
+		<a href="" ng-click="openContact(id)">
+			{{contact.name}}
+		</a>
+	</li>
+</ul>
