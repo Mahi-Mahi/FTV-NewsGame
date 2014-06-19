@@ -5,6 +5,8 @@ angular.module('newsGameApp')
 
 		$scope.windows = {};
 
+		$scope.currentTheme = null;
+
 		// Cuitcuitter
 
 		$scope.cuits = {
@@ -81,15 +83,6 @@ angular.module('newsGameApp')
 		$scope.closeWin = function(id) {
 			if ($scope.windows[id].visible) {
 				jQuery('#' + id).data('kendoWindow').close();
-				switch (id) {
-					case 'cuicuiter':
-						$log.log("cuit");
-						$scope.closeWin('cuit');
-						break;
-					case 'skoupe':
-						$scope.closeWin('contact');
-						break;
-				}
 			}
 		};
 
@@ -133,6 +126,15 @@ angular.module('newsGameApp')
 			}
 		});
 
+		createWindow('notepad', {
+			title: 'Bloc-Notes',
+			template: 'notepad',
+			visible: true,
+			position: {
+				top: 250,
+				left: 450
+			}
+		});
 		$timeout(function() {
 
 		}, 50);

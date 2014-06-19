@@ -1,14 +1,5 @@
 <div>
 
-	<ul id="windows-bar">
-		<li ng-repeat="(id, win) in windows" ng-if="win.active">
-			<button class="k-button"
-							ng-click="toggleWin(id)">
-				{{win.title}}
-			</button>
-		</li>
-	</ul>
-
 	<div class="windows">
 		<div  ng-repeat="(id, win) in windows"
 					id="{{id}}"
@@ -22,6 +13,30 @@
 					k-width="win.width"
 					k-height="win.height"
 					k-content="{url: '/views/_'+win.template+'.html'}">
+		</div>
+	</div>
+
+	<ul id="windows-bar">
+		<li ng-repeat="(id, win) in windows" ng-if="win.active">
+			<button class="k-button"
+							ng-click="toggleWin(id)">
+				{{win.title}}
+			</button>
+		</li>
+	</ul>
+
+	<div class="widgets">
+		<div class="timeline">
+			<h4>Temps restant</h4>
+			<a href="">Terminer la journée</a>
+			<p>
+				<div class="gauge"></div>
+				<span class="remaining">8 heures</span>
+			</p>
+		</div>
+
+		<div class="status">
+
 		</div>
 	</div>
 
