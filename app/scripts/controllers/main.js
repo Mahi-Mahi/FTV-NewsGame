@@ -148,5 +148,4 @@ angular.module('newsGameApp')
 			loadCuits();
 
 		}, 50);
-
 	});

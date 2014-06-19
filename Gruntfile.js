@@ -307,7 +307,8 @@ module.exports = function(grunt) {
             '*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
-            'fonts/*'
+            'fonts/*',
+            'data/*',
           ]
         }, {
           expand: true,
@@ -365,13 +366,39 @@ module.exports = function(grunt) {
     //   dist: {}
     // },
 
+    uglify: {
+      options: {
+        mangle: false,
+        compress: {
+          drop_console: true
+        }
+      }
+    },
+
     // Test settings
     karma: {
       unit: {
         configFile: 'karma.conf.js',
         singleRun: true
       }
-    }
+    },
+
+    rsync: {
+      options: {
+        args: ["--verbose"],
+        exclude: [".git*", "*.scss", "node_modules", ".svn"],
+        recursive: true
+      },
+      staging: {
+        options: {
+          src: "./dist/",
+          dest: "/home/askmedia/newsGameApp",
+          host: "root@vps.mahi-mahi.fr",
+          syncDestIgnoreExcl: true
+        }
+      }
+    },
+
   });
 
   grunt.registerTask('createConfig', function(target) {
@@ -420,7 +447,8 @@ module.exports = function(grunt) {
     'rev',
     'usemin',
     'htmlmin',
-    'createConfig:dev'
+    'createConfig:dev',
+    'rsync:staging'
   ]);
 
   grunt.registerTask('default', [
