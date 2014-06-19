@@ -7,7 +7,7 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
 
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
@@ -374,13 +374,19 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.registerTask('createConfig', function(target) {
+    grunt.file.write("./app/scripts/services/config.js", '"use strict";' + "\n" + 'angular.module("newsGameApp")' +
+      '.constant("prod", ' + ((target === 'dist') ? 'true' : 'false') + ')' +
+      ';');
+  });
 
-  grunt.registerTask('serve', function (target) {
+  grunt.registerTask('serve', function(target) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
     }
 
     grunt.task.run([
+      'createConfig',
       'clean:server',
       'bowerInstall',
       'concurrent:server',
@@ -388,11 +394,6 @@ module.exports = function (grunt) {
       'connect:livereload',
       'watch'
     ]);
-  });
-
-  grunt.registerTask('server', function (target) {
-    grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
-    grunt.task.run(['serve:' + target]);
   });
 
   grunt.registerTask('test', [
@@ -404,6 +405,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('build', [
+    'createConfig:dist',
     'clean:dist',
     'bowerInstall',
     'useminPrepare',
@@ -417,7 +419,8 @@ module.exports = function (grunt) {
     'uglify',
     'rev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'createConfig:dev'
   ]);
 
   grunt.registerTask('default', [

@@ -3,9 +3,11 @@
   "version": "0.0.0",
   "dependencies": {},
   "devDependencies": {
+    "bower": "^1.3.5",
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "~0.4.0",
     "grunt-bower-install": "~1.0.0",
+    "grunt-cli": "^0.1.13",
     "grunt-concurrent": "~0.5.0",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-compass": "~0.7.2",
@@ -30,7 +32,8 @@
     "karma-ng-html2js-preprocessor": "^0.1.0",
     "karma-ng-scenario": "^0.1.0",
     "load-grunt-tasks": "~0.4.0",
-    "time-grunt": "~0.2.1"
+    "time-grunt": "~0.2.1",
+    "yo": "^1.2.0"
   },
   "engines": {
     "node": ">=0.10.0"

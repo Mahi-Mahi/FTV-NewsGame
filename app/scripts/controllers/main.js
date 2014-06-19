@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('newsGameApp')
-	.controller('MainCtrl', function($scope, $log, $timeout) {
+	.controller('MainCtrl', function($scope, $log, $timeout, $interval, dataService) {
 
 		$scope.windows = {};
 
@@ -9,38 +9,40 @@ angular.module('newsGameApp')
 
 		// Cuitcuitter
 
-		$scope.cuits = {
-			'cuit-1': {
-				author: '@toto',
-				content: 'Cras quis eleifend arcu, in. Ut aliquam sapien sed felis.'
-			},
-			'cuit-2': {
-				author: '@foo',
-				content: 'Aenean mattis, lacus at eleifend. Etiam rhoncus iaculis ante eu.'
-			}
-		};
+		$scope.cuits = [];
+		$scope.allCuits = [];
 
 		$scope.currentCuit = null;
 
-		$scope.openCuit = function(id) {
-			$log.log("openCuit(" + id);
-			$scope.closeWin('cuit');
-			$scope.currentCuit = $scope.cuits[id];
-			$scope.openWin('cuit');
+		$scope.openSource = function(id) {
+			$log.log("openSource(" + id);
+			$scope.closeWin('source');
+			$scope.currentSource = dataService.data.all.sources[id];
+			$scope.openWin('source');
 		};
+
+		function addCuit() {
+			var added = false;
+			angular.forEach(dataService.data.all.cuits, function(cuit, key) {
+				if ($scope.allCuits.indexOf(key) === -1 && !added) {
+					cuit.author = dataService.data.all.sources[cuit.source];
+					$scope.allCuits.push(key);
+					$scope.cuits.push(cuit);
+					added = true;
+				}
+			});
+		}
+
+		function loadCuits() {
+			$interval(function() {
+				addCuit();
+			}, 2500);
+
+		}
 
 		// Skoupe
 
-		$scope.contacts = {
-			'jean-luc': {
-				name: 'Jean Luc',
-				content: 'Cras quis eleifend arcu, in. Ut aliquam sapien sed felis.'
-			},
-			'jean-michel': {
-				name: 'Jean-Michel',
-				content: 'Aenean mattis, lacus at eleifend. Etiam rhoncus iaculis ante eu.'
-			}
-		};
+		$scope.contacts = dataService.data.all.contacts;
 
 		$scope.currentContact = null;
 
@@ -97,10 +99,12 @@ angular.module('newsGameApp')
 				left: 50
 			}
 		});
-		createWindow('cuit', {
-			title: 'Cuit',
+		createWindow('source', {
+			title: 'Source',
 			active: false,
-			template: 'cuicuiter-cuit',
+			template: 'cuicuiter-source',
+			width: 400,
+			height: 200,
 			position: {
 				top: 125,
 				left: 250
@@ -109,7 +113,7 @@ angular.module('newsGameApp')
 
 		createWindow('skoupe', {
 			title: 'Skoupe',
-			visible: false,
+			visible: true,
 			template: 'skoupe-main',
 			position: {
 				top: 150,
@@ -135,7 +139,13 @@ angular.module('newsGameApp')
 				left: 450
 			}
 		});
+
+		// Start
+
 		$timeout(function() {
+
+			addCuit();
+			loadCuits();
 
 		}, 50);
 

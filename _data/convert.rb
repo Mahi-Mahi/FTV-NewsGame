@@ -21,7 +21,7 @@ end
 
 production = false
 
-
+themes = {}
 cuits = {}
 
 idx = 0
@@ -30,13 +30,16 @@ CSV.foreach("BDD_newsgame/Infos-Table 1.csv", :col_sep => ';') do |row|
 	if idx > 0
 
 		cuit = {}
-		cuit[:id] = idx
+		cuit[:id] = "cuit-#{idx}"
 		cuit[:source] = row[0].sanitize
 		# cuit[:name] = row[1]
 		cuit[:content] = row[2]
 		cuit[:theme] = row[3].sanitize
+
+		themes[row[3].sanitize] = row[3]
+
 		cuit[:credibility] = row[4]
-		cuit[:exclusivite] = row[5]
+		cuit[:exclusivity] = row[5]
 		cuit[:article_title] = row[6]
 		cuit[:article_content] = row[7]
 		cuit[:avatar] = row[8]
@@ -68,9 +71,9 @@ CSV.foreach("BDD_newsgame/Sources-Table 1.csv", :col_sep => ';') do |row|
 		source[:name] = row[1]
 		source[:bio] = row[2]
 		source[:avatar] = row[3]
-		source[:thematique] = []
-		source[:thematique] << row[4].sanitize unless row[4].nil?
-		source[:thematique] << row[5].sanitize unless row[5].nil?
+		source[:themes] = []
+		source[:themes] << row[4].sanitize unless row[4].nil?
+		source[:themes] << row[5].sanitize unless row[5].nil?
 		source[:credibility] = row[6].sanitize
 		source[:type] = row[7].sanitize unless row[7].nil?
 
@@ -100,9 +103,9 @@ CSV.foreach("BDD_newsgame/Contacts-Table 1.csv", :col_sep => ';') do |row|
 		contact[:id] = row[0].sanitize
 		contact[:name] = row[0]
 		contact[:bio] = row[1]
-		contact[:thematique] = []
-		contact[:thematique] << row[2].sanitize unless row[2].nil?
-		contact[:thematique] << row[3].sanitize unless row[3].nil?
+		contact[:themes] = []
+		contact[:themes] << row[2].sanitize unless row[2].nil?
+		contact[:themes] << row[3].sanitize unless row[3].nil?
 		contact[:avatar] = row[4]
 
 		contacts[contact[:id]] = contact
@@ -115,34 +118,22 @@ end
 
 pp "#{contacts.length} contacts"
 
+all = {
+	cuits: cuits,
+	sources: sources,
+	contacts: contacts,
+	themes: themes
+}
 
 FileUtils.rm_rf("json/.", secure: true)
 FileUtils.mkdir_p "json/"
 
-
-# Cuits
-filename = "json/cuits.json"
-content = production ? cuits.to_json : JSON.pretty_generate(cuits)
+# All
+filename = "json/all.json"
+content = production ? cuits.to_json : JSON.pretty_generate(all)
 File.open(filename, 'w') { |file| file.write content }
-
-
-# Sources
-filename = "json/sources.json"
-content = production ? sources.to_json : JSON.pretty_generate(sources)
-File.open(filename, 'w') { |file| file.write content }
-
-
-
-# Contacts
-filename = "json/contacts.json"
-content = production ? contacts.to_json : JSON.pretty_generate(contacts)
-File.open(filename, 'w') { |file| file.write content }
-
-
 
 FileUtils.rm_rf("../app/data", secure: true)
 FileUtils.mkdir_p "../app/data"
-FileUtils.cp("json/cuits.json", "../app/data/cuits.json")
-FileUtils.cp("json/sources.json", "../app/data/sources.json")
-FileUtils.cp("json/contacts.json", "../app/data/contacts.json")
+FileUtils.cp("json/all.json", "../app/data/all.json")
 

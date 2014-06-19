@@ -1,8 +1,27 @@
 <h3>Fil d'actu</h3>
 <ul>
-	<li ng-repeat="(id, cuit) in cuits">
-		<a href="" ng-click="openCuit(id)">
-			{{cuit.author}} - {{cuit.content}}
-		</a>
+	<li ng-repeat="(id, cuit) in cuits" class="cuits">
+		<div class="inner">
+			<p>
+				<img src="" alt="" align="left">
+				<a href="" ng-click="openSource(cuit.author.id)">
+					{{cuit.author.id}}
+				</a>
+			</p>
+			<p>
+				{{cuit.content}}
+			</p>
+			<ul class="metas">
+				<li class="theme">Thématique : {{cuit.theme}}</li>
+				<li class="credibility">Crédibilité : {{cuit.credibility}}</li>
+				<li class="exclusivity">Scoop : {{cuit.exclusivity}}</li>
+			</ul>
+		</div>
+		<div class="actions">
+			<ul>
+				<li>Vérifier la thématique</li>
+				<li>Publier cette info</li>
+			</ul>
+		</div>
 	</li>
 </ul>
