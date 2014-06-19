@@ -1,0 +1,59 @@
+TIMING;Temps;;;;;;
+;;;;;;;
+Vérifier la thématique d'une info;5;;;;;POUR INFO;
+Vérifier la crédibilité d'une info;10;;;;;Temps nécessaire pour publier une info vérifiée à 100%;
+Vérifier le potentiel de scoop d'une info;10;;;;;Niveau 2;25
+;;;;;;Niveau 3;35
+Analyser une source;20;;;;;Niveau 4 (hors recherche contact);45
+Verifier crédibilité source;15;;;;;;
+;;;;;;Temps nécessaire pour trouver tous les contacts;
+Publier une info (directement ou dans la maquette);20;;;;;Niveaux 3 ou 4;105
+;;;;;;;
+Chercher un nouveau contact;15;;;;;Nombre d'infos vérifiées max;
+;;;;;;Niveau 2;14
+Durée d'une journée niveau 2;360;;;;;Niveau 3;13
+Durée d'une journée niveau 3;480;;;;;Niveau 4;11
+Durée d'une journée niveau 4;600;;;;;;
+;;;;;;Score max sans coup de bol;
+;;;;;;Niveau 2;700
+;;;;;;Niveau 3;1300
+;;;;;;Niveau 4;8400
+;;;;;;;
+SCORING;;;;;;;
+;;;;;;;
+Niveau 2;Points;;;;;;
+;;;;;;;
+Sélection d'une info dans la bonne thématique;50;;;;;;
+Sélection d'une info dans une mauvaise thématique;-50;;;;;;
+;;;;;;;
+Nombre de points à atteindre;200;;;;;;
+;;;;;;;
+Niveau 3;;;;;;;
+;;;;;;;
+Sélection d'une info dans une des deux bonnes thématiques - crédibilité 1;20;;;;;;
+Sélection d'une info dans une des deux bonnes thématiques - crédibilité 2;80;;;;;;
+Sélection d'une info dans une des deux bonnes thématiques - crédibilité 3;100;;;;;;
+Sélection d'une info dans une mauvaise thématique;-60;;;;;;
+Sélection d'une info dans une des deux bonnes thématiques - crédibilité 0;-30;;;;;;
+;;;;;;;
+Nombre de points à atteindre;500;;;;;;
+;;;;;;;
+Niveau 4;;;;;;;
+;;;;;;;
+NB1 : le score général doit être multiplié par le nombre de thématiques différentes représentées sur la home du site;*1 à *6;;;;;;
+NB2 : chaque score est multiplié par un multiplicateur spécial en fonction de son emplacement :;;;;;;;
+L'info est en brève :;1;;;;;;
+L'info est en papier moyen :;3;;;;;;
+L'info est en tête de site;9;;;;;;
+;;;;;;;
+Sélection d'une info de crédibilité 0;-40;;;;;;
+Sélection d'une info de crédibilité 1 qui n'est pas un scoop;-20;;;;;;
+Sélection d'une info de crédibilité 1 qui est un scoop;0;;;;;;
+Sélection d'une info de crédibilité 2 qui n'est pas un scoop;10;;;;;;
+Sélection d'une info de crédibilité 2 qui est un scoop;20;;;;;;
+Sélection d'une info de crédibilité 3 qui n'est pas un scoop;20;;;;;;
+Sélection d'une info de crédibilité 3 qui est un scoop;30;;;;;;
+Sélection d'une info de crédibilité 4 qui n'est pas un scoop;20;;;;;;
+Sélection d'une info de crédibilité 4 qui est un scoop;50;;;;;;
+;;;;;;;
+Nombre de points à atteindre;2000;;;;;;

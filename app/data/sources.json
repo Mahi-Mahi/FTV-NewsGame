@@ -1,0 +1,415 @@
+{
+  "@agence_france_bref": {
+    "id": "@agence_france_bref",
+    "name": "Agence France Bref",
+    "bio": "Notre agence de presse, créée en 1944, dispose d’un réseau de journalistes dans le monde entier. Nous sommes connus pour traiter les actualités internationales avec rapidité et précision. Et aussi, notre cantine est hyper bonne !",
+    "avatar": null,
+    "thematique": [
+      "international",
+      "economie"
+    ],
+    "credibility": "tres-credible",
+    "type": "fil-d-agence-organes-de-presse-type-afp"
+  },
+  "@francediplo": {
+    "id": "@francediplo",
+    "name": "Ministère des Affaires Etrangères",
+    "bio": "Notre mission : faire rayonner le pays à l'étranger, œuvrer pour la paix dans le monde, et organiser des réceptions qui sont toujours un succès.  ",
+    "avatar": null,
+    "thematique": [
+      "international",
+      "politique"
+    ],
+    "credibility": "tres-credible",
+    "type": "compte-officiel"
+  },
+  "@europeinfo": {
+    "id": "@europeinfo",
+    "name": "Europe Info",
+    "bio": "Fil Cuicuitter d'un blog rassemblant des passionnés de l'Union européenne. Tout ce qui se passe en Europe se retrouve ici !",
+    "avatar": null,
+    "thematique": [
+      "international"
+    ],
+    "credibility": "assez-credible",
+    "type": "compte-non-identifie"
+  },
+  "@passionasie": {
+    "id": "@passionasie",
+    "name": "Alain Dochine",
+    "bio": "Savez-vous ce qui se passe de l'autre côté du monde, en Asie ? Non ? Alors suivez-moi !",
+    "avatar": null,
+    "thematique": [
+      "international",
+      "culture-sport-et-people"
+    ],
+    "credibility": "assez-credible",
+    "type": "compte-d-expert"
+  },
+  "@vivelesus": {
+    "id": "@vivelesus",
+    "name": "Vive les USA !",
+    "bio": "1001 raisons qui montrent pourquoi les USA sont les BOSS du monde ! Ici, tout est vrai, pas comme sur  @RussiedAmour !",
+    "avatar": null,
+    "thematique": [
+      "international"
+    ],
+    "credibility": "peu-credible",
+    "type": "compte-non-identifie"
+  },
+  "@russiedamour": {
+    "id": "@russiedamour",
+    "name": "La Russie, j'adore !",
+    "bio": "Des nouvelles fraîches de la plus belle des fédérations, la Russie ! Nous corrigeons aussi les inépties que raconte @VivelesUS…",
+    "avatar": null,
+    "thematique": [
+      "international"
+    ],
+    "credibility": "peu-credible",
+    "type": "compte-non-identifie"
+  },
+  "@bernardpipot1": {
+    "id": "@bernardpipot1",
+    "name": "Bernard Pipot",
+    "bio": "Ancien journaliste. Amoureux des lettres, de l'orthographe, du théâtre et de la littérature, j'adore faire des jeux de mots. A Meaux. ",
+    "avatar": null,
+    "thematique": [
+      "culture-sport-et-people"
+    ],
+    "credibility": "tres-credible",
+    "type": "compte-d-expert"
+  },
+  "@la_ffs": {
+    "id": "@la_ffs",
+    "name": "Fédération Française de Sport",
+    "bio": "Compte officiel de la Fédération Française de Sport. Allez les bleus ! Si vous gagnez, c'est bien ! Si vous perdez, c'est bien aussi… mais moins.",
+    "avatar": null,
+    "thematique": [
+      "culture-sport-et-people"
+    ],
+    "credibility": "tres-credible",
+    "type": "compte-officiel"
+  },
+  "@miss_pottin": {
+    "id": "@miss_pottin",
+    "name": "Mélody Pottin",
+    "bio": "J’adore les stars, les soirées, les lunettes de soleil et les secrets ! Je travaille pour un journal People que vous lisez, même si vous ne voulez pas l’avouer ! Qui je suis ? Vous ne croyez quand même pas que je vais vous le révéler ? ;-)",
+    "avatar": null,
+    "thematique": [
+      "culture-sport-et-people"
+    ],
+    "credibility": "assez-credible",
+    "type": "compte-de-journaliste"
+  },
+  "@culturestreet": {
+    "id": "@culturestreet",
+    "name": "Culture Street",
+    "bio": "Comme l'a dit le grand philosophe Justin Ptitbeurre : \"La culture, c'est bien\". Le premier site d'actu des cultures urbaines.",
+    "avatar": null,
+    "thematique": [
+      "culture-sport-et-people",
+      "science-technologie-et-jeux-video"
+    ],
+    "credibility": "assez-credible",
+    "type": "fil-d-agence-organes-de-presse-type-afp"
+  },
+  "@jce": {
+    "id": "@jce",
+    "name": "Jean-Charles Edouard",
+    "bio": "Je suis Jean-Charles Edouard. Tout le monde me connaît. Pas toi ? Tssss… T'as pas regardé \"Les anges de Secret Story 3\", ou quoi ?",
+    "avatar": null,
+    "thematique": [
+      "culture-sport-et-people",
+      "international"
+    ],
+    "credibility": "peu-credible",
+    "type": "compte-de-people"
+  },
+  "@apmaniac": {
+    "id": "@apmaniac",
+    "name": "André-Pierre Maniac",
+    "bio": "Footballeur. Attaquant. Buteur. Le meilleur.",
+    "avatar": null,
+    "thematique": [
+      "culture-sport-et-people"
+    ],
+    "credibility": "peu-credible",
+    "type": "compte-de-people"
+  },
+  "@educnat": {
+    "id": "@educnat",
+    "name": "Éducation Nationale",
+    "bio": "Compte officiel du ministère de l'éducation nationale. Attention : nous nous donnons le droit de corriger tous les Cuitts que nous verrons passer avec des fautes d'orthographe !",
+    "avatar": null,
+    "thematique": [
+      "societe",
+      "science-technologie-et-jeux-video"
+    ],
+    "credibility": "tres-credible",
+    "type": "compte-officiel"
+  },
+  "@inscd": {
+    "id": "@inscd",
+    "name": "Institut national des statistiques, chiffres et données",
+    "bio": "L'INSCD collecte, produit, analyse et diffuse des informations sur l'économie et la société françaises. Nos analystes sont si forts qu'ils savent compter jusqu'à 11 sur leurs doigts.",
+    "avatar": null,
+    "thematique": [
+      "societe",
+      "economie"
+    ],
+    "credibility": "tres-credible",
+    "type": "compte-d-expert"
+  },
+  "@ctt": {
+    "id": "@ctt",
+    "name": "Confédération Totale des Travailleurs",
+    "bio": "Le compte de la Confédération Totale des Travailleurs, une organisation syndicale qui se bat pour les travailleurs. Même que parfois, on se fache tout rouge !",
+    "avatar": null,
+    "thematique": [
+      "societe"
+    ],
+    "credibility": "assez-credible",
+    "type": "compte-de-com"
+  },
+  "@maitrelegolas": {
+    "id": "@maitrelegolas",
+    "name": "Jean-Philippe Légolas",
+    "bio": "Avocat le jour, justicier la nuit !",
+    "avatar": null,
+    "thematique": [
+      "societe",
+      "politique"
+    ],
+    "credibility": "assez-credible",
+    "type": "compte-d-expert"
+  },
+  "@revoltes": {
+    "id": "@revoltes",
+    "name": "Les Révoltés",
+    "bio": "Les Révoltés est un réseau de citoyens qui protestent contre les injustices de la société, comme le fait que c'est jamais les premiers qui sont derniers.",
+    "avatar": null,
+    "thematique": [
+      "societe"
+    ],
+    "credibility": "peu-credible",
+    "type": "compte-non-identifie"
+  },
+  "@lasantefacile": {
+    "id": "@lasantefacile",
+    "name": "Docteur M. Aison",
+    "bio": "Pour se soigner, rien de mieux que la technique ancienne de la raisonnanse chamanique inversée… Et peut-être un peu d'aspirine, parfois.",
+    "avatar": null,
+    "thematique": [
+      "societe"
+    ],
+    "credibility": "peu-credible",
+    "type": "compte-non-identifie"
+  },
+  "@eplenel": {
+    "id": "@eplenel",
+    "name": "Edwige Plenel",
+    "bio": "Journaliste, rédactrice en chef du site Médiatart'. Poil à gratter des hommes politiques : ils n'ont pas de secrets assez bien cachés pour nous !",
+    "avatar": null,
+    "thematique": [
+      "politique",
+      "international"
+    ],
+    "credibility": "tres-credible",
+    "type": "compte-de-journaliste"
+  },
+  "@elysee_direct": {
+    "id": "@elysee_direct",
+    "name": "Palais de l'Elysée",
+    "bio": "Le compte officiel de la Présidence de la République française et du Palais de l'Élysée. C'est plutôt un compte serieux, quoi. ",
+    "avatar": null,
+    "thematique": [
+      "politique",
+      "societe"
+    ],
+    "credibility": "tres-credible",
+    "type": "compte-officiel"
+  },
+  "@fil_pol": {
+    "id": "@fil_pol",
+    "name": "Le Fil Politique",
+    "bio": "Nous sommes une agence de presse spécialisée dans la politique. Des couloirs de l'assemblée au parc du Sénat, nous avons des oreilles partout !",
+    "avatar": null,
+    "thematique": [
+      "politique",
+      "culture-sport-et-people"
+    ],
+    "credibility": "assez-credible",
+    "type": "fil-d-agence-organes-de-presse-type-afp"
+  },
+  "@terravieilla": {
+    "id": "@terravieilla",
+    "name": "Terra Vieilla",
+    "bio": "Terra Vieilla est un \"think tank\", un groupe de réflexion et laboratoire d'idée progressiste et indépendant. Les hommes politiques avisés feraient bien de nous écouter !",
+    "avatar": null,
+    "thematique": [
+      "politique",
+      "economie"
+    ],
+    "credibility": "assez-credible",
+    "type": "compte-d-expert"
+  },
+  "@nadineparano": {
+    "id": "@nadineparano",
+    "name": "Nadine Parano",
+    "bio": "Députée du Parti des Vrais Gens, membre actif de l'opposition, toujours prête à faire entendre la voix du peuple à l'Assemblée Nationale. Votez pour moi !",
+    "avatar": null,
+    "thematique": [
+      "politique"
+    ],
+    "credibility": "peu-credible",
+    "type": "compte-officiel"
+  },
+  "@politikator": {
+    "id": "@politikator",
+    "name": "Marco Ruption",
+    "bio": "Titulaire d'un diplôme \"science politique appliquée et bilboquet\" de l'université de Meurthe-et-Moselle. Je dénonce les SCANDALES de la politique.",
+    "avatar": null,
+    "thematique": [
+      "politique"
+    ],
+    "credibility": "peu-credible",
+    "type": "compte-non-identifie"
+  },
+  "@alain_flation": {
+    "id": "@alain_flation",
+    "name": "Alain Flation",
+    "bio": "Docteur en finance, en macroéconomie, en microéconomie et aussi en tango roumain, mais c'est parce que je m'étais trompé de salle de cours.",
+    "avatar": null,
+    "thematique": [
+      "economie",
+      "international"
+    ],
+    "credibility": "tres-credible",
+    "type": "compte-d-expert"
+  },
+  "@ecofin": {
+    "id": "@ecofin",
+    "name": "Ministère de l'Economie et des Finances",
+    "bio": "Le compte officiel du Ministère de l'Économie et des fincances.  Parce qu'un Cuitt sans chiffres n'est pas un bon Cuitt.",
+    "avatar": null,
+    "thematique": [
+      "economie",
+      "politique"
+    ],
+    "credibility": "tres-credible"
+  },
+  "@bpp-pbb": {
+    "id": "@bpp-pbb",
+    "name": "BPP - PariBaBas",
+    "bio": "Ce compte, qui vous fournit les dernières infos sur l'économie, est sponsorisé par la banque BNP- PariBaBas",
+    "avatar": null,
+    "thematique": [
+      "economie"
+    ],
+    "credibility": "assez-credible",
+    "type": "compte-de-com"
+  },
+  "@capitotal": {
+    "id": "@capitotal",
+    "name": "Capitotal",
+    "bio": "Capitotal est un magasine d'analyse financière. Nos journalistes sont si serieux qu'ils mettent des costumes-cravates même à la plage.",
+    "avatar": null,
+    "thematique": [
+      "economie",
+      "societe"
+    ],
+    "credibility": "assez-credible",
+    "type": "fil-d-agence-organes-de-presse-type-afp"
+  },
+  "@lapetitesouris": {
+    "id": "@lapetitesouris",
+    "name": "M. Mouse",
+    "bio": "Spécialisée depuis des années dans l'import-export, notamment de molaires et canines, je suis réputée pour ma ponctualité.",
+    "avatar": null,
+    "thematique": [
+      "economie"
+    ],
+    "credibility": "peu-credible",
+    "type": "compte-non-identifie"
+  },
+  "@bourse_facile": {
+    "id": "@bourse_facile",
+    "name": "La Bourse Facile",
+    "bio": "Devenez riche facilement grâce à nos conseils et à nos informations sur le business. Les plus grands comme Steve Flops et Bill Grattes nous ont fait confiance !",
+    "avatar": null,
+    "thematique": [
+      "economie",
+      "science-technologie-et-jeux-video"
+    ],
+    "credibility": "peu-credible",
+    "type": "fil-d-agence-organes-de-presse-type-afp"
+  },
+  "@eureka": {
+    "id": "@eureka",
+    "name": "Al Bernstein",
+    "bio": "Physicien, prix nobel 2013. Il n'y a que deux choses qui soient infinies : l'univers, et la stupidité des humains ! ;-)",
+    "avatar": null,
+    "thematique": [
+      "science-technologie-et-jeux-video",
+      "culture-sport-et-people"
+    ],
+    "credibility": "tres-credible",
+    "type": "compte-d-expert"
+  },
+  "@cnrt": {
+    "id": "@cnrt",
+    "name": "Centre National de la Recherche Technologique",
+    "bio": "Le CNRT est un organisme public de recherche, dont le but est de rechercher des trucs, jusqu'à ce qu'on les ait trouvés. Et on est plutôt du genre têtus !",
+    "avatar": null,
+    "thematique": [
+      "science-technologie-et-jeux-video",
+      "societe"
+    ],
+    "credibility": "tres-credible",
+    "type": "compte-officiel"
+  },
+  "@bibisoft": {
+    "id": "@bibisoft",
+    "name": "BibiSoft S.A",
+    "bio": "Sur Paystation ou sur XBoite, les meilleurs jeux sont signés BibiSoft !",
+    "avatar": null,
+    "thematique": [
+      "science-technologie-et-jeux-video"
+    ],
+    "credibility": "assez-credible",
+    "type": "compte-de-com"
+  },
+  "@banana": {
+    "id": "@banana",
+    "name": "Banana, inc",
+    "bio": "Compte de la célèbre marque de téléphones portables et tablettes tactiles. Suivez-nous pour être au courant de toutes les nouveautés !",
+    "avatar": null,
+    "thematique": [
+      "science-technologie-et-jeux-video"
+    ],
+    "credibility": "assez-credible",
+    "type": "compte-de-com"
+  },
+  "@madprofessor": {
+    "id": "@madprofessor",
+    "name": "Alex Perience",
+    "bio": "Bienvenue sur mon compte : ici vous trouverez toutes les informations que les autres scientifiques refusent de vous dire… Prêts à tenter l'expérience ?",
+    "avatar": null,
+    "thematique": [
+      "science-technologie-et-jeux-video"
+    ],
+    "credibility": "peu-credible",
+    "type": "compte-non-identifie"
+  },
+  "@gamesscoop": {
+    "id": "@gamesscoop",
+    "name": "Games Scoop",
+    "bio": "Tous les derniers scoops sur les sorties de jeux vidéo à venir. Nos infos sont 100% vérifiées, ou presque.",
+    "avatar": null,
+    "thematique": [
+      "science-technologie-et-jeux-video"
+    ],
+    "credibility": "peu-credible",
+    "type": "fil-d-agence-organes-de-presse-type-afp"
+  }
+}
