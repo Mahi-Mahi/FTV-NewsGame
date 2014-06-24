@@ -1,4 +1,4 @@
-<div>
+<div ng-class="[level]">
 
 	<div class="windows">
 		<div  ng-repeat="(id, win) in windows"
@@ -31,7 +31,7 @@
 			<a href="">Terminer la journée</a>
 			<p>
 				<div class="gauge"></div>
-				<span class="remaining">8 heures</span>
+				<span class="remaining">{{remainingTime / 60}} heures</span>
 			</p>
 		</div>
 

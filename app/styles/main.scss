@@ -3,6 +3,9 @@
 
 @import 'kendo';
 
+.clearfix {
+	content:"";display:block;clear: both;
+}
 
 .templates {
 	display: none;
@@ -42,4 +45,60 @@
 
 .cuits {
 	list-style: none;
+	margin: 0;
+	padding: 0;
+	.cuit {
+		.off {
+			display: inline;
+		}
+		.on {
+			display: none;
+		}
+		.metas {
+			list-style: none;
+			li {
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+		.actions {
+			list-style: none;
+			li {
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+	}
+}
+
+.actions {
+	display: none;
+	.toggle & {
+		display: block;
+	}
+}
+
+.theme {
+	.verified-theme & {
+		.off { display: none; }
+		.on { display: inline; }
+	}
+}
+.credibility {
+	.verified-credibility & {
+		.off { display: none; }
+		.on { display: inline; }
+	}
+}
+.exclusivity {
+	.verified-exclusivity & {
+		.off { display: none; }
+		.on { display: inline; }
+	}
+}
+
+.level-1 {
+	.publish, .credibility, .exclusivity {
+		display: none !important;
+	}
 }

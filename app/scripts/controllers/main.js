@@ -5,9 +5,13 @@ angular.module('newsGameApp')
 
 		$scope.windows = {};
 
-		$scope.currentTheme = null;
+		// $scope.currentTheme = null;
 
-		// Cuitcuitter
+		$scope.level = 'level-1';
+
+		$scope.totalTime = $scope.remainingTime = dataService.data.settings.totalTime;
+
+		// CuitCuiter
 
 		$scope.cuits = [];
 		$scope.allCuits = [];
@@ -37,8 +41,13 @@ angular.module('newsGameApp')
 			$interval(function() {
 				addCuit();
 			}, 2500);
-
 		}
+
+		$scope.verifyCuitTheme = function(cuit) {
+			$log.log("verifyCuitTheme(" + cuit);
+			cuit.themeVerified = true;
+			decrementTime('verify-cuit-theme');
+		};
 
 		// Skoupe
 
@@ -52,6 +61,21 @@ angular.module('newsGameApp')
 			$scope.currentContact = $scope.contacts[id];
 			$scope.openWin('contact');
 		};
+
+		$scope.openChat = function(id) {
+			$log.log("openChat(" + id);
+			$scope.closeWin('chat');
+			$scope.currentchatContact = $scope.chat[id];
+			$scope.openWin('chat');
+		};
+
+		// Timeline
+
+		function decrementTime(type) {
+			var value = dataService.data.settings.actionsCost[type];
+			$log.log("decrementTime : " + value + " (" + type + ")");
+			$scope.remainingTime -= value;
+		}
 
 		// Generic Window Management
 
@@ -126,6 +150,15 @@ angular.module('newsGameApp')
 			template: 'skoupe-contact',
 			position: {
 				top: 125,
+				left: 550
+			}
+		});
+		createWindow('chat', {
+			title: 'chat',
+			active: false,
+			template: 'skoupe-chat',
+			position: {
+				top: 225,
 				left: 550
 			}
 		});

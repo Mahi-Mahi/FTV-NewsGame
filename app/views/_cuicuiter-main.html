@@ -1,27 +1,26 @@
-<h3>Fil d'actu</h3>
-<ul>
-	<li ng-repeat="(id, cuit) in cuits" class="cuits">
-		<div class="inner">
-			<p>
-				<img src="" alt="" align="left">
-				<a href="" ng-click="openSource(cuit.author.id)">
-					{{cuit.author.id}}
-				</a>
-			</p>
-			<p>
-				{{cuit.content}}
-			</p>
-			<ul class="metas">
-				<li class="theme">Thématique : {{cuit.theme}}</li>
-				<li class="credibility">Crédibilité : {{cuit.credibility}}</li>
-				<li class="exclusivity">Scoop : {{cuit.exclusivity}}</li>
-			</ul>
-		</div>
-		<div class="actions">
-			<ul>
-				<li>Vérifier la thématique</li>
-				<li>Publier cette info</li>
-			</ul>
-		</div>
-	</li>
-</ul>
+<div ng-class="level">
+	<h3>Fil d'actu</h3>
+	<ul class="cuits">
+		<li ng-repeat="(id, cuit) in cuits" ng-class="['cuit', cuit.toggle ? 'toggle' : '']">
+			<div class="publish">
+				<button>Publier cette info</button>
+			</div>
+			<div class="inner" ng-click="cuit.toggle=!cuit.toggle">
+				<p>
+					<img src="" alt="" align="left">
+					<a href="" ng-click="openSource(cuit.author.id)">
+						{{cuit.author.id}}
+					</a>
+				</p>
+				<p>
+					{{cuit.content}}
+				</p>
+				<ul class="metas">
+					<li class="theme">Thématique : <span class="off"><button ng-click="verifyCuitTheme(cuit)">Vérifier</button></span><span class="on">{{cuit.theme}}</span></li>
+					<li class="credibility">Crédibilité : <span class="off"><button>Vérifier</button></span><span class="on">{{cuit.credibility}}</span></li>
+					<li class="exclusivity">Scoop : <span class="off"><button>Vérifier</button></span><span class="on">{{cuit.exclusivity}}</span></li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>

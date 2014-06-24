@@ -8,10 +8,17 @@ angular.module('newsGameApp')
 				var defer = $q.defer();
 				var data = this.data;
 
-				$http.get(config.baseurl + '/data/' + id + '.json')
+				$http.get(config.baseurl + '/data/settings.json')
 					.success(function(response) {
-						data[id] = response;
-						defer.resolve(response);
+						data.settings = response;
+						// defer.resolve(response);
+
+						$http.get(config.baseurl + '/data/' + id + '.json')
+							.success(function(response) {
+								data[id] = response;
+								defer.resolve(response);
+							});
+
 					});
 
 				return defer.promise;
