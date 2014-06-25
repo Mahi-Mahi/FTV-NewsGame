@@ -1,0 +1,7 @@
+<ul>
+	<li ng-repeat="(theme, name) in themes">
+		<label for="theme-{{theme}}">{{name}}</label>
+		<input type="radio" id="theme-{{theme}}" ng-model="currentTheme" value="{{theme}}">
+	</li>
+</ul>
+<button ng-click="level1Phase2()">Valider</button>

@@ -102,3 +102,16 @@
 		display: none !important;
 	}
 }
+
+
+#chat {
+	.discussion {
+		list-style: none;
+		.me {
+			text-align: right;
+		}
+		.other {
+			text-align: left;
+		}
+	}
+}

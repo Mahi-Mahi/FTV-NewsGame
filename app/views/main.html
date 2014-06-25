@@ -1,4 +1,4 @@
-<div ng-class="[level]">
+<div ng-class="['level-'+level]">
 
 	<div class="windows">
 		<div  ng-repeat="(id, win) in windows"
@@ -19,7 +19,7 @@
 	<ul id="windows-bar">
 		<li ng-repeat="(id, win) in windows" ng-if="win.active">
 			<button class="k-button"
-							ng-click="toggleWin(id)">
+					ng-click="toggleWin(id)">
 				{{win.title}}
 			</button>
 		</li>
@@ -31,7 +31,7 @@
 			<a href="">Terminer la journée</a>
 			<p>
 				<div class="gauge"></div>
-				<span class="remaining">{{remainingTime / 60}} heures</span>
+				<span class="remaining">{{remainingTime | duration}}</span>
 			</p>
 		</div>
 
