@@ -1,10 +1,12 @@
 'use strict';
 
 angular.module('newsGameApp')
-	.controller('MainCtrl', function($scope, $log, prod, $timeout, $interval, dataService) {
+	.controller('MainCtrl', function($scope, $routeParams, $log, prod, $timeout, $interval, dataService) {
+
+		$scope.debug = ($routeParams.debug);
 
 		// debug config
-		var delayModifier = (prod ? 1 : 1);
+		var delayModifier = ($scope.debug ? 0.1 : 1);
 
 		// reference to all windows on the desktop
 		$scope.windows = {};
@@ -47,7 +49,10 @@ angular.module('newsGameApp')
 				if ($scope.allCuits.indexOf(key) === -1 && !added) {
 					cuit.author = dataService.data.all.sources[cuit.source];
 					$scope.allCuits.push(key);
-					$scope.cuits.push(cuit);
+					$scope.cuits.unshift(cuit);
+					$timeout(function() {
+						cuit.visible = true;
+					}, 1);
 					added = true;
 					// scheduled next cuit
 					if (next) {
@@ -155,10 +160,10 @@ angular.module('newsGameApp')
 			title: 'Cuicuiter',
 			visible: true,
 			template: 'cuicuiter-main',
-			height: 500,
+			height: 400,
 			position: {
-				top: 100,
-				left: 50
+				top: 10,
+				left: 20
 			}
 		});
 		createWindow('source', {
@@ -177,8 +182,9 @@ angular.module('newsGameApp')
 			title: 'Skoupe',
 			visible: true,
 			template: 'skoupe-main',
+			height: 150,
 			position: {
-				top: 150,
+				top: 50,
 				left: 600
 			}
 		});
@@ -195,6 +201,7 @@ angular.module('newsGameApp')
 			title: 'chat',
 			active: false,
 			template: 'skoupe-chat',
+			height: 300,
 			position: {
 				top: 225,
 				left: 550
@@ -274,6 +281,8 @@ angular.module('newsGameApp')
 		}
 
 		var scenarii = {};
+
+		// Level 1
 		scenarii.level1 = function() {
 			$log.log(">scenario1");
 
@@ -307,6 +316,7 @@ angular.module('newsGameApp')
 				if (false && !prod) {
 					var $choices = jQuery('#themeSelector :radio');
 					$choices.eq(Math.round(Math.random() * $choices.length)).click();
+					$log.log($scope.currentTheme);
 					jQuery('#themeSelector button').click();
 				}
 			});
@@ -321,7 +331,7 @@ angular.module('newsGameApp')
 
 			$log.log(">level1Phase2");
 
-			$log.log($scope.currentTheme);
+			$scope.currentTheme = jQuery('#themeSelector :checked').val();
 
 			steps = [];
 
@@ -330,6 +340,10 @@ angular.module('newsGameApp')
 
 			addChat(1500, 'me', "Hum... pas facile !");
 			addChat(1500, 'other', "Je vois. Si tu as un doute, tu peux faire une recherche pour vérifier la thématique de chaque Cuitt. Regarde : choisis-en un, n’importe lequel !");
+
+			addStep(1500, function() {
+				// show info popup
+			});
 
 			doSteps();
 

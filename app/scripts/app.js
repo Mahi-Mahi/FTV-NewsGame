@@ -26,6 +26,14 @@ angular
 						return dataService.load('all');
 					}
 				}
+			}).when('/play/:debug', {
+				templateUrl: 'views/main.html',
+				controller: 'MainCtrl',
+				resolve: {
+					load: function($route, dataService) {
+						return dataService.load('all');
+					}
+				}
 			})
 			.otherwise({
 				redirectTo: '/'

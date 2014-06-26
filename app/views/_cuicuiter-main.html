@@ -1,7 +1,7 @@
 <div ng-class="['level-'+level]">
 	<h3>Fil d'actu</h3>
 	<ul class="cuits">
-		<li ng-repeat="(id, cuit) in cuits" ng-class="['cuit', cuit.toggle ? 'toggle' : '', cuit.themeVerified ? 'verified-theme' : '', cuit.credibilityVerified ? 'verified-credibility' : '', cuit.exclusivityVerified ? 'exclusivity-theme' : '']">
+		<li ng-repeat="(id, cuit) in cuits" ng-class="['cuit', cuit.visible ? 'visible' : '', cuit.toggle ? 'toggle' : '', cuit.themeVerified ? 'verified-theme' : '', cuit.credibilityVerified ? 'verified-credibility' : '', cuit.exclusivityVerified ? 'exclusivity-theme' : '']">
 			<div class="publish">
 				<button>Publier cette info</button>
 			</div>
