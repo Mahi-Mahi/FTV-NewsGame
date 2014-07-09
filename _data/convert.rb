@@ -27,7 +27,7 @@ cuits = {}
 idx = 0
 CSV.foreach("BDD_newsgame/Infos-Table 1.csv", :col_sep => ';') do |row|
 
-	if idx > 0
+	if idx > 0 && !row[0].nil?
 
 		cuit = {}
 		cuit[:id] = "cuit-#{idx}"
@@ -38,8 +38,8 @@ CSV.foreach("BDD_newsgame/Infos-Table 1.csv", :col_sep => ';') do |row|
 
 		themes[row[3].sanitize] = row[3]
 
-		cuit[:credibility] = row[4]
-		cuit[:exclusivity] = row[5]
+		cuit[:credibility] = row[4].to_i
+		cuit[:exclusivity] = row[5].to_f / 100
 		cuit[:article_title] = row[6]
 		cuit[:article_content] = row[7]
 		cuit[:avatar] = row[8]
@@ -133,7 +133,7 @@ filename = "json/all.json"
 content = production ? cuits.to_json : JSON.pretty_generate(all)
 File.open(filename, 'w') { |file| file.write content }
 
-FileUtils.rm_rf("../app/data", secure: true)
+FileUtils.rm_rf("../app/data/all.json", secure: true)
 FileUtils.mkdir_p "../app/data"
 FileUtils.cp("json/all.json", "../app/data/all.json")
 

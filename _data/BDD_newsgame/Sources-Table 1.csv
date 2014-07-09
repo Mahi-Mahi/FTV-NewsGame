@@ -7,9 +7,9 @@ pseudo;nom complet;Bio;Avatar;Thématique1;Thématique2;Crédibilité;Type de co
  @RussiedAmour;La Russie, j'adore !;Des nouvelles fraîches de la plus belle des fédérations, la Russie ! Nous corrigeons aussi les inépties que raconte @VivelesUS…;;International;;Peu crédible;Compte non identifié
 @BernardPipot1;Bernard Pipot;Ancien journaliste. Amoureux des lettres, de l'orthographe, du théâtre et de la littérature, j'adore faire des jeux de mots. A Meaux. ;;Culture, sport et people;;Très crédible;Compte d'expert
 @La_FFS;Fédération Française de Sport;Compte officiel de la Fédération Française de Sport. Allez les bleus ! Si vous gagnez, c'est bien ! Si vous perdez, c'est bien aussi… mais moins.;;Culture, sport et people;;Très crédible;Compte officiel
-@Miss_Pottin;Mélody Pottin;"J’adore les stars, les soirées, les lunettes de soleil et les secrets ! Je travaille pour un journal People que vous lisez, même si vous ne voulez pas l’avouer ! Qui je suis ? Vous ne croyez quand même pas que je vais vous le révéler ? ;-)";;Culture, sport et people;;Assez crédible;Compte de journaliste
+@RicylNanouna;Ricyl Nanouna;J’adore les stars, les soirées, les lunettes de soleil et les secrets ! Je travaille pour une super émission de la TNT, que vous regardez tous, même si vous ne voulez pas l'avouer !;;Culture, sport et people;;Assez crédible;Compte de journaliste
  @CultureStreet;Culture Street;"Comme l'a dit le grand philosophe Justin Ptitbeurre : ""La culture, c'est bien"". Le premier site d'actu des cultures urbaines.";;Culture, sport et people;Science, technologie et jeux vidéo;Assez crédible;fil d’agence / organes de presse (type AFP)
- @JCE;Jean-Charles Edouard;"Je suis Jean-Charles Edouard. Tout le monde me connaît. Pas toi ? Tssss… T'as pas regardé ""Les anges de Secret Story 3"", ou quoi ?";;Culture, sport et people;International;Peu crédible;Compte de people
+ @SblaggMan_Officiel;Sblagg Man;Je suis Sblagg Man. Tout le monde me connaît. Pas toi ? Tssss… T'as pas regardé Mes vidéos sur GroTube, ou quoi ? ;;Culture, sport et people;International;Peu crédible;Compte de people
  @APManiac;André-Pierre Maniac;Footballeur. Attaquant. Buteur. Le meilleur.;;Culture, sport et people;;Peu crédible;Compte de people
  @educnat;Éducation Nationale;Compte officiel du ministère de l'éducation nationale. Attention : nous nous donnons le droit de corriger tous les Cuitts que nous verrons passer avec des fautes d'orthographe !;;Société;Science, technologie et jeux vidéo;Très crédible;Compte officiel
  @INSCD;Institut national des statistiques, chiffres et données;L'INSCD collecte, produit, analyse et diffuse des informations sur l'économie et la société françaises. Nos analystes sont si forts qu'ils savent compter jusqu'à 11 sur leurs doigts.;;Société;Economie;Très crédible;Compte d'expert
@@ -22,7 +22,7 @@ pseudo;nom complet;Bio;Avatar;Thématique1;Thématique2;Crédibilité;Type de co
  @fil_pol;Le Fil Politique;Nous sommes une agence de presse spécialisée dans la politique. Des couloirs de l'assemblée au parc du Sénat, nous avons des oreilles partout !;;Politique;Culture, sport et people;Assez crédible;fil d’agence / organes de presse (type AFP)
  @terravieilla;Terra Vieilla;"Terra Vieilla est un ""think tank"", un groupe de réflexion et laboratoire d'idée progressiste et indépendant. Les hommes politiques avisés feraient bien de nous écouter !";;Politique;Économie;Assez crédible;Compte d'expert
 @NadineParano;Nadine Parano;Députée du Parti des Vrais Gens, membre actif de l'opposition, toujours prête à faire entendre la voix du peuple à l'Assemblée Nationale. Votez pour moi !;;Politique;;Peu crédible;Compte officiel
- @Politikator;Marco Ruption;"Titulaire d'un diplôme ""science politique appliquée et bilboquet"" de l'université de Meurthe-et-Moselle. Je dénonce les SCANDALES de la politique.";;Politique;;Peu crédible;Compte non identifié
+ @toute_la_verite;Basile Uminati;Le gouvernement vous ment. L'establishment vous ment. Votre maman vous ment. Il n'y a que moi qui dise la vérité. Toute la vérité.;;Politique;;Peu crédible;Compte non identifié
 @Alain_Flation ;Alain Flation;Docteur en finance, en macroéconomie, en microéconomie et aussi en tango roumain, mais c'est parce que je m'étais trompé de salle de cours.;;Économie;International;Très crédible;Compte d'expert
  @EcoFin;Ministère de l'Economie et des Finances;Le compte officiel du Ministère de l'Économie et des fincances.  Parce qu'un Cuitt sans chiffres n'est pas un bon Cuitt.;;Économie;Politique;Très crédible;
  @Bpp-Pbb;BPP - PariBaBas;Ce compte, qui vous fournit les dernières infos sur l'économie, est sponsorisé par la banque BNP- PariBaBas;;Économie;;Assez crédible;Compte de com'
@@ -45,13 +45,3 @@ Peu crédible;comptes d’experts (universitaires…);Experts et universitaires;
 ;comptes « non identifiés » (sources à vérifier avec précaution, pouvant donner des scoops potentiels comme des infos complètement fausses);Comptes non identifiés;Culture, sport et people;;;;
 ;;;;;;;
 http://ymobactus.miaouw.net/labo-top-journalistes.php?mode=followers&liste=francais&theme=economie;;;;;;;
-;;;;;;;
-;;;;;;;
-;;;;;;;
-;;;;;;;
-;;;;;;;
-;;;;;;;
-;;;;;;;
-;;;;;;;
-;;;;;;;
-;;;;;;;
