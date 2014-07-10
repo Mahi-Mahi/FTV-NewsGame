@@ -3,18 +3,25 @@
 	<ul class="cuits">
 		<li ng-repeat="(id, cuit) in cuits" ng-class="['cuit', cuit.visible ? 'visible' : '', cuit.toggle ? 'toggle' : '', cuit.themeVerified ? 'verified-theme' : '', cuit.credibilityVerified ? 'verified-credibility' : '', cuit.exclusivityVerified ? 'exclusivity-theme' : '']">
 			<div class="inner" ng-click="cuit.toggle=!cuit.toggle">
-				<div class="publish">
-					<button>Publier cette info</button>
-				</div>
-				<p>
-					<img src="" alt="" align="left">
-					<a href="" ng-click="openSource(cuit.author.id)">
-						{{cuit.author.id}}
-					</a>
-				</p>
-				<p>
-					{{cuit.content}}
-				</p>
+				<div class="inner__body">
+					<div class="media">
+						<img src="images/default-profile" alt="" class="avatar" />
+						<div class="media">
+							<div class="publish">
+								<button>Publier cette info</button>
+							</div>
+							<p>
+								<img src="" alt="" align="left">
+								<a href="" ng-click="openSource(cuit.author.id)">
+									{{cuit.author.id}}
+								</a>
+							</p>
+							<p>
+								{{cuit.content}}
+							</p>
+						</div>				
+					</div>
+				</div><!-- .inner__body -->
 				<ul class="metas">
 					<li class="theme">Thématique : <span class="off"><button ng-click="verifyCuitTheme(cuit)">Vérifier</button></span><span class="on">{{cuit.theme}}</span></li>
 					<li class="credibility">Crédibilité : <span class="off"><button>Vérifier</button></span><span class="on">{{cuit.credibility}}</span></li>
