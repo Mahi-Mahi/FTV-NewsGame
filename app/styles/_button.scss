@@ -1,0 +1,59 @@
+@import 'elements';
+// BUTTON
+/*
+.bt {
+	background:#fff;
+	border:2px solid $bt-color;
+	border-radius:8px;
+	clear:both;
+	display: block;
+	text-transform: uppercase;
+	color:$bt-color;
+	height: 16px;
+	margin: 0;
+	padding: 5px 0 0 0;
+	text-align: center;
+	width:100%;
+}
+
+.bt--publish {
+	background:$bt-color;
+	color:#fff;
+    border-radius:8px;
+    display: block;
+    overflow: hidden;
+    width:100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+*/
+
+.bt {
+	background:#fff;
+	border:2px solid $bt-color;
+    border-radius:8px;
+    color:$bt-color;
+    display: block;
+    height: 16px;
+    padding:5px 0 0 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    text-transform: uppercase;
+   	width:100%;
+   	span {
+   		display: block;
+   		margin:0;
+   		padding:0 8px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+   	}
+}
+
+.bt--publish {
+	background:$bt-color;
+	color:#fff;
+}

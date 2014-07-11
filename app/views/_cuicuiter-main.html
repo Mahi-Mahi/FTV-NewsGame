@@ -5,13 +5,12 @@
 			<div class="inner" ng-click="cuit.toggle=!cuit.toggle">
 				<div class="inner__body">
 					<div class="media">
-						<img src="images/default-profile" alt="" class="avatar" />
+						<img src="/images/default-avatar.png" alt="" class="avatar" />
 						<div class="media">
-							<div class="publish">
-								<button>Publier cette info</button>
+							<div class="publish right">
+								<button class="bt bt--publish"><span>Publier 15 minutes </span></button>
 							</div>
 							<p>
-								<img src="" alt="" align="left">
 								<a href="" ng-click="openSource(cuit.author.id)">
 									{{cuit.author.id}}
 								</a>
@@ -23,9 +22,9 @@
 					</div>
 				</div><!-- .inner__body -->
 				<ul class="metas">
-					<li class="theme">Thématique : <span class="off"><button ng-click="verifyCuitTheme(cuit)">Vérifier</button></span><span class="on">{{cuit.theme}}</span></li>
-					<li class="credibility">Crédibilité : <span class="off"><button>Vérifier</button></span><span class="on">{{cuit.credibility}}</span></li>
-					<li class="exclusivity">Scoop : <span class="off"><button>Vérifier</button></span><span class="on">{{cuit.exclusivity}}</span></li>
+					<li class="theme">Thématique : <span class="off"><button ng-click="verifyCuitTheme(cuit)" class="bt">Vérifier</button></span><span class="on">{{cuit.theme}}</span></li>
+					<li class="credibility">Crédibilité : <span class="off"><button class="bt">Vérifier</button></span><span class="on">{{cuit.credibility}}</span></li>
+					<li class="exclusivity">Scoop : <span class="off"><button class="bt">Vérifier</button></span><span class="on">{{cuit.exclusivity}}</span></li>
 				</ul>
 			</div>
 		</li>

@@ -160,7 +160,7 @@ angular.module('newsGameApp')
 			title: 'Cuicuiter',
 			visible: true,
 			template: 'cuicuiter-main',
-			height: 400,
+			height: 505,
 			position: {
 				top: 10,
 				left: 20
@@ -356,7 +356,7 @@ angular.module('newsGameApp')
 
 		$timeout(function() {
 			addCuit(true);
-		}, 50);
+		}, 500);
 
 		$timeout(function() {
 			scenario();
