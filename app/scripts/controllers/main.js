@@ -356,7 +356,7 @@ angular.module('newsGameApp')
 
 		$timeout(function() {
 			addCuit(true);
-		}, 500);
+		}, 50);
 
 		$timeout(function() {
 			scenario();
