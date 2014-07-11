@@ -18,6 +18,10 @@
 
 html { font-size: 75%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; height:100%; }
 html, button, input, select, textarea { font-family:'HelveticaNeueLight', Helvetica, Verdana, sans-serif; color:$default-color; }
+body { 
+	background:image-url("background/bg-default.jpg") left top no-repeat;
+	background-size:cover;
+}
 a { @include transition(all .5s linear); color: $default-link-color; text-decoration: none; }
 b, strong { font-weight: bold; }
 ul, ol { margin: 0 0 1em 0; padding: 0 0 0 40px; }
