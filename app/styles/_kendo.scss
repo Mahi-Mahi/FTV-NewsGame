@@ -1158,14 +1158,23 @@ a:focus,button:focus {
 
 // WINDOW
 
+.k-block>.k-header, .k-window-titlebar {
+    min-height:40px !important;
+}
+
 .k-window-titlebar {
     background:$background-color-header;
     border:none !important;
 }
 
 .k-window-title {
-    left:0;
+    display: block;
+    margin:-.25em 0 0 0;
+    position:static !important;
+    left:auto !important;
     text-align: center;
+    color:#34495e;
+    font-size:em(16px) !important;
 }
 
 .k-window-actions {
@@ -1183,7 +1192,7 @@ a:focus,button:focus {
         display: block;
         font-size:em(16px);
         margin: 0;
-        padding: 0;
+        padding: 1em 0;
     }
     .inner {
         background:$background-color-inner; 

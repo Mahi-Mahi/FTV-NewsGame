@@ -34,12 +34,10 @@ button, input { line-height: normal; }
 button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
 .oldie button, .oldie input { overflow: visible; vertical-align: middle; }
 textarea { overflow: auto; vertical-align: top; resize: vertical; }
-
-
-.clearfix {
-	content:"";display:block;clear: both;
-}
-
+.unstyled { list-style-type:none; margin:0; padding:0; }
+.clearfix { zoom:1; }
+.clearfix:before, .clearfix:after { content:""; display:table; }
+.clearfix:after { clear:both; }
 .left {
 	float: left;
 }
@@ -117,6 +115,7 @@ textarea { overflow: auto; vertical-align: top; resize: vertical; }
 			li {
 				border-top:1px solid $border-color;
 				border-left:1px solid $border-color;
+				color:#95a5a6;
 				display: table-cell;
 				margin: 0;
 				padding:5px 10px;
@@ -128,7 +127,7 @@ textarea { overflow: auto; vertical-align: top; resize: vertical; }
 			}
 		}
 		.actions {
-			list-style: none;
+			list-style-type: none;
 			li {
 				display: inline-block;
 				padding:5px 10px;
@@ -164,12 +163,11 @@ textarea { overflow: auto; vertical-align: top; resize: vertical; }
 	}
 }
 
-// .level-1 {
-// 	.publish, .credibility, .exclusivity, .timeline {
-// 		display: none !important;
-// 	}
-// }
-
+.level-1 {
+	.publish, .credibility, .exclusivity, .timeline {
+		display: none !important;
+	}
+}
 
 #chat {
 	.discussion {
@@ -185,6 +183,20 @@ textarea { overflow: auto; vertical-align: top; resize: vertical; }
 
 .inner__body {
 	padding:10px;
+}
+
+.inner__body--fullwidth {
+	padding:10px 0;
+}
+
+.inner-item {
+	border-bottom:1px solid $border-color;
+	display: block;
+	padding:5px;
+	margin: 0;
+	&:last-child {
+		border:none;
+	}
 }
 
 .publish {

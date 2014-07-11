@@ -1,8 +1,13 @@
 <h3>Mes contacts</h3>
-<ul>
-	<li ng-repeat="(id, contact) in contacts">
-		<a href="" ng-click="openContact(id)">
-			{{contact.name}}
-		</a>
-	</li>
-</ul>
+<div class="inner">
+	<div class="inner__body inner__body--fullwidth">
+		<ul class="unstyled">
+			<li ng-repeat="(id, contact) in contacts" class="inner-item">
+				<a href="" ng-click="openContact(id)">
+					{{contact.name}}
+				</a>
+			</li>
+		</ul>
+	</div><!-- .inner__body -->
+</div><!-- .inner -->
+<button class="bt"><span>Nouveau contact</span></button>
