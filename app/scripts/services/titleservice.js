@@ -6,7 +6,8 @@ angular.module('newsGameApp')
 		suffix = title = "";
 		return {
 			setSuffix: function(s) {
-				return suffix = s;
+				suffix = s;
+				return suffix;
 			},
 			getSuffix: function() {
 				return suffix;
@@ -17,6 +18,7 @@ angular.module('newsGameApp')
 				} else {
 					title = t;
 				}
+				title = title + " | Chasseur d'infos";
 				return $document.prop('title', title);
 			},
 			getTitle: function() {

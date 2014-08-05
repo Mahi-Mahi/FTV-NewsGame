@@ -219,3 +219,12 @@ div.k-window-content#chat {
 	height: 60px;
 	width: 60px;
 }
+
+#tooltip {
+	position: absolute;
+	top: 200px;
+	left: 250px;
+	z-index: 99999;
+	border: 1px gray solid;
+	background: rgba(255,255,255,0.7);
+}
