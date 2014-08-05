@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('newsGameApp')
-	.controller('MainCtrl', function($scope, $routeParams, $log, prod, $timeout, $interval, dataService) {
+	.controller('MainCtrl', function($document, $scope, $routeParams, $log, prod, $timeout, $interval, dataService) {
 
 		$scope.debug = ($routeParams.debug);
 
@@ -41,27 +41,39 @@ angular.module('newsGameApp')
 
 		// add cuit to Cuicuiter timeline
 
+		$scope.cuitshover = false;
+		$log.log("init", $scope.cuitshover);
+
 		function addCuit(next) {
-			var added = false;
-			// iterate through all cuits ( loaded from /data/all.json )
-			angular.forEach(dataService.data.all.cuits, function(cuit, key) {
-				// if cuit is not currenlty displayed
-				if ($scope.allCuits.indexOf(key) === -1 && !added) {
-					cuit.author = dataService.data.all.sources[cuit.source];
-					$scope.allCuits.push(key);
-					$scope.cuits.unshift(cuit);
-					$timeout(function() {
-						cuit.visible = true;
-					}, 1);
-					added = true;
-					// scheduled next cuit
-					if (next) {
+			$log.log("addCuit", $scope.cuitshover);
+			if ($scope.cuitshover) {
+				$log.log("hover");
+				$timeout(function() {
+					addCuit(true);
+				}, Math.random() * 1500 + 800);
+			} else {
+				$log.log('out');
+				var added = false;
+				// iterate through all cuits ( loaded from /data/all.json )
+				angular.forEach(dataService.data.all.cuits, function(cuit, key) {
+					// if cuit is not currenlty displayed
+					if ($scope.allCuits.indexOf(key) === -1 && !added) {
+						cuit.author = dataService.data.all.sources[cuit.source];
+						$scope.allCuits.push(key);
+						$scope.cuits.unshift(cuit);
 						$timeout(function() {
-							addCuit(true);
-						}, Math.random() * 1500 + 800);
+							cuit.visible = true;
+						}, 1);
+						added = true;
+						// scheduled next cuit
+						if (next) {
+							$timeout(function() {
+								addCuit(true);
+							}, Math.random() * 1500 + 800);
+						}
 					}
-				}
-			});
+				});
+			}
 		}
 
 		// Verify Cuit Theme ( + decrement time counter )
@@ -260,6 +272,9 @@ angular.module('newsGameApp')
 		function addChat(delay, speaker, content) {
 			addStep(500, function() {
 				$scope.currentChat.status = ((speaker === 'other') ? 'reading' : 'writing');
+				var $container = angular.element(document.getElementById('chat-scroll'));
+				var chatBottom = angular.element(document.getElementById('chat-bottom'));
+				$container.scrollToElement(chatBottom, 30, 100);
 			});
 			addStep(delay - 500, function() {
 				$scope.currentChat.discussion.push({
@@ -267,6 +282,11 @@ angular.module('newsGameApp')
 					content: content
 				});
 				$scope.currentChat.status = '';
+				$timeout(function() {
+					var $container = angular.element(document.getElementById('chat-scroll'));
+					var chatBottom = angular.element(document.getElementById('chat-bottom'));
+					$container.scrollToElement(chatBottom, 30, 100);
+				}, 50);
 			});
 		}
 

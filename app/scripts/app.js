@@ -6,7 +6,8 @@ angular
 		'ngResource',
 		'ngSanitize',
 		'ngRoute',
-		'kendo.directives'
+		'kendo.directives',
+		'duScroll'
 	])
 	.config(function(config, $routeProvider) {
 		$routeProvider

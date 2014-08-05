@@ -1,4 +1,4 @@
-<div class="inner">
+<div class="inner" id="chat-scroll" du-scroll-container="scroll-container">
 	<div class="inner__body">
 		<div class="contact">{{currentChat.contact}}</div>
 		<ul class="discussion unstyled">
@@ -8,5 +8,6 @@
 			<li ng-if="currentChat.status == 'reading'" class="other">...<small>Rédige un message</small></li>
 			<li ng-if="currentChat.status == 'writing'" class="me">...</li>
 		</ul>
+		<div id="chat-bottom"></div>
 	</div>
 </div>
