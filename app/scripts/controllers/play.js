@@ -45,18 +45,22 @@ angular.module('newsGameApp')
 
 		// add cuit to Cuicuiter timeline
 
-		$scope.cuitshover = false;
-		$log.log("init", $scope.cuitshover);
+		$scope.cuitsHover = false;
+		$scope.cuitsOver = function() {
+			$scope.cuitsHover = true;
+		};
+		$scope.cuitsOut = function() {
+			$scope.cuitsHover = false;
+		};
+		$log.log("init", $scope.cuitsHover);
 
 		function addCuit(next) {
-			$log.log("addCuit", $scope.cuitshover);
-			if ($scope.cuitshover) {
-				$log.log("hover");
+			$log.log("addCuit", $scope.cuitsHover);
+			if ($scope.cuitsHover) {
 				$timeout(function() {
 					addCuit(true);
 				}, Math.random() * 1500 + 800);
 			} else {
-				$log.log('out');
 				var added = false;
 				// iterate through all cuits ( loaded from /data/all.json )
 				angular.forEach(dataService.data.all.cuits, function(cuit, key) {
