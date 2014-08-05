@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('newsGameApp')
-	.controller('MainCtrl', function($document, $scope, $routeParams, $log, prod, $timeout, $interval, dataService) {
+	.controller('PlayCtrl', function($document, $rootScope, $scope, $routeParams, $log, prod, $timeout, $interval, dataService) {
 
 		$scope.debug = ($routeParams.debug);
 
@@ -22,6 +22,8 @@ angular.module('newsGameApp')
 
 		// selected theme
 		$scope.currentTheme = null;
+
+		$rootScope.background = 'level-' + $scope.level;
 
 		/*
 		CuitCuiter

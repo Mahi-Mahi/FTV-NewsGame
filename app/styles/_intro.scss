@@ -1,0 +1,20 @@
+.splash {
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 99;
+
+	background:image-url("background/splash-intro-level-1.png") 50% 50% no-repeat fixed;
+
+	-webkit-transition:all linear 1s;
+	transition:all linear 1s;
+
+	&.ng-hide {
+		opacity: 0;
+		z-index: -1;
+	}
+
+}

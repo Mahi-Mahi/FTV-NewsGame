@@ -17,7 +17,7 @@
 	</div>
 
 	<ul id="windows-bar">
-		<li ng-repeat="(id, win) in windows" ng-if="win.active">
+		<li ng-repeat="(id, win) in windows" ng-if="win.active" ng-class="[id, win.visible ? 'visible' : '']">
 			<button class="k-button"
 					ng-click="toggleWin(id)">
 				{{win.title}}

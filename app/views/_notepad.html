@@ -1,11 +1,6 @@
 <p>
-	Veiller à publier des ifnos de rubriques différentes :
+	Veiller à publier des infos de rubriques différentes :
 </p>
 <ul>
-	<li>Sciences, technologies et jeux vidéos</li>
-	<li>Société</li>
-	<li>Politique</li>
-	<li>International</li>
-	<li>Economie</li>
-	<li>Culture, sport et people</li>
+	<li ng-repeat="(theme, title) in themes" ng-class="theme">{{title}}</li>
 </ul>

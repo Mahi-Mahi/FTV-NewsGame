@@ -3,48 +3,50 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=1024">
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="bower_components/kendo-ui/styles/web/kendo.common.core.min.css">
-    <!-- endbuild -->
-  </head>
-  <body ng-app="newsGameApp">
-    <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=1024">
+		<link rel="icon" type="image/png" href="/favicon.png">
+		<link rel="stylesheet" href="styles/main.css">
+		<link rel="stylesheet" href="bower_components/kendo-ui/styles/web/kendo.common.core.min.css">
+		<!-- endbuild -->
+	</head>
+	<body ng-app="newsGameApp" ng-class="[background]">
+		<!-- Add your site or application content here -->
+		<div class="container" ng-view=""></div>
 
-    <!--[if lt IE 9]>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.min.js"></script>
-    <![endif]-->
+		<!--[if lt IE 9]>
+		<script src="bower_components/es5-shim/es5-shim.js"></script>
+		<script src="bower_components/json3/lib/json3.min.js"></script>
+		<![endif]-->
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/kendo-ui/js/kendo.ui.core.min.js"></script>
-    <script src="bower_components/angular-kendo/build/angular-kendo.min.js"></script>
-    <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+		<!-- build:js scripts/vendor.js -->
+		<!-- bower:js -->
+		<script src="bower_components/jquery/jquery.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-resource/angular-resource.js"></script>
+		<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+		<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+		<script src="bower_components/angular-route/angular-route.js"></script>
+		<script src="bower_components/kendo-ui/js/kendo.ui.core.min.js"></script>
+		<script src="bower_components/angular-kendo/build/angular-kendo.min.js"></script>
+		<script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
+		<script src="bower_components/angular-animate/angular-animate.js"></script>
+		<!-- endbower -->
+		<!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/services/config.js"></script>
-        <script src="scripts/services/app_config.js"></script>
-        <script src="scripts/services/dataservice.js"></script>
-        <script src="scripts/filters/duration.js"></script>
-        <script src="scripts/controllers/splash.js"></script>
-        <script src="scripts/controllers/intro.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <!-- endbuild -->
-</body>
+		<!-- build:js({.tmp,app}) scripts/scripts.js -->
+		<script src="scripts/app.js"></script>
+		<script src="scripts/services/config.js"></script>
+		<script src="scripts/services/app_config.js"></script>
+		<script src="scripts/services/dataservice.js"></script>
+		<script src="scripts/filters/duration.js"></script>
+		<script src="scripts/controllers/home.js"></script>
+		<script src="scripts/controllers/intro.js"></script>
+		<script src="scripts/controllers/play.js"></script>
+		<!-- endbuild -->
+
+	</body>
 </html>

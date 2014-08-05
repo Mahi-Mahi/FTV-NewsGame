@@ -7,29 +7,27 @@ angular
 		'ngSanitize',
 		'ngRoute',
 		'kendo.directives',
-		'duScroll'
+		'duScroll',
+		'ngAnimate'
 	])
 	.config(function(config, $routeProvider) {
 		$routeProvider
 			.when('/', {
-				templateUrl: 'views/splash.html',
-				controller: 'SplashCtrl'
+				templateUrl: 'views/home.html',
+				controller: 'HomeCtrl'
 			})
-			.when('/intro', {
+			.when('/intro/:debug?', {
 				templateUrl: 'views/intro.html',
-				controller: 'IntroCtrl'
-			})
-			.when('/play', {
-				templateUrl: 'views/main.html',
-				controller: 'MainCtrl',
+				controller: 'IntroCtrl',
 				resolve: {
 					load: function($route, dataService) {
 						return dataService.load('all');
 					}
 				}
-			}).when('/play/:debug', {
+			})
+			.when('/play/:debug?', {
 				templateUrl: 'views/main.html',
-				controller: 'MainCtrl',
+				controller: 'PlayCtrl',
 				resolve: {
 					load: function($route, dataService) {
 						return dataService.load('all');
