@@ -7,7 +7,15 @@
 	left: 0;
 	z-index: 99;
 
-	background:image-url("background/splash-intro-level-1.png") 50% 50% no-repeat fixed;
+	&.level-1 {
+		background:image-url("background/splash-intro-level-1.jpg") 50% 50% no-repeat fixed;
+	}
+	&.level-2 {
+		background:image-url("background/splash-intro-level-2.jpg") 50% 50% no-repeat fixed;
+	}
+	&.level-3 {
+		background:image-url("background/splash-intro-level-3.jpg") 50% 50% no-repeat fixed;
+	}
 
 	-webkit-transition:all linear 1s;
 	transition:all linear 1s;
@@ -17,4 +25,42 @@
 		z-index: -1;
 	}
 
+}
+
+.dialogue {
+	height: 120px;
+	background: rgba(0,0,0, 0.5);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: #FFF;
+	font-size: 16px;
+	img {
+		height: 100px;
+		width: 100px;
+	}
+	.typed {
+		padding: 10px;
+	}
+	.skip {
+		color: #FFF;
+		font-weight: bold;
+		font-size: 20px;
+		cursor: pointer;
+		float: right;
+	}
+}
+
+#typed-cursor{
+  opacity: 1;
+  font-weight: 100;
+  // add prefixes
+  animation: blink 0.7s infinite;
+}
+
+@-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
 }

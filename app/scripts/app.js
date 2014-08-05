@@ -26,7 +26,7 @@ angular
 				}
 			})
 			.when('/play/:debug?', {
-				templateUrl: 'views/main.html',
+				templateUrl: 'views/play.html',
 				controller: 'PlayCtrl',
 				resolve: {
 					load: function($route, dataService) {

@@ -1,9 +1,11 @@
 'use strict';
 
 angular.module('newsGameApp')
-	.controller('PlayCtrl', function($document, $rootScope, $scope, $routeParams, $log, prod, $timeout, $interval, dataService) {
+	.controller('PlayCtrl', function($document, $rootScope, $scope, $routeParams, $log, prod, $timeout, $interval, dataService, titleService) {
 
 		$scope.debug = ($routeParams.debug);
+
+		titleService.setTitle('Play');
 
 		// debug config
 		var delayModifier = ($scope.debug ? 0.1 : 1);
