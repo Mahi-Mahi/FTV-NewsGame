@@ -40,8 +40,8 @@ CSV.foreach("BDD_newsgame/Infos-Table 1.csv", :col_sep => ';') do |row|
 
 		cuit[:credibility] = row[4].to_i
 		cuit[:exclusivity] = row[5].to_f / 100
-		cuit[:article_title] = row[6]
-		cuit[:article_content] = row[7]
+		cuit[:articleTitle] = row[6]
+		cuit[:articleContent] = row[7]
 		cuit[:avatar] = row[8]
 
 		cuits[cuit[:id]] = cuit

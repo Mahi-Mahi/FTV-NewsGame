@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('newsGameApp')
-	.controller('IntroCtrl', function($rootScope, $scope, $routeParams, $log, $timeout, $interval, $q, titleService) {
+	.controller('IntroCtrl', function($rootScope, $scope, $routeParams, $cookies, $log, $location, $timeout, $interval, $q, titleService) {
 
 		$log.log('Intro');
 
@@ -10,10 +10,9 @@ angular.module('newsGameApp')
 		$scope.debug = ($routeParams.debug);
 
 		// debug config
-		var delayModifier = ($scope.debug ? 0.5 : 1);
+		var delayModifier = ($scope.debug ? 0.1 : 1);
 
-		$scope.level = 1;
-
+		$scope.level = $cookies.level ? $cookies.level : 1;
 		var steps = [];
 
 		function doSteps() {
@@ -60,7 +59,6 @@ angular.module('newsGameApp')
 			$scope.typed = '';
 			$scope.skipText = 0;
 			var interval = $interval(function() {
-				$log.log($scope.skipText);
 				if ($scope.skipText === 0) {
 					$scope.typed = $scope.typed + content[contentIdx];
 					contentIdx = contentIdx + 1;
@@ -117,6 +115,23 @@ angular.module('newsGameApp')
 			addChat(1500, interlocutor + '1', "Arf, faut aller en cours. Bon c’est pas grave : ce soir, t’allumes ton ordi, tu me captes sur Skoupe et je t’expliquerai.");
 			addChat(1500, 'me', "Ok, super! A ce soir !");
 			addChat(1500, interlocutor + '1', "A plus!");
+			addStep(1500, function() {
+				$location.path('/play');
+			});
+
+		};
+
+		// Level 2
+		scenarii.level2 = function() {
+			$log.log(">scenario2");
+
+			$rootScope.background = 'sceneC';
+
+			steps = [];
+
+			addStep(1500, function() {
+				$location.path('/play');
+			});
 
 		};
 

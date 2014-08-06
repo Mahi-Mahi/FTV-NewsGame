@@ -1,13 +1,21 @@
-<h4>
-	{{currentSource.name}}
-	<small>{{currentSource.id}}</small>
-</h4>
-<p>
-	{{currentSource.bio}}
-</p>
-<ul>
-	<li ng-repeat="theme in currentSource.themes">
-		{{theme}}
-	</li>
-</ul>
+<div ng-class="[currentSource.themeVerified ? 'verified-theme' : '']">
+	<h4>
+		{{currentSource.name}}
+		<small>{{currentSource.id}}</small>
+	</h4>
+	<p>
+		{{currentSource.bio}}
+	</p>
+	<ul class="metas">
+		<li class="theme">Thématique
+			<span class="off"><button ng-click="verifySourceTheme(currentSource.id)" class="bt">Analyser la source</button></span>
+			<span class="on">
+			<ul>
+				<li ng-repeat="theme in currentSource.themes">{{theme}}</li>
+			</ul>
+			</span>
+		</li>
+	</ul>
+</div>
+
 

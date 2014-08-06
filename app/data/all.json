@@ -7,8 +7,8 @@
       "theme": "international",
       "credibility": 3,
       "exclusivity": 0.25,
-      "article_title": "Bienvenue en France, Président Ohmama !",
-      "article_content": "C'est un visiteur de marque que reçoit aujourd'hui le président Nederlande : le chef d'état américain Barraque Ohmama. Celui-ci aurait fait part de son souhait de visiter la Tour Eiffel et Disneyland Paris.",
+      "articleTitle": "Bienvenue en France, Président Ohmama !",
+      "articleContent": "C'est un visiteur de marque que reçoit aujourd'hui le président Nederlande : le chef d'état américain Barraque Ohmama. Celui-ci aurait fait part de son souhait de visiter la Tour Eiffel et Disneyland Paris.",
       "avatar": null
     },
     "cuit-2": {
@@ -18,8 +18,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 2,
       "exclusivity": 0.25,
-      "article_title": "Lady Glagla réchauffe le Moyen Journal",
-      "article_content": "La princesse de la pop, Lady Glagla, a encore prévu de faire parler d'elle : ce soir, elle apparaîtra sur le plateau du Moyen Journal vêtue d'une robe en peau de kiwi. De quoi nous donner la banane !",
+      "articleTitle": "Lady Glagla réchauffe le Moyen Journal",
+      "articleContent": "La princesse de la pop, Lady Glagla, a encore prévu de faire parler d'elle : ce soir, elle apparaîtra sur le plateau du Moyen Journal vêtue d'une robe en peau de kiwi. De quoi nous donner la banane !",
       "avatar": null
     },
     "cuit-3": {
@@ -29,8 +29,8 @@
       "theme": "economie",
       "credibility": 3,
       "exclusivity": 0.25,
-      "article_title": "Le chômage encore en hausse... ",
-      "article_content": "Mauvaise nouvelle pour le gouvernement : selon l'économiste Alain Flation, le chômage repart à la hausse ce mois-ci. C'est peut-être le Premier Ministre qui va bientôt devoir chercher un nouveau travail…",
+      "articleTitle": "Le chômage encore en hausse... ",
+      "articleContent": "Mauvaise nouvelle pour le gouvernement : selon l'économiste Alain Flation, le chômage repart à la hausse ce mois-ci. C'est peut-être le Premier Ministre qui va bientôt devoir chercher un nouveau travail…",
       "avatar": null
     },
     "cuit-4": {
@@ -40,8 +40,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 2,
       "exclusivity": 0.25,
-      "article_title": "Grand Theft Toto : les poings sur les i ",
-      "article_content": "Le nouveau jeu de Bibisoft repousse toujours plus loin les limites pour choquer. Dans cette version, il est même possible de traverser en dehors des passages piétons !",
+      "articleTitle": "Grand Theft Toto : les poings sur les i ",
+      "articleContent": "Le nouveau jeu de Bibisoft repousse toujours plus loin les limites pour choquer. Dans cette version, il est même possible de traverser en dehors des passages piétons !",
       "avatar": null
     },
     "cuit-5": {
@@ -51,8 +51,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 1,
       "exclusivity": 0.25,
-      "article_title": "L’Orrifique de Marseille droit au bus",
-      "article_content": "Cruelle désillusion pour André-Pierre Maniac, l’attaquant du club de football provençal, qui a perdu hier son match au sommet contre le Paris-Saint-Glinglin sur le score sans appel de 17 à 0.",
+      "articleTitle": "L’Orrifique de Marseille droit au bus",
+      "articleContent": "Cruelle désillusion pour André-Pierre Maniac, l’attaquant du club de football provençal, qui a perdu hier son match au sommet contre le Paris-Saint-Glinglin sur le score sans appel de 17 à 0.",
       "avatar": null
     },
     "cuit-6": {
@@ -62,8 +62,8 @@
       "theme": "politique",
       "credibility": 0,
       "exclusivity": 0.25,
-      "article_title": "Scandale à l’assemblée ",
-      "article_content": "Le ton monte à l’Assemblée. « C’est celui qui le dit qui y est ! », a déclaré la députée d’opposition Nadine Parano au Premier Ministre qui, lors de la session parlementaire d’hier, l’avait traitée de « voleuse de stylo ». ",
+      "articleTitle": "Scandale à l’assemblée ",
+      "articleContent": "Le ton monte à l’Assemblée. « C’est celui qui le dit qui y est ! », a déclaré la députée d’opposition Nadine Parano au Premier Ministre qui, lors de la session parlementaire d’hier, l’avait traitée de « voleuse de stylo ». ",
       "avatar": null
     },
     "cuit-7": {
@@ -73,8 +73,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 2,
       "exclusivity": 0.25,
-      "article_title": "Superman contre les caniches, un film décevant",
-      "article_content": "Selon les privilégiés qui ont assisté à l'avant-première du dernier blockbuster, le film est une grosse déception. On dirait que Superman est tombé sur un os !",
+      "articleTitle": "Superman contre les caniches, un film décevant",
+      "articleContent": "Selon les privilégiés qui ont assisté à l'avant-première du dernier blockbuster, le film est une grosse déception. On dirait que Superman est tombé sur un os !",
       "avatar": null
     },
     "cuit-8": {
@@ -84,8 +84,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 3,
       "exclusivity": 0.25,
-      "article_title": "L’équipe de France de saut à la perche tombe de haut",
-      "article_content": "Lors des championnats du monde, qui se déroulaient à Rocamadour, Renaud Lacampagnenie a été éliminé. Quelqu'un a mis un bâton dans les roues du sauteur à la perche !",
+      "articleTitle": "L’équipe de France de saut à la perche tombe de haut",
+      "articleContent": "Lors des championnats du monde, qui se déroulaient à Rocamadour, Renaud Lacampagnenie a été éliminé. Quelqu'un a mis un bâton dans les roues du sauteur à la perche !",
       "avatar": null
     },
     "cuit-9": {
@@ -95,8 +95,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 2,
       "exclusivity": 0.25,
-      "article_title": "Au théâtre à Noël : Les Fourberies du sapin",
-      "article_content": "Les plus grands critiques ont accueilli très positivement la nouvelle pièce montée par le Théâtre National. Si vous avez les boules, allez la voir !",
+      "articleTitle": "Au théâtre à Noël : Les Fourberies du sapin",
+      "articleContent": "Les plus grands critiques ont accueilli très positivement la nouvelle pièce montée par le Théâtre National. Si vous avez les boules, allez la voir !",
       "avatar": null
     },
     "cuit-10": {
@@ -106,8 +106,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 2,
       "exclusivity": 0.25,
-      "article_title": "Incroyable : Zlatatan marque du banc de touche !",
-      "article_content": "La gravité ne semble pas avoir de prise sur le joueur-star du Paris-Saint-Glinglin, qui ébahit tout le monde, même les plus grands scientifiques.",
+      "articleTitle": "Incroyable : Zlatatan marque du banc de touche !",
+      "articleContent": "La gravité ne semble pas avoir de prise sur le joueur-star du Paris-Saint-Glinglin, qui ébahit tout le monde, même les plus grands scientifiques.",
       "avatar": null
     },
     "cuit-11": {
@@ -117,8 +117,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 1,
       "exclusivity": 0.25,
-      "article_title": "L’extinction de voix de Justin Bideur fêtée partout dans le monde ",
-      "article_content": "Les témoignages s'accumulent pour remercier le destin, après la terrible extinction de voix dont est victime le jeune chanteur. Dernier en date, le présentateur du Moyen Journal, Antoine Troiscônes.",
+      "articleTitle": "L’extinction de voix de Justin Bideur fêtée partout dans le monde ",
+      "articleContent": "Les témoignages s'accumulent pour remercier le destin, après la terrible extinction de voix dont est victime le jeune chanteur. Dernier en date, le présentateur du Moyen Journal, Antoine Troiscônes.",
       "avatar": null
     },
     "cuit-12": {
@@ -128,8 +128,8 @@
       "theme": "international",
       "credibility": 3,
       "exclusivity": 0.25,
-      "article_title": "La tension monte en Centrafrique",
-      "article_content": "La paix aura été de courte durée en Afrique centrale, puisqu'après le Sud-Soudan le mois dernier, c'est au tour de la Centrafrique de connaître des tensions. Les Nations-Amies vont intervenir.",
+      "articleTitle": "La tension monte en Centrafrique",
+      "articleContent": "La paix aura été de courte durée en Afrique centrale, puisqu'après le Sud-Soudan le mois dernier, c'est au tour de la Centrafrique de connaître des tensions. Les Nations-Amies vont intervenir.",
       "avatar": null
     },
     "cuit-13": {
@@ -139,8 +139,8 @@
       "theme": "international",
       "credibility": 3,
       "exclusivity": 0.25,
-      "article_title": "La France sur le point d'intervenir en Centrafrique ?",
-      "article_content": "Les récents affrontements en Afrique centrale inquiètent beaucoup Laurent Fabule, notre ministre des affaires étrangères, qui a déclaré que la France allait aider le président Malundais à lutter contre les rebelles.",
+      "articleTitle": "La France sur le point d'intervenir en Centrafrique ?",
+      "articleContent": "Les récents affrontements en Afrique centrale inquiètent beaucoup Laurent Fabule, notre ministre des affaires étrangères, qui a déclaré que la France allait aider le président Malundais à lutter contre les rebelles.",
       "avatar": null
     },
     "cuit-14": {
@@ -150,8 +150,8 @@
       "theme": "international",
       "credibility": 1,
       "exclusivity": 0.25,
-      "article_title": "Le Royaume-Uni ne peut plus nous sentir.",
-      "article_content": "Pour le Royaume-Uni, ça suffit : les fromages français sentent trop mauvais, alors ils seront désormais interdits. Cette décision fait suite à une plainte des douaniers anglais… Ce n'était peut-être pas une raison d'en faire un fromage !",
+      "articleTitle": "Le Royaume-Uni ne peut plus nous sentir.",
+      "articleContent": "Pour le Royaume-Uni, ça suffit : les fromages français sentent trop mauvais, alors ils seront désormais interdits. Cette décision fait suite à une plainte des douaniers anglais… Ce n'était peut-être pas une raison d'en faire un fromage !",
       "avatar": null
     },
     "cuit-15": {
@@ -161,8 +161,8 @@
       "theme": "international",
       "credibility": 2,
       "exclusivity": 0.25,
-      "article_title": "Tensions entre Chine et Japon suite à une indigestion.",
-      "article_content": "Voilà une affaire qui fait des vagues : les poissons utilisés dans des sushis japonais exportés vers la Chine seraient toxiques. Le restaurant incriminé, qui nage en plein scandale, risque fort de couler.",
+      "articleTitle": "Tensions entre Chine et Japon suite à une indigestion.",
+      "articleContent": "Voilà une affaire qui fait des vagues : les poissons utilisés dans des sushis japonais exportés vers la Chine seraient toxiques. Le restaurant incriminé, qui nage en plein scandale, risque fort de couler.",
       "avatar": null
     },
     "cuit-16": {
@@ -172,8 +172,8 @@
       "theme": "international",
       "credibility": 1,
       "exclusivity": 0.25,
-      "article_title": "Ohmama affronte un fromage musclé.",
-      "article_content": "Le président américain a profité de sa visite chez nous pour manger du fromage. Mais pas n'importe lequel : un camembert ultra-vieux et super-fait. Les observateurs auraient déclaré \"La vache !\"",
+      "articleTitle": "Ohmama affronte un fromage musclé.",
+      "articleContent": "Le président américain a profité de sa visite chez nous pour manger du fromage. Mais pas n'importe lequel : un camembert ultra-vieux et super-fait. Les observateurs auraient déclaré \"La vache !\"",
       "avatar": null
     },
     "cuit-17": {
@@ -183,8 +183,8 @@
       "theme": "international",
       "credibility": 1,
       "exclusivity": 0.25,
-      "article_title": "Tétine affronte un ours énervé",
-      "article_content": "Le président russe ne s'en laisse pas compter, même pas par plus poilu que lui. Lors d'un voyage en Sibérie, il a défié un ours sauvage à la bataille de pouces. La pauvre bête serait repartie avec la patte cassée. ",
+      "articleTitle": "Tétine affronte un ours énervé",
+      "articleContent": "Le président russe ne s'en laisse pas compter, même pas par plus poilu que lui. Lors d'un voyage en Sibérie, il a défié un ours sauvage à la bataille de pouces. La pauvre bête serait repartie avec la patte cassée. ",
       "avatar": null
     },
     "cuit-18": {
@@ -194,8 +194,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 3,
       "exclusivity": 0.25,
-      "article_title": "La critique tout feu tout flamme pour \"Harold Pottier\"",
-      "article_content": "Bernard Pipot a une nouvelle passion : le livre Harold Pottier à l'école des pompiers. Le nouveau tome des aventures du jeune sorcier a laissé le chroniqueur sur le grill du début à la fin.",
+      "articleTitle": "La critique tout feu tout flamme pour \"Harold Pottier\"",
+      "articleContent": "Bernard Pipot a une nouvelle passion : le livre Harold Pottier à l'école des pompiers. Le nouveau tome des aventures du jeune sorcier a laissé le chroniqueur sur le grill du début à la fin.",
       "avatar": null
     },
     "cuit-19": {
@@ -205,8 +205,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 2,
       "exclusivity": 0.25,
-      "article_title": "Alexandra Dada, reine des cavalières",
-      "article_content": "Cocorico ! C'est une cavalière française, Alexandra Dada, qui a remporté les derniers championnats d'Europe de saut d'obstacle. De quoi remettre toute l'équitation française en selle !",
+      "articleTitle": "Alexandra Dada, reine des cavalières",
+      "articleContent": "Cocorico ! C'est une cavalière française, Alexandra Dada, qui a remporté les derniers championnats d'Europe de saut d'obstacle. De quoi remettre toute l'équitation française en selle !",
       "avatar": null
     },
     "cuit-20": {
@@ -216,8 +216,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 1,
       "exclusivity": 0.25,
-      "article_title": "Nouvelle opération de chirurgie esthétique pour Nabibaa.",
-      "article_content": "La bimbo, rendue célèbre par sa participation à l'émission de télé-réalité , \"Koh-lanstars 3\", aurait décidé d'augmenter encore la taille de ses charmes naturels… Qui n'ont, de fait, plus grand-chose de naturel !",
+      "articleTitle": "Nouvelle opération de chirurgie esthétique pour Nabibaa.",
+      "articleContent": "La bimbo, rendue célèbre par sa participation à l'émission de télé-réalité , \"Koh-lanstars 3\", aurait décidé d'augmenter encore la taille de ses charmes naturels… Qui n'ont, de fait, plus grand-chose de naturel !",
       "avatar": null
     },
     "cuit-21": {
@@ -227,8 +227,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 2,
       "exclusivity": 0.25,
-      "article_title": "Gros bide pour le nouvel album de Black B et Maitre Rims",
-      "article_content": "Les deux rappeurs, anciens membres du groupe Sexion Lasso, ont du mal à capturer un nouveau public. Si on en croit l'analyse en profondeur des chroniqueurs spécialisés, \"C'est nul\".",
+      "articleTitle": "Gros bide pour le nouvel album de Black B et Maitre Rims",
+      "articleContent": "Les deux rappeurs, anciens membres du groupe Sexion Lasso, ont du mal à capturer un nouveau public. Si on en croit l'analyse en profondeur des chroniqueurs spécialisés, \"C'est nul\".",
       "avatar": null
     },
     "cuit-22": {
@@ -238,8 +238,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 0,
       "exclusivity": 0.25,
-      "article_title": "Sblagg Man, une star est née !",
-      "article_content": "Le millionnaire, qui s'est fait connaître grâce à ses vidéos sur le site GroTube, serait une personnalité très populaire. Le public a sûrement été conquis par sa capacité à jonglayyy avec ses doigts de piayyy…",
+      "articleTitle": "Sblagg Man, une star est née !",
+      "articleContent": "Le millionnaire, qui s'est fait connaître grâce à ses vidéos sur le site GroTube, serait une personnalité très populaire. Le public a sûrement été conquis par sa capacité à jonglayyy avec ses doigts de piayyy…",
       "avatar": null
     },
     "cuit-23": {
@@ -249,8 +249,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 1,
       "exclusivity": 0.25,
-      "article_title": "La botte secrète d'André-Pierre Maniac",
-      "article_content": "Le footballeur de l'Orrifique de Marseille emploie les grands moyens pour être au top de son art cette année. Nouveau régime, nouvel entrainement… Cette année, les spectateurs devraient prendre leur pied !",
+      "articleTitle": "La botte secrète d'André-Pierre Maniac",
+      "articleContent": "Le footballeur de l'Orrifique de Marseille emploie les grands moyens pour être au top de son art cette année. Nouveau régime, nouvel entrainement… Cette année, les spectateurs devraient prendre leur pied !",
       "avatar": null
     },
     "cuit-24": {
@@ -260,8 +260,8 @@
       "theme": "societe",
       "credibility": 3,
       "exclusivity": 0.25,
-      "article_title": "Baccalauréat : des résultats encourageants",
-      "article_content": "Pour 87% des élèves de terminale, c'est une bonne nouvelle qui vient de tomber : ils sont admis à l'épreuve du baccalauréat. 1% des élèves ont même obtenu la mention \"Chapeau\" : de quoi prendre la grosse tête !",
+      "articleTitle": "Baccalauréat : des résultats encourageants",
+      "articleContent": "Pour 87% des élèves de terminale, c'est une bonne nouvelle qui vient de tomber : ils sont admis à l'épreuve du baccalauréat. 1% des élèves ont même obtenu la mention \"Chapeau\" : de quoi prendre la grosse tête !",
       "avatar": null
     },
     "cuit-25": {
@@ -271,8 +271,8 @@
       "theme": "societe",
       "credibility": 2,
       "exclusivity": 0.25,
-      "article_title": "Vers un week-end de 5 jours ?",
-      "article_content": "Les chiffres de la dernière étude de l'INSCD sont clairs : une grande majorité des Français préfèreraient avoir un week-end de 5 jours et une semaine de 2. Un moyen efficace d'obtenir des lundis au sommeil.",
+      "articleTitle": "Vers un week-end de 5 jours ?",
+      "articleContent": "Les chiffres de la dernière étude de l'INSCD sont clairs : une grande majorité des Français préfèreraient avoir un week-end de 5 jours et une semaine de 2. Un moyen efficace d'obtenir des lundis au sommeil.",
       "avatar": null
     },
     "cuit-26": {
@@ -282,8 +282,8 @@
       "theme": "societe",
       "credibility": 1,
       "exclusivity": 0.25,
-      "article_title": "Les syndicats dans la rue",
-      "article_content": "Les syndicats ont décidé d'organiser une grande manifestation pour obtenir de meilleurs salaires. Ils ont prévu de crier des slogans très forts, mais le gouvernement risque de faire la sourde oreille. ",
+      "articleTitle": "Les syndicats dans la rue",
+      "articleContent": "Les syndicats ont décidé d'organiser une grande manifestation pour obtenir de meilleurs salaires. Ils ont prévu de crier des slogans très forts, mais le gouvernement risque de faire la sourde oreille. ",
       "avatar": null
     },
     "cuit-27": {
@@ -293,8 +293,8 @@
       "theme": "societe",
       "credibility": 2,
       "exclusivity": 0.25,
-      "article_title": "Justice : le stress des mamans enfin pris en compte.",
-      "article_content": "C'est une décision humaine qu'a prise le ministère de la Justice, en autorisant les gardés à vue à appeler leur maman pour la tenir au courant et la rassurer. Les mamans gardées à vue auront, elles, le droit d'appeler leur chien.",
+      "articleTitle": "Justice : le stress des mamans enfin pris en compte.",
+      "articleContent": "C'est une décision humaine qu'a prise le ministère de la Justice, en autorisant les gardés à vue à appeler leur maman pour la tenir au courant et la rassurer. Les mamans gardées à vue auront, elles, le droit d'appeler leur chien.",
       "avatar": null
     },
     "cuit-28": {
@@ -304,8 +304,8 @@
       "theme": "societe",
       "credibility": 0,
       "exclusivity": 0.25,
-      "article_title": "Enfants au volant, mort au tournant ?",
-      "article_content": "On s'inquiète, dans les milieux bien renseignés, d'un projet de loi du gouvernement permettant aux enfants de moins de 10 ans de conduire. ",
+      "articleTitle": "Enfants au volant, mort au tournant ?",
+      "articleContent": "On s'inquiète, dans les milieux bien renseignés, d'un projet de loi du gouvernement permettant aux enfants de moins de 10 ans de conduire. ",
       "avatar": null
     },
     "cuit-29": {
@@ -315,8 +315,8 @@
       "theme": "societe",
       "credibility": 0,
       "exclusivity": 0.25,
-      "article_title": "Le virus de la grippe enfin vaincu",
-      "article_content": "C'est une petite révolution en matière de santé publique : le célèbre Docteur M. Aison a développé un nouveau traitement révolutionnaire… À consommer al dente !",
+      "articleTitle": "Le virus de la grippe enfin vaincu",
+      "articleContent": "C'est une petite révolution en matière de santé publique : le célèbre Docteur M. Aison a développé un nouveau traitement révolutionnaire… À consommer al dente !",
       "avatar": null
     },
     "cuit-30": {
@@ -326,8 +326,8 @@
       "theme": "politique",
       "credibility": 3,
       "exclusivity": 0.25,
-      "article_title": "Médiatart' dévoile le scandale du Voixtergate",
-      "article_content": "Scandale : des sénateurs se seraient rendus coupables d'un détournement de fonds. Ils prétendent que c'est pour acquérir des oreillers, mais la justice ne l'entend pas de cette oreille : elle penche pour un achat de voix.",
+      "articleTitle": "Médiatart' dévoile le scandale du Voixtergate",
+      "articleContent": "Scandale : des sénateurs se seraient rendus coupables d'un détournement de fonds. Ils prétendent que c'est pour acquérir des oreillers, mais la justice ne l'entend pas de cette oreille : elle penche pour un achat de voix.",
       "avatar": null
     },
     "cuit-31": {
@@ -337,8 +337,8 @@
       "theme": "politique",
       "credibility": 2,
       "exclusivity": 0.25,
-      "article_title": "Le Président veut rendre son éclat à la France",
-      "article_content": "Dans une allocution, le Président François Nederlande s'est montré volontaire, bien décidé à redorer le blason de la France. Il souhaite combattre les idées noires de ses concitoyens.",
+      "articleTitle": "Le Président veut rendre son éclat à la France",
+      "articleContent": "Dans une allocution, le Président François Nederlande s'est montré volontaire, bien décidé à redorer le blason de la France. Il souhaite combattre les idées noires de ses concitoyens.",
       "avatar": null
     },
     "cuit-32": {
@@ -348,8 +348,8 @@
       "theme": "politique",
       "credibility": 1,
       "exclusivity": 0.25,
-      "article_title": "Vandalisme à l'assemblée",
-      "article_content": "Image choquante : un député a décidé de casser un pauvre nain de jardin sans défense. Le parlementaire souhaitait exprimer ainsi son profond désaccord avec la nouvelle loi sur le contrôle des décorations de pelouses",
+      "articleTitle": "Vandalisme à l'assemblée",
+      "articleContent": "Image choquante : un député a décidé de casser un pauvre nain de jardin sans défense. Le parlementaire souhaitait exprimer ainsi son profond désaccord avec la nouvelle loi sur le contrôle des décorations de pelouses",
       "avatar": null
     },
     "cuit-33": {
@@ -359,8 +359,8 @@
       "theme": "politique",
       "credibility": 1,
       "exclusivity": 0.25,
-      "article_title": "Bientôt, des ministres high-tech ?",
-      "article_content": "Le groupe de réflexion Terra Vieilla conseille au gouvernement de s'équiper des tout nouveaux AïePhone 5 de Banana. Ils pourront ainsi rester toujours joignables… et faire des compétitions de Candy Brush.",
+      "articleTitle": "Bientôt, des ministres high-tech ?",
+      "articleContent": "Le groupe de réflexion Terra Vieilla conseille au gouvernement de s'équiper des tout nouveaux AïePhone 5 de Banana. Ils pourront ainsi rester toujours joignables… et faire des compétitions de Candy Brush.",
       "avatar": null
     },
     "cuit-34": {
@@ -370,8 +370,8 @@
       "theme": "politique",
       "credibility": 0,
       "exclusivity": 0.25,
-      "article_title": "La foule acclame Nadine Parano",
-      "article_content": "Elle n'a pas la langue dans sa poche. Est-ce le secret de la popularité de la controversée Nadine Parano ? En tout cas, une foule en liesse a accueilli la députée lors de sa visite à Trifougnan. ",
+      "articleTitle": "La foule acclame Nadine Parano",
+      "articleContent": "Elle n'a pas la langue dans sa poche. Est-ce le secret de la popularité de la controversée Nadine Parano ? En tout cas, une foule en liesse a accueilli la députée lors de sa visite à Trifougnan. ",
       "avatar": null
     },
     "cuit-35": {
@@ -381,8 +381,8 @@
       "theme": "politique",
       "credibility": 0,
       "exclusivity": 0.25,
-      "article_title": "La machination favorisant le fils du Premier Ministre mise à nu !",
-      "article_content": "Stupeur et effarement : il semblerait que si les cheveux blancs se voient moins sur les blonds, ce soit pour favoriser le fils du Premier Ministre, lui-même blond comme les blés. De quoi se mettre un brun en colère !",
+      "articleTitle": "La machination favorisant le fils du Premier Ministre mise à nu !",
+      "articleContent": "Stupeur et effarement : il semblerait que si les cheveux blancs se voient moins sur les blonds, ce soit pour favoriser le fils du Premier Ministre, lui-même blond comme les blés. De quoi se mettre un brun en colère !",
       "avatar": null
     },
     "cuit-36": {
@@ -392,8 +392,8 @@
       "theme": "economie",
       "credibility": 3,
       "exclusivity": 0.25,
-      "article_title": "Le pétrolier Tatol fait le plein de profits",
-      "article_content": "Pour Tatol, l'année qui se termine a été vraiment… super ! Le pétrolier, qui accumule plus de 700 millions d'euros de bénéfice, termine l'exercice comptable sans plomb dans ses comptes.",
+      "articleTitle": "Le pétrolier Tatol fait le plein de profits",
+      "articleContent": "Pour Tatol, l'année qui se termine a été vraiment… super ! Le pétrolier, qui accumule plus de 700 millions d'euros de bénéfice, termine l'exercice comptable sans plomb dans ses comptes.",
       "avatar": null
     },
     "cuit-37": {
@@ -403,8 +403,8 @@
       "theme": "economie",
       "credibility": 2,
       "exclusivity": 0.25,
-      "article_title": "La visite d'Ohmama relance l'économie française",
-      "article_content": "On savait le président Ohmama amateur de cuisine française. À l'occasion de sa visite présidentielle, il a acheté pour sa consommation personnelle 12 tonnes de foie gras, qu'il a fait envoyer aux États-Unis.",
+      "articleTitle": "La visite d'Ohmama relance l'économie française",
+      "articleContent": "On savait le président Ohmama amateur de cuisine française. À l'occasion de sa visite présidentielle, il a acheté pour sa consommation personnelle 12 tonnes de foie gras, qu'il a fait envoyer aux États-Unis.",
       "avatar": null
     },
     "cuit-38": {
@@ -414,8 +414,8 @@
       "theme": "economie",
       "credibility": 1,
       "exclusivity": 0.25,
-      "article_title": "Banco pour la banque BPP - PariBaBas !",
-      "article_content": "Les clients ont parlé, et ils ont désigné BPP - PariBaBas comme la meilleure banque du pays - Une distinction que l'établissement remporte pour la troisième fois consécutive. Jackpot !",
+      "articleTitle": "Banco pour la banque BPP - PariBaBas !",
+      "articleContent": "Les clients ont parlé, et ils ont désigné BPP - PariBaBas comme la meilleure banque du pays - Une distinction que l'établissement remporte pour la troisième fois consécutive. Jackpot !",
       "avatar": null
     },
     "cuit-39": {
@@ -425,8 +425,8 @@
       "theme": "economie",
       "credibility": 2,
       "exclusivity": 0.25,
-      "article_title": "Hausse de la TVA : une facture salée dans votre assiette",
-      "article_content": "Selon nos informations, le gouvernement travaillerait sur une hausse de la Taxe sur la Valeur Ajoutée prévue pour les produits alimentaires. Un véritable coup de poing dans le ventre pour les consommateurs…",
+      "articleTitle": "Hausse de la TVA : une facture salée dans votre assiette",
+      "articleContent": "Selon nos informations, le gouvernement travaillerait sur une hausse de la Taxe sur la Valeur Ajoutée prévue pour les produits alimentaires. Un véritable coup de poing dans le ventre pour les consommateurs…",
       "avatar": null
     },
     "cuit-40": {
@@ -436,8 +436,8 @@
       "theme": "economie",
       "credibility": 1,
       "exclusivity": 0.25,
-      "article_title": "Placements : une idée d'investissement solide",
-      "article_content": "Si vous êtes fortuné et à la recherche d'un placement intéressant, M. Mouse vous conseille d'investir dans l'achat de molaires. Où trouver cette ressource rare ? Toujours d'après M. Mouse, elle se situe \"souloreiller\".",
+      "articleTitle": "Placements : une idée d'investissement solide",
+      "articleContent": "Si vous êtes fortuné et à la recherche d'un placement intéressant, M. Mouse vous conseille d'investir dans l'achat de molaires. Où trouver cette ressource rare ? Toujours d'après M. Mouse, elle se situe \"souloreiller\".",
       "avatar": null
     },
     "cuit-41": {
@@ -447,8 +447,8 @@
       "theme": "economie",
       "credibility": 0,
       "exclusivity": 0.25,
-      "article_title": "Piej Apijon, la nouvelle start-up qui monte !",
-      "article_content": "Faire des tire-bouchons pour gauchers est une idée à la fois simple et géniale, qui assurera, à n'en pas douter, le succès de la société slovène Piej Apijon. Investisseur, il faudrait être bouché pour ne pas en profiter !",
+      "articleTitle": "Piej Apijon, la nouvelle start-up qui monte !",
+      "articleContent": "Faire des tire-bouchons pour gauchers est une idée à la fois simple et géniale, qui assurera, à n'en pas douter, le succès de la société slovène Piej Apijon. Investisseur, il faudrait être bouché pour ne pas en profiter !",
       "avatar": null
     },
     "cuit-42": {
@@ -458,8 +458,8 @@
       "theme": "science-technologie-et-jeux-video",
       "credibility": 3,
       "exclusivity": 0.25,
-      "article_title": "Une découverte scientifique révolutionnaire.",
-      "article_content": "C'est le chercheur français Al Bernstein qui l'a annoncé sur Cuicuitter : les scientifiques ont réussi à confirmer l'existence du Boson de Biggs. Nous n'avons pas tout à fait compris ce que c'était, mais ça a l'air très important.",
+      "articleTitle": "Une découverte scientifique révolutionnaire.",
+      "articleContent": "C'est le chercheur français Al Bernstein qui l'a annoncé sur Cuicuitter : les scientifiques ont réussi à confirmer l'existence du Boson de Biggs. Nous n'avons pas tout à fait compris ce que c'était, mais ça a l'air très important.",
       "avatar": null
     },
     "cuit-43": {
@@ -469,8 +469,8 @@
       "theme": "science-technologie-et-jeux-video",
       "credibility": 2,
       "exclusivity": 0.25,
-      "article_title": "La science perce un grand mystère du quotidien.",
-      "article_content": "C'est la hantise de tous les petits-déjeuners : pourquoi une tartine qui tombe s'écrase-t-elle toujours du côté avec la confiture ? Les chercheurs du CNRT ont enfin trouvé la réponse à cette question… collante.",
+      "articleTitle": "La science perce un grand mystère du quotidien.",
+      "articleContent": "C'est la hantise de tous les petits-déjeuners : pourquoi une tartine qui tombe s'écrase-t-elle toujours du côté avec la confiture ? Les chercheurs du CNRT ont enfin trouvé la réponse à cette question… collante.",
       "avatar": null
     },
     "cuit-44": {
@@ -480,8 +480,8 @@
       "theme": "science-technologie-et-jeux-video",
       "credibility": 2,
       "exclusivity": 0.25,
-      "article_title": "Le public dévore les stocks de Call of Cookie",
-      "article_content": "Le jeu Call of Cookie était particulièrement attendu par les fans, et il a provoqué une ruée des joueurs dès sa sortie. Bibisoft, l'éditeur, a annoncé avoir déjà vendu plus de 5 millions d'exemplaires du jeu.",
+      "articleTitle": "Le public dévore les stocks de Call of Cookie",
+      "articleContent": "Le jeu Call of Cookie était particulièrement attendu par les fans, et il a provoqué une ruée des joueurs dès sa sortie. Bibisoft, l'éditeur, a annoncé avoir déjà vendu plus de 5 millions d'exemplaires du jeu.",
       "avatar": null
     },
     "cuit-45": {
@@ -491,8 +491,8 @@
       "theme": "science-technologie-et-jeux-video",
       "credibility": 1,
       "exclusivity": 0.25,
-      "article_title": "Le nouveau AïePhone ravit grands et petits avec sa fonction \"Bisou Magique\"",
-      "article_content": "Vous êtes-vous déjà cogné le doigt en répondant au téléphone ? Eh bien, le constructeur Banana a pensé à vous. Son AïePhone 5 propose désormais la fonction \"Bisou qui soigne\", pour guérir les petits tracas du quotidien.",
+      "articleTitle": "Le nouveau AïePhone ravit grands et petits avec sa fonction \"Bisou Magique\"",
+      "articleContent": "Vous êtes-vous déjà cogné le doigt en répondant au téléphone ? Eh bien, le constructeur Banana a pensé à vous. Son AïePhone 5 propose désormais la fonction \"Bisou qui soigne\", pour guérir les petits tracas du quotidien.",
       "avatar": null
     },
     "cuit-46": {
@@ -502,8 +502,8 @@
       "theme": "science-technologie-et-jeux-video",
       "credibility": 1,
       "exclusivity": 0.25,
-      "article_title": "Faites de belles galettes, pas des boulettes !",
-      "article_content": "Voilà une invention qui vous assurera que votre cuisine ne tombera jamais à plat : la machine à retourner les crêpes, développée par le professeur Alex Périence, promet d'être une vraie révolution pour la prochaine Chandeleur.",
+      "articleTitle": "Faites de belles galettes, pas des boulettes !",
+      "articleContent": "Voilà une invention qui vous assurera que votre cuisine ne tombera jamais à plat : la machine à retourner les crêpes, développée par le professeur Alex Périence, promet d'être une vraie révolution pour la prochaine Chandeleur.",
       "avatar": null
     },
     "cuit-47": {
@@ -513,8 +513,8 @@
       "theme": "science-technologie-et-jeux-video",
       "credibility": 0,
       "exclusivity": 0.25,
-      "article_title": "Le foot les doigts dans le nez",
-      "article_content": "La prochaine version de FIBA, le célèbre jeu de foot, repoussera encore les limites du réalisme, puisqu'on pourra y sentir l'odeur des pieds de Zlatatan ou des dessous de bras d'André-Pierre Maniac.",
+      "articleTitle": "Le foot les doigts dans le nez",
+      "articleContent": "La prochaine version de FIBA, le célèbre jeu de foot, repoussera encore les limites du réalisme, puisqu'on pourra y sentir l'odeur des pieds de Zlatatan ou des dessous de bras d'André-Pierre Maniac.",
       "avatar": null
     },
     "cuit-48": {
@@ -524,8 +524,8 @@
       "theme": "international",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "Le terroriste ne savait pas conduire! ",
-      "article_content": "Les attentats se multiplient en Irak, où une voiture piégée a causé la destruction d'un parking, sans faire la moindre victime. Le chauffeur miraculé de la voiture était connu des services de police pour ses créneaux désastreux.",
+      "articleTitle": "Le terroriste ne savait pas conduire! ",
+      "articleContent": "Les attentats se multiplient en Irak, où une voiture piégée a causé la destruction d'un parking, sans faire la moindre victime. Le chauffeur miraculé de la voiture était connu des services de police pour ses créneaux désastreux.",
       "avatar": null
     },
     "cuit-49": {
@@ -535,8 +535,8 @@
       "theme": "international",
       "credibility": 3,
       "exclusivity": 0.0,
-      "article_title": "Monaco/Saint-Marin : que le meilleur gagne ! ",
-      "article_content": "La France n'arbitrera pas le conflit armé entre l'armée monégasque (12 hommes) et la République de Saint-Marin (8 soldats). Le Vatican soutenant cette dernière, Monaco cherche à obtenir une aide de poids : celle de la Principauté d'Andorre. ",
+      "articleTitle": "Monaco/Saint-Marin : que le meilleur gagne ! ",
+      "articleContent": "La France n'arbitrera pas le conflit armé entre l'armée monégasque (12 hommes) et la République de Saint-Marin (8 soldats). Le Vatican soutenant cette dernière, Monaco cherche à obtenir une aide de poids : celle de la Principauté d'Andorre. ",
       "avatar": null
     },
     "cuit-50": {
@@ -546,8 +546,8 @@
       "theme": "international",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "Grande vague de pluies en Europe de l'Est",
-      "article_content": "La météo n'a pas été clémente avec la Bulgarie : le pays est depuis plusieurs jours victime de pluies sévères. Si la situation ne s'améliore pas, la Rounanie et la Hongrie voisines risquent aussi de boire la tasse.",
+      "articleTitle": "Grande vague de pluies en Europe de l'Est",
+      "articleContent": "La météo n'a pas été clémente avec la Bulgarie : le pays est depuis plusieurs jours victime de pluies sévères. Si la situation ne s'améliore pas, la Rounanie et la Hongrie voisines risquent aussi de boire la tasse.",
       "avatar": null
     },
     "cuit-51": {
@@ -557,8 +557,8 @@
       "theme": "international",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "Inde : la mort d'une vache fait tout un fromage",
-      "article_content": "En Inde, une génisse a été retrouvée morte près de Jaitapur, et le chef de police a ouvert une enquête pour retrouver le coupable. \"La vache !\" a-t-il déclaré, \"c'est le genre d'affaire qui me fait voir rouge !\"",
+      "articleTitle": "Inde : la mort d'une vache fait tout un fromage",
+      "articleContent": "En Inde, une génisse a été retrouvée morte près de Jaitapur, et le chef de police a ouvert une enquête pour retrouver le coupable. \"La vache !\" a-t-il déclaré, \"c'est le genre d'affaire qui me fait voir rouge !\"",
       "avatar": null
     },
     "cuit-52": {
@@ -568,8 +568,8 @@
       "theme": "international",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "Une arme pour chaque Américain",
-      "article_content": "Une étude américaine a dénombré 318 000 0001 armes à feu pour 318 000 000 habitants sur le sol américain. C'est la première fois que le taux d'armes par habitant passe au-dessus de 1, mais une naissance des jumeaux suffirait à changer la donne.  ",
+      "articleTitle": "Une arme pour chaque Américain",
+      "articleContent": "Une étude américaine a dénombré 318 000 0001 armes à feu pour 318 000 000 habitants sur le sol américain. C'est la première fois que le taux d'armes par habitant passe au-dessus de 1, mais une naissance des jumeaux suffirait à changer la donne.  ",
       "avatar": null
     },
     "cuit-53": {
@@ -579,8 +579,8 @@
       "theme": "international",
       "credibility": 0,
       "exclusivity": 0.0,
-      "article_title": "L'Ukraine, un service public? ",
-      "article_content": "Le président Russe aurait annoncé son désir de privatiser l'Ukraine voisine, pour contrôler son déficit budgétaire. En réaction, les Ukrainiens ont d'ores et déjà entamé une grève de la citoyenneté. ",
+      "articleTitle": "L'Ukraine, un service public? ",
+      "articleContent": "Le président Russe aurait annoncé son désir de privatiser l'Ukraine voisine, pour contrôler son déficit budgétaire. En réaction, les Ukrainiens ont d'ores et déjà entamé une grève de la citoyenneté. ",
       "avatar": null
     },
     "cuit-54": {
@@ -590,8 +590,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "Bernard Pipot spoile Gems of Pron",
-      "article_content": "Scandale sur Cuicuitter : Bernard Pipot a révélé la fin de la série à succès Gems of Pron. Suite à la demande des internautes, Le Président Nederlande a évoqué l'idée d'interdire tous les livres de la série pour éviter ce genre de désagrément.",
+      "articleTitle": "Bernard Pipot spoile Gems of Pron",
+      "articleContent": "Scandale sur Cuicuitter : Bernard Pipot a révélé la fin de la série à succès Gems of Pron. Suite à la demande des internautes, Le Président Nederlande a évoqué l'idée d'interdire tous les livres de la série pour éviter ce genre de désagrément.",
       "avatar": null
     },
     "cuit-55": {
@@ -601,8 +601,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "Le Roller Derby remplacera le ping-pong au bac 2015.",
-      "article_content": "Le ministère de l'Education Nationale a annoncé sa volonté d'ouvrir le bac de sport au Roller Derby. Les associations d'Ultimate Frisbee, de ChessBoxing, de Lancer de nains et de Quidditch l'ont mauvaise. ",
+      "articleTitle": "Le Roller Derby remplacera le ping-pong au bac 2015.",
+      "articleContent": "Le ministère de l'Education Nationale a annoncé sa volonté d'ouvrir le bac de sport au Roller Derby. Les associations d'Ultimate Frisbee, de ChessBoxing, de Lancer de nains et de Quidditch l'ont mauvaise. ",
       "avatar": null
     },
     "cuit-56": {
@@ -612,8 +612,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "Tulle et Traumaé : bientôt un duo?",
-      "article_content": "La chanteuse franco-israélienne Tulle aurait eu une affaire avec le Belge Traumaé. “C'est le passé”, a-t-elle déclaré. Traumaé, lui, aurait tout simplement trouvé ça “Formidable”. ",
+      "articleTitle": "Tulle et Traumaé : bientôt un duo?",
+      "articleContent": "La chanteuse franco-israélienne Tulle aurait eu une affaire avec le Belge Traumaé. “C'est le passé”, a-t-elle déclaré. Traumaé, lui, aurait tout simplement trouvé ça “Formidable”. ",
       "avatar": null
     },
     "cuit-57": {
@@ -623,8 +623,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "Un Batman à la française",
-      "article_content": "Jack Sniper, le réalisateur à succès, lorgnerait du côté de Jean Roquefort pour incarner le prochain Batman. Traumaé serait quant à lui pressenti pour le rôle de Double Face et Sblagg Man pour le Joker. ",
+      "articleTitle": "Un Batman à la française",
+      "articleContent": "Jack Sniper, le réalisateur à succès, lorgnerait du côté de Jean Roquefort pour incarner le prochain Batman. Traumaé serait quant à lui pressenti pour le rôle de Double Face et Sblagg Man pour le Joker. ",
       "avatar": null
     },
     "cuit-58": {
@@ -634,8 +634,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 0,
       "exclusivity": 0.0,
-      "article_title": "La Bentleyy de Sblagg Man toute cabossey",
-      "article_content": "Alors qu'il conduisait à reculons sur la RN7, Sblagg Man a percuté un feu de signalisation. Son précieux véhicule devenu hors d'usage, le rappeur de génie songe déjà à s'acheter une Chevroleyy.",
+      "articleTitle": "La Bentleyy de Sblagg Man toute cabossey",
+      "articleContent": "Alors qu'il conduisait à reculons sur la RN7, Sblagg Man a percuté un feu de signalisation. Son précieux véhicule devenu hors d'usage, le rappeur de génie songe déjà à s'acheter une Chevroleyy.",
       "avatar": null
     },
     "cuit-59": {
@@ -645,8 +645,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 0,
       "exclusivity": 0.0,
-      "article_title": "Défaite de l'OM : Maniac a les boules. ",
-      "article_content": "Suite à la défaite de l'Orrifique de Marseille face au Paris Saint-Glinglin l'attaquant marseillais demande une revanche à la pétanque. Fair-play, il a aussi sorti le pastis.  ",
+      "articleTitle": "Défaite de l'OM : Maniac a les boules. ",
+      "articleContent": "Suite à la défaite de l'Orrifique de Marseille face au Paris Saint-Glinglin l'attaquant marseillais demande une revanche à la pétanque. Fair-play, il a aussi sorti le pastis.  ",
       "avatar": null
     },
     "cuit-60": {
@@ -656,8 +656,8 @@
       "theme": "societe",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "Les professeurs vont apprendre à apprendre",
-      "article_content": "Une épreuve de pédagogie sera ajoutée aux prochains examens du Capes. Déjà, la grogne monte du côté des professeurs : “C'est déjà une chose de supporter les élèves, si en plus il faut leur apprendre des choses...”",
+      "articleTitle": "Les professeurs vont apprendre à apprendre",
+      "articleContent": "Une épreuve de pédagogie sera ajoutée aux prochains examens du Capes. Déjà, la grogne monte du côté des professeurs : “C'est déjà une chose de supporter les élèves, si en plus il faut leur apprendre des choses...”",
       "avatar": null
     },
     "cuit-61": {
@@ -667,8 +667,8 @@
       "theme": "societe",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "Masser n'est pas tromper! ",
-      "article_content": "Coquins, les Français? Oui, à en croire l'étude de l'INSCD qui révèle que 68% des Français se seraient déjà fait masser en dehors de leur couple. Les massages les plus fréquents seraient ceux du crâne, du dos, et des coudes. ",
+      "articleTitle": "Masser n'est pas tromper! ",
+      "articleContent": "Coquins, les Français? Oui, à en croire l'étude de l'INSCD qui révèle que 68% des Français se seraient déjà fait masser en dehors de leur couple. Les massages les plus fréquents seraient ceux du crâne, du dos, et des coudes. ",
       "avatar": null
     },
     "cuit-62": {
@@ -678,8 +678,8 @@
       "theme": "societe",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "Grève des cheminots : Plus de sandwiches au wagon-bar",
-      "article_content": "Après deux semaines d'immobilisation des trains, les grévistes de la SCNF veulent rallier les voyageurs immobilisés à leur cause en leur proposant une grève de la faim clef en main. ",
+      "articleTitle": "Grève des cheminots : Plus de sandwiches au wagon-bar",
+      "articleContent": "Après deux semaines d'immobilisation des trains, les grévistes de la SCNF veulent rallier les voyageurs immobilisés à leur cause en leur proposant une grève de la faim clef en main. ",
       "avatar": null
     },
     "cuit-63": {
@@ -689,8 +689,8 @@
       "theme": "societe",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "Maître Rims clashe Maître Rims ",
-      "article_content": "Agacé des moqueries à son encontre, Jean-Michel Rims, avocat de profession, traîne le rappeur Maitre Rims en procès. “Les gens me demandent de chanter Bella lors des plaidoiries, c'est très agaçant.”",
+      "articleTitle": "Maître Rims clashe Maître Rims ",
+      "articleContent": "Agacé des moqueries à son encontre, Jean-Michel Rims, avocat de profession, traîne le rappeur Maitre Rims en procès. “Les gens me demandent de chanter Bella lors des plaidoiries, c'est très agaçant.”",
       "avatar": null
     },
     "cuit-64": {
@@ -700,8 +700,8 @@
       "theme": "societe",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "Manifestations des Révoltés devant le Burger Quick",
-      "article_content": "Après avoir obtenu la fermeture du Burger quick ce soir vers 20 heures, les Révoltés manifestent maintenant pour sa réouverture. Le fast-food devrait rouvrir ses portes demain à 8h, comme chaque matin. ",
+      "articleTitle": "Manifestations des Révoltés devant le Burger Quick",
+      "articleContent": "Après avoir obtenu la fermeture du Burger quick ce soir vers 20 heures, les Révoltés manifestent maintenant pour sa réouverture. Le fast-food devrait rouvrir ses portes demain à 8h, comme chaque matin. ",
       "avatar": null
     },
     "cuit-65": {
@@ -711,8 +711,8 @@
       "theme": "societe",
       "credibility": 0,
       "exclusivity": 0.0,
-      "article_title": "Le Dr. M.Aison soigne l'acné en observant les grand-mères",
-      "article_content": "Ayant constaté qu'aucune grand-mère n'avait d'acné, le Dr M. Aison conclut que pour faire disparaître les vilains boutons, il suffit d'adopter leur rythme de vie : tisane, Fous de l'Amour et gâteaux secs. ",
+      "articleTitle": "Le Dr. M.Aison soigne l'acné en observant les grand-mères",
+      "articleContent": "Ayant constaté qu'aucune grand-mère n'avait d'acné, le Dr M. Aison conclut que pour faire disparaître les vilains boutons, il suffit d'adopter leur rythme de vie : tisane, Fous de l'Amour et gâteaux secs. ",
       "avatar": null
     },
     "cuit-66": {
@@ -722,8 +722,8 @@
       "theme": "politique",
       "credibility": 3,
       "exclusivity": 0.0,
-      "article_title": "MediaTart révèle l'affaire “Larsen” ",
-      "article_content": "La mise sur écoute du gouvernement par MediaTart a révélé la mise sur écoute de MediaTart par le gouvernement. La rencontre du Président Nederlande et d'Edwige Plenel qui a suivi ne fut qu'un dialogue de sourds. ",
+      "articleTitle": "MediaTart révèle l'affaire “Larsen” ",
+      "articleContent": "La mise sur écoute du gouvernement par MediaTart a révélé la mise sur écoute de MediaTart par le gouvernement. La rencontre du Président Nederlande et d'Edwige Plenel qui a suivi ne fut qu'un dialogue de sourds. ",
       "avatar": null
     },
     "cuit-67": {
@@ -733,8 +733,8 @@
       "theme": "politique",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "La cérémonie de décoration tombe à l'eau. ",
-      "article_content": "Nabiba a surpris son monde au Palais de l'Élysée en refusant de se voir décerner la Légion d'honneur par le Président Nerderlande. Elle n'avait aucune robe pour aller avec. Le revers de la médaille d'une vie trop superficielle. ",
+      "articleTitle": "La cérémonie de décoration tombe à l'eau. ",
+      "articleContent": "Nabiba a surpris son monde au Palais de l'Élysée en refusant de se voir décerner la Légion d'honneur par le Président Nerderlande. Elle n'avait aucune robe pour aller avec. Le revers de la médaille d'une vie trop superficielle. ",
       "avatar": null
     },
     "cuit-68": {
@@ -744,8 +744,8 @@
       "theme": "politique",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "L'Assemblée Nationale mène le Sénat 1-0",
-      "article_content": "Le lobby des sénateurs à l'Assemblée Nationale n'a pas empêché la loi anti-Senat d'être votée. Déjà, un lobby de députés de l'Assemblée se mobilise pour faire pression lors du vote au Sénat. Ils n'ont pas fini de parlementer !",
+      "articleTitle": "L'Assemblée Nationale mène le Sénat 1-0",
+      "articleContent": "Le lobby des sénateurs à l'Assemblée Nationale n'a pas empêché la loi anti-Senat d'être votée. Déjà, un lobby de députés de l'Assemblée se mobilise pour faire pression lors du vote au Sénat. Ils n'ont pas fini de parlementer !",
       "avatar": null
     },
     "cuit-69": {
@@ -755,8 +755,8 @@
       "theme": "politique",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "Terra Vieilla veut mener le gouvernement à la manette",
-      "article_content": "Le think tank Terra Vieilla enjoint les ministres à pratiquer chaque soir une heure de Grand Theft Toto sur Playbox One. Partisan de cette idée, Bibisoft a proposé d'ajouter au jeu un mode “Immunité diplomatique”. ",
+      "articleTitle": "Terra Vieilla veut mener le gouvernement à la manette",
+      "articleContent": "Le think tank Terra Vieilla enjoint les ministres à pratiquer chaque soir une heure de Grand Theft Toto sur Playbox One. Partisan de cette idée, Bibisoft a proposé d'ajouter au jeu un mode “Immunité diplomatique”. ",
       "avatar": null
     },
     "cuit-70": {
@@ -766,8 +766,8 @@
       "theme": "politique",
       "credibility": 0,
       "exclusivity": 0.0,
-      "article_title": "Nadine Parano est un robot! ",
-      "article_content": "Nadine Parano confirme sur Cuicuitter la rumeur qui voudrait qu'elle soit un robot à la solde de la gauche, destiné à décrédibiliser la droite. Le président du parti n'a pas l'air étonné : “C'est vrai qu'elle pétait toujours des fusibles...” ",
+      "articleTitle": "Nadine Parano est un robot! ",
+      "articleContent": "Nadine Parano confirme sur Cuicuitter la rumeur qui voudrait qu'elle soit un robot à la solde de la gauche, destiné à décrédibiliser la droite. Le président du parti n'a pas l'air étonné : “C'est vrai qu'elle pétait toujours des fusibles...” ",
       "avatar": null
     },
     "cuit-71": {
@@ -777,8 +777,8 @@
       "theme": "politique",
       "credibility": 0,
       "exclusivity": 0.0,
-      "article_title": "Y'a pas d'lézard à l'Élysée (à moins que...) ",
-      "article_content": "Basile Uminati dénonce une collusion entre la presse et le gouvernement, et affirme que le Président de la République est un lézard géant. Refusant de répondre à ces accusations, M. Nederlande a préféré bronzer au soleil. ",
+      "articleTitle": "Y'a pas d'lézard à l'Élysée (à moins que...) ",
+      "articleContent": "Basile Uminati dénonce une collusion entre la presse et le gouvernement, et affirme que le Président de la République est un lézard géant. Refusant de répondre à ces accusations, M. Nederlande a préféré bronzer au soleil. ",
       "avatar": null
     },
     "cuit-72": {
@@ -788,8 +788,8 @@
       "theme": "economie",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "Y'a-t-il un président pour sauver Maître Rims? ",
-      "article_content": "En 2015, les Français devront tirer une croix sur Maitre Rims. C'est en tout cas ce qu'affirme sur Cuicuitter l'économiste Alain Flation. Sans une action rapide de l'État, c'est toute l'industrie de la musique qui pourrait alors vaciller.",
+      "articleTitle": "Y'a-t-il un président pour sauver Maître Rims? ",
+      "articleContent": "En 2015, les Français devront tirer une croix sur Maitre Rims. C'est en tout cas ce qu'affirme sur Cuicuitter l'économiste Alain Flation. Sans une action rapide de l'État, c'est toute l'industrie de la musique qui pourrait alors vaciller.",
       "avatar": null
     },
     "cuit-73": {
@@ -799,8 +799,8 @@
       "theme": "economie",
       "credibility": 3,
       "exclusivity": 0.0,
-      "article_title": "Le lait, bon pour la croissance.",
-      "article_content": "La campagne visant à promouvoir  la consommation de produits laitiers auprès des jeunes a porté ses fruits. L'économie du lait s'est redressée, quant aux jeunes, ça leur aurait fait pousser la moustache.",
+      "articleTitle": "Le lait, bon pour la croissance.",
+      "articleContent": "La campagne visant à promouvoir  la consommation de produits laitiers auprès des jeunes a porté ses fruits. L'économie du lait s'est redressée, quant aux jeunes, ça leur aurait fait pousser la moustache.",
       "avatar": null
     },
     "cuit-74": {
@@ -810,8 +810,8 @@
       "theme": "economie",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "BPP PariBaBas, la banque qui sait parler aux jeunes. ",
-      "article_content": "La BPP PariBaBas vient d'ouvrir un nouveau livret destiné aux jeunes bacheliers, qui prévoit des intérets à 60% en cas de découvert. Comme ça, au moins, ils ne risquent pas de faire n'importe quoi avec leur argent de poche… malin !",
+      "articleTitle": "BPP PariBaBas, la banque qui sait parler aux jeunes. ",
+      "articleContent": "La BPP PariBaBas vient d'ouvrir un nouveau livret destiné aux jeunes bacheliers, qui prévoit des intérets à 60% en cas de découvert. Comme ça, au moins, ils ne risquent pas de faire n'importe quoi avec leur argent de poche… malin !",
       "avatar": null
     },
     "cuit-75": {
@@ -821,8 +821,8 @@
       "theme": "economie",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "La bourse ou la vie !",
-      "article_content": "À peine l'entrée en bourse de GroTube a-t-elle été annoncée qu'un terroriste  a sorti un revolver et sommé les actionnaires de lui concéder toutes leurs parts. La police soupçonne une action du groupe terroriste O.P.A.",
+      "articleTitle": "La bourse ou la vie !",
+      "articleContent": "À peine l'entrée en bourse de GroTube a-t-elle été annoncée qu'un terroriste  a sorti un revolver et sommé les actionnaires de lui concéder toutes leurs parts. La police soupçonne une action du groupe terroriste O.P.A.",
       "avatar": null
     },
     "cuit-76": {
@@ -832,8 +832,8 @@
       "theme": "economie",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "M. Mouse va vous rendre le sourire",
-      "article_content": "Une bonne nouvelle pour les porteurs de dentiers : M. Mouse propose des devis gratuits pour vous refaire la mâchoire, des molaires aux incisives. Pas étonnant que ses concurrents aient une dent contre lui. ",
+      "articleTitle": "M. Mouse va vous rendre le sourire",
+      "articleContent": "Une bonne nouvelle pour les porteurs de dentiers : M. Mouse propose des devis gratuits pour vous refaire la mâchoire, des molaires aux incisives. Pas étonnant que ses concurrents aient une dent contre lui. ",
       "avatar": null
     },
     "cuit-77": {
@@ -843,8 +843,8 @@
       "theme": "economie",
       "credibility": 0,
       "exclusivity": 0.0,
-      "article_title": "Ohmama parie sur le tire-bouchon pour gaucher",
-      "article_content": "Contactée par nos soins, l'agence La Bourse Facile nous a révélé que Barraque Ohmama aurait placé plusieurs millions de dollars dans la startup slovène Piej Apijon. Un modèle à suivre? ",
+      "articleTitle": "Ohmama parie sur le tire-bouchon pour gaucher",
+      "articleContent": "Contactée par nos soins, l'agence La Bourse Facile nous a révélé que Barraque Ohmama aurait placé plusieurs millions de dollars dans la startup slovène Piej Apijon. Un modèle à suivre? ",
       "avatar": null
     },
     "cuit-78": {
@@ -854,8 +854,8 @@
       "theme": "science-technologie-et-jeux-video",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "Vie sur Mars? La NASA ne se mouille pas. ",
-      "article_content": "La découverte d'une serviette-éponge par Curiosit-E confirme l'hypothèse d'un océan martien. Cette serviette pourrait aussi témoigner de la présence d'une forme de vie, mais la NASA préfère ne pas tirer de conclusion hâtive. ",
+      "articleTitle": "Vie sur Mars? La NASA ne se mouille pas. ",
+      "articleContent": "La découverte d'une serviette-éponge par Curiosit-E confirme l'hypothèse d'un océan martien. Cette serviette pourrait aussi témoigner de la présence d'une forme de vie, mais la NASA préfère ne pas tirer de conclusion hâtive. ",
       "avatar": null
     },
     "cuit-79": {
@@ -865,8 +865,8 @@
       "theme": "science-technologie-et-jeux-video",
       "credibility": 3,
       "exclusivity": 0.0,
-      "article_title": "Nouveau record battu pour le CNRT",
-      "article_content": "En basant leurs études sur les antiques technologies des années 90, les chercheurs du CRNT sont parvenus à concevoir des batteries de smartphone capable de tenir deux jours sans charge ! Banana Inc. songe déjà au rachat.",
+      "articleTitle": "Nouveau record battu pour le CNRT",
+      "articleContent": "En basant leurs études sur les antiques technologies des années 90, les chercheurs du CRNT sont parvenus à concevoir des batteries de smartphone capable de tenir deux jours sans charge ! Banana Inc. songe déjà au rachat.",
       "avatar": null
     },
     "cuit-80": {
@@ -876,8 +876,8 @@
       "theme": "science-technologie-et-jeux-video",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "Hashashin's Cred' repoussé, la tuile !",
-      "article_content": "L'Association des couvreurs accuse Hashashin's Cred' de donner le mauvais exemple à la jeunesse en faisant courir ses héros sur les toits. Chargé de réparer les tuiles cassées, Bibisoft repousse la sortie du prochain volet.",
+      "articleTitle": "Hashashin's Cred' repoussé, la tuile !",
+      "articleContent": "L'Association des couvreurs accuse Hashashin's Cred' de donner le mauvais exemple à la jeunesse en faisant courir ses héros sur les toits. Chargé de réparer les tuiles cassées, Bibisoft repousse la sortie du prochain volet.",
       "avatar": null
     },
     "cuit-81": {
@@ -887,8 +887,8 @@
       "theme": "science-technologie-et-jeux-video",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "Banana Inc., l'entreprise qui donne la banane",
-      "article_content": "De toutes les marques de smartphones, Banana Inc. est assurément la meilleure ! À la pointe de l'innovation, elle a toujours su offrir à ses clients le meilleur rapport vanité/prix. (J'espère que je vais gagner !) ",
+      "articleTitle": "Banana Inc., l'entreprise qui donne la banane",
+      "articleContent": "De toutes les marques de smartphones, Banana Inc. est assurément la meilleure ! À la pointe de l'innovation, elle a toujours su offrir à ses clients le meilleur rapport vanité/prix. (J'espère que je vais gagner !) ",
       "avatar": null
     },
     "cuit-82": {
@@ -898,8 +898,8 @@
       "theme": "science-technologie-et-jeux-video",
       "credibility": 0,
       "exclusivity": 0.0,
-      "article_title": "Alex Perience dans le pétrin ! ",
-      "article_content": "Nouvelle découverte du professeur Alex Perience : il serait possible de produire un puissant explosif à base de farine de blé. La formule est malheureusement inaccessible, son site venant d'être fermé par la CIA. ",
+      "articleTitle": "Alex Perience dans le pétrin ! ",
+      "articleContent": "Nouvelle découverte du professeur Alex Perience : il serait possible de produire un puissant explosif à base de farine de blé. La formule est malheureusement inaccessible, son site venant d'être fermé par la CIA. ",
       "avatar": null
     },
     "cuit-83": {
@@ -909,8 +909,8 @@
       "theme": "science-technologie-et-jeux-video",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "Angry Games : Chronique d'un succès annoncé. ",
-      "article_content": "Raviole, studio créateur d'Hungry Birds, préparerait un cross-over avec Anger Games. Perchés sur des forts de bric-à-brac, de jeunes adolescents s'y lanceraient des oiseaux morts pour tenter de se faire mutuellement chuter.",
+      "articleTitle": "Angry Games : Chronique d'un succès annoncé. ",
+      "articleContent": "Raviole, studio créateur d'Hungry Birds, préparerait un cross-over avec Anger Games. Perchés sur des forts de bric-à-brac, de jeunes adolescents s'y lanceraient des oiseaux morts pour tenter de se faire mutuellement chuter.",
       "avatar": null
     },
     "cuit-84": {
@@ -920,8 +920,8 @@
       "theme": "international",
       "credibility": 3,
       "exclusivity": 0.0,
-      "article_title": "Les bons règlements de comptes font les bons amis",
-      "article_content": "Le fils du préfet des Bouches-Du-Rhône, qu'on a retrouvé Kalashnikov en main sur les lieux de la fusillade en train de crier “Ha! Je vous ai bien eus bande de gros bolosses !”, a finalement été disculpé, faute de preuves. ",
+      "articleTitle": "Les bons règlements de comptes font les bons amis",
+      "articleContent": "Le fils du préfet des Bouches-Du-Rhône, qu'on a retrouvé Kalashnikov en main sur les lieux de la fusillade en train de crier “Ha! Je vous ai bien eus bande de gros bolosses !”, a finalement été disculpé, faute de preuves. ",
       "avatar": null
     },
     "cuit-85": {
@@ -931,8 +931,8 @@
       "theme": "international",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "Le ministre en a trop dit !",
-      "article_content": "Bévue du Ministre des Affaires Etrangères qui s'est exprimé au sujet du conflit dont on tait le nom. Jugée trop explicite, son allocution a été sévèrement critiquée par les associations de tous bords. ",
+      "articleTitle": "Le ministre en a trop dit !",
+      "articleContent": "Bévue du Ministre des Affaires Etrangères qui s'est exprimé au sujet du conflit dont on tait le nom. Jugée trop explicite, son allocution a été sévèrement critiquée par les associations de tous bords. ",
       "avatar": null
     },
     "cuit-86": {
@@ -942,8 +942,8 @@
       "theme": "international",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "Un État membre manque à l'appel ",
-      "article_content": "Suite à l'oubli d'un État membre, L'Union Européenne vient de lancer un avis de recherche et somme les citoyens du pays disparu de se manifester. Le Président de l'U.E. aurait déclaré : “Ça commence pas un S...ou un L...je ne sais plus trop”",
+      "articleTitle": "Un État membre manque à l'appel ",
+      "articleContent": "Suite à l'oubli d'un État membre, L'Union Européenne vient de lancer un avis de recherche et somme les citoyens du pays disparu de se manifester. Le Président de l'U.E. aurait déclaré : “Ça commence pas un S...ou un L...je ne sais plus trop”",
       "avatar": null
     },
     "cuit-87": {
@@ -953,8 +953,8 @@
       "theme": "international",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "Banana Inc. bride l'économie Chinoise",
-      "article_content": "La qualité grandissante des produits chinois a poussé Banana Inc. a déposer la marque “Made in China”. Face aux prix exorbitants de la firme, les commerçants Chinois se voient contraints d'importer du Made in Taïwan. ",
+      "articleTitle": "Banana Inc. bride l'économie Chinoise",
+      "articleContent": "La qualité grandissante des produits chinois a poussé Banana Inc. a déposer la marque “Made in China”. Face aux prix exorbitants de la firme, les commerçants Chinois se voient contraints d'importer du Made in Taïwan. ",
       "avatar": null
     },
     "cuit-88": {
@@ -964,8 +964,8 @@
       "theme": "international",
       "credibility": 0,
       "exclusivity": 0.0,
-      "article_title": "Le rêve américain se poursuit",
-      "article_content": "Pour la 26e année consécutive, les USA sont déclarés le pays où il fait le mieux vivre par l'Agence Nationale pour la Suprématie Américaine. La 2e et 3e places sont respectivement occupées par l'Europe et la Corse. ",
+      "articleTitle": "Le rêve américain se poursuit",
+      "articleContent": "Pour la 26e année consécutive, les USA sont déclarés le pays où il fait le mieux vivre par l'Agence Nationale pour la Suprématie Américaine. La 2e et 3e places sont respectivement occupées par l'Europe et la Corse. ",
       "avatar": null
     },
     "cuit-89": {
@@ -975,8 +975,8 @@
       "theme": "international",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "Ivre, il manque de déclencher une guerre nucléaire. ",
-      "article_content": "Le  test nucléaire opéré ce matin sur l'atoll de Morora ne serait en fait qu'un regrettable accident. Lors d'une soirée trop arrosée, le président russe Vladimir Tétine aurait confondu le bouton rouge et l'allume-cigare.   ",
+      "articleTitle": "Ivre, il manque de déclencher une guerre nucléaire. ",
+      "articleContent": "Le  test nucléaire opéré ce matin sur l'atoll de Morora ne serait en fait qu'un regrettable accident. Lors d'une soirée trop arrosée, le président russe Vladimir Tétine aurait confondu le bouton rouge et l'allume-cigare.   ",
       "avatar": null
     },
     "cuit-90": {
@@ -986,8 +986,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 3,
       "exclusivity": 0.0,
-      "article_title": "Anger Games Vs Bottle Royale : Pipot a choisi son camp. ",
-      "article_content": "Bernard Pipot a tenu a réagir aux accusations de plagiat portant sur la trilogie Anger Games. D'après lui, “l'intrigue [n'aurait] rien à voir avec celle de Bottle Royale, d'ailleurs, c'est probablement Bottle Royale qui a copié.”",
+      "articleTitle": "Anger Games Vs Bottle Royale : Pipot a choisi son camp. ",
+      "articleContent": "Bernard Pipot a tenu a réagir aux accusations de plagiat portant sur la trilogie Anger Games. D'après lui, “l'intrigue [n'aurait] rien à voir avec celle de Bottle Royale, d'ailleurs, c'est probablement Bottle Royale qui a copié.”",
       "avatar": null
     },
     "cuit-91": {
@@ -997,8 +997,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "Les dessous de l'équipe de France.",
-      "article_content": "Pour développer l'intérêt du public féminin envers le football, l'équipe de France jouera désormais en maillots de bain moulants. Compte tenu du froid Russe, les joueurs seront autorisés à garder leurs chaussettes en 2018. ",
+      "articleTitle": "Les dessous de l'équipe de France.",
+      "articleContent": "Pour développer l'intérêt du public féminin envers le football, l'équipe de France jouera désormais en maillots de bain moulants. Compte tenu du froid Russe, les joueurs seront autorisés à garder leurs chaussettes en 2018. ",
       "avatar": null
     },
     "cuit-92": {
@@ -1008,8 +1008,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "Elle pose un lapin et puis s'en va",
-      "article_content": "La starlette Nabiba a encore prouvé ses manières de lady en abandonnant l'animateur Ricyl Nanouna au restaurant. Sur FesseBouc déjà, le défi “Le restau tombe à l'eau” fait le buzz. ",
+      "articleTitle": "Elle pose un lapin et puis s'en va",
+      "articleContent": "La starlette Nabiba a encore prouvé ses manières de lady en abandonnant l'animateur Ricyl Nanouna au restaurant. Sur FesseBouc déjà, le défi “Le restau tombe à l'eau” fait le buzz. ",
       "avatar": null
     },
     "cuit-93": {
@@ -1019,8 +1019,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "Il faut le trône défaire",
-      "article_content": "La chaîne BHO annule la prochaine saison de Gems of Pron. Le producteur témoigne : “Tuer les personnages principaux, c'était marrant au début, mais maintenant qu'il ne reste qu'un squelette et une paire de chevaux, on se demande comment continuer”. ",
+      "articleTitle": "Il faut le trône défaire",
+      "articleContent": "La chaîne BHO annule la prochaine saison de Gems of Pron. Le producteur témoigne : “Tuer les personnages principaux, c'était marrant au début, mais maintenant qu'il ne reste qu'un squelette et une paire de chevaux, on se demande comment continuer”. ",
       "avatar": null
     },
     "cuit-94": {
@@ -1030,8 +1030,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 0,
       "exclusivity": 0.0,
-      "article_title": "Sblagg Man se lance dans le prêt à porteyy",
-      "article_content": "Après avoir arboré des casquettes aussi variées que celles de rapeur, DJ, danseur et apiculteur, Sblagg Man s'est finalement décidé à en vendre. Sa marque de streetwear débarquera sur le marché fin juilleyy.",
+      "articleTitle": "Sblagg Man se lance dans le prêt à porteyy",
+      "articleContent": "Après avoir arboré des casquettes aussi variées que celles de rapeur, DJ, danseur et apiculteur, Sblagg Man s'est finalement décidé à en vendre. Sa marque de streetwear débarquera sur le marché fin juilleyy.",
       "avatar": null
     },
     "cuit-95": {
@@ -1041,8 +1041,8 @@
       "theme": "culture-sport-et-people",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "Croche-patte : L'attaquant marseillais sur la défensive. ",
-      "article_content": "Le croche-patte de Maniac survenu lors de la seconde mi-temps du match OM-PSG aurait bien été volontaire. Il s'agirait de représailles envers Zlatatan qui lui avait volé sa baballe. Zlatan n'a fait aucun commentaire : il boude. ",
+      "articleTitle": "Croche-patte : L'attaquant marseillais sur la défensive. ",
+      "articleContent": "Le croche-patte de Maniac survenu lors de la seconde mi-temps du match OM-PSG aurait bien été volontaire. Il s'agirait de représailles envers Zlatatan qui lui avait volé sa baballe. Zlatan n'a fait aucun commentaire : il boude. ",
       "avatar": null
     },
     "cuit-96": {
@@ -1052,8 +1052,8 @@
       "theme": "societe",
       "credibility": 3,
       "exclusivity": 0.0,
-      "article_title": "Grotubeur, un métier d'avenir",
-      "article_content": "Pour se plier aux exigences du marché, l'Education Nationale a officialisé l'ouvert d'un DUT GroTubeur. Des cours d'humour, de montage et de sourires caméra seront dispensés par Normand, Chyprien et autres pointures du métier. ",
+      "articleTitle": "Grotubeur, un métier d'avenir",
+      "articleContent": "Pour se plier aux exigences du marché, l'Education Nationale a officialisé l'ouvert d'un DUT GroTubeur. Des cours d'humour, de montage et de sourires caméra seront dispensés par Normand, Chyprien et autres pointures du métier. ",
       "avatar": null
     },
     "cuit-97": {
@@ -1063,8 +1063,8 @@
       "theme": "societe",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "Drogue : la jeunesse en première ligne",
-      "article_content": "Cenobis, la pâte à tartiner Suisse, est de plus en plus prisée chez les jeunes. C'est ce que révèle une étude de l'INSCD. Le Ministre de la Santé se dit inquiet par une telle tendance, et craint qu'elle ne s'étende rapidement à la margarine.",
+      "articleTitle": "Drogue : la jeunesse en première ligne",
+      "articleContent": "Cenobis, la pâte à tartiner Suisse, est de plus en plus prisée chez les jeunes. C'est ce que révèle une étude de l'INSCD. Le Ministre de la Santé se dit inquiet par une telle tendance, et craint qu'elle ne s'étende rapidement à la margarine.",
       "avatar": null
     },
     "cuit-98": {
@@ -1074,8 +1074,8 @@
       "theme": "societe",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "La CTT proclame la grève des confiseurs",
-      "article_content": "Pas de RSA, pas de chocolat ! Les confiseurs seront en grève dès demain, et jusqu'à nouvel ordre. “Ils nous cassent les bonbons” a déclaré M. Souris, magnat de l'importation de quenottes. ",
+      "articleTitle": "La CTT proclame la grève des confiseurs",
+      "articleContent": "Pas de RSA, pas de chocolat ! Les confiseurs seront en grève dès demain, et jusqu'à nouvel ordre. “Ils nous cassent les bonbons” a déclaré M. Souris, magnat de l'importation de quenottes. ",
       "avatar": null
     },
     "cuit-99": {
@@ -1085,8 +1085,8 @@
       "theme": "societe",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "Le foot enfin accessible à tous ? ",
-      "article_content": "Jugée anticonstitutionnelle par la CPCICEVH, la règle du hors-jeu pourrait bien être abrogée, mais cette décision doit encore être votée par la Haute Autorité de la Cour de Cassation à la Justice de l'Union Européenne. ",
+      "articleTitle": "Le foot enfin accessible à tous ? ",
+      "articleContent": "Jugée anticonstitutionnelle par la CPCICEVH, la règle du hors-jeu pourrait bien être abrogée, mais cette décision doit encore être votée par la Haute Autorité de la Cour de Cassation à la Justice de l'Union Européenne. ",
       "avatar": null
     },
     "cuit-100": {
@@ -1096,8 +1096,8 @@
       "theme": "societe",
       "credibility": 0,
       "exclusivity": 0.0,
-      "article_title": "Les révoltés en quête d'attention ",
-      "article_content": "Les révoltés se sont cette fois réunis pour protester contre la faible attention médiatique portée au mouvement. Les journalistes se mobilisent. ",
+      "articleTitle": "Les révoltés en quête d'attention ",
+      "articleContent": "Les révoltés se sont cette fois réunis pour protester contre la faible attention médiatique portée au mouvement. Les journalistes se mobilisent. ",
       "avatar": null
     },
     "cuit-101": {
@@ -1107,8 +1107,8 @@
       "theme": "societe",
       "credibility": 0,
       "exclusivity": 0.0,
-      "article_title": "Le docteur M.Aison vous allège du superflu ",
-      "article_content": "Un nouveau régime miracle permettrait de perdre 20 kg en moins d'un mois et de conserver une silhouette svelte. Le secret : virer chaque semaine l'argent des courses sur le compte du docteur M.Aison. ",
+      "articleTitle": "Le docteur M.Aison vous allège du superflu ",
+      "articleContent": "Un nouveau régime miracle permettrait de perdre 20 kg en moins d'un mois et de conserver une silhouette svelte. Le secret : virer chaque semaine l'argent des courses sur le compte du docteur M.Aison. ",
       "avatar": null
     },
     "cuit-102": {
@@ -1118,8 +1118,8 @@
       "theme": "politique",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "Bluff ou coup de poker ? ",
-      "article_content": "Nouvelle révélation de la part de Médiatart : le directeur de la Satiété générale se serait couché devant une paire de 8, perdant ainsi une partie du capital de la banque. Aucune preuve n'est encore avancée, mais Edwige Plenel affirme avoir toutes les cartes en main. ",
+      "articleTitle": "Bluff ou coup de poker ? ",
+      "articleContent": "Nouvelle révélation de la part de Médiatart : le directeur de la Satiété générale se serait couché devant une paire de 8, perdant ainsi une partie du capital de la banque. Aucune preuve n'est encore avancée, mais Edwige Plenel affirme avoir toutes les cartes en main. ",
       "avatar": null
     },
     "cuit-103": {
@@ -1129,8 +1129,8 @@
       "theme": "politique",
       "credibility": 3,
       "exclusivity": 0.0,
-      "article_title": "Une cérémonie au poil ! ",
-      "article_content": "Hugues Michaud, dernier témoin de la guerre 14-18, s'est vu offrir un rasoir par le président français, M. Nederlande. Champion de longévité du haut de ses 119 ans, M. Michaud détient aussi le record des plus longs poils de nez. ",
+      "articleTitle": "Une cérémonie au poil ! ",
+      "articleContent": "Hugues Michaud, dernier témoin de la guerre 14-18, s'est vu offrir un rasoir par le président français, M. Nederlande. Champion de longévité du haut de ses 119 ans, M. Michaud détient aussi le record des plus longs poils de nez. ",
       "avatar": null
     },
     "cuit-104": {
@@ -1140,8 +1140,8 @@
       "theme": "politique",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "Séance ciné à l'Assemblée",
-      "article_content": "L'Assemblée Nationale ne s'est jamais distinguée par son taux de présence, mais elle a touché le fond mercredi avec seulement 6 députés. Livrés à eux-mêmes, sans chefs, ils se sont réconciliés autour d'un seau de pop-corn. ",
+      "articleTitle": "Séance ciné à l'Assemblée",
+      "articleContent": "L'Assemblée Nationale ne s'est jamais distinguée par son taux de présence, mais elle a touché le fond mercredi avec seulement 6 députés. Livrés à eux-mêmes, sans chefs, ils se sont réconciliés autour d'un seau de pop-corn. ",
       "avatar": null
     },
     "cuit-105": {
@@ -1151,8 +1151,8 @@
       "theme": "politique",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "L'idée lumineuse de Terra Vieilla",
-      "article_content": "La mauvaise gestion budgétaire de l'année 2014 serait due à un souci d'alimentation des calculettes. Pour éviter que le problème ne se reproduise, Terra Vieilla conseille à l'Élysée de déplacer ses bureaux dans le jardin et d'investir dans des calculatrices solaires. ",
+      "articleTitle": "L'idée lumineuse de Terra Vieilla",
+      "articleContent": "La mauvaise gestion budgétaire de l'année 2014 serait due à un souci d'alimentation des calculettes. Pour éviter que le problème ne se reproduise, Terra Vieilla conseille à l'Élysée de déplacer ses bureaux dans le jardin et d'investir dans des calculatrices solaires. ",
       "avatar": null
     },
     "cuit-106": {
@@ -1162,8 +1162,8 @@
       "theme": "politique",
       "credibility": 0,
       "exclusivity": 0.0,
-      "article_title": "Nadine, ange déchu",
-      "article_content": "Nadine Parano ne participera finalement pas à la prochaine saison des Anges de la Télé-Débilité, les producteurs ayant craint à la dernière minute qu'elle puisse abaisser le niveau de l'émission. ",
+      "articleTitle": "Nadine, ange déchu",
+      "articleContent": "Nadine Parano ne participera finalement pas à la prochaine saison des Anges de la Télé-Débilité, les producteurs ayant craint à la dernière minute qu'elle puisse abaisser le niveau de l'émission. ",
       "avatar": null
     },
     "cuit-107": {
@@ -1173,8 +1173,8 @@
       "theme": "politique",
       "credibility": 0,
       "exclusivity": 0.0,
-      "article_title": "11 Septembre : le complot se confirme",
-      "article_content": "Basile Uminati jette un nouveau pavé dans la marre : les tours jumelles n'auraient jamais été jumelles - tout juste cousines. Il affirme aussi que les attentats du 11 septembre seraient en fait survenus le 14. ",
+      "articleTitle": "11 Septembre : le complot se confirme",
+      "articleContent": "Basile Uminati jette un nouveau pavé dans la marre : les tours jumelles n'auraient jamais été jumelles - tout juste cousines. Il affirme aussi que les attentats du 11 septembre seraient en fait survenus le 14. ",
       "avatar": null
     },
     "cuit-108": {
@@ -1184,8 +1184,8 @@
       "theme": "economie",
       "credibility": 3,
       "exclusivity": 0.0,
-      "article_title": "GroTube, bon pour la santé ?",
-      "article_content": "D'après les calculs d'Alain Flation, une infime portion des bénéfices de GroTube permettrait de pallier au déficit de la sécurité sociale. L'État y réfléchit déjà, et suggère aux Français d'éviter d'être malades en attendant. ",
+      "articleTitle": "GroTube, bon pour la santé ?",
+      "articleContent": "D'après les calculs d'Alain Flation, une infime portion des bénéfices de GroTube permettrait de pallier au déficit de la sécurité sociale. L'État y réfléchit déjà, et suggère aux Français d'éviter d'être malades en attendant. ",
       "avatar": null
     },
     "cuit-109": {
@@ -1195,8 +1195,8 @@
       "theme": "economie",
       "credibility": 3,
       "exclusivity": 0.0,
-      "article_title": "“Allez, faites pas vos rats !”",
-      "article_content": "C'est par ces mots que le Ministre de l'Économie a exprimé ses craintes vis-à-vis de la baisse de l'argent de poche accordé aux adolescents. Toujours selon ses dires, quelques 200€/mois suffiraient à relancer la croissance du pays.",
+      "articleTitle": "“Allez, faites pas vos rats !”",
+      "articleContent": "C'est par ces mots que le Ministre de l'Économie a exprimé ses craintes vis-à-vis de la baisse de l'argent de poche accordé aux adolescents. Toujours selon ses dires, quelques 200€/mois suffiraient à relancer la croissance du pays.",
       "avatar": null
     },
     "cuit-110": {
@@ -1206,8 +1206,8 @@
       "theme": "economie",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "Normand fait des publicités",
-      "article_content": "Pour séduire le jeune public, la BPP-PariBaBas a commandé une vidéo promotionnelle au célèbre GroTubeur Normand. La Satiété Générale prépare déjà une contre-attaque en finançant un clip de Rayana. ",
+      "articleTitle": "Normand fait des publicités",
+      "articleContent": "Pour séduire le jeune public, la BPP-PariBaBas a commandé une vidéo promotionnelle au célèbre GroTubeur Normand. La Satiété Générale prépare déjà une contre-attaque en finançant un clip de Rayana. ",
       "avatar": null
     },
     "cuit-111": {
@@ -1217,8 +1217,8 @@
       "theme": "economie",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "Arnaque boursière : 6 millions d'euros envolés.",
-      "article_content": "La startup Piej Apijon dont les actions s'arrachent n'aurait en fait jamais existé. L'auteur de la fraude aurait créé une fausse agence de presse, La Bourse Facile, pour s'en mettre plein les poches. Il est introuvable à ce jour. ",
+      "articleTitle": "Arnaque boursière : 6 millions d'euros envolés.",
+      "articleContent": "La startup Piej Apijon dont les actions s'arrachent n'aurait en fait jamais existé. L'auteur de la fraude aurait créé une fausse agence de presse, La Bourse Facile, pour s'en mettre plein les poches. Il est introuvable à ce jour. ",
       "avatar": null
     },
     "cuit-112": {
@@ -1228,8 +1228,8 @@
       "theme": "economie",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "Incisif, M.Mouse dénonce les contrefaçons",
-      "article_content": "Le marché de la dent de lait attire des acteurs toujours plus nombreux...mais pas toujours très honnêtes. Sur Cuicuitter, M. Mouse nous met en garde contre les contrefaçons et rappelle qu'il est le seul vendeur vérifié. ",
+      "articleTitle": "Incisif, M.Mouse dénonce les contrefaçons",
+      "articleContent": "Le marché de la dent de lait attire des acteurs toujours plus nombreux...mais pas toujours très honnêtes. Sur Cuicuitter, M. Mouse nous met en garde contre les contrefaçons et rappelle qu'il est le seul vendeur vérifié. ",
       "avatar": null
     },
     "cuit-113": {
@@ -1239,8 +1239,8 @@
       "theme": "economie",
       "credibility": 0,
       "exclusivity": 0.0,
-      "article_title": "Ça plane pour Piej Apijon",
-      "article_content": "Sur Cuicuitter, La Bourse Facile colporte la rumeur d'un éventuel rachat de la startup Piej Apijon par le géant FesseBouc. À Wolstrit, l'action de la firme vient d'enregistrer une hausse de 1800%.",
+      "articleTitle": "Ça plane pour Piej Apijon",
+      "articleContent": "Sur Cuicuitter, La Bourse Facile colporte la rumeur d'un éventuel rachat de la startup Piej Apijon par le géant FesseBouc. À Wolstrit, l'action de la firme vient d'enregistrer une hausse de 1800%.",
       "avatar": null
     },
     "cuit-114": {
@@ -1250,8 +1250,8 @@
       "theme": "science-technologie-et-jeux-video",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "On n’a pas de pétrole, mais on a des idées !",
-      "article_content": "Soucieux de sortir du tout pétrole, des scientifiques français ont mis au point un véhicule roulant à la bêtise. Un coup de klaxon dans les embouteillages, et c'est reparti ! Les USA songent déjà à exporter ce nouveau carburant. ",
+      "articleTitle": "On n’a pas de pétrole, mais on a des idées !",
+      "articleContent": "Soucieux de sortir du tout pétrole, des scientifiques français ont mis au point un véhicule roulant à la bêtise. Un coup de klaxon dans les embouteillages, et c'est reparti ! Les USA songent déjà à exporter ce nouveau carburant. ",
       "avatar": null
     },
     "cuit-115": {
@@ -1261,8 +1261,8 @@
       "theme": "science-technologie-et-jeux-video",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "Le CNRT découvre la clef du savoir. ",
-      "article_content": "Il leur a fallu du temps, mais les recherches du CNRT sont enfin arrivées à terme : la clef du labo se trouvait là où ils l'avaient vue pour la dernière fois. ",
+      "articleTitle": "Le CNRT découvre la clef du savoir. ",
+      "articleContent": "Il leur a fallu du temps, mais les recherches du CNRT sont enfin arrivées à terme : la clef du labo se trouvait là où ils l'avaient vue pour la dernière fois. ",
       "avatar": null
     },
     "cuit-116": {
@@ -1272,8 +1272,8 @@
       "theme": "science-technologie-et-jeux-video",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "Un Hashashin's Cred' Crô Mignon",
-      "article_content": "Le prochain Hashashin's Cred' se déroulera durant la Préhistoire. En plus des évidents combats à la massue, il sera possible d'élever et d'habiller des bébés mammouths. Un moyen pour Bibisoft de se rapprocher du jeune public. ",
+      "articleTitle": "Un Hashashin's Cred' Crô Mignon",
+      "articleContent": "Le prochain Hashashin's Cred' se déroulera durant la Préhistoire. En plus des évidents combats à la massue, il sera possible d'élever et d'habiller des bébés mammouths. Un moyen pour Bibisoft de se rapprocher du jeune public. ",
       "avatar": null
     },
     "cuit-117": {
@@ -1283,8 +1283,8 @@
       "theme": "science-technologie-et-jeux-video",
       "credibility": 2,
       "exclusivity": 0.0,
-      "article_title": "Les bananes de la colère",
-      "article_content": "Banana Inc. traîne la coopérative des fruits et légumes en procès. Les “bananes” vendues sur leurs étals pourraient en effet créer la confusion avec les smartphones de la firme, et ainsi nuire à son image de marque. ",
+      "articleTitle": "Les bananes de la colère",
+      "articleContent": "Banana Inc. traîne la coopérative des fruits et légumes en procès. Les “bananes” vendues sur leurs étals pourraient en effet créer la confusion avec les smartphones de la firme, et ainsi nuire à son image de marque. ",
       "avatar": null
     },
     "cuit-118": {
@@ -1294,8 +1294,8 @@
       "theme": "science-technologie-et-jeux-video",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "Alex Perience froisse les vendeurs d'adoucissants.",
-      "article_content": "La dernière astuce du professeur Perience pourrait bien signer la fin des fers à repasser et adoucissants. Qui aurait cru qu'il suffisait d'un accélérateur atomique pour obtenir un linge doux, et sans un pli ? ",
+      "articleTitle": "Alex Perience froisse les vendeurs d'adoucissants.",
+      "articleContent": "La dernière astuce du professeur Perience pourrait bien signer la fin des fers à repasser et adoucissants. Qui aurait cru qu'il suffisait d'un accélérateur atomique pour obtenir un linge doux, et sans un pli ? ",
       "avatar": null
     },
     "cuit-119": {
@@ -1305,8 +1305,8 @@
       "theme": "science-technologie-et-jeux-video",
       "credibility": 1,
       "exclusivity": 0.0,
-      "article_title": "L'Année des morts-vivants",
-      "article_content": "4673 jeux de zombies sont annoncés pour 2015, soit 16% de plus que l'année précédente. Le Comité à l'Innovation entend prendre des mesures en mettant en quarantaine tous les développeurs de jeux concernés.",
+      "articleTitle": "L'Année des morts-vivants",
+      "articleContent": "4673 jeux de zombies sont annoncés pour 2015, soit 16% de plus que l'année précédente. Le Comité à l'Innovation entend prendre des mesures en mettant en quarantaine tous les développeurs de jeux concernés.",
       "avatar": null
     }
   },

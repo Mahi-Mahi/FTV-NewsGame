@@ -1,5 +1,9 @@
 <div ng-class="['level-'+level]">
 
+	<div id="debug">
+		{{level}}
+	</div>
+
 	<div class="windows">
 		<div  ng-repeat="(id, win) in windows"
 					id="{{id}}"
@@ -28,7 +32,7 @@
 	<div class="widgets">
 		<div class="timeline">
 			<h4>Temps restant</h4>
-			<a href="">Terminer la journée</a>
+			<a ng-click="endDay()">Terminer la journée</a>
 			<p>
 				<div class="gauge"></div>
 				<span class="remaining">{{remainingTime | duration}}</span>
@@ -42,6 +46,44 @@
 
 	<div id="tooltip" ng-show="tooltip.active">
 		<p ng-bind-html="tooltip.content"></p>
+	</div>
+
+	<div id="scoring" ng-class="[level, status]" ng-if="showScoring">
+
+		<h4>Félicitations</h4>
+
+		<div class="message">
+			<p>
+				Vous avez appris les bases de l'utilisation de Cuicuitter pour chercher des infos<br />
+				et savoir de quoi elles parlent. Mais la route est encore longue avant de devenir<br />
+				un journaliste chevronné. Maintenant les choses sérieuses vont commencer !
+			</p>
+			<button ng-click="nextLevel()">Niveau Suivant</button>
+		</div>
+
+		<div class="scores">
+
+			<div class="level-score">
+				<p>Score à atteindre pour ce niveau</p>
+				<span>70</span>
+			</div>
+
+			<div class="my-level-score">
+				<p>Mon score pour ce niveau</p>
+				<span>90</span>
+			</div>
+
+			<div class="total-score">
+				<p>Mon score total</p>
+				<span>540</span>
+			</div>
+
+			<br>
+
+			<ul class="score-detail"></ul>
+
+		</div>
+
 	</div>
 
 </div>

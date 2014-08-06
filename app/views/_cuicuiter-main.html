@@ -6,13 +6,13 @@
 			<div class="inner" ng-click="cuit.toggle=!cuit.toggle">
 				<div class="inner__body">
 					<div class="media">
-						<img src="/images/default-avatar.png" alt="" class="avatar" />
+						<img src="/images/default-avatar.png" alt="" class="avatar" ng-click="openSource(cuit.author.id)" />
 						<div class="media">
 							<div class="publish right">
-								<button class="bt bt--publish"><span>Publier 15 minutes </span></button>
+								<button class="bt bt--publish" ng-click="publishCuit(cuit)" ng-if="!cuit.published"><span>Publier 15 minutes </span></button>
 							</div>
 							<p>
-								<a href="" ng-click="openSource(cuit.author.id)">
+								<a href="" ng-click="openSource(cuit.author.id)" class="source">
 									{{cuit.author.id}}
 								</a>
 							</p>

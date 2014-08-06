@@ -1,11 +1,13 @@
-<div class="splash level-1" ng-hide="fadeSplash">
-	<h3>Niveau 1 : naissance d'une vocation</h3>
-</div>
+<div ui-keyup="{13'skipCurrentText()'}">
+	<div class="splash level-1" ng-hide="fadeSplash">
+		<h3>Niveau 1 : naissance d'une vocation</h3>
+	</div>
 
-<a href="/#/play">skip</a>
+	<a href="/#/play">skip</a>
 
-<div ng-class="['dialogue', character]">
-	<img src="" alt="" class="character" ng-src="images/character/{{character}}.png" ng-if="character && character != 'me' ">
-	<div class="typed">{{typed}}</div>
-	<a class="skip" ng-click="skipCurrentText()">&gt;</a>
+	<div ng-class="['dialogue', character]">
+		<img src="" alt="" class="character" ng-src="images/character/{{character}}.png" ng-if="character && character != 'me' ">
+		<div class="typed">{{typed}}</div>
+		<a class="skip" ng-click="skipCurrentText()">&gt;</a>
+	</div>
 </div>
