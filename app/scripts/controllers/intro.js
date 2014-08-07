@@ -9,10 +9,15 @@ angular.module('newsGameApp')
 
 		$scope.debug = ($routeParams.debug);
 
+		// current difficulty level
+		$scope.level = $cookies.level ? parseInt($cookies.level, 10) : 1;
+		$cookies.level = $scope.level;
+
+		$rootScope.background = 'intro-level-' + $scope.level;
+
 		// debug config
 		var delayModifier = ($scope.debug ? 0.1 : 1);
 
-		$scope.level = $cookies.level ? $cookies.level : 1;
 		var steps = [];
 
 		function doSteps() {

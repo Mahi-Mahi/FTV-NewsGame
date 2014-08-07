@@ -9,7 +9,7 @@
 						<img src="/images/default-avatar.png" alt="" class="avatar" ng-click="openSource(cuit.author.id)" />
 						<div class="media">
 							<div class="publish right">
-								<button class="bt bt--publish" ng-click="publishCuit(cuit)" ng-if="!cuit.published"><span>Publier 15 minutes </span></button>
+								<button class="bt bt--publish" ng-click="publishCuit(cuit)" ng-if="!cuit.published"><span>Publier ({{actionsCost['publish-cuit']}} min) </span></button>
 							</div>
 							<p>
 								<a href="" ng-click="openSource(cuit.author.id)" class="source">

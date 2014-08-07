@@ -1,17 +1,5 @@
 <div ng-class="['level-'+level]">
 
-	<div id="debug">
-		<p>
-			level : {{level}}
-		</p>
-		<p>
-			debug : {{debug}}
-		</p>
-		<p>
-			tooltip: <input type="checkbox" ng-model="tooltip.active">
-		</p>
-	</div>
-
 	<div class="windows">
 		<div  ng-repeat="(id, win) in windows"
 					id="{{id}}"
@@ -20,6 +8,8 @@
 					k-on-open="win.visible = true"
 					k-on-close="win.visible = false"
 					k-resizable="win.resizable"
+					k-actions="win.actions"
+					k-modal="win.modal"
 					k-visible="win.visible"
 					k-position="win.position"
 					k-width="win.width"
@@ -95,3 +85,5 @@
 	</div>
 
 </div>
+
+<div id="debug" ng-include="'/views/_debug.html'"></div>

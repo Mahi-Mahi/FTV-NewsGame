@@ -14,7 +14,8 @@ angular.module('newsGameApp')
 		$scope.windows = {};
 
 		// current difficulty level
-		$scope.level = $cookies.level ? $cookies.level : 1;
+		$scope.level = $cookies.level ? parseInt($cookies.level, 10) : 1;
+		$cookies.level = $scope.level;
 
 		// TotalTime ( and RemainingTime ) are loaded from /data/settings.json
 		$scope.totalTime = $scope.remainingTime = dataService.data.settings.totalTime['level-' + $scope.level];
@@ -25,9 +26,11 @@ angular.module('newsGameApp')
 		// selected theme
 		$scope.currentTheme = null;
 
+		$scope.actionsCost = dataService.data.settings.actionsCost;
+
 		$scope.showScoring = false;
 
-		$rootScope.background = 'level-' + $scope.level;
+		$rootScope.background = 'play-level-' + $scope.level;
 
 		/*
 		CuitCuiter
@@ -94,6 +97,7 @@ angular.module('newsGameApp')
 					if ($scope.allCuits.indexOf(key) === -1 && !added) {
 						if (!author || cuit.source === author) {
 							cuit.author = dataService.data.all.sources[cuit.source];
+							$log.log('author', cuit.source, cuit.author);
 							cuit.themeVerified = cuit.author.themeVerified;
 							$scope.allCuits.push(key);
 							$scope.cuits.unshift(cuit);
@@ -182,7 +186,9 @@ angular.module('newsGameApp')
 			$scope.windows[id] = angular.extend({
 				visible: false,
 				active: true,
+				actions: ['Close'],
 				resizable: false,
+				modal: false,
 				width: 400,
 				height: 400,
 				position: {
@@ -202,6 +208,8 @@ angular.module('newsGameApp')
 		};
 		$scope.openWin = function(id) {
 			if (!$scope.windows[id].visible) {
+				$log.log(jQuery('#' + id));
+				$log.log(jQuery('#' + id).data('kendoWindow'));
 				jQuery('#' + id).data('kendoWindow').open();
 			}
 		};
@@ -221,7 +229,7 @@ angular.module('newsGameApp')
 			template: 'cuicuiter-main',
 			height: 505,
 			position: {
-				top: 150,
+				top: 25,
 				left: 20
 			}
 		});
@@ -285,6 +293,7 @@ angular.module('newsGameApp')
 			title: "Choix d'une thématique",
 			template: 'theme-selector',
 			active: false,
+			actions: [],
 			modal: true,
 			position: {
 				top: 250,
@@ -404,8 +413,7 @@ angular.module('newsGameApp')
 				if ($scope.debug) {
 					var $choices = jQuery('#themeSelector :radio');
 					$choices.eq(Math.round(Math.random() * $choices.length)).click();
-					$log.log($scope.currentTheme);
-					jQuery('#themeSelector button').click();
+					// jQuery('#themeSelector button').click();
 				}
 			});
 
@@ -727,7 +735,7 @@ angular.module('newsGameApp')
 		};
 
 		$scope.nextLevel = function() {
-			$cookies.level = $scope.level + 1;
+			$cookies.level = parseInt($scope.level, 10) + 1;
 			$location.path('/intro');
 		};
 

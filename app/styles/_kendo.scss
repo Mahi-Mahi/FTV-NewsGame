@@ -1177,7 +1177,7 @@ a:focus,button:focus {
     font-size:em(16px) !important;
 }
 
-.k-window-actions {
+.modal .k-window-actions {
     display: none;
 }
 
@@ -1195,7 +1195,7 @@ a:focus,button:focus {
         padding: 1em 0;
     }
     .inner {
-        background:$background-color-inner; 
+        background:$background-color-inner;
         border:1px solid $border-color;
         border-radius:4px;
         margin: 0 0 20px 0;
