@@ -18,7 +18,7 @@
 	background:#d35400;
 }
 
-.notepad__list {
+.notepad__list, .thematique-list {
 	li {
 		color:#34495e;
 		display: block;
@@ -67,5 +67,56 @@
 	}
 }
 
+// THEMATIQUES
 
+.thematique-list {
+	li {
+		color:$notepad-color;
+		font-size:em(13px);
+		padding:10px 0 5px 10px;
+		&:before {
+			left:10px;
+			top:10px;
+		}
+	}
+	[type="radio"]:not(:checked),
+	[type="radio"]:checked {
+		position: absolute;
+		left: -999em;
+	}
+	[type="radio"]:not(:checked) + label,
+	[type="radio"]:checked + label {
+		position: relative;
+		padding-left: 20px;
+		cursor: pointer;
+		display: block;
+	}
 
+	[type="radio"]:not(:checked) + label:before,
+	[type="radio"]:checked + label:before {
+		content: '';
+		position: absolute;
+		right:10px; top: 0;
+		width: 12px; height: 12px;
+		border: 1px solid #cecdcd;
+		background: #fff;
+		border-radius: 3px;
+	}
+	[type="radio"]:not(:checked) + label:after,
+	[type="radio"]:checked + label:after {
+		content: 'X';
+		position: absolute;
+		top: 2px; right: 13px;
+		font-size: em(11px);
+		color:$notepad-color;
+		@include transition(all .2s);
+	}
+	[type="radio"]:not(:checked) + label:after {
+		opacity: 0;
+		@include transform(scale(0));
+	}
+	[type="radio"]:checked + label:after {
+		opacity: 1;
+		@include transform(scale(1));
+	}
+}

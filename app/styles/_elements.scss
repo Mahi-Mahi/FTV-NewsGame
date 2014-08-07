@@ -20,6 +20,14 @@ $notepad-color:#29abe2;
   -webkit-transform: translate3d(0, 0, 0);      
 }
 
+// CSS TRANSFORM
+@mixin transform($transform) {
+    -webkit-transform:$transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    transform: $transform;    
+}
+
 // EM CONVERSION
 @function em($px, $base: $base-font-size) {
     @return ($px / $base) * 1em;

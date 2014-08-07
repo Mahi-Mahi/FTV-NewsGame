@@ -281,9 +281,14 @@ angular.module('newsGameApp')
 		});
 
 		createWindow('contact', {
+<<<<<<< HEAD
 			title: 'contact',
 			active: true,
 			visible: true,
+=======
+			title: 'Contact',
+			active: false,
+>>>>>>> FETCH_HEAD
 			template: 'skoupe-contact',
 			position: {
 				top: 125,
@@ -292,7 +297,7 @@ angular.module('newsGameApp')
 		});
 
 		createWindow('chat', {
-			title: 'chat',
+			title: 'Conversation',
 			active: false,
 			template: 'skoupe-chat',
 			height: 300,
@@ -327,12 +332,13 @@ angular.module('newsGameApp')
 		});
 
 		createWindow('prompt', {
-			title: "Prompt",
+			title: "Avertissement",
 			template: 'prompt',
 			active: false,
 			actions: [],
 			modal: true,
-			height: 200,
+			height: 130,
+			width: 220,
 			position: {
 				top: 250,
 				left: 250
