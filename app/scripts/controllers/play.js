@@ -43,7 +43,7 @@ angular.module('newsGameApp')
 		// open Cuit source window
 		var openSourceThemeCallback = false;
 		$scope.openSource = function(id) {
-			$log.log("openSource(" + id);
+			// $log.log("openSource(" + id);
 			$scope.closeWin('source');
 			$scope.currentSource = dataService.data.all.sources[id];
 			$scope.openWin('source');
@@ -55,7 +55,7 @@ angular.module('newsGameApp')
 		// Verify source Theme ( + decrement time counter )
 		var verifySourceThemeCallback = false;
 		$scope.verifySourceTheme = function(id) {
-			$log.log("verifySourceTheme(" + id);
+			// $log.log("verifySourceTheme(" + id);
 			dataService.data.all.sources[id].themeVerified = true;
 			$scope.currentSource = dataService.data.all.sources[id];
 			decrementTime('verify-source-theme');
@@ -81,7 +81,6 @@ angular.module('newsGameApp')
 		$scope.cuitsOut = function() {
 			$scope.cuitsHover = false;
 		};
-		$log.log("init", $scope.cuitsHover);
 
 		function addCuit(next, force, author) {
 			// $log.log("addCuit", next, force, author);
@@ -97,7 +96,9 @@ angular.module('newsGameApp')
 					if ($scope.allCuits.indexOf(key) === -1 && !added) {
 						if (!author || cuit.source === author) {
 							cuit.author = dataService.data.all.sources[cuit.source];
-							cuit.themeVerified = cuit.author.themeVerified;
+							if (cuit.author) {
+								cuit.themeVerified = cuit.author.themeVerified;
+							}
 							$scope.allCuits.push(key);
 							$scope.cuits.unshift(cuit);
 							$timeout(function() {
@@ -140,7 +141,7 @@ angular.module('newsGameApp')
 
 		// open contact detail window
 		$scope.openContact = function(id) {
-			$log.log("openContact(" + id);
+			// $log.log("openContact(" + id);
 			$scope.closeWin('contact');
 			$scope.currentContact = $scope.contacts[id];
 			$scope.openWin('contact');
@@ -151,7 +152,7 @@ angular.module('newsGameApp')
 
 		// open chat window
 		$scope.openChat = function(id) {
-			$log.log("openChat(" + id);
+			// $log.log("openChat(" + id);
 			$scope.closeWin('chat');
 			$scope.currentchatContact = $scope.chat[id];
 			$scope.openWin('chat');
@@ -169,6 +170,20 @@ angular.module('newsGameApp')
 			// $log.log("decrementTime : " + value + " (" + type + ")");
 			$scope.remainingTime -= value;
 		}
+
+		/*
+		Generic Prompt
+		*/
+		var promptCallback;
+		$scope.promptCancel = function() {
+			promptCallback = null;
+			$scope.closeWin('prompt');
+		};
+		$scope.promptConfirm = function() {
+			if (promptCallback) {
+				promptCallback();
+			}
+		};
 
 		/*
 		Generic Window Management
@@ -207,8 +222,7 @@ angular.module('newsGameApp')
 		};
 		$scope.openWin = function(id) {
 			if (!$scope.windows[id].visible) {
-				$log.log(jQuery('#' + id));
-				$log.log(jQuery('#' + id).data('kendoWindow'));
+				$log.log("openWin(", id);
 				jQuery('#' + id).data('kendoWindow').open();
 			}
 		};
@@ -294,6 +308,19 @@ angular.module('newsGameApp')
 			active: false,
 			actions: [],
 			modal: true,
+			position: {
+				top: 250,
+				left: 250
+			}
+		});
+
+		createWindow('prompt', {
+			title: "Prompt",
+			template: 'prompt',
+			active: false,
+			actions: [],
+			modal: true,
+			height: 200,
 			position: {
 				top: 250,
 				left: 250
@@ -412,7 +439,7 @@ angular.module('newsGameApp')
 				if ($scope.debug) {
 					var $choices = jQuery('#themeSelector :radio');
 					$choices.eq(Math.round(Math.random() * $choices.length)).click();
-					// jQuery('#themeSelector button').click();
+					jQuery('#themeSelector button').click();
 				}
 			});
 
@@ -689,18 +716,19 @@ angular.module('newsGameApp')
 				$scope.closeWin('chat');
 			});
 
-			addStep(1500, function() {
+			addStep(500, function() {
 				// show info popup
 				$scope.tooltip.content = "Choisissez des infos dans votre fil Cuicuitter et publiez-les sur votre blog. Attention : choisissez-les bien dans la thématique " + $scope.themes[$scope.currentTheme] + ". Et faites attention : le temps passe vite ! ";
 				$scope.tooltip.active = true;
+				$scope.openWin('blog');
 			});
 
-			addStep(1500, function() {
+			addStep(500, function() {
 				$scope.tooltip.active = false;
 			});
 
 			addStep(1500, function() {
-				$scope.openWin('blog');
+				jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.publish button').click();
 			});
 
 			doSteps();
@@ -710,23 +738,41 @@ angular.module('newsGameApp')
 		scenarii.level2End = function() {
 			$log.log(">level2Phase2");
 			showScoring();
-
 		};
 
 		$scope.posts = [];
 		$scope.publishCuit = function(cuit) {
-			$log.log("publishCuit(", cuit.id);
-			var post = {
-				cuit: cuit,
-				title: cuit.articleTitle
+			$scope.currentCuit = cuit;
+
+			promptCallback = function() {
+
+				$log.log("publishCuit(", $scope.currentCuit.id);
+				var post = {
+					cuit: $scope.currentCuit,
+					title: $scope.currentCuit.articleTitle
+				};
+				angular.forEach($scope.cuits, function(c, idx) {
+					if (c.id === $scope.currentCuit.id) {
+						$scope.cuits[idx].published = true;
+					}
+				});
+				$scope.posts.push(post);
+				decrementTime("publish-cuit");
+				$scope.closeWin('prompt');
+				promptCallback = null;
 			};
-			angular.forEach($scope.cuits, function(c, idx) {
-				if (c.id === cuit.id) {
-					$scope.cuits[idx].published = true;
+
+			$scope.promptContent = "Êtes-vous sûr de vouloir publier ce Cuit ?";
+			$scope.openWin('prompt');
+
+			addStep(1500, function() {
+				if ($scope.debug) {
+					var $choices = jQuery('#prompt :radio');
+					// $choices.eq(Math.round(Math.random() * $choices.length)).click();
+					// jQuery('#themeSelector button').click();
 				}
 			});
-			$scope.posts.push(post);
-			decrementTime("publish-cuit");
+
 		};
 		$scope.unpublish = function(post) {
 			$log.log("unpublish(", post.cuit.id);

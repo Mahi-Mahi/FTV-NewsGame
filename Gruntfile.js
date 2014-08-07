@@ -320,6 +320,11 @@ module.exports = function(grunt) {
           cwd: '.tmp/styles/',
           dest: '<%= yeoman.dist %>/styles',
           src: '{,*/}*.css'
+        }, {
+          expand: true,
+          cwd: '<%=yeoman.app %>',
+          dest: '<%= yeoman.dist %>',
+          src: 'bower_components/kendo-ui/styles/web/kendo.common.core.min.css'
         }]
       },
       styles: {
@@ -453,7 +458,7 @@ module.exports = function(grunt) {
     'usemin',
     'htmlmin',
     'createConfig:dev',
-    // 'rsync:staging'
+    'rsync:staging'
   ]);
 
   grunt.registerTask('default', [

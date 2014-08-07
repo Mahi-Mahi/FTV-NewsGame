@@ -130,7 +130,7 @@ angular.module('newsGameApp')
 
 			steps = [];
 
-			addStep(1500, function() {
+			addStep(2500, function() {
 				$location.path('/play');
 			});
 
