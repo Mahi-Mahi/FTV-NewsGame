@@ -328,7 +328,8 @@ angular.module('newsGameApp')
 			active: false,
 			actions: [],
 			modal: true,
-			height: 200,
+			height: 130,
+			width: 220,
 			position: {
 				top: 250,
 				left: 250
