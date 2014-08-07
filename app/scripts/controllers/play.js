@@ -282,7 +282,8 @@ angular.module('newsGameApp')
 
 		createWindow('contact', {
 			title: 'contact',
-			active: false,
+			active: true,
+			visible: true,
 			template: 'skoupe-contact',
 			position: {
 				top: 125,
@@ -681,7 +682,7 @@ angular.module('newsGameApp')
 
 			addChat(1500, 'other', "Ah ouais ? Cool ! Ben voilà, plus besoin de te prendre la tête, tu sais quoi mettre sur ta fiche d’orientation ! Mais tu vas devoir apprendre à maîtriser Cuicuitter à mort, alors !");
 
-			addStep(1500, function() {
+			addStep(2500, function() {
 				// show scoring
 				showScoring();
 			});
@@ -855,14 +856,19 @@ angular.module('newsGameApp')
 		}
 
 		function feedback(type, detail) {
-			$scope.feedbackType = type;
+			$scope.feedback.type = type;
 			if (type === 'good') {
-				$scope.feedback = "Vos lecteurs vont aimer cette publication !";
+				$scope.feedback.status = "Vos lecteurs vont aimer cette publication !";
 			}
 			if (type === 'bad') {
-				$scope.feedback = "Vos lecteurs ne vont aimer pas cette publication !";
+				$scope.feedback.status = "Vos lecteurs ne vont aimer pas cette publication !";
 			}
-			$scope.feedbackDetail = detail;
+			$scope.feedback.status = detail;
+			$scope.feedback.active = true;
+			$timeout(function() {
+				$scope.feedback.active = false;
+
+			}, 2000);
 		}
 
 		$scope.endDay = function() {
