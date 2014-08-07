@@ -173,7 +173,7 @@ angular.module('newsGameApp')
 
 		$scope.tooltip = {
 			active: false,
-			content: ''
+			content: 'Quisque id neque scelerisque velit.'
 		};
 
 		// create a new window (KendoUI will automattically instatiate ir)
@@ -221,7 +221,7 @@ angular.module('newsGameApp')
 			template: 'cuicuiter-main',
 			height: 505,
 			position: {
-				top: 10,
+				top: 150,
 				left: 20
 			}
 		});
