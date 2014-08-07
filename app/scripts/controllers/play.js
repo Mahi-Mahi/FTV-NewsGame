@@ -270,8 +270,8 @@ angular.module('newsGameApp')
 
 		createWindow('skoupe', {
 			title: 'Skoupe',
-			visible: false,
-			active: false,
+			visible: true,
+			active: true,
 			template: 'skoupe-main',
 			height: 150,
 			position: {
@@ -281,14 +281,9 @@ angular.module('newsGameApp')
 		});
 
 		createWindow('contact', {
-<<<<<<< HEAD
-			title: 'contact',
-			active: true,
-			visible: true,
-=======
 			title: 'Contact',
 			active: false,
->>>>>>> FETCH_HEAD
+			visible: false,
 			template: 'skoupe-contact',
 			position: {
 				top: 125,
