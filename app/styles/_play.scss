@@ -155,11 +155,15 @@ div.k-window-content#chat {
     }
     li {
         border-radius: 8px;
+        clear:both;
         position: relative;
         min-height: 20px;
         padding: 8px;
         margin: 0 0 10px 0;
         background: #fff;
+        float:left;
+        min-width:26%;
+        max-width:75%;
     }
     .me {
         border: 2px solid #16a085;
@@ -190,6 +194,7 @@ div.k-window-content#chat {
     .other {
         border: 2px solid #f15a24;
         color: #f15a24;
+        float: right;
         &:after, &:before {
             left: 100%;
             top: 50%;
@@ -251,12 +256,57 @@ div.k-window-content#chat {
 }
 
 #tooltip {
+    border-radius:4px;
+    color:#fff;
+    font-size: em(16px);
     position: absolute;
     top: 200px;
     left: 250px;
     z-index: 99999;
-    border: 1px gray solid;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(46,33,20,.7);
+    margin:0;
+    padding:16px;
+    width:320px;       
+    &:after {
+        top: 100%;
+        left: 280px;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-top-color:rgba(46, 33, 20, .7);
+        border-width: 20px;
+    }
+    p {
+        display: block;
+        margin:0;
+        min-height:45px;
+        padding:0;
+        position:relative;
+        width:260px;
+        &:after {
+            color:$notepad-color;
+            content: "\75";
+            display: block;
+            margin: 0;
+            padding: 0;
+            position:absolute;
+            right:-50px;
+            top:0;
+            font-family: 'icomoon';
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 2.75em;
+        }
+    }
 }
 
 #scoring {
