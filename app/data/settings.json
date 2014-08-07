@@ -9,8 +9,10 @@
 		"verify-cuit-credibility": 10,
 		"verify-cuit-exclusivity": 10,
 		"verify-source": 20,
-		"verfify-source-credibility": 15,
+		"verify-source-theme": 15,
+		"verify-source-credibility": 15,
 		"publish-cuit": 20,
+		"unpublish-cuit": 10,
 		"find-new-contact": 15
 	},
 	"scoring": {

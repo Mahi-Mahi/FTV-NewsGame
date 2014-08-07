@@ -19,6 +19,15 @@
     left: 50px;
     width: 200px;
     height: 150px;
+    .gauge {
+        height: 20px;
+        width: 200px;
+        border: 1px yellow solid;
+        .fill {
+            height: 20px;
+            background: red;
+        }
+    }
 }
 
 .status {

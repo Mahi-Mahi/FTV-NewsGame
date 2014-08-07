@@ -32,7 +32,9 @@
 			<h4>Temps restant</h4>
 			<a ng-click="endDay()">Terminer la journée</a>
 			<p>
-				<div class="gauge"></div>
+				<div class="gauge">
+					<div class="fill" style="width:{{((totalTime-remainingTime)/totalTime)*100}}%;"></div>
+				</div>
 				<span class="remaining">{{remainingTime | duration}}</span>
 			</p>
 		</div>

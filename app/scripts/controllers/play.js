@@ -97,7 +97,6 @@ angular.module('newsGameApp')
 					if ($scope.allCuits.indexOf(key) === -1 && !added) {
 						if (!author || cuit.source === author) {
 							cuit.author = dataService.data.all.sources[cuit.source];
-							$log.log('author', cuit.source, cuit.author);
 							cuit.themeVerified = cuit.author.themeVerified;
 							$scope.allCuits.push(key);
 							$scope.cuits.unshift(cuit);
@@ -728,6 +727,14 @@ angular.module('newsGameApp')
 			});
 			$scope.posts.push(post);
 			decrementTime("publish-cuit");
+		};
+		$scope.unpublish = function(post) {
+			$log.log("unpublish(", post.cuit.id);
+			$log.log($scope.posts);
+			angular.forEach($scope.posts, function(post, idx) {
+				$log.log(idx, post);
+				delete $scope.posts[idx];
+			});
 		};
 
 		$scope.endDay = function() {
