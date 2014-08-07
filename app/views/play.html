@@ -30,7 +30,7 @@
 	<div class="widgets">
 		<div class="timeline">
 			<h4>Temps restant</h4>
-			<a ng-click="endDay()">Terminer la journée</a>
+			<a ng-click="endDay()" class="endDay">Terminer la journée</a>
 			<p>
 				<div class="gauge">
 					<div class="fill" style="width:{{((totalTime-remainingTime)/totalTime)*100}}%;"></div>
@@ -39,8 +39,10 @@
 			</p>
 		</div>
 
-		<div class="status">
-
+		<div class="feedback">
+			<div ng-class="feedbackType">
+				{{feedback}}
+			</div>
 		</div>
 	</div>
 
@@ -65,17 +67,17 @@
 
 			<div class="level-score">
 				<p>Score à atteindre pour ce niveau</p>
-				<span>70</span>
+				<span>{{scoring['level-'+level]['winning-score']}}</span>
 			</div>
 
 			<div class="my-level-score">
 				<p>Mon score pour ce niveau</p>
-				<span>90</span>
+				<span>{{scores['level-'+level]}}</span>
 			</div>
 
 			<div class="total-score">
 				<p>Mon score total</p>
-				<span>540</span>
+				<span>{{scores['level-1']+scores['level-2']+scores['level-3']+scores['level-4']}}</span>
 			</div>
 
 			<br>

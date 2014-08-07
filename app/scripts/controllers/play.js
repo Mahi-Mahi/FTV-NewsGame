@@ -17,6 +17,9 @@ angular.module('newsGameApp')
 		$scope.level = $cookies.level ? parseInt($cookies.level, 10) : 1;
 		$cookies.level = $scope.level;
 
+		// Scoring
+		$scope.scoring = dataService.data.settings.scoring;
+
 		// TotalTime ( and RemainingTime ) are loaded from /data/settings.json
 		$scope.totalTime = $scope.remainingTime = dataService.data.settings.totalTime['level-' + $scope.level];
 
@@ -549,6 +552,7 @@ angular.module('newsGameApp')
 
 			steps = [];
 
+			$log.log(selectedCuit.theme, " === ", $scope.currentTheme);
 			if (selectedCuit.theme === $scope.currentTheme) {
 				scenarii.level1Phase5();
 				return;
@@ -653,7 +657,7 @@ angular.module('newsGameApp')
 
 			addStep(1500, function() {
 				if ($scope.debug) {
-					// jQuery('#source .metas .theme button').click();
+					jQuery('#source .metas .theme button').click();
 				}
 			});
 
@@ -751,6 +755,7 @@ angular.module('newsGameApp')
 						}
 						max--;
 					}
+					scenarii.level2End();
 				}
 			});
 
@@ -781,7 +786,8 @@ angular.module('newsGameApp')
 					$log.log("publishCuit(", $scope.currentCuit.id);
 					var post = {
 						cuit: $scope.currentCuit,
-						title: $scope.currentCuit.articleTitle
+						title: $scope.currentCuit.articleTitle,
+						date: Math.floor(($scope.totalTime - $scope.remainingTime) / $scope.remainingTime * 10 * 60) + (8 * 60)
 					};
 					angular.forEach($scope.cuits, function(c, idx) {
 						if (c.id === $scope.currentCuit.id) {
@@ -790,6 +796,11 @@ angular.module('newsGameApp')
 					});
 					$scope.posts.push(post);
 					decrementTime("publish-cuit");
+
+					updateFeedback(post);
+
+					updateScore();
+
 					$scope.closeWin('prompt');
 					promptCallback = null;
 				};
@@ -813,6 +824,9 @@ angular.module('newsGameApp')
 					if (p.cuit.id === $scope.currentPost.cuit.id) {
 						$scope.posts.splice(idx, 1);
 						decrementTime("unpublish-cuit");
+
+						updateScore();
+
 					}
 				});
 
@@ -831,6 +845,27 @@ angular.module('newsGameApp')
 
 		};
 
+		function updateFeedback(post) {
+			if ($scope.level === 2) {
+				if (post.theme === $scope.currentTheme) {
+					feedback('good');
+				} else {
+					feedback('bad');
+				}
+			}
+		}
+
+		function feedback(type, detail) {
+			$scope.feedbackType = type;
+			if (type === 'good') {
+				$scope.feedback = "Vos lecteurs vont aimer cette publication !";
+			}
+			if (type === 'bad') {
+				$scope.feedback = "Vos lecteurs ne vont aimer pas cette publication !";
+			}
+			$scope.feedbackDetail = detail;
+		}
+
 		$scope.endDay = function() {
 			scenarii['level' + $scope.level + 'End']();
 		};
@@ -841,7 +876,29 @@ angular.module('newsGameApp')
 		};
 
 		function showScoring() {
+			updateScore();
 			$scope.showScoring = true;
+		}
+
+		function updateScore() {
+			var score = 0;
+			var scoring = $scope.scoring['level-' + $scope.level];
+			if ($scope.level === 2) {
+				angular.forEach($scope.posts, function(post) {
+					if (post.theme === $scope.currentTheme) {
+						score += scoring['select-cuit-in-correct-theme'];
+					} else {
+						score += scoring['select-cuit-in-wrong-theme'];
+					}
+				});
+			}
+			$log.log("score : " + score);
+			if (typeof $cookies.scores === 'undefined' || !$cookies.scores['level-1']) {
+				$cookies.scores = {};
+			}
+			$cookies.scores['level-' + $scope.level] = score;
+			$scope.scores = $cookies.scores;
+			$log.log($cookies.scores);
 		}
 
 		/*
