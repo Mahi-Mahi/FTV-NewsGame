@@ -22,10 +22,11 @@ body {
 	@each $bgd in home, intro-level-1, intro-level-2, intro-level-3, intro-level-4, play-level-1, play-level-2, play-level-3, play-level-4 {
 		&.#{$bgd} {
 			background:image-url("background/#{$bgd}.jpg") 50% 50% no-repeat fixed;
+			background-size:cover;
 		}
 	}
-	background-size:cover;
 }
+
 a { @include transition(all .5s linear); color: $default-link-color; text-decoration: none; }
 b, strong { font-weight: bold; }
 ul, ol { margin: 0 0 1em 0; padding: 0 0 0 40px; }
