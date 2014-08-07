@@ -147,7 +147,8 @@ div.k-window-content#chat {
 #chat {
     .inner {
         height: 100%;
-        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
     .discussion {
         list-style-type: none;

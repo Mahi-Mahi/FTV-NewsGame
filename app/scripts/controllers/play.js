@@ -273,7 +273,7 @@ angular.module('newsGameApp')
 		});
 
 		createWindow('contact', {
-			title: 'contact',
+			title: 'Contact',
 			active: false,
 			template: 'skoupe-contact',
 			position: {
@@ -283,7 +283,7 @@ angular.module('newsGameApp')
 		});
 
 		createWindow('chat', {
-			title: 'chat',
+			title: 'Conversation',
 			active: false,
 			template: 'skoupe-chat',
 			height: 300,
@@ -318,7 +318,7 @@ angular.module('newsGameApp')
 		});
 
 		createWindow('prompt', {
-			title: "Prompt",
+			title: "Avertissement",
 			template: 'prompt',
 			active: false,
 			actions: [],
