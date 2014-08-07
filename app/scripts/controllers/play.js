@@ -401,7 +401,7 @@ angular.module('newsGameApp')
 			});
 
 			addStep(1500, function() {
-				if (!prod) {
+				if ($scope.debug) {
 					var $choices = jQuery('#themeSelector :radio');
 					$choices.eq(Math.round(Math.random() * $choices.length)).click();
 					$log.log($scope.currentTheme);
@@ -425,7 +425,7 @@ angular.module('newsGameApp')
 
 			steps = [];
 
-			addChat(1500, 'me', $scope.themes[$scope.currentTheme] + "! Si je veux trouver des infos sur ce sujet-là, je fais comment ?");
+			addChat(500, 'me', $scope.themes[$scope.currentTheme] + "! Si je veux trouver des infos sur ce sujet-là, je fais comment ?");
 			addChat(1500, 'other', "Tu ouvres grands tes yeux... et tu fais marcher ton cerveau ! En lisant les Cuitts, tu pourras déterminer de quoi ils parlent.");
 
 			addChat(1500, 'me', "Hum... pas facile !");
@@ -442,7 +442,7 @@ angular.module('newsGameApp')
 			});
 
 			addStep(1500, function() {
-				if (!prod) {
+				if ($scope.debug) {
 					jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.theme button').click();
 				}
 			});
@@ -488,7 +488,7 @@ angular.module('newsGameApp')
 			});
 
 			addStep(1500, function() {
-				if (!prod) {
+				if ($scope.debug) {
 					jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.theme button').click();
 				}
 			});
@@ -534,7 +534,7 @@ angular.module('newsGameApp')
 			}
 
 			addStep(1500, function() {
-				if (!prod) {
+				if ($scope.debug) {
 					jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.theme button').click();
 				}
 			});
@@ -579,7 +579,7 @@ angular.module('newsGameApp')
 				};
 			});
 			addStep(1500, function() {
-				if (!prod) {
+				if ($scope.debug) {
 					jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.source').click();
 				}
 			});
@@ -608,7 +608,7 @@ angular.module('newsGameApp')
 			});
 
 			addStep(1500, function() {
-				if (!prod) {
+				if ($scope.debug) {
 					jQuery('#source .metas .theme button').click();
 				}
 			});
