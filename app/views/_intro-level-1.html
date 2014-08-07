@@ -5,9 +5,9 @@
 
 	<a href="/#/play">skip</a>
 
-	<div ng-class="['dialogue', character]">
+	<div ng-class="['dialogue', character]" ng-click="skipCurrentText()">
 		<img src="" alt="" class="character" ng-src="images/character/{{character}}.png" ng-if="character && character != 'me' ">
 		<div class="typed">{{typed}}</div>
-		<a class="skip" ng-click="skipCurrentText()">&gt;</a>
+		<a class="skip">&gt;</a>
 	</div>
 </div>

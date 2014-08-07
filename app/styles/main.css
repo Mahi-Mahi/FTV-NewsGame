@@ -1,0 +1,2859 @@
+/**
+ * Copyright 2014 Telerik AD
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* line 17, ../../app/styles/_kendo.scss */
+
+.k-in,
+.k-item,
+.k-window-action {
+  border-color: transparent;
+}
+
+/* line 21, ../../app/styles/_kendo.scss */
+
+.k-block,
+.k-widget {
+  background-color: #fff;
+}
+
+/* line 25, ../../app/styles/_kendo.scss */
+
+.k-block,
+.k-widget,
+.k-input,
+.k-textbox,
+.k-group,
+.k-content,
+.k-header,
+.k-editable-area,
+.k-separator,
+.k-colorpicker .k-i-arrow-s,
+.k-textbox > input,
+.k-autocomplete,
+.k-dropdown-wrap,
+.k-toolbar,
+.k-group-footer td,
+.k-grid-footer,
+.k-footer-template td,
+.k-state-default,
+.k-state-default .k-select,
+.k-state-disabled,
+.k-grid-header,
+.k-grid-header-wrap,
+.k-grid-header-locked,
+.k-grid-footer-locked,
+.k-grid-content-locked,
+.k-grid td,
+.k-grid td.k-state-selected,
+.k-grid-footer-wrap,
+.k-pager-wrap,
+.k-pager-wrap .k-link,
+.k-pager-refresh,
+.k-grouping-header,
+.k-grouping-header .k-group-indicator,
+.k-panelbar > .k-item > .k-link,
+.k-panel > .k-item > .k-link,
+.k-panelbar .k-panel,
+.k-panelbar .k-content,
+.k-calendar th,
+.k-slider-track,
+.k-splitbar,
+.k-dropzone-active,
+.k-tiles,
+.k-toolbar,
+.k-tooltip,
+.k-button-group .k-tool,
+.k-upload-files {
+  border-color: #c5c5c5;
+}
+
+/* line 29, ../../app/styles/_kendo.scss */
+
+.k-group,
+.k-toolbar,
+.k-grouping-header,
+.k-pager-wrap,
+.k-group-footer td,
+.k-grid-footer,
+.k-footer-template td,
+.k-widget .k-status,
+.k-calendar th,
+.k-dropzone-hovered,
+.k-widget.k-popup {
+  background-color: #ebebeb;
+}
+
+/* line 33, ../../app/styles/_kendo.scss */
+
+.k-grouping-row td,
+td.k-group-cell,
+.k-resize-handle-inner {
+  background-color: #e3e3e3;
+}
+
+/* line 37, ../../app/styles/_kendo.scss */
+
+.k-list-container {
+  border-color: #c5c5c5;
+  background-color: #e9e9e9;
+}
+
+/* line 42, ../../app/styles/_kendo.scss */
+
+.k-content,
+.k-editable-area,
+.k-panelbar > li.k-item,
+.k-panel > li.k-item,
+.k-tiles {
+  background-color: #fff;
+}
+
+/* line 46, ../../app/styles/_kendo.scss */
+
+.k-alt,
+.k-separator {
+  background-color: #f5f5f5;
+}
+
+/* line 50, ../../app/styles/_kendo.scss */
+
+.k-textbox,
+.k-autocomplete.k-header,
+.k-dropdown-wrap.k-state-active,
+.k-picker-wrap.k-state-active,
+.k-numeric-wrap.k-state-active {
+  border-color: #c5c5c5;
+  background-color: #e9e9e9;
+}
+
+/* line 55, ../../app/styles/_kendo.scss */
+
+.k-textbox > input,
+.k-autocomplete .k-input,
+.k-dropdown-wrap .k-input,
+.k-autocomplete.k-state-focused .k-input,
+.k-dropdown-wrap.k-state-focused .k-input,
+.k-picker-wrap.k-state-focused .k-input,
+.k-numeric-wrap.k-state-focused .k-input {
+  border-color: #c5c5c5;
+}
+
+/* line 59, ../../app/styles/_kendo.scss */
+
+input.k-textbox,
+textarea.k-textbox,
+input.k-textbox:hover,
+textarea.k-textbox:hover,
+.k-textbox > input {
+  background: 0;
+}
+
+/* line 63, ../../app/styles/_kendo.scss */
+
+.k-input,
+input.k-textbox,
+textarea.k-textbox,
+input.k-textbox:hover,
+textarea.k-textbox:hover,
+.k-textbox > input,
+.k-multiselect-wrap {
+  background-color: #fff;
+  color: #2e2e2e;
+}
+
+/* line 68, ../../app/styles/_kendo.scss */
+
+.k-input[readonly] {
+  background-color: #fff;
+  color: #2e2e2e;
+}
+
+/* line 73, ../../app/styles/_kendo.scss */
+
+.k-block,
+.k-widget,
+.k-popup,
+.k-content,
+.k-dropdown .k-input {
+  color: #2e2e2e;
+}
+
+/* line 77, ../../app/styles/_kendo.scss */
+
+.k-block {
+  color: #2e2e2e;
+}
+
+/* line 81, ../../app/styles/_kendo.scss */
+
+.k-link:link,
+.k-link:visited,
+.k-nav-current.k-state-hover .k-link {
+  color: #2e2e2e;
+}
+
+/* line 85, ../../app/styles/_kendo.scss */
+
+.k-tabstrip-items .k-link,
+.k-panelbar > li > .k-link {
+  color: #2e2e2e;
+}
+
+/* line 89, ../../app/styles/_kendo.scss */
+
+.k-header {
+  color: #2e2e2e;
+}
+
+/* line 93, ../../app/styles/_kendo.scss */
+
+.k-header,
+.k-grid-header,
+.k-toolbar,
+.k-dropdown-wrap,
+.k-picker-wrap,
+.k-numeric-wrap,
+.k-grouping-header,
+.k-pager-wrap,
+.k-textbox,
+.k-button,
+.k-progressbar,
+.k-draghandle,
+.k-autocomplete,
+.k-state-highlight,
+.k-tabstrip-items .k-item,
+.km-pane-wrapper > .km-pane > .km-view > .km-content {
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+  background-position: 50% 50%;
+  background-color: #e3e3e3;
+}
+
+/* line 103, ../../app/styles/_kendo.scss */
+
+.k-widget.k-tooltip {
+  background-image: url("textures/highlight.png");
+}
+
+/* line 107, ../../app/styles/_kendo.scss */
+
+.k-block,
+.k-header,
+.k-grid-header,
+.k-toolbar,
+.k-grouping-header,
+.k-pager-wrap,
+.k-button,
+.k-draghandle,
+html .km-pane-wrapper .k-header {
+  background-color: #e3e3e3;
+}
+
+/* line 111, ../../app/styles/_kendo.scss */
+
+.k-icon:hover,
+.k-state-hover .k-icon,
+.k-state-selected .k-icon,
+.k-state-focused .k-icon,
+.k-column-menu .k-state-hover .k-sprite,
+.k-column-menu .k-state-active .k-sprite {
+  opacity: 1;
+}
+
+/* line 115, ../../app/styles/_kendo.scss */
+
+.k-icon,
+.k-state-disabled .k-icon,
+.k-column-menu .k-sprite {
+  opacity: .8;
+}
+
+/* line 119, ../../app/styles/_kendo.scss */
+
+.k-mobile-list .k-check:checked,
+.k-mobile-list .k-edit-field [type=checkbox]:checked,
+.k-mobile-list .k-edit-field [type=radio]:checked {
+  opacity: .8;
+}
+
+/* line 123, ../../app/styles/_kendo.scss */
+
+.k-tool {
+  border-color: transparent;
+}
+
+/* line 127, ../../app/styles/_kendo.scss */
+
+.k-icon,
+.k-tool-icon,
+.k-grouping-dropclue,
+.k-drop-hint,
+.k-column-menu .k-sprite,
+.k-grid-mobile .k-resize-handle-inner:before,
+.k-grid-mobile .k-resize-handle-inner:after {
+  background-image: url('/images/kendo/sprite.png');
+  border-color: transparent;
+}
+
+/* line 132, ../../app/styles/_kendo.scss */
+
+.k-mobile-list .k-check:checked,
+.k-mobile-list .k-edit-field [type=checkbox]:checked,
+.k-mobile-list .k-edit-field [type=radio]:checked {
+  background-image: url('/images/kendo/sprite.png');
+  border-color: transparent;
+}
+
+/* line 137, ../../app/styles/_kendo.scss */
+
+.k-loading,
+.k-state-hover .k-loading {
+  background-image: url('/images/kendo/loading.gif');
+  background-position: 50% 50%;
+}
+
+/* line 142, ../../app/styles/_kendo.scss */
+
+.k-loading-image {
+  background-image: url('/images/kendo/loading-image.gif');
+}
+
+/* line 146, ../../app/styles/_kendo.scss */
+
+.k-loading-color {
+  background-color: #fff;
+}
+
+/* line 150, ../../app/styles/_kendo.scss */
+
+.k-button {
+  color: #2e2e2e;
+  border-color: #c5c5c5;
+  background-color: #e3e3e3;
+}
+
+/* line 156, ../../app/styles/_kendo.scss */
+
+.k-button:focus,
+.k-button.k-state-focused {
+  border-color: #c5c5c5;
+}
+
+/* line 160, ../../app/styles/_kendo.scss */
+
+.k-button:hover {
+  color: #2e2e2e;
+  border-color: #bcb4b0;
+  background-color: #bcb4b0;
+}
+
+/* line 166, ../../app/styles/_kendo.scss */
+
+.k-button:active {
+  color: #fff;
+  background-color: #f35800;
+  border-color: #f35800;
+}
+
+/* line 172, ../../app/styles/_kendo.scss */
+
+.k-button.k-state-disabled,
+.k-state-disabled .k-button,
+.k-state-disabled .k-button:hover,
+.k-button.k-state-disabled:hover,
+.k-state-disabled .k-button:active,
+.k-button.k-state-disabled:active {
+  color: #9f9e9e;
+  border-color: #c5c5c5;
+  background-color: #e3e3e3;
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* line 183, ../../app/styles/_kendo.scss */
+
+.k-button:focus:not(.k-state-disabled):not([disabled]) {
+  box-shadow: inset 0 0 5px 1px #bcb4b0;
+}
+
+/* line 188, ../../app/styles/_kendo.scss */
+
+.k-button:focus:active:not(.k-state-disabled):not([disabled]) {
+  box-shadow: inset 0 0 3px 4px #df5100;
+}
+
+/* line 193, ../../app/styles/_kendo.scss */
+
+.k-draghandle {
+  border-color: #c5c5c5;
+  background-color: #fff;
+  box-shadow: none;
+}
+
+/* line 200, ../../app/styles/_kendo.scss */
+
+.k-draghandle:hover {
+  border-color: #bcb4b0;
+  background-color: #bcb4b0;
+  box-shadow: none;
+}
+
+/* line 207, ../../app/styles/_kendo.scss */
+
+.k-scheduler {
+  color: #2e2e2e;
+  background-color: #fff;
+}
+
+/* line 212, ../../app/styles/_kendo.scss */
+
+.k-scheduler-layout {
+  color: #2e2e2e;
+}
+
+/* line 216, ../../app/styles/_kendo.scss */
+
+.k-scheduler-datecolumn,
+.k-scheduler-groupcolumn {
+  background-color: #fff;
+  color: #2e2e2e;
+}
+
+/* line 221, ../../app/styles/_kendo.scss */
+
+.k-scheduler-times tr,
+.k-scheduler-times th,
+.k-scheduler-table td,
+.k-scheduler-header th,
+.k-scheduler-header-wrap,
+.k-scheduler-times {
+  border-color: #c5c5c5;
+}
+
+/* line 225, ../../app/styles/_kendo.scss */
+
+.k-nonwork-hour {
+  background-color: #f2f2f2;
+}
+
+/* line 229, ../../app/styles/_kendo.scss */
+
+.k-scheduler-table .k-today,
+.k-today > .k-scheduler-datecolumn,
+.k-today > .k-scheduler-groupcolumn {
+  background-color: #f8f8f8;
+}
+
+/* line 233, ../../app/styles/_kendo.scss */
+
+.k-scheduler-now-arrow {
+  border-left-color: #e20000;
+}
+
+/* line 237, ../../app/styles/_kendo.scss */
+
+.k-scheduler-now-line {
+  background-color: #e20000;
+}
+
+/* line 241, ../../app/styles/_kendo.scss */
+
+.k-event {
+  border-color: #ffdac1;
+  background: #ffdac1 0 -257px url("textures/highlight.png") repeat-x;
+  color: #2e2e2e;
+}
+
+/* line 247, ../../app/styles/_kendo.scss */
+
+.k-event-inverse {
+  color: #fff;
+}
+
+/* line 251, ../../app/styles/_kendo.scss */
+
+.k-event.k-state-selected {
+  background-position: 0 0;
+}
+
+/* line 255, ../../app/styles/_kendo.scss */
+
+.k-ie7 .k-event .k-resize-handle,
+.k-event .k-resize-handle:after {
+  background-color: #bababa;
+}
+
+/* line 259, ../../app/styles/_kendo.scss */
+
+.k-scheduler-marquee:before,
+.k-scheduler-marquee:after {
+  border-color: #f35800;
+}
+
+/* line 263, ../../app/styles/_kendo.scss */
+
+.k-panelbar .k-content,
+.k-panelbar .k-panel,
+.k-panelbar .k-item {
+  background-color: #fff;
+  color: #2e2e2e;
+  border-color: #c5c5c5;
+}
+
+/* line 269, ../../app/styles/_kendo.scss */
+
+.k-panelbar > li > .k-link {
+  color: #2e2e2e;
+}
+
+/* line 273, ../../app/styles/_kendo.scss */
+
+.k-panelbar > .k-item > .k-link {
+  border-color: #c5c5c5;
+}
+
+/* line 277, ../../app/styles/_kendo.scss */
+
+.k-panel > li.k-item {
+  background-color: #fff;
+}
+
+/* line 281, ../../app/styles/_kendo.scss */
+
+.k-state-active,
+.k-state-active:hover,
+.k-active-filter,
+.k-tabstrip .k-state-active {
+  background-color: #fff;
+  border-color: #f35800;
+  color: #2e2e2e;
+}
+
+/* line 287, ../../app/styles/_kendo.scss */
+
+.k-menu .k-state-hover > .k-state-active {
+  background-color: transparent;
+}
+
+/* line 291, ../../app/styles/_kendo.scss */
+
+.k-state-highlight {
+  background: #fff;
+  color: #2e2e2e;
+}
+
+/* line 296, ../../app/styles/_kendo.scss */
+
+.k-state-focused,
+.k-grouping-row .k-state-focused {
+  border-color: #bcb4b0;
+}
+
+/* line 300, ../../app/styles/_kendo.scss */
+
+.k-calendar .k-link {
+  color: #2e2e2e;
+}
+
+/* line 304, ../../app/styles/_kendo.scss */
+
+.k-calendar .k-footer {
+  padding: 0;
+}
+
+/* line 308, ../../app/styles/_kendo.scss */
+
+.k-calendar .k-footer .k-nav-today {
+  color: #2e2e2e;
+  text-decoration: none;
+  background-color: #fff;
+}
+
+/* line 314, ../../app/styles/_kendo.scss */
+
+.k-calendar .k-footer .k-nav-today:hover,
+.k-calendar .k-footer .k-nav-today.k-state-hover {
+  background-color: #fff;
+  text-decoration: underline;
+}
+
+/* line 319, ../../app/styles/_kendo.scss */
+
+.k-calendar .k-footer .k-nav-today:active {
+  background-color: #fff;
+}
+
+/* line 323, ../../app/styles/_kendo.scss */
+
+.k-calendar .k-link.k-nav-fast {
+  color: #2e2e2e;
+}
+
+/* line 327, ../../app/styles/_kendo.scss */
+
+.k-calendar .k-nav-fast.k-state-hover {
+  text-decoration: none;
+  background-color: #bcb4b0;
+  color: #2e2e2e;
+}
+
+/* line 333, ../../app/styles/_kendo.scss */
+
+.k-calendar .k-link.k-state-hover,
+.k-window-titlebar .k-link {
+  border-radius: 4px;
+}
+
+/* line 337, ../../app/styles/_kendo.scss */
+
+.k-calendar .k-footer .k-link {
+  border-radius: 0;
+}
+
+/* line 341, ../../app/styles/_kendo.scss */
+
+.k-calendar th {
+  background-color: #ebebeb;
+}
+
+/* line 345, ../../app/styles/_kendo.scss */
+
+.k-calendar-container.k-group {
+  border-color: #c5c5c5;
+}
+
+/* line 349, ../../app/styles/_kendo.scss */
+
+.k-state-selected,
+.k-state-selected:link,
+.k-state-selected:visited,
+.k-list > .k-state-selected,
+.k-list > .k-state-highlight,
+.k-panel > .k-state-selected,
+.k-ghost-splitbar-vertical,
+.k-ghost-splitbar-horizontal,
+.k-draghandle.k-state-selected:hover,
+.k-scheduler .k-scheduler-toolbar .k-state-selected,
+.k-scheduler .k-today.k-state-selected,
+.k-marquee-color {
+  color: #fff;
+  background-color: #f35800;
+  border-color: #f35800;
+}
+
+/* line 355, ../../app/styles/_kendo.scss */
+
+.k-marquee-text {
+  color: #fff;
+}
+
+/* line 359, ../../app/styles/_kendo.scss */
+
+.k-state-focused,
+.k-list > .k-state-focused,
+.k-listview > .k-state-focused,
+.k-grid-header th.k-state-focused,
+td.k-state-focused,
+.k-button.k-state-focused {
+  box-shadow: inset 0 0 5px 1px #bcb4b0;
+}
+
+/* line 364, ../../app/styles/_kendo.scss */
+
+.k-state-focused.k-state-selected,
+.k-list > .k-state-focused.k-state-selected,
+.k-listview > .k-state-focused.k-state-selected,
+td.k-state-focused.k-state-selected {
+  box-shadow: inset 0 0 3px 4px #df5100;
+}
+
+/* line 369, ../../app/styles/_kendo.scss */
+
+.k-ie8 .k-panelbar span.k-state-focused,
+.k-ie8 .k-menu li.k-state-focused,
+.k-ie8 .k-listview > .k-state-focused,
+.k-ie8 .k-grid-header th.k-state-focused,
+.k-ie8 td.k-state-focused,
+.k-ie8 .k-tool.k-state-hover,
+.k-ie8 .k-button:focus,
+.k-ie8 .k-button.k-state-focused,
+.k-ie7 .k-panelbar span.k-state-focused,
+.k-ie7 .k-menu li.k-state-focused,
+.k-ie7 .k-listview > .k-state-focused,
+.k-ie7 .k-grid-header th.k-state-focused,
+.k-ie7 td.k-state-focused,
+.k-ie7 .k-tool.k-state-hover,
+.k-ie7 .k-button:focus,
+.k-ie7 .k-button.k-state-focused {
+  background-color: #bcb4b0;
+}
+
+/* line 373, ../../app/styles/_kendo.scss */
+
+.k-list > .k-state-selected.k-state-focused {
+  box-shadow: none;
+}
+
+/* line 378, ../../app/styles/_kendo.scss */
+
+.k-state-selected > .k-link,
+.k-panelbar > li > .k-state-selected,
+.k-panelbar > li.k-state-default > .k-link.k-state-selected {
+  color: #fff;
+}
+
+/* line 382, ../../app/styles/_kendo.scss */
+
+.k-state-selected,
+.k-button:active,
+.k-draghandle.k-state-selected:hover {
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* line 390, ../../app/styles/_kendo.scss */
+
+.k-button:active,
+.k-draghandle.k-state-selected:hover {
+  background-position: 50% 50%;
+}
+
+/* line 394, ../../app/styles/_kendo.scss */
+
+.k-state-hover,
+.k-state-hover:hover,
+.k-splitbar-horizontal-hover:hover,
+.k-splitbar-vertical-hover:hover,
+.k-list > .k-state-hover,
+.k-scheduler .k-scheduler-toolbar ul li.k-state-hover,
+.k-pager-wrap .k-link:hover,
+.k-dropdown .k-state-focused,
+.k-imagebrowser-dropzone,
+.k-mobile-list .k-item > .k-link:active,
+.k-mobile-list .k-item > .k-label:active,
+.k-mobile-list .k-edit-label.k-check:active,
+.k-mobile-list .k-recur-view .k-check:active {
+  color: #2e2e2e;
+  background-color: #bcb4b0;
+  border-color: #bcb4b0;
+}
+
+/* line 400, ../../app/styles/_kendo.scss */
+
+.k-mobile-list .k-scheduler-timezones .k-edit-field:nth-child(2):active {
+  color: #2e2e2e;
+  background-color: #bcb4b0;
+  border-color: #bcb4b0;
+}
+
+/* line 406, ../../app/styles/_kendo.scss */
+
+.k-ie7 .k-window-titlebar .k-state-hover,
+.k-ie8 .k-window-titlebar .k-state-hover {
+  border-color: #bcb4b0;
+}
+
+/* line 410, ../../app/styles/_kendo.scss */
+
+.k-state-hover > .k-select,
+.k-state-focused > .k-select {
+  border-color: #bcb4b0;
+}
+
+/* line 414, ../../app/styles/_kendo.scss */
+
+.k-button:hover,
+.k-button:focus,
+.k-button.k-state-focused,
+.k-textbox:hover,
+.k-state-hover,
+.k-state-hover:hover,
+.k-pager-wrap .k-link:hover,
+.k-other-month.k-state-hover .k-link,
+div.k-imagebrowser-dropzone em,
+.k-draghandle:hover {
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* line 422, ../../app/styles/_kendo.scss */
+
+.k-pager-wrap {
+  background-color: #e3e3e3;
+  color: #2e2e2e;
+}
+
+/* line 427, ../../app/styles/_kendo.scss */
+
+.k-autocomplete.k-state-active,
+.k-picker-wrap.k-state-active,
+.k-numeric-wrap.k-state-active,
+.k-dropdown-wrap.k-state-active,
+.k-state-active,
+.k-state-active:hover,
+.k-state-active > .k-link,
+.k-button:active,
+.k-panelbar > .k-item > .k-state-focused {
+  background-image: none;
+}
+
+/* line 431, ../../app/styles/_kendo.scss */
+
+.k-tool-icon {
+  background-image: url('/images/kendo/sprite.png');
+}
+
+/* line 435, ../../app/styles/_kendo.scss */
+
+.k-state-hover > .k-link,
+.k-other-month.k-state-hover .k-link,
+div.k-imagebrowser-dropzone em {
+  color: #2e2e2e;
+}
+
+/* line 439, ../../app/styles/_kendo.scss */
+
+.k-autocomplete.k-state-hover,
+.k-autocomplete.k-state-focused,
+.k-picker-wrap.k-state-hover,
+.k-picker-wrap.k-state-focused,
+.k-numeric-wrap.k-state-hover,
+.k-numeric-wrap.k-state-focused,
+.k-dropdown-wrap.k-state-hover,
+.k-dropdown-wrap.k-state-focused {
+  background-color: #bcb4b0;
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  background-position: 50% 50%;
+  border-color: #bcb4b0;
+}
+
+/* line 450, ../../app/styles/_kendo.scss */
+
+.km-pane-wrapper .k-mobile-list input:not([type="checkbox"]):not([type="radio"]),
+.km-pane-wrapper .km-pane .k-mobile-list select:not([multiple]),
+.km-pane-wrapper .k-mobile-list textarea,
+.k-dropdown .k-state-focused .k-input {
+  color: #2e2e2e;
+}
+
+/* line 454, ../../app/styles/_kendo.scss */
+
+.k-dropdown .k-state-hover .k-input {
+  color: #2e2e2e;
+}
+
+/* line 458, ../../app/styles/_kendo.scss */
+
+.k-state-error {
+  border-color: #e20000;
+  background-color: #ff5252;
+  color: #fff;
+}
+
+/* line 464, ../../app/styles/_kendo.scss */
+
+.k-state-disabled {
+  filter: alpha(opacity=70);
+  opacity: .7;
+}
+
+/* line 469, ../../app/styles/_kendo.scss */
+
+.k-tile-empty.k-state-selected,
+.k-loading-mask.k-state-selected {
+  border-width: 0;
+  background-image: none;
+  background-color: transparent;
+}
+
+/* line 475, ../../app/styles/_kendo.scss */
+
+.k-state-disabled,
+.k-state-disabled .k-link,
+.k-state-disabled .k-button,
+.k-other-month,
+.k-other-month .k-link,
+.k-dropzone em,
+.k-dropzone .k-upload-status,
+.k-tile-empty strong,
+.k-slider .k-draghandle {
+  color: #9f9e9e;
+}
+
+/* line 479, ../../app/styles/_kendo.scss */
+
+.k-progressbar-indeterminate {
+  background: url('/images/kendo/indeterminate.gif');
+}
+
+/* line 483, ../../app/styles/_kendo.scss */
+
+.k-progressbar-indeterminate .k-progress-status-wrap,
+.k-progressbar-indeterminate .k-state-selected {
+  display: none;
+}
+
+/* line 487, ../../app/styles/_kendo.scss */
+
+.k-slider-track {
+  background-color: #c5c5c5;
+}
+
+/* line 491, ../../app/styles/_kendo.scss */
+
+.k-slider-selection {
+  background-color: #f35800;
+}
+
+/* line 495, ../../app/styles/_kendo.scss */
+
+.k-slider-horizontal .k-tick {
+  background-image: url('/images/kendo/slider-h.gif');
+}
+
+/* line 499, ../../app/styles/_kendo.scss */
+
+.k-slider-vertical .k-tick {
+  background-image: url('/images/kendo/slider-v.gif');
+}
+
+/* line 503, ../../app/styles/_kendo.scss */
+
+.k-widget.k-tooltip {
+  border-color: #c5c5c5;
+  background-color: #c6c6c6;
+  color: #282828;
+}
+
+/* line 509, ../../app/styles/_kendo.scss */
+
+.k-widget.k-tooltip-validation {
+  border-color: #ffe79e;
+  background-color: #fff4c9;
+  color: #635145;
+}
+
+/* line 515, ../../app/styles/_kendo.scss */
+
+.input-prepend .k-tooltip-validation,
+.input-append .k-tooltip-validation {
+  font-size: 12px;
+  position: relative;
+  top: 3px;
+}
+
+/* line 521, ../../app/styles/_kendo.scss */
+
+.k-callout-n {
+  border-bottom-color: #c5c5c5;
+}
+
+/* line 525, ../../app/styles/_kendo.scss */
+
+.k-callout-w {
+  border-right-color: #c5c5c5;
+}
+
+/* line 529, ../../app/styles/_kendo.scss */
+
+.k-callout-s {
+  border-top-color: #c5c5c5;
+}
+
+/* line 533, ../../app/styles/_kendo.scss */
+
+.k-callout-e {
+  border-left-color: #c5c5c5;
+}
+
+/* line 537, ../../app/styles/_kendo.scss */
+
+.k-tooltip-validation .k-callout-n {
+  border-bottom-color: #ffe79e;
+}
+
+/* line 541, ../../app/styles/_kendo.scss */
+
+.k-tooltip-validation .k-callout-w {
+  border-right-color: #ffe79e;
+}
+
+/* line 545, ../../app/styles/_kendo.scss */
+
+.k-tooltip-validation .k-callout-s {
+  border-top-color: #ffe79e;
+}
+
+/* line 549, ../../app/styles/_kendo.scss */
+
+.k-tooltip-validation .k-callout-e {
+  border-left-color: #ffe79e;
+}
+
+/* line 553, ../../app/styles/_kendo.scss */
+
+.k-splitbar {
+  background-color: #e3e3e3;
+}
+
+/* line 557, ../../app/styles/_kendo.scss */
+
+.k-restricted-size-vertical,
+.k-restricted-size-horizontal {
+  background-color: #fff;
+}
+
+/* line 561, ../../app/styles/_kendo.scss */
+
+.k-file {
+  background-color: #fff;
+  border-color: #c5c5c5;
+}
+
+/* line 566, ../../app/styles/_kendo.scss */
+
+.k-file-progress {
+  color: #06c;
+}
+
+/* line 570, ../../app/styles/_kendo.scss */
+
+.k-file-progress .k-progress {
+  background-color: #d0f8ff;
+}
+
+/* line 574, ../../app/styles/_kendo.scss */
+
+.k-file-success {
+  color: #28760b;
+}
+
+/* line 578, ../../app/styles/_kendo.scss */
+
+.k-file-success .k-progress {
+  background-color: #ddffd0;
+}
+
+/* line 582, ../../app/styles/_kendo.scss */
+
+.k-file-error {
+  color: #c00;
+}
+
+/* line 586, ../../app/styles/_kendo.scss */
+
+.k-file-error .k-progress {
+  background-color: #ffded7;
+}
+
+/* line 590, ../../app/styles/_kendo.scss */
+
+.k-tile {
+  border-color: #fff;
+}
+
+/* line 594, ../../app/styles/_kendo.scss */
+
+.k-textbox:hover,
+.k-tiles li.k-state-hover {
+  border-color: #bcb4b0;
+}
+
+/* line 598, ../../app/styles/_kendo.scss */
+
+.k-tiles li.k-state-selected {
+  border-color: #f35800;
+}
+
+/* line 602, ../../app/styles/_kendo.scss */
+
+.k-tile .k-folder,
+.k-tile .k-file {
+  background-image: url('/images/kendo/imagebrowser.png');
+}
+
+/* line 606, ../../app/styles/_kendo.scss */
+
+.k-widget,
+.k-button {
+  box-shadow: none;
+}
+
+/* line 611, ../../app/styles/_kendo.scss */
+
+.k-slider,
+.k-treeview,
+.k-upload {
+  box-shadow: none;
+}
+
+/* line 616, ../../app/styles/_kendo.scss */
+
+.k-state-hover {
+  box-shadow: none;
+}
+
+/* line 621, ../../app/styles/_kendo.scss */
+
+.k-autocomplete.k-state-focused,
+.k-dropdown-wrap.k-state-focused,
+.k-picker-wrap.k-state-focused,
+.k-numeric-wrap.k-state-focused {
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* line 626, ../../app/styles/_kendo.scss */
+
+.k-state-selected {
+  box-shadow: none;
+}
+
+/* line 631, ../../app/styles/_kendo.scss */
+
+.k-state-active {
+  box-shadow: none;
+}
+
+/* line 636, ../../app/styles/_kendo.scss */
+
+.k-grid td.k-state-selected.k-state-focused {
+  background-color: #ff5e03;
+}
+
+/* line 640, ../../app/styles/_kendo.scss */
+
+.k-popup,
+.k-menu .k-group,
+.k-grid .k-filter-options,
+.k-time-popup,
+.k-datepicker-calendar,
+.k-autocomplete.k-state-border-down,
+.k-autocomplete.k-state-border-up,
+.k-dropdown-wrap.k-state-active,
+.k-picker-wrap.k-state-active,
+.k-multiselect.k-state-focused,
+.k-imagebrowser .k-image,
+.k-tooltip {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* line 645, ../../app/styles/_kendo.scss */
+
+.k-window {
+  border: none !important;
+  box-shadow: 1px 1px 7px 1px rgba(128, 128, 128, 0.3);
+  background: #edeeee;
+}
+
+/* line 652, ../../app/styles/_kendo.scss */
+
+.k-window.k-state-focused {
+  box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* line 657, ../../app/styles/_kendo.scss */
+
+.k-window.k-window-maximized,
+.k-window-maximized .k-window-titlebar,
+.k-window-maximized .k-window-content {
+  border-radius: 0;
+}
+
+/* line 661, ../../app/styles/_kendo.scss */
+
+.k-shadow {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* line 666, ../../app/styles/_kendo.scss */
+
+.k-inset {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* line 671, ../../app/styles/_kendo.scss */
+
+.k-editor-inline ::selection {
+  background-color: #f35800;
+  text-shadow: none;
+  color: #fff;
+}
+
+/* line 677, ../../app/styles/_kendo.scss */
+
+.k-editor-inline ::-moz-selection {
+  background-color: #f35800;
+  text-shadow: none;
+  color: #fff;
+}
+
+/* line 683, ../../app/styles/_kendo.scss */
+
+.k-notification.k-notification-info {
+  background-color: #e5f5fa;
+  color: #0487c4;
+  border-color: #b7e1f0;
+}
+
+/* line 689, ../../app/styles/_kendo.scss */
+
+.k-notification.k-notification-success {
+  background-color: #eaf7ec;
+  color: #349946;
+  border-color: #c3e8ca;
+}
+
+/* line 695, ../../app/styles/_kendo.scss */
+
+.k-notification.k-notification-warning {
+  background-color: #fff4d9;
+  color: #0487c4;
+  border-color: #fff0c8;
+}
+
+/* line 701, ../../app/styles/_kendo.scss */
+
+.k-notification.k-notification-error {
+  background-color: #ffe0d9;
+  color: #ef470a;
+  border-color: #ffb7a8;
+}
+
+/* line 707, ../../app/styles/_kendo.scss */
+
+.k-block,
+.k-button,
+.k-textbox,
+.k-drag-clue,
+.k-touch-scrollbar,
+.k-window,
+.k-window-titleless .k-window-content,
+.k-window-action,
+.k-inline-block,
+.k-grid .k-filter-options,
+.k-grouping-header .k-group-indicator,
+.k-autocomplete,
+.k-multiselect,
+.k-combobox,
+.k-dropdown,
+.k-dropdown-wrap,
+.k-datepicker,
+.k-timepicker,
+.k-colorpicker,
+.k-datetimepicker,
+.k-notification,
+.k-numerictextbox,
+.k-picker-wrap,
+.k-numeric-wrap,
+.k-colorpicker,
+.k-list-container,
+.k-calendar-container,
+.k-calendar td,
+.k-calendar .k-link,
+.k-treeview .k-in,
+.k-editor-inline,
+.k-tooltip,
+.k-tile,
+.k-slider-track,
+.k-slider-selection,
+.k-upload {
+  border-radius: 4px;
+}
+
+/* line 711, ../../app/styles/_kendo.scss */
+
+.k-tool {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 716, ../../app/styles/_kendo.scss */
+
+.k-tool.k-group-start {
+  border-radius: 4px 0 0 4px;
+}
+
+/* line 720, ../../app/styles/_kendo.scss */
+
+.k-rtl .k-tool.k-group-start {
+  border-radius: 0 4px 4px 0;
+}
+
+/* line 724, ../../app/styles/_kendo.scss */
+
+.k-tool.k-group-end {
+  border-radius: 0 4px 4px 0;
+}
+
+/* line 728, ../../app/styles/_kendo.scss */
+
+.k-rtl .k-tool.k-group-end {
+  border-radius: 4px 0 0 4px;
+}
+
+/* line 732, ../../app/styles/_kendo.scss */
+
+.k-group-start.k-group-end.k-tool {
+  border-radius: 4px;
+}
+
+/* line 736, ../../app/styles/_kendo.scss */
+
+.k-calendar-container.k-state-border-up,
+.k-list-container.k-state-border-up,
+.k-autocomplete.k-state-border-up,
+.k-multiselect.k-state-border-up,
+.k-dropdown-wrap.k-state-border-up,
+.k-picker-wrap.k-state-border-up,
+.k-numeric-wrap.k-state-border-up,
+.k-window-content,
+.k-filter-menu {
+  border-radius: 0 0 4px 4px;
+}
+
+/* line 740, ../../app/styles/_kendo.scss */
+
+.k-autocomplete.k-state-border-up .k-input,
+.k-dropdown-wrap.k-state-border-up .k-input,
+.k-picker-wrap.k-state-border-up .k-input,
+.k-picker-wrap.k-state-border-up .k-selected-color,
+.k-numeric-wrap.k-state-border-up .k-input {
+  border-radius: 0 0 0 4px;
+}
+
+/* line 744, ../../app/styles/_kendo.scss */
+
+.k-multiselect.k-state-border-up .k-multiselect-wrap {
+  border-radius: 0 0 4px 4px;
+}
+
+/* line 748, ../../app/styles/_kendo.scss */
+
+.k-window-titlebar,
+.k-block > .k-header,
+.k-tabstrip-items .k-item,
+.k-panelbar .k-tabstrip-items .k-item,
+.k-tabstrip-items .k-link,
+.k-calendar-container.k-state-border-down,
+.k-list-container.k-state-border-down,
+.k-autocomplete.k-state-border-down,
+.k-multiselect.k-state-border-down,
+.k-dropdown-wrap.k-state-border-down,
+.k-picker-wrap.k-state-border-down,
+.k-numeric-wrap.k-state-border-down {
+  border-radius: 4px 4px 0 0;
+}
+
+/* line 752, ../../app/styles/_kendo.scss */
+
+.k-dropdown-wrap .k-input,
+.k-picker-wrap .k-input,
+.k-numeric-wrap .k-input {
+  border-radius: 3px 0 0 3px;
+}
+
+/* line 756, ../../app/styles/_kendo.scss */
+
+.k-rtl .k-dropdown-wrap .k-input,
+.k-rtl .k-picker-wrap .k-input,
+.k-rtl .k-numeric-wrap .k-input {
+  border-radius: 0 3px 3px 0;
+}
+
+/* line 760, ../../app/styles/_kendo.scss */
+
+.k-numeric-wrap .k-link {
+  border-radius: 0 3px 0 0;
+}
+
+/* line 764, ../../app/styles/_kendo.scss */
+
+.k-numeric-wrap .k-link + .k-link {
+  border-radius: 0 0 3px 0;
+}
+
+/* line 768, ../../app/styles/_kendo.scss */
+
+.k-colorpicker .k-selected-color {
+  border-radius: 3px 0 0 3px;
+}
+
+/* line 772, ../../app/styles/_kendo.scss */
+
+.k-rtl .k-colorpicker .k-selected-color {
+  border-radius: 0 3px 3px 0;
+}
+
+/* line 776, ../../app/styles/_kendo.scss */
+
+.k-autocomplete.k-state-border-down .k-input {
+  border-radius: 4px 4px 0 0;
+}
+
+/* line 780, ../../app/styles/_kendo.scss */
+
+.k-dropdown-wrap.k-state-border-down .k-input,
+.k-picker-wrap.k-state-border-down .k-input,
+.k-picker-wrap.k-state-border-down .k-selected-color,
+.k-numeric-wrap.k-state-border-down .k-input {
+  border-radius: 4px 0 0 0;
+}
+
+/* line 784, ../../app/styles/_kendo.scss */
+
+.k-numeric-wrap .k-link.k-state-selected {
+  background-color: #f35800;
+}
+
+/* line 788, ../../app/styles/_kendo.scss */
+
+.k-multiselect.k-state-border-down .k-multiselect-wrap {
+  border-radius: 3px 3px 0 0;
+}
+
+/* line 792, ../../app/styles/_kendo.scss */
+
+.k-dropdown-wrap .k-select,
+.k-picker-wrap .k-select,
+.k-numeric-wrap .k-select,
+.k-datetimepicker .k-select + .k-select,
+.k-list-container.k-state-border-right {
+  border-radius: 0 4px 4px 0;
+}
+
+/* line 796, ../../app/styles/_kendo.scss */
+
+.k-rtl .k-dropdown-wrap .k-select,
+.k-rtl .k-picker-wrap .k-select,
+.k-rtl .k-numeric-wrap .k-select,
+.k-rtl .k-datetimepicker .k-select + .k-select,
+.k-rtl .k-list-container.k-state-border-right {
+  border-radius: 4px 0 0 4px;
+}
+
+/* line 800, ../../app/styles/_kendo.scss */
+
+.k-numeric-wrap.k-expand-padding .k-input {
+  border-radius: 4px;
+}
+
+/* line 804, ../../app/styles/_kendo.scss */
+
+.k-textbox > input,
+.k-autocomplete .k-input,
+.k-multiselect-wrap {
+  border-radius: 3px;
+}
+
+/* line 808, ../../app/styles/_kendo.scss */
+
+.k-list .k-state-hover,
+.k-list .k-state-focused,
+.k-list .k-state-highlight,
+.k-list .k-state-selected,
+.k-dropzone {
+  border-radius: 3px;
+}
+
+/* line 812, ../../app/styles/_kendo.scss */
+
+.k-slider .k-button,
+.k-grid .k-slider .k-button {
+  border-radius: 13px;
+}
+
+/* line 816, ../../app/styles/_kendo.scss */
+
+.k-draghandle {
+  border-radius: 7px;
+}
+
+/* line 820, ../../app/styles/_kendo.scss */
+
+.k-scheduler-toolbar > ul li:first-child,
+.k-scheduler-toolbar > ul li:first-child .k-link {
+  border-radius: 4px 0 0 4px;
+}
+
+/* line 824, ../../app/styles/_kendo.scss */
+
+.k-rtl .k-scheduler-toolbar > ul li:first-child,
+.k-rtl .k-scheduler-toolbar > ul li:first-child .k-link,
+.km-view.k-popup-edit-form .k-scheduler-toolbar > ul li:last-child,
+.km-view.k-popup-edit-form .k-scheduler-toolbar > ul li:last-child .k-link {
+  border-radius: 0 4px 4px 0;
+}
+
+/* line 828, ../../app/styles/_kendo.scss */
+
+.k-scheduler-phone .k-scheduler-toolbar > ul li.k-nav-today,
+.k-scheduler-phone .k-scheduler-toolbar > ul li.k-nav-today .k-link,
+.k-edit-field > .k-scheduler-navigation {
+  border-radius: 4px;
+}
+
+/* line 832, ../../app/styles/_kendo.scss */
+
+.k-scheduler-toolbar .k-nav-next,
+.k-scheduler-toolbar ul + ul li:last-child,
+.k-scheduler-toolbar .k-nav-next .k-link,
+.k-scheduler-toolbar ul + ul li:last-child .k-link {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* line 837, ../../app/styles/_kendo.scss */
+
+.k-rtl .k-scheduler-toolbar .k-nav-next,
+.k-rtl .k-scheduler-toolbar ul + ul li:last-child,
+.k-rtl .k-scheduler-toolbar .k-nav-next .k-link,
+.k-rtl .k-scheduler-toolbar ul + ul li:last-child .k-link {
+  border-radius: 4px 0 0 4px;
+}
+
+/* line 841, ../../app/styles/_kendo.scss */
+
+.k-scheduler div.k-scheduler-footer ul li,
+.k-scheduler div.k-scheduler-footer .k-link {
+  border-radius: 4px;
+}
+
+/* line 845, ../../app/styles/_kendo.scss */
+
+.k-more-events,
+.k-event,
+.k-event .k-link {
+  border-radius: 3px;
+}
+
+/* line 849, ../../app/styles/_kendo.scss */
+
+.k-scheduler-mobile .k-event {
+  border-radius: 2px;
+}
+
+/* line 853, ../../app/styles/_kendo.scss */
+
+.k-grid-mobile .k-column-active + th.k-header {
+  border-left-color: #2e2e2e;
+}
+
+/* line 857, ../../app/styles/_kendo.scss */
+
+html .km-pane-wrapper .km-widget,
+.k-ie .km-pane-wrapper .k-widget,
+.k-ie .km-pane-wrapper .k-group,
+.k-ie .km-pane-wrapper .k-content,
+.k-ie .km-pane-wrapper .k-header,
+.k-ie .km-pane-wrapper .k-popup-edit-form .k-edit-field .k-button,
+.km-pane-wrapper .k-mobile-list .k-item,
+.km-pane-wrapper .k-mobile-list .k-edit-label,
+.km-pane-wrapper .k-mobile-list .k-edit-field {
+  color: #2e2e2e;
+}
+
+@media screen and (-ms-high-contrast: active) and (-ms-high-contrast: none) {
+  /* line 862, ../../app/styles/_kendo.scss */
+
+  div.km-pane-wrapper a {
+    color: #2e2e2e;
+  }
+
+  /* line 865, ../../app/styles/_kendo.scss */
+
+  .km-pane-wrapper .k-icon {
+    background-image: url('/images/kendo/sprite_2x.png');
+    background-size: 21.2em 21em;
+  }
+}
+
+/* line 871, ../../app/styles/_kendo.scss */
+
+.km-pane-wrapper .k-mobile-list .k-item,
+.km-pane-wrapper .k-mobile-list .k-edit-field,
+.km-pane-wrapper .k-mobile-list .k-recur-view > .k-edit-field .k-check {
+  background-color: #fff;
+  border-top: 1px solid #c5c5c5;
+}
+
+/* line 876, ../../app/styles/_kendo.scss */
+
+.km-pane-wrapper .k-mobile-list .k-item.k-state-selected {
+  background-color: #f35800;
+  border-top-color: #f35800;
+}
+
+/* line 881, ../../app/styles/_kendo.scss */
+
+.km-pane-wrapper .k-mobile-list .k-recur-view > .k-edit-field .k-check:first-child {
+  border-top-color: transparent;
+}
+
+/* line 885, ../../app/styles/_kendo.scss */
+
+.km-pane-wrapper .k-mobile-list .k-item:last-child {
+  box-shadow: inset 0 -1px 0 #c5c5c5;
+}
+
+/* line 890, ../../app/styles/_kendo.scss */
+
+.km-pane-wrapper .k-mobile-list > ul > li > .k-link,
+.km-pane-wrapper .k-mobile-list .k-recur-view > .k-edit-label:nth-child(3),
+.km-pane-wrapper #recurrence .km-scroll-container > .k-edit-label:first-child {
+  color: #797979;
+}
+
+/* line 894, ../../app/styles/_kendo.scss */
+
+.km-pane-wrapper .k-mobile-list > ul > li > .k-link {
+  border-bottom: 1px solid #c5c5c5;
+}
+
+/* line 898, ../../app/styles/_kendo.scss */
+
+.km-pane-wrapper .k-mobile-list .k-edit-field {
+  box-shadow: 0 1px 1px #c5c5c5;
+}
+
+/* line 903, ../../app/styles/_kendo.scss */
+
+.km-actionsheet .k-grid-delete,
+.km-actionsheet .k-scheduler-delete,
+.km-pane-wrapper .k-scheduler-delete,
+.km-pane-wrapper .k-filter-menu .k-button[type=reset] {
+  color: #fff;
+  border-color: #e20000;
+  background-color: red;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.15));
+}
+
+/* line 914, ../../app/styles/_kendo.scss */
+
+.km-actionsheet .k-grid-delete:active,
+.km-actionsheet .k-scheduler-delete:active,
+.km-pane-wrapper .k-scheduler-delete:active,
+.km-pane-wrapper .k-filter-menu .k-button[type=reset]:active {
+  background-color: #900;
+}
+
+/* line 918, ../../app/styles/_kendo.scss */
+
+.k-autocomplete.k-state-default,
+.k-picker-wrap.k-state-default,
+.k-numeric-wrap.k-state-default,
+.k-dropdown-wrap.k-state-default {
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+  background-position: 50% 50%;
+  background-color: #e9e9e9;
+  border-color: #c5c5c5;
+}
+
+/* line 929, ../../app/styles/_kendo.scss */
+
+.k-autocomplete.k-state-hover,
+.k-picker-wrap.k-state-hover,
+.k-numeric-wrap.k-state-hover,
+.k-dropdown-wrap.k-state-hover {
+  background-color: #bcb4b0;
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  background-position: 50% 50%;
+  border-color: #bcb4b0;
+}
+
+/* line 940, ../../app/styles/_kendo.scss */
+
+.k-multiselect.k-header {
+  border-color: #c5c5c5;
+}
+
+/* line 944, ../../app/styles/_kendo.scss */
+
+.k-multiselect.k-header.k-state-hover {
+  border-color: #bcb4b0;
+}
+
+/* line 948, ../../app/styles/_kendo.scss */
+
+.k-autocomplete.k-state-focused,
+.k-picker-wrap.k-state-focused,
+.k-numeric-wrap.k-state-focused,
+.k-dropdown-wrap.k-state-focused,
+.k-multiselect.k-header.k-state-focused {
+  background-color: #bcb4b0;
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  background-position: 50% 50%;
+  border-color: #bcb4b0;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* line 961, ../../app/styles/_kendo.scss */
+
+.k-list-container {
+  color: #2e2e2e;
+}
+
+/* line 965, ../../app/styles/_kendo.scss */
+
+.k-dropdown .k-input,
+.k-dropdown .k-state-focused .k-input,
+.k-menu .k-popup {
+  color: #2e2e2e;
+}
+
+/* line 969, ../../app/styles/_kendo.scss */
+
+.k-state-default > .k-select {
+  border-color: #c5c5c5;
+}
+
+/* line 973, ../../app/styles/_kendo.scss */
+
+.k-state-hover > .k-select {
+  border-color: #bcb4b0;
+}
+
+/* line 977, ../../app/styles/_kendo.scss */
+
+.k-state-focused > .k-select {
+  border-color: #bcb4b0;
+}
+
+/* line 981, ../../app/styles/_kendo.scss */
+
+.k-tabstrip-items .k-state-default .k-link,
+.k-panelbar > li.k-state-default > .k-link {
+  color: #2e2e2e;
+}
+
+/* line 985, ../../app/styles/_kendo.scss */
+
+.k-tabstrip-items .k-state-hover .k-link,
+.k-panelbar > li.k-state-hover > .k-link,
+.k-panelbar > li.k-state-default > .k-link.k-state-hover {
+  color: #2e2e2e;
+}
+
+/* line 989, ../../app/styles/_kendo.scss */
+
+.k-panelbar .k-state-focused.k-state-hover {
+  background: #bcb4b0;
+  box-shadow: none;
+}
+
+/* line 995, ../../app/styles/_kendo.scss */
+
+.k-tabstrip-items .k-state-default,
+.k-ie7 .k-tabstrip-items .k-state-default .k-loading {
+  border-color: #c5c5c5;
+}
+
+/* line 999, ../../app/styles/_kendo.scss */
+
+.k-tabstrip-items .k-state-hover,
+.k-ie7 .k-tabstrip-items .k-state-hover .k-loading {
+  border-color: #bcb4b0;
+}
+
+/* line 1003, ../../app/styles/_kendo.scss */
+
+.k-tabstrip-items .k-state-active,
+.k-ie7 .k-tabstrip-items .k-state-active .k-loading {
+  background-color: #fff;
+  background-image: none;
+  border-color: #f35800;
+}
+
+/* line 1009, ../../app/styles/_kendo.scss */
+
+.k-tabstrip .k-content.k-state-active {
+  background-color: #fff;
+  color: #2e2e2e;
+}
+
+/* line 1014, ../../app/styles/_kendo.scss */
+
+.k-menu.k-header,
+.k-menu .k-item {
+  border-color: #c5c5c5;
+}
+
+/* line 1018, ../../app/styles/_kendo.scss */
+
+.k-column-menu,
+.k-column-menu .k-item {
+  border-color: #c5c5c5;
+}
+
+/* line 1022, ../../app/styles/_kendo.scss */
+
+.k-column-menu .k-separator {
+  border-color: #c5c5c5;
+  background-color: transparent;
+}
+
+/* line 1027, ../../app/styles/_kendo.scss */
+
+.k-menu .k-group {
+  border-color: #c5c5c5;
+}
+
+/* line 1031, ../../app/styles/_kendo.scss */
+
+.k-grid-filter.k-state-active {
+  background-color: #fff;
+}
+
+/* line 1035, ../../app/styles/_kendo.scss */
+
+.k-grouping-row td,
+.k-group-footer td,
+.k-grid-footer td {
+  color: #2e2e2e;
+  border-color: #c5c5c5;
+  font-weight: bold;
+}
+
+/* line 1041, ../../app/styles/_kendo.scss */
+
+.k-grouping-header {
+  color: #2e2e2e;
+}
+
+/* line 1045, ../../app/styles/_kendo.scss */
+
+.k-grid td.k-state-focused {
+  box-shadow: inset 0 0 0 1px inset 0 0 5px 1px #bcb4b0;
+}
+
+/* line 1050, ../../app/styles/_kendo.scss */
+
+.k-header,
+.k-grid-header-wrap,
+.k-grid .k-grouping-header,
+.k-grid-header,
+.k-pager-wrap,
+.k-pager-wrap .k-textbox,
+.k-pager-wrap .k-link,
+.k-grouping-header .k-group-indicator {
+  border-color: #c5c5c5;
+}
+
+/* line 1054, ../../app/styles/_kendo.scss */
+
+.k-primary {
+  color: #fff;
+  border-color: #ef671a;
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, #f6813f 0%, #f35a03 100%);
+  background-position: 50% 50%;
+  background-color: #f35800;
+  box-shadow: none;
+}
+
+/* line 1068, ../../app/styles/_kendo.scss */
+
+.k-primary:focus,
+.k-primary.k-state-focused {
+  color: #fff;
+  border-color: #e84200;
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, #f1713f 0%, #ed4503 100%);
+  box-shadow: 0 0 3px 1px #e10000;
+}
+
+/* line 1080, ../../app/styles/_kendo.scss */
+
+.k-primary:hover {
+  color: #fff;
+  border-color: #ef671a;
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, #f1713f 0%, #ed4503 100%);
+  background-color: #ed4300;
+  box-shadow: none;
+}
+
+/* line 1093, ../../app/styles/_kendo.scss */
+
+.k-primary:focus:active:not(.k-state-disabled):not([disabled]),
+.k-primary:focus:not(.k-state-disabled):not([disabled]) {
+  box-shadow: 0 0 3px 1px #e10000;
+}
+
+/* line 1098, ../../app/styles/_kendo.scss */
+
+.k-primary:active {
+  color: #fff;
+  border-color: #ef671a;
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, #f6813f 0%, #f35a03 100%);
+  background-color: #f35800;
+  box-shadow: none;
+}
+
+/* line 1111, ../../app/styles/_kendo.scss */
+
+.k-primary.k-state-disabled,
+.k-state-disabled .k-primary,
+.k-primary.k-state-disabled:hover,
+.k-state-disabled .k-primary:hover,
+.k-primary.k-state-disabled:hover,
+.k-state-disabled .k-primary:active,
+.k-primary.k-state-disabled:active {
+  color: #fab58e;
+  border-color: #ef671a;
+  background-color: #f35800;
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, #f6813f 0%, #f35a03 100%);
+  box-shadow: none;
+}
+
+/* line 1124, ../../app/styles/_kendo.scss */
+
+.k-pager-numbers .k-link,
+.k-treeview .k-in {
+  border-color: transparent;
+}
+
+/* line 1128, ../../app/styles/_kendo.scss */
+
+.k-treeview .k-icon,
+.k-scheduler-table .k-icon,
+.k-grid .k-hierarchy-cell .k-icon {
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+/* line 1133, ../../app/styles/_kendo.scss */
+
+.k-scheduler-table .k-state-hover .k-icon {
+  background-color: transparent;
+}
+
+/* line 1137, ../../app/styles/_kendo.scss */
+
+a:focus,
+button:focus {
+  outline: 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  /* line 1142, ../../app/styles/_kendo.scss */
+
+  .k-icon:not(.k-loading),
+  .k-grouping-dropclue,
+  .k-drop-hint,
+  .k-callout,
+  .k-tool-icon,
+  .k-state-hover .k-tool-icon,
+  .k-state-active .k-tool-icon,
+  .k-state-active.k-state-hover .k-tool-icon,
+  .k-state-selected .k-tool-icon,
+  .k-state-selected.k-state-hover .k-tool-icon,
+  .k-column-menu .k-sprite,
+  .k-mobile-list .k-check:checked,
+  .k-mobile-list .k-edit-field [type=checkbox]:checked,
+  .k-mobile-list .k-edit-field [type=radio]:checked {
+    background-image: url('/images/kendo/sprite_2x.png');
+    background-size: 340px 336px;
+  }
+
+  /* line 1146, ../../app/styles/_kendo.scss */
+
+  .k-dropdown-wrap .k-input,
+  .k-picker-wrap .k-input,
+  .k-numeric-wrap .k-input {
+    border-radius: 3px 0 0 3px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) {
+  /* line 1152, ../../app/styles/_kendo.scss */
+
+  .k-editor-toolbar-wrap .k-dropdown-wrap.k-state-focused,
+  .k-editor-toolbar-wrap .k-button-group .k-tool:focus {
+    border-color: #fff;
+  }
+}
+
+/* line 1161, ../../app/styles/_kendo.scss */
+
+.k-block > .k-header,
+.k-window-titlebar {
+  min-height: 40px !important;
+}
+
+/* line 1165, ../../app/styles/_kendo.scss */
+
+.k-window-titlebar {
+  background: #d7d8d8;
+  border: none !important;
+}
+
+/* line 1170, ../../app/styles/_kendo.scss */
+
+.k-window-title {
+  display: block;
+  margin: -.25em 0 0 0;
+  position: static !important;
+  left: auto !important;
+  text-align: center;
+  color: #34495e;
+  font-size: 1.3333333333em !important;
+}
+
+/* line 1180, ../../app/styles/_kendo.scss */
+
+.modal .k-window-actions {
+  display: none;
+}
+
+/* line 1184, ../../app/styles/_kendo.scss */
+
+.k-window {
+  background: none;
+}
+
+/* line 1188, ../../app/styles/_kendo.scss */
+
+.k-content {
+  background: #edeeee;
+}
+
+/* line 1190, ../../app/styles/_kendo.scss */
+
+.k-content h2 {
+  color: #95A5A6;
+  display: block;
+  font-size: 1.3333333333em;
+  margin: 0;
+  padding: 1em 0;
+}
+
+/* line 1197, ../../app/styles/_kendo.scss */
+
+.k-content .inner {
+  background: white;
+  border: 1px solid #cecdcd;
+  border-radius: 4px;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/* line 4, ../../app/styles/_button.scss */
+
+.bt {
+  background: #fff;
+  border: 2px solid #39b54a;
+  border-radius: 8px;
+  color: #39b54a;
+  display: block;
+  height: 16px;
+  margin: 0 auto;
+  padding: 5px 0 0 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  text-transform: uppercase;
+  width: auto;
+}
+
+/* line 19, ../../app/styles/_button.scss */
+
+.bt span {
+  display: block;
+  margin: 0;
+  padding: 0 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* line 27, ../../app/styles/_button.scss */
+
+.metas .bt {
+  max-width: 150px;
+  width: 100%;
+}
+
+/* line 33, ../../app/styles/_button.scss */
+
+.bt--publish {
+  background: #39b54a;
+  color: #fff;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLight';
+  src: url("../fonts/HelveticaNeueLight.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/HelveticaNeueLight.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueLight.woff") format("woff"), url("../fonts/HelveticaNeueLight.ttf") format("truetype"), url("../fonts/HelveticaNeueLight.svg#3162d512a0b0767ee94e99606f47da13") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* line 19, ../../app/styles/main.scss */
+
+html {
+  font-size: 75%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  height: 100%;
+}
+
+/* line 20, ../../app/styles/main.scss */
+
+html,
+button,
+input,
+select,
+textarea {
+  font-family: 'HelveticaNeueLight', Helvetica, Verdana, sans-serif;
+  color: #333333;
+}
+
+/* line 21, ../../app/styles/main.scss */
+
+body {
+  background-size: cover;
+}
+
+/* line 23, ../../app/styles/main.scss */
+
+body.home {
+  background: url('/images/background/home.jpg') 50% 50% no-repeat fixed;
+}
+
+/* line 23, ../../app/styles/main.scss */
+
+body.intro-level-1 {
+  background: url('/images/background/intro-level-1.jpg') 50% 50% no-repeat fixed;
+}
+
+/* line 23, ../../app/styles/main.scss */
+
+body.intro-level-2 {
+  background: url('/images/background/intro-level-2.jpg') 50% 50% no-repeat fixed;
+}
+
+/* line 23, ../../app/styles/main.scss */
+
+body.intro-level-3 {
+  background: url('/images/background/intro-level-3.jpg') 50% 50% no-repeat fixed;
+}
+
+/* line 23, ../../app/styles/main.scss */
+
+body.intro-level-4 {
+  background: url('/images/background/intro-level-4.jpg') 50% 50% no-repeat fixed;
+}
+
+/* line 23, ../../app/styles/main.scss */
+
+body.play-level-1 {
+  background: url('/images/background/play-level-1.jpg') 50% 50% no-repeat fixed;
+}
+
+/* line 23, ../../app/styles/main.scss */
+
+body.play-level-2 {
+  background: url('/images/background/play-level-2.jpg') 50% 50% no-repeat fixed;
+}
+
+/* line 23, ../../app/styles/main.scss */
+
+body.play-level-3 {
+  background: url('/images/background/play-level-3.jpg') 50% 50% no-repeat fixed;
+}
+
+/* line 23, ../../app/styles/main.scss */
+
+body.play-level-4 {
+  background: url('/images/background/play-level-4.jpg') 50% 50% no-repeat fixed;
+}
+
+/* line 29, ../../app/styles/main.scss */
+
+a {
+  transition: all 0.5s linear;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  color: #29abe2;
+  text-decoration: none;
+}
+
+/* line 30, ../../app/styles/main.scss */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 31, ../../app/styles/main.scss */
+
+ul,
+ol {
+  margin: 0 0 1em 0;
+  padding: 0 0 0 40px;
+}
+
+/* line 32, ../../app/styles/main.scss */
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+/* line 34, ../../app/styles/main.scss */
+
+form {
+  margin: 0;
+}
+
+/* line 35, ../../app/styles/main.scss */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 36, ../../app/styles/main.scss */
+
+label {
+  cursor: pointer;
+}
+
+/* line 37, ../../app/styles/main.scss */
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+/* line 38, ../../app/styles/main.scss */
+
+button {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 39, ../../app/styles/main.scss */
+
+button:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* line 40, ../../app/styles/main.scss */
+
+.oldie select,
+.oldie textarea {
+  vertical-align: middle;
+}
+
+/* line 41, ../../app/styles/main.scss */
+
+button,
+input {
+  line-height: normal;
+}
+
+/* line 42, ../../app/styles/main.scss */
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+/* line 43, ../../app/styles/main.scss */
+
+.oldie button,
+.oldie input {
+  overflow: visible;
+  vertical-align: middle;
+}
+
+/* line 44, ../../app/styles/main.scss */
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/* line 45, ../../app/styles/main.scss */
+
+.unstyled {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 46, ../../app/styles/main.scss */
+
+.clearfix {
+  zoom: 1;
+}
+
+/* line 47, ../../app/styles/main.scss */
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+/* line 48, ../../app/styles/main.scss */
+
+.clearfix:after {
+  clear: both;
+}
+
+/* line 49, ../../app/styles/main.scss */
+
+.left {
+  float: left;
+}
+
+/* line 53, ../../app/styles/main.scss */
+
+.right {
+  float: right;
+}
+
+/* line 57, ../../app/styles/main.scss */
+
+.media {
+  overflow: hidden;
+  zoom: 1;
+}
+
+/* line 62, ../../app/styles/main.scss */
+
+.templates {
+  display: none;
+}
+
+/* line 1, ../../app/styles/_intro.scss */
+
+.splash {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  transition: all linear 1s;
+}
+
+/* line 10, ../../app/styles/_intro.scss */
+
+.splash.level-1 {
+  background: url('/images/background/splash-intro-level-1.jpg') 50% 50% no-repeat fixed;
+}
+
+/* line 13, ../../app/styles/_intro.scss */
+
+.splash.level-2 {
+  background: url('/images/background/splash-intro-level-2.jpg') 50% 50% no-repeat fixed;
+}
+
+/* line 16, ../../app/styles/_intro.scss */
+
+.splash.level-3 {
+  background: url('/images/background/splash-intro-level-3.jpg') 50% 50% no-repeat fixed;
+}
+
+/* line 23, ../../app/styles/_intro.scss */
+
+.splash.ng-hide {
+  opacity: 0;
+  z-index: -1;
+}
+
+/* line 30, ../../app/styles/_intro.scss */
+
+.dialogue {
+  height: 120px;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #FFF;
+  font-size: 16px;
+}
+
+/* line 39, ../../app/styles/_intro.scss */
+
+.dialogue img {
+  height: 100px;
+  width: 100px;
+}
+
+/* line 43, ../../app/styles/_intro.scss */
+
+.dialogue .typed {
+  padding: 10px;
+}
+
+/* line 46, ../../app/styles/_intro.scss */
+
+.dialogue .skip {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  float: right;
+}
+
+/* line 55, ../../app/styles/_intro.scss */
+
+#typed-cursor {
+  opacity: 1;
+  font-weight: 100;
+  -webkit-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@-keyframes blink {
+  /* line 63, ../../app/styles/_intro.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 64, ../../app/styles/_intro.scss */
+  50% {
+    opacity: 0;
+  }
+
+  /* line 65, ../../app/styles/_intro.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+/* line 1, ../../app/styles/_play.scss */
+
+#windows-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  margin: 0;
+  background: #eee;
+  list-style: none;
+}
+
+/* line 10, ../../app/styles/_play.scss */
+
+#windows-bar li {
+  float: left;
+  margin-right: 2px;
+}
+
+/* line 16, ../../app/styles/_play.scss */
+
+.timeline {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  width: 200px;
+  height: 150px;
+}
+
+/* line 22, ../../app/styles/_play.scss */
+
+.timeline .gauge {
+  height: 20px;
+  width: 200px;
+  border: 1px yellow solid;
+}
+
+/* line 26, ../../app/styles/_play.scss */
+
+.timeline .gauge .fill {
+  height: 20px;
+  background: red;
+}
+
+/* line 33, ../../app/styles/_play.scss */
+
+.status {
+  position: absolute;
+  bottom: 100px;
+  left: 350px;
+  width: 300px;
+  height: 150px;
+  border: 1px solid #eee;
+}
+
+/* line 42, ../../app/styles/_play.scss */
+
+.cuits {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 46, ../../app/styles/_play.scss */
+
+.cuits .cuit {
+  height: auto;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: max-height 0.5s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+/* line 51, ../../app/styles/_play.scss */
+
+.cuits .cuit.visible {
+  max-height: 220px;
+}
+
+/* line 54, ../../app/styles/_play.scss */
+
+.cuits .cuit .off {
+  display: inline;
+}
+
+/* line 57, ../../app/styles/_play.scss */
+
+.cuits .cuit .on {
+  display: none;
+}
+
+/* line 60, ../../app/styles/_play.scss */
+
+.cuits .cuit .metas {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 67, ../../app/styles/_play.scss */
+
+.cuits .cuit .metas li {
+  border-top: 1px solid #cecdcd;
+  border-left: 1px solid #cecdcd;
+  color: #95a5a6;
+  display: table-cell;
+  margin: 0;
+  padding: 5px 10px;
+  text-align: center;
+  vertical-align: top;
+}
+
+/* line 76, ../../app/styles/_play.scss */
+
+.cuits .cuit .metas li:first-child {
+  border-left: none;
+}
+
+/* line 81, ../../app/styles/_play.scss */
+
+.cuits .cuit .actions {
+  list-style-type: none;
+}
+
+/* line 83, ../../app/styles/_play.scss */
+
+.cuits .cuit .actions li {
+  display: inline-block;
+  padding: 5px 10px;
+  vertical-align: top;
+}
+
+/* line 92, ../../app/styles/_play.scss */
+
+.actions {
+  display: none;
+}
+
+/* line 94, ../../app/styles/_play.scss */
+
+.toggle .actions {
+  display: block;
+}
+
+/* line 101, ../../app/styles/_play.scss */
+
+.verified-theme .theme .off {
+  display: none;
+}
+
+/* line 104, ../../app/styles/_play.scss */
+
+.verified-theme .theme .on {
+  display: inline;
+}
+
+/* line 112, ../../app/styles/_play.scss */
+
+.verified-credibility .credibility .off {
+  display: none;
+}
+
+/* line 115, ../../app/styles/_play.scss */
+
+.verified-credibility .credibility .on {
+  display: inline;
+}
+
+/* line 123, ../../app/styles/_play.scss */
+
+.verified-exclusivity .exclusivity .off {
+  display: none;
+}
+
+/* line 126, ../../app/styles/_play.scss */
+
+.verified-exclusivity .exclusivity .on {
+  display: inline;
+}
+
+/* line 133, ../../app/styles/_play.scss */
+
+.level-1 .publish,
+.level-1 .credibility,
+.level-1 .exclusivity,
+.level-1 .timeline {
+  display: none !important;
+}
+
+/* line 138, ../../app/styles/_play.scss */
+
+.level-2 .credibility,
+.level-2 .exclusivity {
+  display: none !important;
+}
+
+/* line 143, ../../app/styles/_play.scss */
+
+div.k-window-content#chat {
+  overflow: hidden;
+}
+
+/* line 148, ../../app/styles/_play.scss */
+
+#chat .inner {
+  height: 100%;
+  overflow: auto;
+}
+
+/* line 152, ../../app/styles/_play.scss */
+
+#chat .discussion {
+  list-style-type: none;
+}
+
+/* line 155, ../../app/styles/_play.scss */
+
+#chat li {
+  border-radius: 8px;
+  position: relative;
+  min-height: 20px;
+  padding: 8px;
+  margin: 0 0 10px 0;
+  background: #fff;
+}
+
+/* line 163, ../../app/styles/_play.scss */
+
+#chat .me {
+  border: 2px solid #16a085;
+  color: #16a085;
+}
+
+/* line 166, ../../app/styles/_play.scss */
+
+#chat .me:after,
+#chat .me:before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* line 176, ../../app/styles/_play.scss */
+
+#chat .me:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-right-color: #ffffff;
+  border-width: 4px;
+  margin-top: -4px;
+}
+
+/* line 182, ../../app/styles/_play.scss */
+
+#chat .me:before {
+  border-color: rgba(22, 160, 133, 0);
+  border-right-color: #16a085;
+  border-width: 7px;
+  margin-top: -7px;
+}
+
+/* line 189, ../../app/styles/_play.scss */
+
+#chat .other {
+  border: 2px solid #f15a24;
+  color: #f15a24;
+}
+
+/* line 192, ../../app/styles/_play.scss */
+
+#chat .other:after,
+#chat .other:before {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* line 202, ../../app/styles/_play.scss */
+
+#chat .other:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-left-color: #fff;
+  border-width: 4px;
+  margin-top: -4px;
+}
+
+/* line 208, ../../app/styles/_play.scss */
+
+#chat .other:before {
+  border-color: rgba(241, 90, 36, 0);
+  border-left-color: #f15a24;
+  border-width: 7px;
+  margin-top: -7px;
+}
+
+/* line 217, ../../app/styles/_play.scss */
+
+.inner__body {
+  padding: 10px;
+}
+
+/* line 221, ../../app/styles/_play.scss */
+
+.inner__body--fullwidth {
+  padding: 10px 0;
+}
+
+/* line 225, ../../app/styles/_play.scss */
+
+.inner-item {
+  border-bottom: 1px solid #cecdcd;
+  display: block;
+  padding: 5px;
+  margin: 0;
+}
+
+/* line 230, ../../app/styles/_play.scss */
+
+.inner-item:last-child {
+  border: none;
+}
+
+/* line 235, ../../app/styles/_play.scss */
+
+.publish {
+  margin: 0 5px 0 0;
+  width: 150px;
+}
+
+/* line 240, ../../app/styles/_play.scss */
+
+.avatar {
+  border: 1px solid #cecdcd;
+  border-radius: 4px;
+  display: block;
+  float: left;
+  overflow: hidden;
+  margin: 0 10px 0 0;
+  padding: 0;
+  height: 60px;
+  width: 60px;
+}
+
+/* line 252, ../../app/styles/_play.scss */
+
+#tooltip {
+  position: absolute;
+  top: 200px;
+  left: 250px;
+  z-index: 99999;
+  border: 1px gray solid;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* line 261, ../../app/styles/_play.scss */
+
+#scoring {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  right: 100px;
+  bottom: 100px;
+  z-index: 99999;
+  border: 1px gray solid;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+/* line 1, ../../app/styles/_debug.scss */
+
+#debug {
+  border: 1px #F00 solid;
+  background: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  position: absolute;
+  top: 50px;
+  left: 200px;
+  z-index: 99999;
+  width: 400px;
+  padding: 20px;
+}

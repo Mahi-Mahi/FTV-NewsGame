@@ -315,6 +315,11 @@ module.exports = function(grunt) {
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
+        }, {
+          expand: true,
+          cwd: '.tmp/styles/',
+          dest: '<%= yeoman.dist %>/styles',
+          src: '{,*/}*.css'
         }]
       },
       styles: {
@@ -448,7 +453,7 @@ module.exports = function(grunt) {
     'usemin',
     'htmlmin',
     'createConfig:dev',
-    'rsync:staging'
+    // 'rsync:staging'
   ]);
 
   grunt.registerTask('default', [
