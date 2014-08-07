@@ -298,6 +298,7 @@ angular.module('newsGameApp')
 			template: 'notepad',
 			visible: false,
 			active: true,
+			height: 200,
 			position: {
 				top: 250,
 				left: 450

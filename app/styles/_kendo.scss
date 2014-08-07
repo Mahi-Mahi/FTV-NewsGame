@@ -1167,6 +1167,13 @@ a:focus,button:focus {
     border:none !important;
 }
 
+.k-window-titlebar .k-window-actions {
+    right:auto !important;
+    left:.3em !important;
+    padding-top:0 !important;
+    top:1.25em !important;
+}
+
 .k-window-title {
     display: block;
     margin:-.25em 0 0 0;
@@ -1201,4 +1208,14 @@ a:focus,button:focus {
         margin: 0 0 20px 0;
         padding:0;
     }
+}
+
+.k-i-close {
+    background-image:none !important;
+    background-color:#d35400 !important;
+    border:1px solid #95a5a6 !important;
+    border-radius:50% !important;
+    opacity: 1 !important;
+    height: 12px !important;
+    width:12px !important;
 }

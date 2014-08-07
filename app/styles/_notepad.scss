@@ -1,0 +1,71 @@
+#notepad {
+	background:image-url("background/notepad.png") repeat;
+}
+
+.notepad__title {
+	background:#34495e;
+	border-radius:4px;
+	color:#f5ee90;
+	display: inline-block;
+	font-size: em(14px);
+	line-height: 1;
+	margin: 0;
+	padding:5px 5px 3px 5px;
+	vertical-align: top;
+}
+
+.notepad__title--warning {
+	background:#d35400;
+}
+
+.notepad__list {
+	li {
+		color:#34495e;
+		display: block;
+		font-size: em(12px);
+		min-height:16px;
+		margin: 0;
+		padding: 0 0 0 20px;
+		position:relative;
+		&:before {
+			color:$notepad-color;
+			display: block;
+			margin: 0;
+			padding: 0;
+			position:absolute;
+			left:0;
+			top:0;
+			font-family: 'icomoon';
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			font-size: em(12px);
+		}
+	}
+	.culture-sport-et-people:before {
+		content: "\77";
+	}
+	.economie:before {
+		content: "\63";
+	}
+	.international:before {
+		content: "\62";
+	}
+	.politique:before {
+		content: "\e600";
+	}
+	.science-technologie-et-jeux-video:before {
+		content: "\78";
+	}
+	.societe:before {
+		content: "\76";
+	}
+}
+
+
+
