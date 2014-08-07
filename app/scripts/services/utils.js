@@ -23,4 +23,9 @@ angular.module('newsGameApp')
 				return array;
 			}
 		};
+	})
+	.filter('reverse', function() {
+		return function(items) {
+			return items.slice().reverse();
+		};
 	});
