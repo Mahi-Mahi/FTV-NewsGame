@@ -10,7 +10,7 @@ angular.module('newsGameApp')
 		$scope.debug = ($routeParams.debug);
 
 		// current difficulty level
-		$scope.level = $cookies.level ? parseInt($cookies.level, 10) : 1;
+		$scope.level = parseInt($cookies.level, 10) ? parseInt($cookies.level, 10) : 1;
 		$cookies.level = $scope.level;
 
 		$rootScope.background = 'intro-level-' + $scope.level;
@@ -102,8 +102,6 @@ angular.module('newsGameApp')
 		scenarii.level1 = function() {
 			$log.log(">scenario1");
 
-			$rootScope.background = 'sceneB';
-
 			steps = [];
 
 			var interlocutor = 'Daniel';
@@ -129,8 +127,6 @@ angular.module('newsGameApp')
 		// Level 2
 		scenarii.level2 = function() {
 			$log.log(">scenario2");
-
-			$rootScope.background = 'sceneC';
 
 			steps = [];
 
