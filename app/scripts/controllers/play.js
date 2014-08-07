@@ -1,14 +1,14 @@
 'use strict';
 
 angular.module('newsGameApp')
-	.controller('PlayCtrl', function($document, $rootScope, $scope, $routeParams, $location, $cookies, $log, prod, $timeout, $interval, dataService, titleService) {
+	.controller('PlayCtrl', function($document, $rootScope, $scope, $routeParams, $location, $cookies, $log, prod, $timeout, $interval, dataService, titleService, utils) {
 
 		$scope.debug = ($routeParams.debug);
 
 		titleService.setTitle('Play');
 
 		// debug config
-		var delayModifier = ($scope.debug ? 0.1 : 1);
+		var delayModifier = ($scope.debug ? 0.05 : 1);
 
 		// reference to all windows on the desktop
 		$scope.windows = {};
@@ -91,15 +91,17 @@ angular.module('newsGameApp')
 			} else {
 				var added = false;
 				// iterate through all cuits ( loaded from /data/all.json )
-				angular.forEach(dataService.data.all.cuits, function(cuit, key) {
+				var cuits = utils.shuffle(Object.keys(dataService.data.all.cuits));
+				angular.forEach(cuits, function(cuitIdx) {
+					var cuit = dataService.data.all.cuits[cuitIdx];
 					// if cuit is not currenlty displayed
-					if ($scope.allCuits.indexOf(key) === -1 && !added) {
+					if (!added && $scope.allCuits.indexOf(cuitIdx) === -1) {
 						if (!author || cuit.source === author) {
 							cuit.author = dataService.data.all.sources[cuit.source];
 							if (cuit.author) {
 								cuit.themeVerified = cuit.author.themeVerified;
 							}
-							$scope.allCuits.push(key);
+							$scope.allCuits.push(cuitIdx);
 							$scope.cuits.unshift(cuit);
 							$timeout(function() {
 								cuit.visible = true;
@@ -728,7 +730,21 @@ angular.module('newsGameApp')
 			});
 
 			addStep(1500, function() {
-				jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.publish button').click();
+				$log.log($scope.cuits);
+
+				var i = 2 + Math.round(Math.random() * 3);
+				var max = 10;
+				while (i && max) {
+					var cuit = Math.floor(Math.random() * Object.keys($scope.cuits).length);
+					$log.log($scope.cuits);
+					$log.log(i, cuit, $scope.cuits[cuit]);
+					if (!$scope.cuits[cuit].published) {
+						$log.log("publish");
+						$scope.publishCuit($scope.cuits[cuit], true);
+						i--;
+					}
+					max--;
+				}
 			});
 
 			doSteps();
@@ -741,7 +757,7 @@ angular.module('newsGameApp')
 		};
 
 		$scope.posts = [];
-		$scope.publishCuit = function(cuit) {
+		$scope.publishCuit = function(cuit, force) {
 			$scope.currentCuit = cuit;
 
 			promptCallback = function() {
@@ -765,22 +781,37 @@ angular.module('newsGameApp')
 			$scope.promptContent = "Êtes-vous sûr de vouloir publier ce Cuit ?";
 			$scope.openWin('prompt');
 
-			addStep(1500, function() {
-				if ($scope.debug) {
-					var $choices = jQuery('#prompt :radio');
-					// $choices.eq(Math.round(Math.random() * $choices.length)).click();
-					// jQuery('#themeSelector button').click();
-				}
-			});
+			if (force) {
+				jQuery('#prompt .confirm').click();
+			}
 
 		};
 		$scope.unpublish = function(post) {
-			$log.log("unpublish(", post.cuit.id);
-			$log.log($scope.posts);
-			angular.forEach($scope.posts, function(post, idx) {
-				$log.log(idx, post);
-				delete $scope.posts[idx];
+			$scope.currentPost = post;
+
+			promptCallback = function() {
+
+				$log.log("unpublish(", $scope.currentPost.cuit.id);
+				angular.forEach($scope.posts, function(p, idx) {
+					if (p.cuit.id === $scope.currentPost.cuit.id) {
+						$scope.posts.splice(idx, 1);
+						decrementTime("unpublish-cuit");
+					}
+				});
+
+				$scope.closeWin('prompt');
+				promptCallback = null;
+			};
+
+			$scope.promptContent = "Êtes-vous sûr de vouloir dépublier cet article ?";
+			$scope.openWin('prompt');
+
+			addStep(1500, function() {
+				if ($scope.debug) {
+					jQuery('#prompt .confirm').click();
+				}
 			});
+
 		};
 
 		$scope.endDay = function() {
