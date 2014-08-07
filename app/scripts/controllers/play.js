@@ -193,7 +193,13 @@ angular.module('newsGameApp')
 
 		$scope.tooltip = {
 			active: false,
-			content: 'Quisque id neque scelerisque velit.'
+			content: 'Quisque id neque scelerisque velit.',
+			position: function($elt, top, left) {
+				jQuery('#tooltip').css({
+					top: $elt.offset().top + top,
+					left: $elt.offset().left + left
+				});
+			}
 		};
 
 		// create a new window (KendoUI will automattically instatiate ir)
@@ -224,7 +230,6 @@ angular.module('newsGameApp')
 		};
 		$scope.openWin = function(id) {
 			if (!$scope.windows[id].visible) {
-				$log.log("openWin(", id);
 				jQuery('#' + id).data('kendoWindow').open();
 			}
 		};
@@ -472,6 +477,7 @@ angular.module('newsGameApp')
 				// show info popup
 				$scope.skipCuits = true;
 				$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Vérifier la thématique</strong>";
+				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.metas .theme button'), 0, 100);
 				$scope.tooltip.active = true;
 				verifyCuitThemeCallback = function() {
 					scenarii.level1Phase3();
@@ -503,9 +509,6 @@ angular.module('newsGameApp')
 			addChat(1500, 'other', "Et voilà ! Tu vois, ça a pris un peu de temps mais ça en valait la peine ! Maintenant, tu sais que ce cuitt parle de " + selectedCuit.theme + ".");
 			addChat(1500, 'other', "Tu vois, c’est signalé par le petit picto qui a remplacé le point d’interrogation en dessous du message !");
 
-			$log.log(selectedCuit.theme);
-			$log.log($scope.currentTheme);
-
 			if (selectedCuit.theme === $scope.currentTheme) {
 				addChat(1500, 'me', "Ah, géniale, cette info ! justement ce qui m’intéresse !");
 			} else {
@@ -518,6 +521,7 @@ angular.module('newsGameApp')
 				addCuit(false, true);
 				$scope.skipCuits = true;
 				$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Vérifier la thématique</strong>";
+				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.metas .theme button'), 0, 100);
 				$scope.tooltip.active = true;
 				verifyCuitThemeCallback = function() {
 					scenarii.level1Phase4();
@@ -545,7 +549,6 @@ angular.module('newsGameApp')
 			steps = [];
 
 			if (selectedCuit.theme === $scope.currentTheme) {
-				$log.log("scenarii.level1Phase5()");
 				scenarii.level1Phase5();
 				return;
 			} else {
@@ -563,6 +566,7 @@ angular.module('newsGameApp')
 					*/
 					$scope.skipCuits = true;
 					$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Vérifier la thématique</strong>";
+					$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.metas .theme button'), 0, 100);
 					$scope.tooltip.active = true;
 					verifyCuitThemeCallback = function() {
 						scenarii.level1Phase4();
@@ -610,6 +614,7 @@ angular.module('newsGameApp')
 				addCuit(false, true, author);
 				// show info popup
 				$scope.tooltip.content = "Cliquez sur le profil de l'auteur";
+				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.source'), 0, 100);
 				$scope.tooltip.active = true;
 				openSourceThemeCallback = function() {
 					scenarii.level1Phase6();
@@ -638,6 +643,7 @@ angular.module('newsGameApp')
 			addStep(1500, function() {
 				// show info popup
 				$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Analyser la source</strong>";
+				$scope.tooltip.position(jQuery('#source .metas .theme button'), 0, 100);
 				$scope.tooltip.active = true;
 				verifySourceThemeCallback = function() {
 					scenarii.level1Phase7();
@@ -646,7 +652,7 @@ angular.module('newsGameApp')
 
 			addStep(1500, function() {
 				if ($scope.debug) {
-					jQuery('#source .metas .theme button').click();
+					// jQuery('#source .metas .theme button').click();
 				}
 			});
 
@@ -722,6 +728,7 @@ angular.module('newsGameApp')
 			addStep(500, function() {
 				// show info popup
 				$scope.tooltip.content = "Choisissez des infos dans votre fil Cuicuitter et publiez-les sur votre blog. Attention : choisissez-les bien dans la thématique " + $scope.themes[$scope.currentTheme] + ". Et faites attention : le temps passe vite ! ";
+				$scope.tooltip.position(jQuery('#cuicuiter'), 0, 100);
 				$scope.tooltip.active = true;
 				$scope.openWin('blog');
 			});
@@ -731,20 +738,18 @@ angular.module('newsGameApp')
 			});
 
 			addStep(1500, function() {
-				$log.log($scope.cuits);
-
-				var i = 2 + Math.round(Math.random() * 3);
-				var max = 10;
-				while (i && max) {
-					var cuit = Math.floor(Math.random() * Object.keys($scope.cuits).length);
-					$log.log($scope.cuits);
-					$log.log(i, cuit, $scope.cuits[cuit]);
-					if (!$scope.cuits[cuit].published) {
-						$log.log("publish");
-						$scope.publishCuit($scope.cuits[cuit], true);
-						i--;
+				if ($scope.debug) {
+					var i = 6; //2 + Math.round(Math.random() * 3);
+					var max = 10;
+					while (i && max) {
+						addCuit(false, true);
+						var cuit = Math.floor(Math.random() * Object.keys($scope.cuits).length);
+						if (!$scope.cuits[cuit].published) {
+							$scope.publishCuit($scope.cuits[cuit], true);
+							i--;
+						}
+						max--;
 					}
-					max--;
 				}
 			});
 
@@ -761,29 +766,39 @@ angular.module('newsGameApp')
 		$scope.publishCuit = function(cuit, force) {
 			$scope.currentCuit = cuit;
 
-			promptCallback = function() {
+			if ($scope.posts.length === 5) {
+				$log.log("already 5 posts");
+				$scope.tooltip.content = "vous avez déjà publié 5 articles aurjourd'hui";
+				$scope.tooltip.position(jQuery('#blog'), 0, 100);
+				$scope.tooltip.active = true;
+				$timeout(function() {
+					$scope.tooltip.active = false;
+				}, 2000);
+			} else {
 
-				$log.log("publishCuit(", $scope.currentCuit.id);
-				var post = {
-					cuit: $scope.currentCuit,
-					title: $scope.currentCuit.articleTitle
+				promptCallback = function() {
+					$log.log("publishCuit(", $scope.currentCuit.id);
+					var post = {
+						cuit: $scope.currentCuit,
+						title: $scope.currentCuit.articleTitle
+					};
+					angular.forEach($scope.cuits, function(c, idx) {
+						if (c.id === $scope.currentCuit.id) {
+							$scope.cuits[idx].published = true;
+						}
+					});
+					$scope.posts.push(post);
+					decrementTime("publish-cuit");
+					$scope.closeWin('prompt');
+					promptCallback = null;
 				};
-				angular.forEach($scope.cuits, function(c, idx) {
-					if (c.id === $scope.currentCuit.id) {
-						$scope.cuits[idx].published = true;
-					}
-				});
-				$scope.posts.push(post);
-				decrementTime("publish-cuit");
-				$scope.closeWin('prompt');
-				promptCallback = null;
-			};
 
-			$scope.promptContent = "Êtes-vous sûr de vouloir publier ce Cuit ?";
-			$scope.openWin('prompt');
+				$scope.promptContent = "Êtes-vous sûr de vouloir publier ce Cuit ?";
+				$scope.openWin('prompt');
 
-			if (force) {
-				jQuery('#prompt .confirm').click();
+				if (force) {
+					jQuery('#prompt .confirm').click();
+				}
 			}
 
 		};
