@@ -193,7 +193,13 @@ angular.module('newsGameApp')
 
 		$scope.tooltip = {
 			active: false,
-			content: 'Quisque id neque scelerisque velit.'
+			content: 'Quisque id neque scelerisque velit.',
+			position: function($elt, top, left) {
+				jQuery('#tooltip').css({
+					top: $elt.offset().top + top,
+					left: $elt.offset().left + left
+				});
+			}
 		};
 
 		// create a new window (KendoUI will automattically instatiate ir)
@@ -471,6 +477,7 @@ angular.module('newsGameApp')
 				// show info popup
 				$scope.skipCuits = true;
 				$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Vérifier la thématique</strong>";
+				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.metas .theme button'), 0, 100);
 				$scope.tooltip.active = true;
 				verifyCuitThemeCallback = function() {
 					scenarii.level1Phase3();
@@ -514,6 +521,7 @@ angular.module('newsGameApp')
 				addCuit(false, true);
 				$scope.skipCuits = true;
 				$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Vérifier la thématique</strong>";
+				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.metas .theme button'), 0, 100);
 				$scope.tooltip.active = true;
 				verifyCuitThemeCallback = function() {
 					scenarii.level1Phase4();
@@ -558,6 +566,7 @@ angular.module('newsGameApp')
 					*/
 					$scope.skipCuits = true;
 					$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Vérifier la thématique</strong>";
+					$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.metas .theme button'), 0, 100);
 					$scope.tooltip.active = true;
 					verifyCuitThemeCallback = function() {
 						scenarii.level1Phase4();
@@ -605,6 +614,7 @@ angular.module('newsGameApp')
 				addCuit(false, true, author);
 				// show info popup
 				$scope.tooltip.content = "Cliquez sur le profil de l'auteur";
+				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.source'), 0, 100);
 				$scope.tooltip.active = true;
 				openSourceThemeCallback = function() {
 					scenarii.level1Phase6();
@@ -633,6 +643,7 @@ angular.module('newsGameApp')
 			addStep(1500, function() {
 				// show info popup
 				$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Analyser la source</strong>";
+				$scope.tooltip.position(jQuery('#source .metas .theme button'), 0, 100);
 				$scope.tooltip.active = true;
 				verifySourceThemeCallback = function() {
 					scenarii.level1Phase7();
@@ -641,7 +652,7 @@ angular.module('newsGameApp')
 
 			addStep(1500, function() {
 				if ($scope.debug) {
-					jQuery('#source .metas .theme button').click();
+					// jQuery('#source .metas .theme button').click();
 				}
 			});
 
@@ -717,6 +728,7 @@ angular.module('newsGameApp')
 			addStep(500, function() {
 				// show info popup
 				$scope.tooltip.content = "Choisissez des infos dans votre fil Cuicuitter et publiez-les sur votre blog. Attention : choisissez-les bien dans la thématique " + $scope.themes[$scope.currentTheme] + ". Et faites attention : le temps passe vite ! ";
+				$scope.tooltip.position(jQuery('#cuicuiter'), 0, 100);
 				$scope.tooltip.active = true;
 				$scope.openWin('blog');
 			});
@@ -757,6 +769,7 @@ angular.module('newsGameApp')
 			if ($scope.posts.length === 5) {
 				$log.log("already 5 posts");
 				$scope.tooltip.content = "vous avez déjà publié 5 articles aurjourd'hui";
+				$scope.tooltip.position(jQuery('#blog'), 0, 100);
 				$scope.tooltip.active = true;
 				$timeout(function() {
 					$scope.tooltip.active = false;

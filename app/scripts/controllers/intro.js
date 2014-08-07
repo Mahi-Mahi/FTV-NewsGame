@@ -110,6 +110,9 @@ angular.module('newsGameApp')
 			addChat(1500, interlocutor + '1', "Ah, salut !");
 			addChat(1500, 'me', "T’as passé un bon week-end ? Tu as trouvé ce que tu allais mettre sur ta fiche d’orientation ?");
 			addChat(1500, interlocutor + '1', "Pffft ! Pas du tout. Comment on est censés savoir ce qu’on voudra faire plus tard... Et toi, t’as une idée ?");
+			if ($routeParams.debug === 'stop') {
+				return;
+			}
 			addChat(1500, 'me', "Non, pas trop. Tu fais quoi avec ton aïePhone ? Tu admires tes selfies du week-end ?");
 			addChat(1500, interlocutor + '1', "Ah non, plus sérieux que ça ! Je checkais ma timeline sur Cuicuitter !");
 			addChat(1500, 'me', "Tu quoi ta quoi sur kuikuiquoi ? J’ai rien compris !");
