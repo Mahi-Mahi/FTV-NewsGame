@@ -29,14 +29,18 @@
 
 	<div class="widgets">
 		<div class="timeline">
-			<h4>Temps restant</h4>
-			<a ng-click="endDay()" class="endDay">Terminer la journée</a>
-			<p>
-				<div class="gauge">
-					<div class="fill" style="width:{{((totalTime-remainingTime)/totalTime)*100}}%;"></div>
+			<div class="clearfix timeline-row">
+				<h2 class="left">Temps restant</h2>
+				<a ng-click="endDay()" class="endDay bt bt--finish right">Terminer la journée</a>
+			</div>
+			<div class="clearfix">
+				<div class="jauge left">
+					<div class="jauge__inner">
+						<div class="fill" style="width:{{((totalTime-remainingTime)/totalTime)*100}}%;"></div>
+					</div>
 				</div>
-				<span class="remaining">{{remainingTime | duration}}</span>
-			</p>
+				<span class="remaining left">{{remainingTime | duration}}</span>
+			</div>
 		</div>
 
 		<div class="feedback">

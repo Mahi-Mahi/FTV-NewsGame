@@ -34,3 +34,14 @@
 	background:$bt-color;
 	color:#fff;
 }
+
+.bt--finish {
+  border-color:#b83e22;
+  background:#b83e22;
+  color:#fff;
+  font-size: em(10px);
+  padding:5px 5px 0 5px;
+  &:hover {
+    cursor:pointer;
+  }
+}

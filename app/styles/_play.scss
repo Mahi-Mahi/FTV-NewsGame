@@ -74,21 +74,69 @@
     }
 }
 
+// TIMELINE
 .timeline {
+    background:#e7e6e6;
+    border-radius:4px;
+    box-shadow: rgba(128, 128, 128, 0.3) 1px 1px 7px 1px;
     position: absolute;
+    margin:0;
+    padding:10px;
     bottom: 50px;
     left: 50px;
-    width: 200px;
-    height: 150px;
-    .gauge {
-        height: 20px;
-        width: 200px;
-        border: 1px yellow solid;
-        .fill {
-            height: 20px;
-            background: red;
+    h2 {
+        display: block;
+        font-size: em(16px);
+        margin: 0;
+        padding: 5px 10px 0 0;
+        &:before {
+            color:#f15a24;
+            content: "\27";
+            display: inline-block;
+            margin: -4px 0 0 0;
+            padding: 0 8px 0 0;
+            font-family: 'icomoon';
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 1.25em;
+            vertical-align: top;
         }
     }
+}
+
+.timeline-row {
+    padding:0 0 10px 0;
+}
+
+.jauge {
+    border:1px solid #95a5a6;
+    border-radius:8px;
+    margin: 0;
+    padding:4px 3px 2px 2px;
+    width: 145px;
+    .jauge__inner {
+        background:#dbd9d6;
+        background: linear-gradient(to bottom, #b8b3af 0%,#dbd9d6 100%); 
+        border-radius:8px;
+        border-bottom:1px solid #fff;
+    }
+    .fill {
+        border-radius:8px;
+        border-bottom:1px solid #fff;
+        height: 8px;
+        background:green;
+    }
+}
+
+.remaining {
+    font-size: em(16px);
+    padding:0 0 0 10px;
 }
 
 .status {
@@ -338,23 +386,26 @@ div.k-window-content#chat {
 }
 
 .contact-item {
-    a:before {
-        color:#39b54a;
-        content: "\61";
-        display: inline-block;
-        margin: 0;
-        padding: 0 5px 0 0;
-        font-family: 'icomoon';
-        speak: none;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        font-size: 1.5em;
-        vertical-align: middle;   
+    a {
+        display: block;
+        &:before {
+            color:#39b54a;
+            content: "\61";
+            display: inline-block;
+            margin: 0;
+            padding: 0 5px 0 0;
+            font-family: 'icomoon';
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 1.5em;
+            vertical-align: middle;   
+        }
     }
 }
 
