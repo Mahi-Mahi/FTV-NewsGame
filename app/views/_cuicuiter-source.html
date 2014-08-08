@@ -22,7 +22,7 @@
 			<li class="theme">Thématique
 				<span class="off"><button ng-click="verifySourceTheme(currentSource.id)" class="bt">Analyser la source</button></span>
 				<span class="on">
-					<span ng-repeat="theme in currentSource.themes">{{theme}}</span>
+					<span ng-repeat="theme in currentSource.themes" ng-class="['item-theme', theme]">{{theme}}</span>
 				</span>
 			</li>
 			<li class="credibility">Crédibilité <span class="off"><button class="bt">Vérifier</button></span><span class="on"><!-- TO DO --></span></li>

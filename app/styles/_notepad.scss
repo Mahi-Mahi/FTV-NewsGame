@@ -67,6 +67,49 @@
 	}
 }
 
+.item-theme {
+	color:$notepad-color;
+	display: block;
+	font-size: em(12px);
+	min-height:16px;
+	margin: 0;
+	padding: 3px 0 0 0;
+	&:before {
+		color:$notepad-color;
+		display: inline-block;
+		margin: 0;
+		padding: 0 5px 0 0;
+		font-family: 'icomoon';
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-size: em(12px);
+	}
+	&.culture-sport-et-people:before {
+		content: "\77";
+	}
+	&.economie:before {
+		content: "\63";
+	}
+	&.international:before {
+		content: "\62";
+	}
+	&.politique:before {
+		content: "\e600";
+	}
+	&.science-technologie-et-jeux-video:before {
+		content: "\78";
+	}
+	&.societe:before {
+		content: "\76";
+	}	
+}
+
 // THEMATIQUES
 
 .thematique-list {
