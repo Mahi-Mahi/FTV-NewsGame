@@ -1,18 +1,27 @@
-<div ng-class="[currentSource.themeVerified ? 'verified-theme' : '']">
-	<h4>
-		{{currentSource.name}}
-		<small>{{currentSource.id}}</small>
-	</h4>
-	<p>
-		{{currentSource.bio}}
-	</p>
+<div ng-class="['inner',currentSource.themeVerified ? 'verified-theme' : '']">
+	<div class="inner__body">
+		<div class="media">
+			<img src="/images/default-avatar.png" alt="" class="avatar" ng-click="openSource(cuit.author.id)" />
+			<div class="media">
+				<p>
+					{{currentSource.name}}
+				</p>
+				<p>
+					<a href="" ng-click="openSource(cuit.author.id)" class="source">
+						{{currentSource.id}}
+					</a>
+				</p>
+				<p>
+					{{currentSource.bio}}
+				</p>
+			</div>
+		</div>
+	</div><!-- .inner__body -->
 	<ul class="metas">
 		<li class="theme">Thématique
 			<span class="off"><button ng-click="verifySourceTheme(currentSource.id)" class="bt">Analyser la source</button></span>
 			<span class="on">
-			<ul>
-				<li ng-repeat="theme in currentSource.themes">{{theme}}</li>
-			</ul>
+				<span ng-repeat="theme in currentSource.themes">{{theme}}</span>
 			</span>
 		</li>
 	</ul>

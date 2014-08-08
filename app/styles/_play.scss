@@ -51,41 +51,44 @@
         &.visible {
             max-height: 220px;
         }
-        .off {
-            display: inline;
+    }
+}
+
+.off {
+    display: inline;
+}
+
+.on {
+    display: none;
+}
+
+.metas {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        border-top: 1px solid $border-color;
+        border-left: 1px solid $border-color;
+        color: #95a5a6;
+        display: table-cell;
+        margin: 0;
+        padding: 5px 10px;
+        text-align: center;
+        vertical-align: top;
+        &:first-child {
+            border-left: none;
         }
-        .on {
-            display: none;
-        }
-        .metas {
-            display: table;
-            table-layout: fixed;
-            width: 100%;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            li {
-                border-top: 1px solid $border-color;
-                border-left: 1px solid $border-color;
-                color: #95a5a6;
-                display: table-cell;
-                margin: 0;
-                padding: 5px 10px;
-                text-align: center;
-                vertical-align: top;
-                &:first-child {
-                    border-left: none;
-                }
-            }
-        }
-        .actions {
-            list-style-type: none;
-            li {
-                display: inline-block;
-                padding: 5px 10px;
-                vertical-align: top;
-            }
-        }
+    }
+}
+.actions {
+    list-style-type: none;
+    li {
+        display: inline-block;
+        padding: 5px 10px;
+        vertical-align: top;
     }
 }
 
