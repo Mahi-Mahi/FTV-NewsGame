@@ -1,5 +1,25 @@
-// SHARE
+// CREDITS
 
+.credits {
+	display: block;
+	margin:0;
+	padding:0;
+	position:absolute;
+	top:10px;
+	left:10px;
+	z-index:2;
+	a {
+		color:#fff;
+		display: block;
+		font:normal 2em 'Amatic SC', sans-serif;
+		height: 100%;
+		line-height: 2;
+		text-transform: uppercase;
+		width: 100%;
+	}
+}
+
+// SHARE
 .top-social {
 	display: block;
 	position:absolute;
@@ -14,20 +34,21 @@
 
 .top-social__item {
 	display: inline-block;
-	margin:0 0 0 5px;
+	margin:0 0 0 2px;
 	padding: 0;
 	vertical-align: top;
 	a {
 		display: block;
 		height: 25px;
 		margin: 0;
-		padding: 0;
 		overflow: hidden;
-		text-align: center;
+		padding: 0;
+		position:relative;
+		overflow: hidden;
 		text-indent: 100%;
 		white-space: nowrap;
 		width: 25px;
-        &:after {
+		&:after {
 			color: #fff;
 			display: block;
 			margin: 0;
@@ -50,7 +71,7 @@
 			background: none;
 			height: 25px;
 			width: 25px;
-        }
+		}
 	}
 	.bt-twitter:after {
 		content: "\43";
