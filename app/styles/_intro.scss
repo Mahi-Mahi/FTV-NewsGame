@@ -27,32 +27,107 @@
 
 }
 
-.dialogue {
-	height: 120px;
-	background: rgba(0,0,0, 0.5);
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	color: #FFF;
-	font-size: 16px;
-	img {
-		height: 100px;
-		width: 100px;
-	}
-	.typed {
-		padding: 10px;
-	}
-	.skip {
-		color: #FFF;
-		font-weight: bold;
-		font-size: 20px;
-		cursor: pointer;
-		float: right;
+.top-skip {
+	display: block;
+	position:absolute;
+	margin: 0;
+	padding: 0;
+	top:10px;
+	right:10px;
+	text-align: center;
+	z-index:3;
+	a {
+		background:none;
+		border-radius:6px;
+		border:1px solid #000;
+		color:#000;
+		display: block;
+		height: 45px;
+		line-height: 45px;
+		margin: 0 0 2px 0;
+		padding: 0;
+		width: 45px;
 	}
 }
 
-#typed-cursor{
+
+.media {
+	overflow: hidden;
+	zoom:1;
+}
+
+.dialogue {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background: rgba(0,0,0, 0.7);
+	border-radius:8px;
+	display: block;
+	margin:0 0 0 -49%;
+	padding:10px;
+	width:98%;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	color: #fff;
+	font-size: em(16px);
+	img {
+		float: left;
+		height: 105px;
+		margin: 0 10px 0 0;
+		padding:0;
+		width: 105px;
+	}
+	.typed {
+		display: block;
+		padding: 10px;
+	}
+	.skip {
+		font-size: em(20px);
+		cursor: pointer;
+		display: block;
+		height: 25px;
+		position:absolute;
+		right:10px;
+		bottom:10px;
+		text-indent: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+		width: 25px;
+		&:after {
+			content: "▸";
+			color:#fff;
+			display: block;
+			text-indent: 0;
+			margin: 0;
+			padding: 0;
+			position:absolute;
+			right:0;
+			top:0;
+		}
+	}
+}
+
+.dialogue__name {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	box-shadow: 0 0 3px #afafaf;
+	background: #cecccf;
+	background: linear-gradient(#cecccf, #eceaeb 70%);
+	border-radius:6px 6px 0 0;
+	color:#000;
+	display: block;
+	float: left;
+	font-size: em(11px);
+	display: block;
+	height: 30px;
+	margin:-40px 0 0 0;
+	overflow: hidden;
+	padding:8px;
+}
+
+#typed-cursor {
   opacity: 1;
   font-weight: 100;
   // add prefixes
