@@ -1,0 +1,110 @@
+// SHARE
+
+.top-social {
+	display: block;
+	position:absolute;
+	top:20px;
+	right:20px;
+	z-index:2;
+}
+
+.top-social__list {
+	text-align: right;
+}
+
+.top-social__item {
+	display: inline-block;
+	margin:0 0 0 5px;
+	padding: 0;
+	vertical-align: top;
+	a {
+		display: block;
+		height: 25px;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		text-align: center;
+		text-indent: 100%;
+		white-space: nowrap;
+		width: 25px;
+        &:after {
+			color: #fff;
+			display: block;
+			margin: 0;
+			padding: 0;
+			font-family: 'icomoon';
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			font-size: 25px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			text-indent: 0;
+			background: none;
+			height: 25px;
+			width: 25px;
+        }
+	}
+	.bt-twitter:after {
+		content: "\43";
+	}
+	.bt-facebook:after {
+		content: "\42";
+	}
+	.bt-googleplus:after {
+		content: "\41";
+	}
+}
+
+// BUTTON START
+.bt-start {
+	background:image-url("svg/bt-start.svg") left top no-repeat;
+	display: block;
+	margin: 0 0 0 -191px;
+	padding: 0;
+	position:absolute;
+	height: 86px;
+	text-align: center;
+	width: 382px;
+	bottom:90px;
+	left:50%;
+	z-index:2;
+	a {
+		color:#fff;
+		display: block;
+		font:normal 3.2em 'Amatic SC', sans-serif;
+		height: 100%;
+		line-height: 2;
+		text-transform: uppercase;
+		width: 100%;
+	}
+}
+
+// LOGO FRANCE TV EDUCATION
+.logo-francetv-education {
+	background:image-url("svg/logo-france-tv-education.svg") left top no-repeat;
+	display: block;
+	height: 22px;
+	margin: 0;
+	padding: 0;
+	position:absolute;
+	right:10px;
+	bottom:10px;
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+	width: 180px;
+	z-index:2;
+	a {
+		display: block;
+		height: 100%;
+		width: 100%;
+	}
+}

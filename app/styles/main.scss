@@ -55,6 +55,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] { cursor
 .oldie button, .oldie input { overflow: visible; vertical-align: middle; }
 textarea { overflow: auto; vertical-align: top; resize: vertical; }
 .unstyled { list-style-type:none; margin:0; padding:0; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
 .clearfix { zoom:1; }
 .clearfix:before, .clearfix:after { content:""; display:table; }
 .clearfix:after { clear:both; }

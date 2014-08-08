@@ -6,7 +6,7 @@ angular.module('newsGameApp')
 
 		$rootScope.background = 'home';
 
-		titleService.setTitle('Home');
+		titleService.setTitle('Accueil');
 
 		// current difficulty level
 		$scope.level = $cookies.level ? parseInt($cookies.level, 10) : 1;

@@ -1,19 +1,24 @@
-<h1>Chasseurs d'infos, deviendrez-vous le rédac'chef de demain ?</h1>
+<h1 class="visuallyhidden">Chasseurs d'infos, deviendrez-vous le rédac'chef de demain ?</h1>
 
 <a href="#" id="credits">crédits</a>
 
-<ul class="shares">
-	<li>Twitter</li>
-	<li>Facebook</li>
-	<li>Google+</li>
-</ul>
+<div class="top-social">
+	<ul class="top-social__list unstyled">
+		<li class="top-social__item"><a href="#" class="bt-twitter" target="_blank">Twitter</a></li>
+		<li class="top-social__item"><a href="#" class="bt-facebook" target="_blank">Facebook</a></li>
+		<li class="top-social__item"><a href="#" class="bt-googleplus" target="_blank">Google +</a></li>
+	</ul>
+</div>
 
-<a href="#/intro" class="start">
-	<span ng-if="level==1">Nouvelle partie</span>
-	<span ng-if="level>1">Continuer la partie</span>
-</a>
+<div class="bt-start">
+	<a href="#/intro" class="start">
+		<span ng-if="level==1">Nouvelle partie</span>
+		<span ng-if="level>1">Continuer la partie</span>
+	</a>
+</div>
 
-<a href="">francetvéducation</a>
-
+<div class="logo-francetv-education">
+	<a href="http://education.francetv.fr/" target="_blank">francetvéducation</a>
+</div>
 
 <div id="debug" ng-include="'/views/_debug.html'"></div>
