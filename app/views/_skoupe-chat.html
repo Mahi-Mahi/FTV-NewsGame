@@ -1,6 +1,6 @@
 <div class="inner" id="chat-scroll" du-scroll-container="scroll-container">
 	<div class="inner__body">
-		<div class="contact">{{currentChat.contact}}</div>
+		<div class="contact__name">{{currentChat.contact}}</div>
 		<ul class="discussion unstyled clearfix">
 			<li ng-repeat="message in currentChat.discussion" ng-class="message.speaker">
 					{{message.content}}

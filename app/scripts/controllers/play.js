@@ -320,6 +320,7 @@ angular.module('newsGameApp')
 			active: false,
 			actions: [],
 			modal: true,
+			height: 280,
 			position: {
 				top: 250,
 				left: 250
@@ -341,7 +342,7 @@ angular.module('newsGameApp')
 		});
 
 		createWindow('blog', {
-			title: 'blog',
+			title: 'Blog',
 			active: true,
 			template: 'blog',
 			height: 400,

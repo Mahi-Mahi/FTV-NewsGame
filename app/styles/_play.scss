@@ -3,13 +3,74 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 5px;
+    padding: 8px 5px 5px 5px;
     margin: 0;
-    background: #eee;
+    background: rgba(255,255,255,.7);
     list-style: none;
     li {
         float: left;
-        margin-right: 2px;
+        margin: 0 0 0 6px;
+        padding: 0;
+    }
+    .k-button {
+        background:#e7e6e6 !important;
+        border-radius:8px !important;
+        border:none !important;
+        position:relative;
+        height: 25px;
+        line-height: 2.4;
+        text-align: left !important;
+        padding:0 0 0 30px !important;
+        width:175px;
+        &:before {
+            display: block;
+            margin: 0;
+            padding: 0;
+            position:absolute;
+            left:8px;
+            top:6px;
+            font-family: 'icomoon';
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 1.25em;
+        }
+    }
+    .visible .k-button {
+        background:#c2ccd1 !important;
+        color:#fff !important;
+        &:after {
+            bottom: 100%;
+            left: 15px;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: transparent;
+            border-bottom-color: #c2ccd1;
+            border-width: 5px;
+            margin-left: -5px;
+        }
+    }
+    .cuicuiter .k-button:before {
+        background:#e7e6e6;
+        content: "\24";
+        color: #fff;
+    }
+    .cuicuiter.visible .k-button:before {
+        background:#c2ccd1;
+    }
+    .skoupe .k-button:before {
+        background:none;
+        content: "\2c";
+        color: #189a99;
     }
 }
 
@@ -221,6 +282,32 @@ div.k-window-content#chat {
             margin-top: -7px;
         }
     }
+}
+
+.contact__name {
+    display: block;
+    font-size: em(16px);
+    line-height: 1;
+    margin:0;
+    padding:0;
+    &:before {
+        color:#95a5a6;
+        content: "\61";
+        display: inline-block;
+        margin: 0;
+        padding: 0 5px 0 0;
+        font-family: 'icomoon';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 1.5em;
+        vertical-align: middle;
+    } 
 }
 
 .inner__body {
