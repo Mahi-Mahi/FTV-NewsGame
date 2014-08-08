@@ -4,30 +4,30 @@
 .bt {
 	background:#fff;
 	border:2px solid $bt-color;
-    border-radius:8px;
-    color:$bt-color;
+  border-radius:8px;
+  color:$bt-color;
+  display: block;
+  height: 16px;
+  margin: 0 auto;
+  padding:5px 0 0 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  text-transform: uppercase;
+  width:auto;
+ 	span {
     display: block;
-    height: 16px;
-    margin: 0 auto;
-    padding:5px 0 0 0;
+    margin:0;
+    padding:0 8px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    text-align: center;
-    text-transform: uppercase;
-    width:auto;
-   	span {
-   		display: block;
-   		margin:0;
-   		padding:0 8px;
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
    	}
-   	.metas & {
-   		max-width:150px;
-   		width:100%;
-   	}
+ 	.metas & {
+ 		max-width:150px;
+ 		width:100%;
+ 	}
 }
 
 .bt--publish {

@@ -1,8 +1,8 @@
-<h3>Mes contacts</h3>
+<h2>Mes contacts</h2>
 <div class="inner">
 	<div class="inner__body inner__body--fullwidth">
 		<ul class="unstyled">
-			<li ng-repeat="(id, contact) in contacts" class="inner-item">
+			<li ng-repeat="(id, contact) in contacts" class="inner-item contact-item">
 				<a href="" ng-click="openContact(id)">
 					{{contact.name}}
 				</a>
@@ -10,4 +10,4 @@
 		</ul>
 	</div><!-- .inner__body -->
 </div><!-- .inner -->
-<button class="bt"><span>Nouveau contact</span></button>
+<button class="bt right"><span>Nouveau contact <strong>+</strong></span></button>

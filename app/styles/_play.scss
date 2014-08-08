@@ -143,6 +143,9 @@
             border-left: none;
         }
     }
+    .contact-skoupe & li {
+        text-align: left;
+    }
 }
 .actions {
     list-style-type: none;
@@ -291,7 +294,7 @@ div.k-window-content#chat {
     margin:0;
     padding:0;
     &:before {
-        color:#95a5a6;
+        color:#cecdcd;
         content: "\61";
         display: inline-block;
         margin: 0;
@@ -312,6 +315,12 @@ div.k-window-content#chat {
 
 .inner__body {
     padding: 10px;
+    h3 {
+        display: block;
+        font-size: em(16px);
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .inner__body--fullwidth {
@@ -325,6 +334,27 @@ div.k-window-content#chat {
     margin: 0;
     &:last-child {
         border: none;
+    }
+}
+
+.contact-item {
+    a:before {
+        color:#39b54a;
+        content: "\61";
+        display: inline-block;
+        margin: 0;
+        padding: 0 5px 0 0;
+        font-family: 'icomoon';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 1.5em;
+        vertical-align: middle;   
     }
 }
 

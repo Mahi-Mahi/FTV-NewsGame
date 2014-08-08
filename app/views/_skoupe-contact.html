@@ -1,8 +1,20 @@
-<h4>{{currentContact.name}}</h4>
-<p>
-	{{currentContact.bio}}
-</p>
-<ul>
-	<li ng-repeat="theme in currentContact.themes">{{theme}}</li>
-</ul>
-
+	<div class="inner contact-skoupe">
+		<div class="inner__body">
+			<div class="media">
+				<img src="/images/default-skoupe-avatar.png" alt="" class="avatar" />
+				<div class="media">
+					<h3>
+						{{currentContact.name}}
+					</h3>
+					<p>
+						{{currentContact.bio}}
+					</p>
+				</div>
+			</div>
+		</div><!-- .inner__body -->
+		<ul class="metas">
+			<li class="theme">Thématique de prédilection
+					<span ng-repeat="theme in currentContact.themes" ng-class="['item-theme', theme]">{{theme}}</span>
+			</li>
+		</ul>
+	</div>
