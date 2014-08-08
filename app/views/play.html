@@ -55,17 +55,19 @@
 	</div>
 
 	<div id="scoring" ng-class="[level, status]" ng-if="showScoring">
-
-		<h4>Félicitations</h4>
-
-		<div class="message">
-			<p>
-				Vous avez appris les bases de l'utilisation de Cuicuitter pour chercher des infos<br />
-				et savoir de quoi elles parlent. Mais la route est encore longue avant de devenir<br />
-				un journaliste chevronné. Maintenant les choses sérieuses vont commencer !
-			</p>
-			<button ng-click="nextLevel()">Niveau Suivant</button>
+		<div class="inner">
+			<div class="scoring__body">
+				<h2 class="scoring__title"><span>Victoire</span></h2>
+				<h3 class="scoring__subtitle">Félicitations</h3>
+				<p>
+					Vous avez appris les bases de l'utilisation de Cuicuitter pour chercher des infos<br />
+					et savoir de quoi elles parlent. Mais la route est encore longue avant de devenir<br />
+					un journaliste chevronné. Maintenant les choses sérieuses vont commencer !
+				</p>
+				<button ng-click="nextLevel()" class="bt bt--nextlevel">Niveau Suivant</button>
+			</div>
 		</div>
+	</div>
 
 		<div class="scores">
 
