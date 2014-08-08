@@ -74,6 +74,9 @@
 	min-height:16px;
 	margin: 0;
 	padding: 3px 0 0 0;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 	&:before {
 		color:$notepad-color;
 		display: inline-block;
