@@ -742,22 +742,19 @@ $stars: 0 0, 1 -8px, 2 -16px, 3 -24px, 4 -32px, 5 -40px;
     top:2em;
     left:2em;
     text-align:center;
-    text-decoration:none;
-    color:#000;
-    font-weight:bold;
-    font-family:Arial, sans-serif;
-    text-shadow:0 0 3em #04b3df, 0 0 4px #0077e5;
+    color:#fff;
     font-size:1em;
-    -moz-transition: all 0.3s ease-out;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
     span {
         display:block;
         width:6em;
         height:6em;
-        background:#00f4b2;
+        background:#54bf80;
         -webkit-transform:rotate(11.25deg);
         -moz-transform:rotate(11.25deg);
         rotation:12.5deg;
-    }    
+    }   
+}
+
+.starburst--minus span {
+    background:#e34f43;
 }
