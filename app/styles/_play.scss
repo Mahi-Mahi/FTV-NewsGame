@@ -517,6 +517,7 @@ div.k-window-content#chat {
     }
 }
 
+/*
 .scoring__title {
     color:#bfb7a6;
     display: block;
@@ -543,6 +544,34 @@ div.k-window-content#chat {
             left: 100%;
             margin-left: 10px; 
         }  
+    }
+}
+*/
+
+.scoring__title {
+    color:#bfb7a6;
+    font:normal 3.2em 'Amatic SC', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-align: center;
+    &:before, &:after {
+        border-top: 1px solid #bfb7a6;
+        content: "";
+        display: inline-block;
+        height: .1em;
+        position: relative;
+        vertical-align: middle;
+        width: 50%;
+    }
+    &:before {
+        right: 0.5em;
+        margin-left: -50%;
+    }
+    &:after {
+        left: 0.5em;
+        margin-right: -50%;
     }
 }
 
@@ -703,4 +732,23 @@ div.k-window-content#chat {
 .blog-copyright {
     color:#b3b3b3;
     text-align: right;
+}
+
+// STARS
+
+.stars {
+    background:image-url("bg-stars.png") left top no-repeat;
+    display: block;
+    height: 8px;
+    margin: 0;
+    padding: 0;
+    width: 45px;
+}
+
+// GENRES
+$stars: 0 0, 1 -8px, 2 -16px, 3 -24px, 4 -32px, 5 -40px;
+@each $star-number in $stars {
+  .stars--#{nth($star-number, 1)} {
+    background-position: 0 nth($star-number, 2);
+  }
 }
