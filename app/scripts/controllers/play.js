@@ -342,7 +342,7 @@ angular.module('newsGameApp')
 		});
 
 		createWindow('blog', {
-			title: 'Blog',
+			title: 'Mon blog ::: Publier',
 			active: true,
 			template: 'blog',
 			height: 400,

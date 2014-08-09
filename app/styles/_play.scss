@@ -578,3 +578,129 @@ div.k-window-content#chat {
         float: left;
     }
 }
+
+// BLOG
+
+#blog {
+    background:#fff;
+}
+
+.blog-title {
+    background:#2c7093;
+    background: linear-gradient(to bottom, #2c7093 0%,#3393bf 100%);
+    color:#fff !important;
+    display: block;
+    font-size:em(18px) !important;
+    margin: 0;
+    padding:20px !important;
+}
+
+.blog-subtitle {
+    color:#29abe2;
+    display: block;
+    margin:0;
+    padding: 15px 0;
+    &:before {
+        color:#29abe2;
+        content: "\60";
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        font-family: 'icomoon';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 2.5em; 
+        vertical-align: top;  
+    }
+}
+
+.blog-item {
+    background:#daf0f9;
+    border:1px solid #29abe2;
+    border-radius:4px;
+    color:#29abe2;
+    padding:10px 20px 10px 10px;
+    position:relative;
+    margin:0 0 10px 0;
+    .metas li {
+        border:none;
+        color:#29abe2;
+        display: inline-block;
+        font-size:em(9px);
+        position:relative;
+        margin: 0;
+        padding:0 3px;
+        vertical-align: top;
+        &:before {
+            color:#29abe2;
+            content:'•';
+            display: inline-block;
+            margin: 0;
+            padding: 0 3px 0 0;
+        }
+        &:first-child:before {
+            display: none;
+        }
+    }
+}
+
+.postActions {
+    display: block;
+    position:absolute;
+    margin: 0;
+    padding: 0;
+    position:absolute;
+    right:5px;
+    top:0;
+    > span {
+        cursor:pointer;
+        display: block;
+        margin:8px 0;
+        padding:0;
+        &:before {
+            color:#29abe2;
+            display: block;
+            margin: 0;
+            padding: 0;
+            font-family: 'icomoon';
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 1em; 
+            vertical-align: top;  
+        }
+    }
+    .remove:before {
+        content:"\e8";
+    }
+    .up:before {
+        content:"\28"
+    }
+    .down:before {
+        content:"\a7"
+    }
+}
+
+.blog-item-title {
+    color:#29abe2;
+    display: block;
+    font-size:em(20px);
+    margin: 0;
+    padding: 0 0 15px 0;
+}
+
+.blog-copyright {
+    color:#b3b3b3;
+    text-align: right;
+}

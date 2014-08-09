@@ -1,12 +1,12 @@
-<h2>L'international</h2>
-
-<h3>Publier</h3>
-
-<ul>
-	<li ng-repeat="post in posts | reverse">
-		<h4>{{post.title}}</h4>
+<h2 class="blog-title">Mon blog</h2>
+<h3 class="blog-subtitle"><span class="visuallyhidden">Publier</span></h3>
+<ul class="unstyled blog-list">
+	<li ng-repeat="post in posts | reverse" class="blog-item">
+		<h4 class="blog-item-title">{{post.title}}</h4>
 		<div class="postActions">
-			<span class="remove" ng-click="unpublish(post)">X</span>
+			<span class="remove" ng-click="unpublish(post)"><span class="visuallyhidden">X</span></span>
+			<span class="up"><span class="visuallyhidden">Haut</span></span>
+			<span class="down"><span class="visuallyhidden">Bas</span></span>
 		</div>
 		<ul class="metas">
 			<li class="date">{{post.date| time}}</li>
@@ -15,3 +15,4 @@
 		</ul>
 	</li>
 </ul>
+<p class="blog-copyright">2014 - &copy; Blogpress</p>
