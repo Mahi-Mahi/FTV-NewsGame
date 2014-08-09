@@ -487,8 +487,6 @@ div.k-window-content#chat {
     bottom:0;
     right:0;
     z-index: 99999;
-    background:image-url("background/intro-level-1.jpg") 50% 50% no-repeat fixed;
-    background-size:cover;
     color: #fff;
     .inner {
         background:rgba(0, 0, 0, .7);
@@ -499,6 +497,13 @@ div.k-window-content#chat {
         bottom:0;
         right:0;
         z-index: 99999;
+    }
+    $bg-scoring: play-level-1 intro-level-1, play-level-2 intro-level-2, play-level-3 intro-level-3, play-level-4 intro-level-4;
+    @each $current-level in $bg-scoring {
+        .#{nth($current-level, 1)} & {
+            background:image-url("background/#{nth($current-level, 2)}.jpg") 50% 50% no-repeat fixed;
+            background-size:cover;
+        }
     }
 }
 
@@ -516,37 +521,6 @@ div.k-window-content#chat {
         font-size: 1.333em;
     }
 }
-
-/*
-.scoring__title {
-    color:#bfb7a6;
-    display: block;
-    font:normal 3.2em 'Amatic SC', sans-serif;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-    span {
-        display: inline-block;
-        position: relative; 
-        &:after, &:before {
-          content: "";
-          position: absolute;
-          height: 22px;
-          border-bottom: 1px solid #bfb7a6;
-          top: 0;
-          width: 400px;
-        }
-        &:after {
-            right: 100%;
-            margin-right: 10px;
-        }
-        &:before { 
-            left: 100%;
-            margin-left: 10px; 
-        }  
-    }
-}
-*/
 
 .scoring__title {
     color:#bfb7a6;
@@ -748,10 +722,42 @@ div.k-window-content#chat {
     text-indent: 100%;
 }
 
-// GENRES
 $stars: 0 0, 1 -8px, 2 -16px, 3 -24px, 4 -32px, 5 -40px;
 @each $star-number in $stars {
     .stars--#{nth($star-number, 1)} {
         background-position: 0 nth($star-number, 2);
     }
+}
+
+// STARBURST
+
+.starburst {
+    display:block;
+    width:6em;
+    height:6em;
+    -webkit-transform:rotate(-67.5deg);
+    -moz-transform:rotate(-67.5deg);
+    rotation:-67.5deg;
+    position:relative;
+    top:2em;
+    left:2em;
+    text-align:center;
+    text-decoration:none;
+    color:#000;
+    font-weight:bold;
+    font-family:Arial, sans-serif;
+    text-shadow:0 0 3em #04b3df, 0 0 4px #0077e5;
+    font-size:1em;
+    -moz-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    span {
+        display:block;
+        width:6em;
+        height:6em;
+        background:#00f4b2;
+        -webkit-transform:rotate(11.25deg);
+        -moz-transform:rotate(11.25deg);
+        rotation:12.5deg;
+    }    
 }

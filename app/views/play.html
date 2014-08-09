@@ -56,7 +56,7 @@
 
 	<div id="scoring" ng-class="[level, status]" ng-if="showScoring">
 		<div class="inner">
-			<div class="scoring__body">
+			<div class="scoring__body scoring__body--victory">
 				<h2 class="scoring__title">Victoire</h2>
 				<h3 class="scoring__subtitle">Félicitations</h3>
 				<p>
@@ -66,31 +66,31 @@
 				</p>
 				<button ng-click="nextLevel()" class="bt bt--nextlevel">Niveau Suivant</button>
 			</div>
+			<div class="scoring__body scoring__body--defeat">
+				<div class="scores">
+					<div class="starburst"><span><span><span><span><span><span><span><span><br>+100<br>points</span></span></span></span></span></span></span></span></div>
+					<div class="level-score">
+						<p>Score à atteindre pour ce niveau</p>
+						<span>{{scoring['level-'+level]['winning-score']}}</span>
+					</div>
+
+					<div class="my-level-score">
+						<p>Mon score pour ce niveau</p>
+						<span>{{scores['level-'+level]}}</span>
+					</div>
+
+					<div class="total-score">
+						<p>Mon score total</p>
+						<span>{{scores['level-1']+scores['level-2']+scores['level-3']+scores['level-4']}}</span>
+					</div>
+
+					<br>
+
+					<ul class="score-detail"></ul>
+				</div>
+			</div>
 		</div>
 	</div>
-
-		<div class="scores">
-
-			<div class="level-score">
-				<p>Score à atteindre pour ce niveau</p>
-				<span>{{scoring['level-'+level]['winning-score']}}</span>
-			</div>
-
-			<div class="my-level-score">
-				<p>Mon score pour ce niveau</p>
-				<span>{{scores['level-'+level]}}</span>
-			</div>
-
-			<div class="total-score">
-				<p>Mon score total</p>
-				<span>{{scores['level-1']+scores['level-2']+scores['level-3']+scores['level-4']}}</span>
-			</div>
-
-			<br>
-
-			<ul class="score-detail"></ul>
-
-		</div>
 
 	</div>
 
