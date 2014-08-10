@@ -55,7 +55,7 @@
 	</div>
 
 	<div id="scoring" ng-class="[level, status]" ng-if="showScoring">
-		<div class="inner">
+		<div class="inner-content">
 			<div class="scoring__body scoring__body--victory">
 				<h2 class="scoring__title">Victoire</h2>
 				<h3 class="scoring__subtitle">Félicitations</h3>
@@ -67,28 +67,109 @@
 				<button ng-click="nextLevel()" class="bt bt--nextlevel">Niveau Suivant</button>
 			</div>
 			<div class="scoring__body scoring__body--defeat">
+				<h2 class="scoring__title">Défaite</h2>
+				<h3 class="scoring__subtitle">Trop Lent !</h3>
+				<p>Retentez votre chance pour accéder au niveau suivant !
 				<div class="scores">
-					<div class="starburst"><span><span><span><span><span><span><span><span><br>+100<br>points</span></span></span></span></span></span></span></span></div>
-
-					<div class="starburst starburst--minus"><span><span><span><span><span><span><span><span><br>-5<br>points</span></span></span></span></span></span></span></span></div>
-					<div class="level-score">
-						<p>Score à atteindre pour ce niveau</p>
-						<span>{{scoring['level-'+level]['winning-score']}}</span>
+					<ul class="clearfix unstyled score__list">
+						<li class="score__item">
+							<span class="score__item__body">Score à atteindre <br />pour ce niveau</span>
+							<span class="score__item__result">{{scoring['level-'+level]['winning-score']}}</span>
+						</li>
+						<li class="score__item score__item__currentlevel">
+							<span class="score__item__body">Mon score <br />pour ce niveau</span>
+							<span class="score__item__result">{{scores['level-'+level]}}</span>
+						</li>
+						<li class="score__item score__item__alllevel">
+							<span class="score__item__body">Mon score <br />total</span>
+							<span class="score__item__result">{{scores['level-1']+scores['level-2']+scores['level-3']+scores['level-4']}}</span>
+						</li>
 					</div>
-
-					<div class="my-level-score">
-						<p>Mon score pour ce niveau</p>
-						<span>{{scores['level-'+level]}}</span>
-					</div>
-
-					<div class="total-score">
-						<p>Mon score total</p>
-						<span>{{scores['level-1']+scores['level-2']+scores['level-3']+scores['level-4']}}</span>
-					</div>
-
-					<br>
-
-					<ul class="score-detail"></ul>
+					<button class="bt bt--nextlevel">Recommencer</button>
+					<h2 class="scoring__title scoring__title--details">Détail du score</h2>
+					<ul class="scoring__details unstyled">
+						<li class="scoring__details__item cuit visible">
+							<div class="inner">
+								<div class="inner__body">
+									<div class="media">
+										<img src="/images/default-avatar.png" alt="" class="avatar">
+										<div class="media">
+											<p>
+												<a href="" ng-click="openSource(cuit.author.id)" class="source ng-binding">
+													@bibisoft
+												</a>
+											</p>
+											<p class="ng-binding">
+												Premier teaser d'Hashashin's Cred' : Paleolithic. Au programme : chasse, pêche, cueillette et élevage de mammouths. 
+											</p>
+										</div>
+									</div>
+								</div><!-- .inner__body -->
+								<ul class="metas">
+									<li class="theme">Thématique
+										<span class="item-theme science-technologie-et-jeux-video">science-technologie-et-jeux-video</span>
+									</li>
+									<li class="credibility">Crédibilité <div class="stars stars--0">2</div></span></li>
+									<li class="exclusivity">Scoop <div class="stars stars--0">3</div></li>
+								</ul>
+							</div>
+							<div class="starburst"><span><span><span><span><span><span><span><span><strong>+100</strong>pts</span></span></span></span></span></span></span></span></div>
+						</li>
+						<li class="scoring__details__item cuit visible">
+							<div class="inner">
+								<div class="inner__body">
+									<div class="media">
+										<img src="/images/default-avatar.png" alt="" class="avatar">
+										<div class="media">
+											<p>
+												<a href="" ng-click="openSource(cuit.author.id)" class="source ng-binding">
+													@bibisoft
+												</a>
+											</p>
+											<p class="ng-binding">
+												Premier teaser d'Hashashin's Cred' : Paleolithic. Au programme : chasse, pêche, cueillette et élevage de mammouths. 
+											</p>
+										</div>
+									</div>
+								</div><!-- .inner__body -->
+								<ul class="metas">
+									<li class="theme">Thématique
+										<span class="item-theme science-technologie-et-jeux-video">science-technologie-et-jeux-video</span>
+									</li>
+									<li class="credibility">Crédibilité <div class="stars stars--0">2</div></span></li>
+									<li class="exclusivity">Scoop <div class="stars stars--0">3</div></li>
+								</ul>
+							</div>
+							<div class="starburst starburst--minus"><span><span><span><span><span><span><span><span><strong>-5</strong>pts</span></span></span></span></span></span></span></span></div>
+						</li>
+						<li class="scoring__details__item cuit visible">
+							<div class="inner">
+								<div class="inner__body">
+									<div class="media">
+										<img src="/images/default-avatar.png" alt="" class="avatar">
+										<div class="media">
+											<p>
+												<a href="" ng-click="openSource(cuit.author.id)" class="source ng-binding">
+													@bibisoft
+												</a>
+											</p>
+											<p class="ng-binding">
+												Premier teaser d'Hashashin's Cred' : Paleolithic. Au programme : chasse, pêche, cueillette et élevage de mammouths. 
+											</p>
+										</div>
+									</div>
+								</div><!-- .inner__body -->
+								<ul class="metas">
+									<li class="theme">Thématique
+										<span class="item-theme science-technologie-et-jeux-video">science-technologie-et-jeux-video</span>
+									</li>
+									<li class="credibility">Crédibilité <div class="stars stars--0">2</div></span></li>
+									<li class="exclusivity">Scoop <div class="stars stars--0">3</div></li>
+								</ul>
+							</div>
+							<div class="starburst"><span><span><span><span><span><span><span><span><strong>+10</strong>pts</span></span></span></span></span></span></span></span></div>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
