@@ -34,8 +34,8 @@
 				<a ng-click="endDay()" class="endDay bt bt--finish right">Terminer la journée</a>
 			</div>
 			<div class="clearfix">
-				<div class="jauge left">
-					<div ng-class="['jauge__inner', gaugeLevel]">
+				<div class="gauge left">
+					<div ng-class="['gauge__inner', gaugeLevel]">
 						<div class="fill" style="width:{{100-((totalTime-remainingTime)/totalTime)*100}}%;"></div>
 					</div>
 				</div>
@@ -43,10 +43,12 @@
 			</div>
 		</div>
 
-		<div class="feedback">
-			<div ng-class="feedbackType">
-				{{feedback}}
+		<div class="feedback feedback--ok">
+			<div ng-class="['feedback__title',feedbackType]">
+				{{feedback}} Vos lecteurs vont aimer cette publication !
 			</div>
+			<p class="feedback__body">La thématique de l’info choisie est exactement celle pour laquelle vous êtes connu et apprécié...</p>
+			<div class="feedback__close"><span class="remove"><span class="visuallyhidden">Fermer</span></span></div>
 		</div>
 	</div>
 
@@ -78,7 +80,8 @@
 					<ul class="clearfix unstyled score__list">
 						<li class="score__item">
 							<span class="score__item__body">Score à atteindre <br />pour ce niveau</span>
-							<span class="score__item__result">{{scoring['level-'+level]['winning-score']}}</span>
+							<span class="score__item__result">{{scoring['level-'+level]['winning-score
+							']}}</span>
 						</li>
 						<li class="score__item score__item__currentlevel">
 							<span class="score__item__body">Mon score <br />pour ce niveau</span>

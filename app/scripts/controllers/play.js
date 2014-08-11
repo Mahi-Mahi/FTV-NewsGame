@@ -350,8 +350,8 @@ angular.module('newsGameApp')
 			height: 130,
 			width: 220,
 			position: {
-				top: 250,
-				left: 250
+				top: '45%',
+				left: '45%'
 			}
 		});
 
@@ -791,7 +791,7 @@ angular.module('newsGameApp')
 
 			if ($scope.posts.length === 5) {
 				$log.log("already 5 posts");
-				$scope.tooltip.content = "vous avez déjà publié 5 articles aurjourd'hui";
+				$scope.tooltip.content = "vous avez déjà publié 5 articles aujourd'hui";
 				$scope.tooltip.position(jQuery('#blog'), 0, 100);
 				$scope.tooltip.active = true;
 				$timeout(function() {

@@ -78,7 +78,7 @@
 .timeline {
     background:#e7e6e6;
     border-radius:4px;
-    box-shadow: rgba(128, 128, 128, 0.3) 1px 1px 7px 1px;
+    box-shadow: rgba(128, 128, 128, .3) 1px 1px 7px 1px;
     position: absolute;
     margin:0;
     padding:10px;
@@ -114,13 +114,13 @@
     padding:0 0 10px 0;
 }
 
-.jauge {
+.gauge {
     border:1px solid #95a5a6;
     border-radius:8px;
     margin: 0;
     padding:4px 3px 2px 2px;
     width: 145px;
-    .jauge__inner {
+    .gauge__inner {
         background:#dbd9d6;
         background: linear-gradient(to bottom, #b8b3af 0%,#dbd9d6 100%);
         border-radius:8px;
@@ -130,13 +130,75 @@
         border-radius:8px;
         border-bottom:1px solid #fff;
         height: 8px;
-        background:green;
+    }
+}
+
+.fill {
+    .green & {
+        background:#009245;
+    }
+    .lightgreen & {
+        background:#8cc63f;
+    }
+    .yellow & {
+        background:#fbb03b;
+    }
+    .orange & {
+        background:#f15a24;
+    }
+    .red & {
+        background:#ed1c24;
     }
 }
 
 .remaining {
     font-size: em(16px);
     padding:0 0 0 10px;
+}
+
+//FEEDBACK
+
+.feedback {
+    position: absolute;
+    margin:0;
+    padding:0;
+    top: 25px;
+    right: 25px;
+    width: 260px;
+    z-index:99999;
+}
+
+.feedback__title, .feedback__body {
+    background:#e7e6e6;
+    border-radius:4px;
+    box-shadow: rgba(128, 128, 128, .3) 1px 1px 7px 1px;
+    display: block;
+    margin:0 0 1px 0;
+    padding:15px 10px;
+}
+
+.feedback__title {
+    font-size:em(16px);
+    padding:15px 10px 15px 60px;
+    text-shadow: 0 0 5px rgba(128, 128, 128, .5);
+    .feedback--ok & {
+        background:image-url("feedback-ok.svg") 10px 10px no-repeat #e7e6e6;
+        color:#009245;
+    }
+    .feedback--bad & {
+        background:image-url("feedback-bad.svg") 10px 10px no-repeat #e7e6e6;
+        color:#904848;
+    }   
+}
+
+.feedback__body {
+    background:#fff;
+    margin:0;
+    font-size: em(10px); 
+}
+
+.feedback__close {
+
 }
 
 .status {
@@ -644,6 +706,10 @@ div.k-window-content#chat {
     }
 }
 
+#cuicuiter .avatar {
+    cursor:pointer;
+}
+
 // PROMPT
 
 #prompt {
@@ -739,12 +805,11 @@ div.k-window-content#chat {
     }
 }
 
-.postActions {
+.postActions, .feedback__close {
     display: block;
     position:absolute;
     margin: 0;
     padding: 0;
-    position:absolute;
     right:5px;
     top:0;
     > span {
@@ -784,6 +849,12 @@ div.k-window-content#chat {
 .play-level-2 .postActions {
     .up, .down {
         display: none;
+    }
+}
+
+.feedback__close {
+    .remove:before {
+        color:#7f8c8d;
     }
 }
 
