@@ -42,7 +42,6 @@ CSV.foreach("BDD_newsgame/Infos-Table 1.csv", :col_sep => ';') do |row|
 		cuit[:exclusivity] = row[5].to_f / 100
 		cuit[:articleTitle] = row[6]
 		cuit[:articleContent] = row[7]
-		cuit[:avatar] = row[8]
 
 		cuits[cuit[:id]] = cuit
 
@@ -70,7 +69,6 @@ CSV.foreach("BDD_newsgame/Sources-Table 1.csv", :col_sep => ';') do |row|
 		source[:id] = row[0].sanitize
 		source[:name] = row[1]
 		source[:bio] = row[2]
-		source[:avatar] = row[3]
 		source[:themes] = []
 		source[:themes] << row[4].sanitize unless row[4].nil?
 		source[:themes] << row[5].sanitize unless row[5].nil?
@@ -106,7 +104,6 @@ CSV.foreach("BDD_newsgame/Contacts-Table 1.csv", :col_sep => ';') do |row|
 		contact[:themes] = []
 		contact[:themes] << row[2].sanitize unless row[2].nil?
 		contact[:themes] << row[3].sanitize unless row[3].nil?
-		contact[:avatar] = row[4]
 
 		contacts[contact[:id]] = contact
 

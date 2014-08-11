@@ -15,9 +15,9 @@ angular.module('newsGameApp')
 
 		// current difficulty level
 		$scope.level = ipCookie('level') ? parseInt(ipCookie('level'), 10) : 1;
-		ipCookie('level', $scope.level), {
+		ipCookie('level', $scope.level, {
 			expires: 365
-		};
+		});
 
 		// Scoring
 		$scope.scoring = dataService.data.settings.scoring;
@@ -99,6 +99,7 @@ angular.module('newsGameApp')
 				var cuits = utils.shuffle(Object.keys(dataService.data.all.cuits));
 				angular.forEach(cuits, function(cuitIdx) {
 					var cuit = dataService.data.all.cuits[cuitIdx];
+
 					// if cuit is not currenlty displayed
 					if (!added && $scope.allCuits.indexOf(cuitIdx) === -1) {
 						if (!author || cuit.source === author) {
@@ -946,7 +947,9 @@ angular.module('newsGameApp')
 			ipCookie('scores', cookieScores, {
 				expires: 21
 			});
+			$scope.scores = cookieScores;
 			$log.log(scoring);
+			$log.log($scope.scoring);
 			if (scoring) {
 				$scope.scoreStatus = score > $scope.scoring['level-' + $scope.level]['winning-score'] ? 'victory' : 'defeat';
 			} else {

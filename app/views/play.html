@@ -79,8 +79,7 @@
 					<ul class="clearfix unstyled score__list">
 						<li class="score__item">
 							<span class="score__item__body">Score à atteindre <br />pour ce niveau</span>
-							<span class="score__item__result">{{scoring['level-'+level]['winning-score
-							']}}</span>
+							<span class="score__item__result">{{scoring['level-'+level]['winning-score']}}</span>
 						</li>
 						<li class="score__item score__item__currentlevel">
 							<span class="score__item__body">Mon score <br />pour ce niveau</span>
@@ -101,7 +100,7 @@
 							<div class="inner">
 								<div class="inner__body">
 									<div class="media">
-										<img ng-src="/images/avatars/{{post.cuit.author.id}}.png" alt="" class="avatar">
+										<img ng-src="/images/avatars/{{post.cuit.author.id|removeAT}}.png" alt="" class="avatar">
 										<div class="media">
 											<p>
 												<a href="" ng-click="openSource(cuit.author.id)" class="source ng-binding">
