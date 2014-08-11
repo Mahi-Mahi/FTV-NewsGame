@@ -8,7 +8,8 @@ angular
 		'ngRoute',
 		'kendo.directives',
 		'duScroll',
-		'ngAnimate'
+		'ngAnimate',
+		'ipCookie'
 	])
 	.config(function(config, $routeProvider) {
 		$routeProvider

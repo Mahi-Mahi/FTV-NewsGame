@@ -43,12 +43,11 @@
 			</div>
 		</div>
 
-		<div class="feedback feedback--ok">
-			<div ng-class="['feedback__title',feedbackType]">
-				{{feedback}} Vos lecteurs vont aimer cette publication !
+		<div class="feedback feedback--{{feedback.type}}" ng-if="feedback.active">
+			<div class="feedback__title">
+				{{feedback.status}}
 			</div>
-			<p class="feedback__body">La thématique de l’info choisie est exactement celle pour laquelle vous êtes connu et apprécié...</p>
-			<div class="feedback__close"><span class="remove"><span class="visuallyhidden">Fermer</span></span></div>
+			<p class="feedback__body">{{feedback.detail}}</p>
 		</div>
 	</div>
 

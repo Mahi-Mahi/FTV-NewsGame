@@ -764,7 +764,7 @@ angular.module('newsGameApp')
 			});
 
 			addStep(1500, function() {
-				if ($scope.debug) {
+				if (false && $scope.debug) {
 					var i = 6; //2 + Math.round(Math.random() * 3);
 					var max = 10;
 					while (i && max) {
@@ -880,10 +880,10 @@ angular.module('newsGameApp')
 
 		function updateFeedback(post) {
 			if ($scope.level === 2) {
-				if (post.theme === $scope.currentTheme) {
-					feedback('good');
+				if (post.cuit.theme === $scope.currentTheme) {
+					feedback('good', dataService.data.settings.messages['level-2']['feedback-good-theme']);
 				} else {
-					feedback('bad');
+					feedback('bad', dataService.data.settings.messages['level-2']['feedback-wrong-theme']);
 				}
 			}
 		}
@@ -891,14 +891,15 @@ angular.module('newsGameApp')
 		function feedback(type, detail) {
 			$log.log("feedback(", type, detail);
 			$scope.feedback.type = type;
-			if (type === 'good') {
+			if (type === "good") {
 				$scope.feedback.status = "Vos lecteurs vont aimer cette publication !";
 			}
-			if (type === 'bad') {
+			if (type === "bad") {
 				$scope.feedback.status = "Vos lecteurs ne vont aimer pas cette publication !";
 			}
-			$scope.feedback.status = detail;
+			$scope.feedback.detail = detail;
 			$scope.feedback.active = true;
+			$log.log($scope.feedback);
 			$timeout(function() {
 				$scope.feedback.active = false;
 			}, 2000);
