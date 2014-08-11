@@ -35,8 +35,8 @@
 			</div>
 			<div class="clearfix">
 				<div class="jauge left">
-					<div class="jauge__inner">
-						<div class="fill" style="width:{{((totalTime-remainingTime)/totalTime)*100}}%;"></div>
+					<div ng-class="['jauge__inner', gaugeLevel]">
+						<div class="fill" style="width:{{100-((totalTime-remainingTime)/totalTime)*100}}%;"></div>
 					</div>
 				</div>
 				<span class="remaining left">{{remainingTime | duration}}</span>
@@ -100,7 +100,7 @@
 												</a>
 											</p>
 											<p class="ng-binding">
-												Premier teaser d'Hashashin's Cred' : Paleolithic. Au programme : chasse, pêche, cueillette et élevage de mammouths. 
+												Premier teaser d'Hashashin's Cred' : Paleolithic. Au programme : chasse, pêche, cueillette et élevage de mammouths.
 											</p>
 										</div>
 									</div>
@@ -127,7 +127,7 @@
 												</a>
 											</p>
 											<p class="ng-binding">
-												Premier teaser d'Hashashin's Cred' : Paleolithic. Au programme : chasse, pêche, cueillette et élevage de mammouths. 
+												Premier teaser d'Hashashin's Cred' : Paleolithic. Au programme : chasse, pêche, cueillette et élevage de mammouths.
 											</p>
 										</div>
 									</div>
@@ -154,7 +154,7 @@
 												</a>
 											</p>
 											<p class="ng-binding">
-												Premier teaser d'Hashashin's Cred' : Paleolithic. Au programme : chasse, pêche, cueillette et élevage de mammouths. 
+												Premier teaser d'Hashashin's Cred' : Paleolithic. Au programme : chasse, pêche, cueillette et élevage de mammouths.
 											</p>
 										</div>
 									</div>

@@ -27,7 +27,7 @@ angular.module('newsGameApp')
 		$scope.themes = dataService.data.all.themes;
 
 		// selected theme
-		$scope.currentTheme = null;
+		$scope.currentTheme = $cookies.theme ? $cookies.theme : $scope.currentTheme;
 
 		$scope.actionsCost = dataService.data.settings.actionsCost;
 
@@ -169,11 +169,26 @@ angular.module('newsGameApp')
 
 		// decrement remaining time
 
+		$scope.gaugeLevel = 'green';
+
 		function decrementTime(type) {
 			// the cost of each actions are specified in /data/settings.json
 			var value = dataService.data.settings.actionsCost[type];
 			// $log.log("decrementTime : " + value + " (" + type + ")");
 			$scope.remainingTime -= value;
+			$log.log($scope.remainingTime / $scope.totalTime);
+			if ($scope.remainingTime / $scope.totalTime <= 0.75) {
+				$scope.gaugeLevel = 'lightgreen';
+			}
+			if ($scope.remainingTime / $scope.totalTime <= 0.5) {
+				$scope.gaugeLevel = 'yellow';
+			}
+			if ($scope.remainingTime / $scope.totalTime <= 0.25) {
+				$scope.gaugeLevel = 'orange';
+			}
+			if ($scope.remainingTime / $scope.totalTime <= 0.15) {
+				$scope.gaugeLevel = 'red';
+			}
 		}
 
 		/*
@@ -465,11 +480,11 @@ angular.module('newsGameApp')
 
 			$scope.closeWin('themeSelector');
 
-			$log.log(">level1Phase2");
+			$scope.currentTheme = jQuery('#themeSelector :checked').val();
+
+			$log.log(">level1Phase2 : " + $scope.currentTheme);
 
 			$cookies.theme = $scope.currentTheme;
-
-			$scope.currentTheme = jQuery('#themeSelector :checked').val();
 
 			steps = [];
 
@@ -559,6 +574,10 @@ angular.module('newsGameApp')
 				scenarii.level1Phase5();
 				return;
 			} else {
+				verifyCuitThemeCallback = function() {
+					scenarii.level1Phase4();
+				};
+
 				addChat(1500, 'me', "Ah... ce Cuitt-là ne m’intéresse pas trop. Attends, j’en cherche un autre !");
 				addStep(1500, function() {
 					// show info popup
@@ -575,9 +594,6 @@ angular.module('newsGameApp')
 					$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Vérifier la thématique</strong>";
 					$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.metas .theme button'), 0, 100);
 					$scope.tooltip.active = true;
-					verifyCuitThemeCallback = function() {
-						scenarii.level1Phase4();
-					};
 				});
 			}
 
@@ -757,7 +773,7 @@ angular.module('newsGameApp')
 						}
 						max--;
 					}
-					scenarii.level2End();
+					// scenarii.level2End();
 				}
 			});
 
@@ -784,38 +800,44 @@ angular.module('newsGameApp')
 				}, 2000);
 			} else {
 
-				promptCallback = function() {
-					$log.log("publishCuit(", $scope.currentCuit.id);
-					var post = {
-						cuit: $scope.currentCuit,
-						title: $scope.currentCuit.articleTitle,
-						date: Math.floor(($scope.totalTime - $scope.remainingTime) / $scope.remainingTime * 10 * 60) + (8 * 60)
-					};
-					angular.forEach($scope.cuits, function(c, idx) {
-						if (c.id === $scope.currentCuit.id) {
-							$scope.cuits[idx].published = true;
-						}
-					});
-					$scope.posts.push(post);
-					decrementTime("publish-cuit");
-
-					updateFeedback(post);
-
-					updateScore();
-
-					$scope.closeWin('prompt');
-					promptCallback = null;
-				};
-
-				$scope.promptContent = "Êtes-vous sûr de vouloir publier ce Cuit ?";
-				$scope.openWin('prompt');
-
 				if (force) {
-					jQuery('#prompt .confirm').click();
+					doPublishCuit($scope.currentCuit, true);
+				} else {
+					promptCallback = function() {
+						doPublishCuit($scope.currentCuit);
+					};
+
+					$scope.promptContent = "Êtes-vous sûr de vouloir publier ce Cuit ?";
+					$scope.openWin('prompt');
+
 				}
 			}
 
 		};
+
+		function doPublishCuit(cuit) {
+			$log.log("publishCuit(", cuit);
+			var post = {
+				cuit: cuit,
+				title: cuit.articleTitle,
+				date: Math.floor(($scope.totalTime - $scope.remainingTime) / $scope.remainingTime * 10 * 60) + (8 * 60)
+			};
+			angular.forEach($scope.cuits, function(c, idx) {
+				if (c.id === cuit.id) {
+					$scope.cuits[idx].published = true;
+				}
+			});
+			$scope.posts.push(post);
+			decrementTime("publish-cuit");
+
+			updateFeedback(post);
+
+			updateScore();
+
+			$scope.closeWin('prompt');
+			promptCallback = null;
+		}
+
 		$scope.unpublish = function(post) {
 			$scope.currentPost = post;
 
@@ -847,6 +869,12 @@ angular.module('newsGameApp')
 
 		};
 
+		$scope.feedback = {
+			status: null,
+			active: false,
+			type: null
+		};
+
 		function updateFeedback(post) {
 			if ($scope.level === 2) {
 				if (post.theme === $scope.currentTheme) {
@@ -858,6 +886,7 @@ angular.module('newsGameApp')
 		}
 
 		function feedback(type, detail) {
+			$log.log("feedback(", type, detail);
 			$scope.feedback.type = type;
 			if (type === 'good') {
 				$scope.feedback.status = "Vos lecteurs vont aimer cette publication !";
