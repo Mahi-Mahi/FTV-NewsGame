@@ -255,7 +255,7 @@
     }
 }
 
-.level-2, .level-3, .level-4 {
+.level-3, .level-4 {
     #scoring {
         .credibility, .exclusivity {
             display: table-cell !important;
@@ -778,6 +778,12 @@ div.k-window-content#chat {
     }
     .down:before {
         content:"\a7"
+    }
+}
+
+.play-level-2 .postActions {
+    .up, .down {
+        display: none;
     }
 }
 

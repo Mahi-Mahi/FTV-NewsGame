@@ -6,7 +6,7 @@
 			<div class="inner" ng-click="cuit.toggle=!cuit.toggle">
 				<div class="inner__body">
 					<div class="media">
-						<img src="/images/default-avatar.png" alt="" class="avatar" ng-click="openSource(cuit.author.id)" />
+						<img src="/images/avatars/{{cuit.author.id|removeAT}}.png" alt="" class="avatar" ng-click="openSource(cuit.author.id)" />
 						<div class="media">
 							<div class="publish right">
 								<button class="bt bt--publish" ng-click="publishCuit(cuit)" ng-if="!cuit.published"><span>Publier ({{actionsCost['publish-cuit']}} min) </span></button>
@@ -26,7 +26,7 @@
 					<li class="theme">Thématique
 						<span class="off"><button ng-click="verifyCuitTheme(cuit)" class="bt">Vérifier</button></span>
 						<span class="on"><span ng-class="['item-theme', cuit.theme]">{{cuit.theme}}</span></span>
-						
+
 					</li>
 					<li class="credibility">Crédibilité <span class="off"><button class="bt">Vérifier</button></span><span class="on">{{cuit.credibility}}<div class="stars stars--0">2</div></span></li>
 					<li class="exclusivity">Scoop <span class="off"><button class="bt">Vérifier</button></span><span class="on">{{cuit.exclusivity}}</span><div class="stars stars--0">3</div></li>

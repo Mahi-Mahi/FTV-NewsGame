@@ -27,4 +27,9 @@ angular.module('newsGameApp')
 			}
 			return result;
 		};
+	})
+	.filter('removeAT', function() {
+		return function(input) {
+			return input.replace('@', '');
+		};
 	});

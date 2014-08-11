@@ -176,7 +176,6 @@ angular.module('newsGameApp')
 			var value = dataService.data.settings.actionsCost[type];
 			// $log.log("decrementTime : " + value + " (" + type + ")");
 			$scope.remainingTime -= value;
-			$log.log($scope.remainingTime / $scope.totalTime);
 			if ($scope.remainingTime / $scope.totalTime <= 0.75) {
 				$scope.gaugeLevel = 'lightgreen';
 			}
@@ -285,8 +284,8 @@ angular.module('newsGameApp')
 
 		createWindow('skoupe', {
 			title: 'Skoupe',
-			visible: true,
-			active: true,
+			visible: false,
+			active: false,
 			template: 'skoupe-main',
 			height: 150,
 			position: {
@@ -773,7 +772,7 @@ angular.module('newsGameApp')
 						}
 						max--;
 					}
-					// scenarii.level2End();
+					scenarii.level2End();
 				}
 			});
 
@@ -898,7 +897,6 @@ angular.module('newsGameApp')
 			$scope.feedback.active = true;
 			$timeout(function() {
 				$scope.feedback.active = false;
-
 			}, 2000);
 		}
 
@@ -920,11 +918,14 @@ angular.module('newsGameApp')
 			var score = 0;
 			var scoring = $scope.scoring['level-' + $scope.level];
 			if ($scope.level === 2) {
-				angular.forEach($scope.posts, function(post) {
-					if (post.theme === $scope.currentTheme) {
+				angular.forEach($scope.posts, function(post, idx) {
+					$log.log(post.cuit.theme, '===', $scope.currentTheme);
+					if (post.cuit.theme === $scope.currentTheme) {
 						score += scoring['select-cuit-in-correct-theme'];
+						$scope.posts[idx].score = scoring['select-cuit-in-correct-theme'];
 					} else {
 						score += scoring['select-cuit-in-wrong-theme'];
+						$scope.posts[idx].score = scoring['select-cuit-in-wrong-theme'];
 					}
 				});
 			}
@@ -934,6 +935,8 @@ angular.module('newsGameApp')
 			}
 			$cookies.scores['level-' + $scope.level] = score;
 			$scope.scores = $cookies.scores;
+			$log.log(scoring);
+			$scope.scoreStatus = score > $scope.scoring['level-' + $scope.level]['winning-score'] ? 'victory' : 'defeat';
 			$log.log($cookies.scores);
 		}
 
