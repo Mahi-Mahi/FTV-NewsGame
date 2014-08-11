@@ -764,7 +764,7 @@ angular.module('newsGameApp')
 			});
 
 			addStep(1500, function() {
-				if (false && $scope.debug) {
+				if ($scope.debug) {
 					var i = 6; //2 + Math.round(Math.random() * 3);
 					var max = 10;
 					while (i && max) {
@@ -906,6 +906,7 @@ angular.module('newsGameApp')
 		}
 
 		$scope.endDay = function() {
+			$scope.skipCuits = true;
 			scenarii['level' + $scope.level + 'End']();
 		};
 
