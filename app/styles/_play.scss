@@ -181,8 +181,8 @@
     font-size:em(16px);
     padding:15px 10px 15px 60px;
     text-shadow: 0 0 5px rgba(128, 128, 128, .5);
-    .feedback--ok & {
-        background:image-url("feedback-ok.svg") 10px 10px no-repeat #e7e6e6;
+    .feedback--good & {
+        background:image-url("feedback-good.svg") 10px 10px no-repeat #e7e6e6;
         color:#009245;
     }
     .feedback--bad & {
