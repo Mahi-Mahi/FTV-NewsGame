@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('newsGameApp')
-	.controller('PlayCtrl', function($document, $rootScope, $scope, $routeParams, $location, $cookies, $log, prod, $timeout, $interval, dataService, titleService, utils) {
+	.controller('PlayCtrl', function($document, $rootScope, $scope, $routeParams, $location, ipCookie, $log, prod, $timeout, $interval, dataService, titleService, utils) {
 
 		$scope.debug = ($routeParams.debug);
 
@@ -14,8 +14,10 @@ angular.module('newsGameApp')
 		$scope.windows = {};
 
 		// current difficulty level
-		$scope.level = $cookies.level ? parseInt($cookies.level, 10) : 1;
-		$cookies.level = $scope.level;
+		$scope.level = ipCookie('level') ? parseInt(ipCookie('level'), 10) : 1;
+		ipCookie('level', $scope.level), {
+			expires: 365
+		};
 
 		// Scoring
 		$scope.scoring = dataService.data.settings.scoring;
@@ -27,7 +29,7 @@ angular.module('newsGameApp')
 		$scope.themes = dataService.data.all.themes;
 
 		// selected theme
-		$scope.currentTheme = $cookies.theme ? $cookies.theme : $scope.currentTheme;
+		$scope.currentTheme = ipCookie('theme') ? ipCookie('theme') : $scope.currentTheme;
 
 		$scope.actionsCost = dataService.data.settings.actionsCost;
 
@@ -483,7 +485,9 @@ angular.module('newsGameApp')
 
 			$log.log(">level1Phase2 : " + $scope.currentTheme);
 
-			$cookies.theme = $scope.currentTheme;
+			ipCookie('theme', $scope.currentTheme, {
+				expires: 365
+			});
 
 			steps = [];
 
@@ -717,7 +721,7 @@ angular.module('newsGameApp')
 				discussion: []
 			};
 
-			$scope.currentTheme = $cookies.theme;
+			$scope.currentTheme = ipCookie('theme');
 
 			steps = [];
 
@@ -905,7 +909,9 @@ angular.module('newsGameApp')
 		};
 
 		$scope.nextLevel = function() {
-			$cookies.level = parseInt($scope.level, 10) + 1;
+			ipCookie('level', parseInt($scope.level, 10) + 1, {
+				expires: 365
+			});
 			$location.path('/intro');
 		};
 
@@ -930,14 +936,21 @@ angular.module('newsGameApp')
 				});
 			}
 			$log.log("score : " + score);
-			if (typeof $cookies.scores === 'undefined' || !$cookies.scores['level-1']) {
-				$cookies.scores = {};
+			var cookieScores = ipCookie('scores');
+			if (!cookieScores) {
+				cookieScores = {};
 			}
-			$cookies.scores['level-' + $scope.level] = score;
-			$scope.scores = $cookies.scores;
+			cookieScores['level-' + $scope.level] = score;
+			ipCookie('scores', cookieScores, {
+				expires: 21
+			});
 			$log.log(scoring);
-			$scope.scoreStatus = score > $scope.scoring['level-' + $scope.level]['winning-score'] ? 'victory' : 'defeat';
-			$log.log($cookies.scores);
+			if (scoring) {
+				$scope.scoreStatus = score > $scope.scoring['level-' + $scope.level]['winning-score'] ? 'victory' : 'defeat';
+			} else {
+				$scope.scoreStatus = 'victory';
+			}
+			$log.log(cookieScores);
 		}
 
 		/*

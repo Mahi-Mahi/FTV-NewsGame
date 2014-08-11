@@ -76,7 +76,7 @@
 					<p>Retentez votre chance pour accéder au niveau suivant !</p>
 				</div>
 
-				<div class="scores">
+				<div class="scores" ng-if="scoring['level-'+level]['winning-score']">
 					<ul class="clearfix unstyled score__list">
 						<li class="score__item">
 							<span class="score__item__body">Score à atteindre <br />pour ce niveau</span>
@@ -91,7 +91,7 @@
 							<span class="score__item__body">Mon score <br />total</span>
 							<span class="score__item__result">{{scores['level-1']+scores['level-2']+scores['level-3']+scores['level-4']}}</span>
 						</li>
-					</div>
+					</ul>
 
 					<button class="bt bt--nextlevel" ng-if="scoreStatus=='defeat'">Recommencer</button>
 
@@ -102,7 +102,7 @@
 							<div class="inner">
 								<div class="inner__body">
 									<div class="media">
-										<img src="/images/avatars/{{post.cuit.author.id|removeAT}}.png" alt="" class="avatar">
+										<img ng-src="/images/avatars/{{post.cuit.author.id}}.png" alt="" class="avatar">
 										<div class="media">
 											<p>
 												<a href="" ng-click="openSource(cuit.author.id)" class="source ng-binding">
