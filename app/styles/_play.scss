@@ -197,10 +197,6 @@
     font-size: em(10px); 
 }
 
-.feedback__close {
-
-}
-
 .status {
     position: absolute;
     bottom: 100px;
@@ -805,7 +801,7 @@ div.k-window-content#chat {
     }
 }
 
-.postActions, .feedback__close {
+.postActions {
     display: block;
     position:absolute;
     margin: 0;
@@ -849,12 +845,6 @@ div.k-window-content#chat {
 .play-level-2 .postActions {
     .up, .down {
         display: none;
-    }
-}
-
-.feedback__close {
-    .remove:before {
-        color:#7f8c8d;
     }
 }
 
