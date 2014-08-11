@@ -77,6 +77,11 @@
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
+	.grid & {
+		display: inline-block;
+		padding:0;
+		vertical-align: top;
+	}
 	&:before {
 		color:$notepad-color;
 		display: inline-block;
@@ -111,6 +116,11 @@
 	&.societe:before {
 		content: "\76";
 	}
+}
+
+.theme-title {
+	display: inline-block;
+	vertical-align: top;
 }
 
 // THEMATIQUES

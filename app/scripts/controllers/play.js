@@ -362,7 +362,8 @@ angular.module('newsGameApp')
 			title: 'Mon blog ::: Publier',
 			active: true,
 			template: 'blog',
-			height: 400,
+			height: 360,
+			width:285,
 			position: {
 				top: 250,
 				left: 550
