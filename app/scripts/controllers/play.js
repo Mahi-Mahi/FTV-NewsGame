@@ -10,6 +10,8 @@ angular.module('newsGameApp')
 		// debug config
 		var delayModifier = ($scope.debug ? 0.05 : 1);
 
+		var chatDelay = dataService.data.settings.chatDelay;
+
 		// reference to all windows on the desktop
 		$scope.windows = {};
 
@@ -30,6 +32,7 @@ angular.module('newsGameApp')
 
 		// selected theme
 		$scope.currentTheme = ipCookie('theme') ? ipCookie('theme') : $scope.currentTheme;
+		$scope.mandatory = ipCookie('mandatory') ? ipCookie('mandatory') : $scope.mandatory;
 
 		$scope.actionsCost = dataService.data.settings.actionsCost;
 
@@ -87,12 +90,12 @@ angular.module('newsGameApp')
 			$scope.cuitsHover = false;
 		};
 
-		function addCuit(next, force, author) {
-			// $log.log("addCuit", next, force, author);
+		function addCuit(next, force, author, theme) {
+			// $log.log("addCuit", next, force, author, theme);
 			if (!force && ($scope.cuitsHover || $scope.skipCuits)) {
 				$timeout(function() {
 					addCuit(true);
-				}, (Math.random() * 1500 * delayModifier) + 800);
+				}, (Math.random() * chatDelay * delayModifier) + 800);
 			} else {
 				var added = false;
 				// iterate through all cuits ( loaded from /data/all.json )
@@ -102,7 +105,7 @@ angular.module('newsGameApp')
 
 					// if cuit is not currenlty displayed
 					if (!added && $scope.allCuits.indexOf(cuitIdx) === -1) {
-						if (!author || cuit.source === author) {
+						if ((!author && !theme) || cuit.source === author || cuit.theme === theme) {
 							cuit.author = dataService.data.all.sources[cuit.source];
 							if (cuit.author) {
 								cuit.themeVerified = cuit.author.themeVerified;
@@ -117,7 +120,7 @@ angular.module('newsGameApp')
 							if (next) {
 								$timeout(function() {
 									addCuit(true);
-								}, (Math.random() * 1500 * delayModifier) + 800);
+								}, (Math.random() * chatDelay * delayModifier) + 800);
 							}
 						}
 					}
@@ -129,6 +132,7 @@ angular.module('newsGameApp')
 		var verifyCuitThemeCallback = false;
 		$scope.verifyCuitTheme = function(cuit) {
 			// $log.log("verifyCuitTheme(" + cuit);
+			$scope.currentCuit = cuit;
 			cuit.themeVerified = true;
 			decrementTime('verify-cuit-theme');
 			if (verifyCuitThemeCallback) {
@@ -137,15 +141,43 @@ angular.module('newsGameApp')
 			}
 		};
 
+		// Verify Cuit Credibility ( + decrement time counter )
+		var verifyCuitCredibilityCallback = false;
+		$scope.verifyCuitCredibility = function(cuit) {
+			// $log.log("verifyCuitCredibility(" + cuit);
+			if (verifyCuitCredibilityCallback) {
+				selectedCuit = cuit;
+				$scope.canCall = true;
+				verifyCuitCredibilityCallback();
+			}
+		};
+
 		/*
 		Skoupe
 		*/
 
 		// all contacts are loaded from /data/all.json
-		$scope.contacts = dataService.data.all.contacts;
+		$scope.contacts = []; //dataService.data.all.contacts;
+		$scope.allContacts = [];
 
 		// current contact displayed in contact detail window
 		$scope.currentContact = null;
+
+		function addContact(theme) {
+			$log.log("addContact(", theme);
+			var contacts = utils.shuffle(Object.keys(dataService.data.all.contacts));
+			var added = false;
+			angular.forEach(contacts, function(contactIdx) {
+				var contact = dataService.data.all.contacts[contactIdx];
+				if (!added && $scope.allContacts.indexOf(contactIdx) === -1) {
+					if ((!theme) || contact.themes.indexOf(theme) !== -1) {
+						$scope.allContacts.push(contactIdx);
+						$scope.contacts.unshift(contact);
+						added = true;
+					}
+				}
+			});
+		}
 
 		// open contact detail window
 		$scope.openContact = function(id) {
@@ -153,6 +185,17 @@ angular.module('newsGameApp')
 			$scope.closeWin('contact');
 			$scope.currentContact = $scope.contacts[id];
 			$scope.openWin('contact');
+		};
+
+		var callContactCallback;
+		var selectedContact;
+		$scope.canCall = false;
+		$scope.callContact = function(contact) {
+			$log.log("callContact(", contact);
+			if (callContactCallback) {
+				selectedContact = contact;
+				callContactCallback();
+			}
 		};
 
 		// current chat displayed in chat window
@@ -445,29 +488,29 @@ angular.module('newsGameApp')
 				$scope.openWin('cuicuiter');
 			});
 
-			addStep(1500, function() {
+			addStep(chatDelay, function() {
 				$scope.openWin('chat');
 			});
 
-			addChat(1500, 'other', "Alors, tu as lancé Cuicuitter ?");
-			addChat(1500, 'me', "Oui, je viens de le faire, mais je comprends rien... C’est quoi tous ces messages ?");
+			addChat(chatDelay, 'other', "Alors, tu as lancé Cuicuitter ?");
+			addChat(chatDelay, 'me', "Oui, je viens de le faire, mais je comprends rien... C’est quoi tous ces messages ?");
 
-			addChat(1500, 'other', "Ca s’appelle des « Cuitts » ! C’est des messages très courts. Ils viennent s’afficher dans ta timeline dès que quelqu’un les poste.");
-			addChat(1500, 'me', "Mais justement, qui les poste ?");
-			addChat(1500, 'other', "Tout le monde ! Des stars, des sportifs, des pros de l’économie ou de la politique... Y en a pour tous les goûts ! En gros, il y a six grandes thématiques. Attends, je t’envoie la liste...");
+			addChat(chatDelay, 'other', "Ca s’appelle des « Cuitts » ! C’est des messages très courts. Ils viennent s’afficher dans ta timeline dès que quelqu’un les poste.");
+			addChat(chatDelay, 'me', "Mais justement, qui les poste ?");
+			addChat(chatDelay, 'other', "Tout le monde ! Des stars, des sportifs, des pros de l’économie ou de la politique... Y en a pour tous les goûts ! En gros, il y a six grandes thématiques. Attends, je t’envoie la liste...");
 
 			addStep(500, function() {
 				$scope.openWin('notepad');
 			});
 
-			addChat(1500, 'me', "Ah merci ! Mais... tout ne m’intéresse pas, là-dedans. Tu sais que moi, ma passion, c’est...");
+			addChat(chatDelay, 'me', "Ah merci ! Mais... tout ne m’intéresse pas, là-dedans. Tu sais que moi, ma passion, c’est...");
 
 			addStep(500, function() {
 				$scope.closeWin('notepad');
 				$scope.openWin('themeSelector');
 			});
 
-			addStep(1500, function() {
+			addStep(chatDelay, function() {
 				if ($scope.debug) {
 					var $choices = jQuery('#themeSelector :radio');
 					$choices.eq(Math.round(Math.random() * $choices.length)).click();
@@ -494,12 +537,12 @@ angular.module('newsGameApp')
 			steps = [];
 
 			addChat(500, 'me', $scope.themes[$scope.currentTheme] + "! Si je veux trouver des infos sur ce sujet-là, je fais comment ?");
-			addChat(1500, 'other', "Tu ouvres grands tes yeux... et tu fais marcher ton cerveau ! En lisant les Cuitts, tu pourras déterminer de quoi ils parlent.");
+			addChat(chatDelay, 'other', "Tu ouvres grands tes yeux... et tu fais marcher ton cerveau ! En lisant les Cuitts, tu pourras déterminer de quoi ils parlent.");
 
-			addChat(1500, 'me', "Hum... pas facile !");
-			addChat(1500, 'other', "Je vois. Si tu as un doute, tu peux faire une recherche pour vérifier la thématique de chaque Cuitt. Regarde : choisis-en un, n’importe lequel !");
+			addChat(chatDelay, 'me', "Hum... pas facile !");
+			addChat(chatDelay, 'other', "Je vois. Si tu as un doute, tu peux faire une recherche pour vérifier la thématique de chaque Cuitt. Regarde : choisis-en un, n’importe lequel !");
 
-			addStep(1500, function() {
+			addStep(chatDelay, function() {
 				// show info popup
 				$scope.skipCuits = true;
 				$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Vérifier la thématique</strong>";
@@ -510,7 +553,7 @@ angular.module('newsGameApp')
 				};
 			});
 
-			addStep(1500, function() {
+			addStep(chatDelay, function() {
 				if ($scope.debug) {
 					jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.theme button').click();
 				}
@@ -532,17 +575,17 @@ angular.module('newsGameApp')
 
 			steps = [];
 
-			addChat(1500, 'other', "Et voilà ! Tu vois, ça a pris un peu de temps mais ça en valait la peine ! Maintenant, tu sais que ce cuitt parle de " + selectedCuit.theme + ".");
-			addChat(1500, 'other', "Tu vois, c’est signalé par le petit picto qui a remplacé le point d’interrogation en dessous du message !");
+			addChat(chatDelay, 'other', "Et voilà ! Tu vois, ça a pris un peu de temps mais ça en valait la peine ! Maintenant, tu sais que ce cuitt parle de " + selectedCuit.theme + ".");
+			addChat(chatDelay, 'other', "Tu vois, c’est signalé par le petit picto qui a remplacé le point d’interrogation en dessous du message !");
 
 			if (selectedCuit.theme === $scope.currentTheme) {
-				addChat(1500, 'me', "Ah, géniale, cette info ! justement ce qui m’intéresse !");
+				addChat(chatDelay, 'me', "Ah, géniale, cette info ! justement ce qui m’intéresse !");
 			} else {
-				addChat(1500, 'me', "Ah ouais... Pas mal, cette info, mais, moi, ce qui m’intéresse, c’est " + $scope.themes[$scope.currentTheme] + ".");
+				addChat(chatDelay, 'me', "Ah ouais... Pas mal, cette info, mais, moi, ce qui m’intéresse, c’est " + $scope.themes[$scope.currentTheme] + ".");
 			}
-			addChat(1500, 'other', "Ce qui est cool avec Cuicuitter, c’est que je suis sûr qu’en fouillant dans la timeline, tu peux trouver un autre cuit qui parle de " + $scope.themes[$scope.currentTheme] + ". A toi de jouer !");
+			addChat(chatDelay, 'other', "Ce qui est cool avec Cuicuitter, c’est que je suis sûr qu’en fouillant dans la timeline, tu peux trouver un autre cuit qui parle de " + $scope.themes[$scope.currentTheme] + ". A toi de jouer !");
 
-			addStep(1500, function() {
+			addStep(chatDelay, function() {
 				// show info popup
 				addCuit(false, true);
 				$scope.skipCuits = true;
@@ -554,7 +597,7 @@ angular.module('newsGameApp')
 				};
 			});
 
-			addStep(1500, function() {
+			addStep(chatDelay, function() {
 				if ($scope.debug) {
 					jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.theme button').click();
 				}
@@ -583,8 +626,8 @@ angular.module('newsGameApp')
 					scenarii.level1Phase4();
 				};
 
-				addChat(1500, 'me', "Ah... ce Cuitt-là ne m’intéresse pas trop. Attends, j’en cherche un autre !");
-				addStep(1500, function() {
+				addChat(chatDelay, 'me', "Ah... ce Cuitt-là ne m’intéresse pas trop. Attends, j’en cherche un autre !");
+				addStep(chatDelay, function() {
 					// show info popup
 					addCuit(false, true);
 					/*
@@ -602,7 +645,7 @@ angular.module('newsGameApp')
 				});
 			}
 
-			addStep(1500, function() {
+			addStep(chatDelay, function() {
 				if ($scope.debug) {
 					jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.theme button').click();
 				}
@@ -621,18 +664,18 @@ angular.module('newsGameApp')
 
 			steps = [];
 
-			addChat(1500, 'me', "Ouah, génial ! C’est super intéressant ce truc !.");
-			addChat(1500, 'other', "T’as vu ? J’apprends plein d’infos de première fraîcheur depuis que je m’en sers... ");
-			addChat(1500, 'other', "Bon, il y a aussi des trucs un peu bidon, mais en général, quand tu vérifies qui poste, tu peux savoir si c’est du solide ou pas...");
-			addChat(1500, 'me', "Ah ? Comment on fait ça ?");
-			addChat(1500, 'other', "Ben, pour voir la fiche de quelqu’un, il faut cliquer sur sa photo d’avatar ou sur son nom d’utilisateur.");
-			addStep(1500, function() {
+			addChat(chatDelay, 'me', "Ouah, génial ! C’est super intéressant ce truc !.");
+			addChat(chatDelay, 'other', "T’as vu ? J’apprends plein d’infos de première fraîcheur depuis que je m’en sers... ");
+			addChat(chatDelay, 'other', "Bon, il y a aussi des trucs un peu bidon, mais en général, quand tu vérifies qui poste, tu peux savoir si c’est du solide ou pas...");
+			addChat(chatDelay, 'me', "Ah ? Comment on fait ça ?");
+			addChat(chatDelay, 'other', "Ben, pour voir la fiche de quelqu’un, il faut cliquer sur sa photo d’avatar ou sur son nom d’utilisateur.");
+			addStep(chatDelay, function() {
 				addCuit(false, true);
-				addCuit(false, true);
+				addCuit(false, true, null, $scope.currentTheme);
 				addCuit(false, true);
 			});
-			addChat(1500, 'other', "Regarde, tu vois le gars qui vient de poster trois messages ? Tu peux cliquer sur sa photo...");
-			addStep(1500, function() {
+			addChat(chatDelay, 'other', "Regarde, tu vois le gars qui vient de poster trois messages ? Tu peux cliquer sur sa photo...");
+			addStep(chatDelay, function() {
 				// add new cuits
 				$scope.skipCuits = true;
 				var authors = Object.keys(dataService.data.all.sources);
@@ -648,7 +691,7 @@ angular.module('newsGameApp')
 					scenarii.level1Phase6();
 				};
 			});
-			addStep(1500, function() {
+			addStep(chatDelay, function() {
 				if ($scope.debug) {
 					jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.source').click();
 				}
@@ -668,7 +711,7 @@ angular.module('newsGameApp')
 
 			steps = [];
 
-			addStep(1500, function() {
+			addStep(chatDelay, function() {
 				// show info popup
 				$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Analyser la source</strong>";
 				$scope.tooltip.position(jQuery('#source .metas .theme button'), 0, 100);
@@ -678,7 +721,7 @@ angular.module('newsGameApp')
 				};
 			});
 
-			addStep(1500, function() {
+			addStep(chatDelay, function() {
 				if ($scope.debug) {
 					jQuery('#source .metas .theme button').click();
 				}
@@ -697,13 +740,13 @@ angular.module('newsGameApp')
 
 			steps = [];
 
-			addChat(1500, 'me', "Ouah, trop cool !");
-			addChat(1500, 'other', "T’as vu ? Analyser une source, ça prend du temps, mais après tu connais la thématique de chacun de ses Cuitts !");
-			addChat(1500, 'me', "C’est génial, Cuicuitter ! Ca doit être un super outil pour les journalistes, ça !");
-			addChat(1500, 'other', "Carrément !");
-			addChat(1500, 'me', "Tiens, mais d’ailleurs... Journaliste... Voilà un métier qui me plairait à fond !");
+			addChat(chatDelay, 'me', "Ouah, trop cool !");
+			addChat(chatDelay, 'other', "T’as vu ? Analyser une source, ça prend du temps, mais après tu connais la thématique de chacun de ses Cuitts !");
+			addChat(chatDelay, 'me', "C’est génial, Cuicuitter ! Ca doit être un super outil pour les journalistes, ça !");
+			addChat(chatDelay, 'other', "Carrément !");
+			addChat(chatDelay, 'me', "Tiens, mais d’ailleurs... Journaliste... Voilà un métier qui me plairait à fond !");
 
-			addChat(1500, 'other', "Ah ouais ? Cool ! Ben voilà, plus besoin de te prendre la tête, tu sais quoi mettre sur ta fiche d’orientation ! Mais tu vas devoir apprendre à maîtriser Cuicuitter à mort, alors !");
+			addChat(chatDelay, 'other', "Ah ouais ? Cool ! Ben voilà, plus besoin de te prendre la tête, tu sais quoi mettre sur ta fiche d’orientation ! Mais tu vas devoir apprendre à maîtriser Cuicuitter à mort, alors !");
 
 			addStep(2500, function() {
 				// show scoring
@@ -731,25 +774,25 @@ angular.module('newsGameApp')
 				$scope.openWin('cuicuiter');
 			});
 
-			addStep(1500, function() {
+			addStep(chatDelay, function() {
 				$scope.openWin('chat');
 			});
 
-			addChat(1500, 'other', "Salut !");
-			addChat(1500, 'me', "Salut ! Ca roule ?");
-			addChat(1500, 'other', "Bien, et toi ? Alors, tu révises le concours pour les écoles de journalisme ?");
-			addChat(1500, 'me', "Pfff... M’en parle pas, c’est crevant x_x. En plus, j’ai ouvert un blog pour m’entrainer à écrire des articles...");
-			addChat(1500, 'other', "Ah bon ? Un blog ? Cool ! Sur quel sujet ?");
-			addChat(1500, 'me', "Sur " + $scope.themes[$scope.currentTheme] + ".");
-			addChat(1500, 'other', "Ah, j’aurais dû m’en douter ! C’est super ! Comment tu fais pour trouver des sujets ?");
-			addChat(1500, 'me', "J’utilise Cuicuitter ! Mais je dois faire gaffe. Si je veux que mes lecteurs soient contents, j’ai intérêt à choisir des infos sur la bonne thématique...");
-			addChat(1500, 'other', "Et comment tu fais pour le savoir ?");
-			addChat(1500, 'me', "J’analyse chaque info...");
-			addChat(1500, 'other', "Tu peux aussi analyser les sources directement en cliquant sur les photos des utilisateurs, tu sais ?");
-			addChat(1500, 'me', "Oui ! C’est vrai, c’est très efficace, même si ça prend plus de temps... Allez, d’ailleurs je te laisse, il faut que je me mette au travail.");
-			addChat(1500, 'other', "Ok/ Bon courage ;-)");
+			addChat(chatDelay, 'other', "Salut !");
+			addChat(chatDelay, 'me', "Salut ! Ca roule ?");
+			addChat(chatDelay, 'other', "Bien, et toi ? Alors, tu révises le concours pour les écoles de journalisme ?");
+			addChat(chatDelay, 'me', "Pfff... M’en parle pas, c’est crevant x_x. En plus, j’ai ouvert un blog pour m’entrainer à écrire des articles...");
+			addChat(chatDelay, 'other', "Ah bon ? Un blog ? Cool ! Sur quel sujet ?");
+			addChat(chatDelay, 'me', "Sur " + $scope.themes[$scope.currentTheme] + ".");
+			addChat(chatDelay, 'other', "Ah, j’aurais dû m’en douter ! C’est super ! Comment tu fais pour trouver des sujets ?");
+			addChat(chatDelay, 'me', "J’utilise Cuicuitter ! Mais je dois faire gaffe. Si je veux que mes lecteurs soient contents, j’ai intérêt à choisir des infos sur la bonne thématique...");
+			addChat(chatDelay, 'other', "Et comment tu fais pour le savoir ?");
+			addChat(chatDelay, 'me', "J’analyse chaque info...");
+			addChat(chatDelay, 'other', "Tu peux aussi analyser les sources directement en cliquant sur les photos des utilisateurs, tu sais ?");
+			addChat(chatDelay, 'me', "Oui ! C’est vrai, c’est très efficace, même si ça prend plus de temps... Allez, d’ailleurs je te laisse, il faut que je me mette au travail.");
+			addChat(chatDelay, 'other', "Ok/ Bon courage ;-)");
 
-			addStep(1500, function() {
+			addStep(2500, function() {
 				$scope.closeWin('chat');
 			});
 
@@ -762,10 +805,10 @@ angular.module('newsGameApp')
 			});
 
 			addStep(500, function() {
-				$scope.tooltip.active = false;
+				// $scope.tooltip.active = false;
 			});
 
-			addStep(1500, function() {
+			addStep(chatDelay, function() {
 				if ($scope.debug) {
 					var i = 6; //2 + Math.round(Math.random() * 3);
 					var max = 10;
@@ -787,15 +830,152 @@ angular.module('newsGameApp')
 		};
 
 		scenarii.level2End = function() {
-			$log.log(">level2Phase2");
+			$log.log(">level2End");
 			showScoring();
 		};
+
+		// Level 3
+		scenarii.level3 = function() {
+			$log.log(">scenario3");
+
+			$scope.skipCuits = true;
+
+			$scope.currentChat = {
+				contact: "Jessica",
+				discussion: []
+			};
+
+			$scope.currentTheme = ipCookie('theme');
+			$scope.mandatoryTheme = ipCookie('mandatory');
+
+			steps = [];
+
+			addStep(500, function() {
+				$scope.openWin('cuicuiter');
+			});
+
+			addStep(chatDelay, function() {
+				$scope.openWin('chat');
+			});
+
+			addChat(chatDelay, 'other', "Vous êtes connecté(e) ?");
+			addChat(chatDelay, 'me', "Oui, ça y est !");
+			addChat(chatDelay, 'other', "Alors je vais vous montrer comment vérifier une info. Commencez par vérifier la thématique d'un cuit.");
+
+			addStep(chatDelay, function() {
+				addCuit(false, true, null, $scope.currentTheme);
+				addCuit(false, true, null, $scope.currentTheme);
+				// show info popup
+				$scope.skipCuits = true;
+				$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Vérifier la thématique</strong>";
+				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.metas .theme button'), 0, 100);
+				$scope.tooltip.active = true;
+				verifyCuitThemeCallback = function() {
+					scenarii.level3Phase2();
+				};
+			});
+
+			addStep(chatDelay, function() {
+				if ($scope.debug) {
+					jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.theme button').click();
+				}
+			});
+
+			doSteps();
+
+		};
+
+		scenarii.level3Phase2 = function() {
+			$log.log(">scenario3Phase2");
+			steps = [];
+			addChat(chatDelay, 'other', "Très bien ! Vous avez vu, ça parle de " + $scope.themes[selectedCuit.theme] + "... Ca pourrait intéresser nos lecteurs ! Mais il faut vérifier que l’info est bien crédible. C’est à ça que sert le nouveau bouton qui vient d’apparaître. Cliquez dessus.");
+
+			addStep(chatDelay, function() {
+				// show info popup
+				$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Vérifier la crédibilité</strong>";
+				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-credibility").first().find('.metas .credibility button'), 0, 100);
+				$scope.tooltip.active = true;
+				verifyCuitCredibilityCallback = function() {
+					scenarii.level3Phase3();
+				};
+			});
+
+			addStep(chatDelay, function() {
+				if ($scope.debug) {
+					jQuery('#cuicuiter .cuit').not(".verified-credibility").first().find('.credibility button').click();
+				}
+			});
+			doSteps();
+		};
+
+		scenarii.level3Phase3 = function() {
+			$log.log(">scenario3Phase3");
+			steps = [];
+
+			addStep(500, function() {
+				$scope.openWin('skoupe');
+				addContact();
+				addContact(selectedCuit.theme);
+				addContact();
+			});
+
+			addChat(chatDelay, 'other', "Pour vérifier une info, vous devez contacter quelqu’un en qui vous avez confiance. J’ai rajouté trois personnes dans votre carnet d’adresses. Mais attention ! Il faut que vous choisissiez un contact qui s’y connaît dans la thématique " + $scope.themes[$scope.mandatory] + ". A vous de jouer !");
+
+			addStep(chatDelay, function() {
+				// show info popup
+				$scope.tooltip.content = "Choisissez un contact";
+				$scope.tooltip.position(jQuery('#skoupe .inner'), 0, 100);
+				$scope.tooltip.active = true;
+				callContactCallback = function() {
+					scenarii.level3Phase4();
+				};
+			});
+
+			doSteps();
+		};
+
+		scenarii.level3Phase4 = function() {
+			$log.log(">scenario3Phase4");
+			steps = [];
+
+			if (selectedContact.themes.indexOf(selectedCuit.theme) === -1) {
+				addChat(chatDelay, 'other', "Eh non ! Ce contact n’est pas spécialiste de " + $scope.themes[selectedCuit.theme] + ". Regardez bien les petites icônes dans la colonne « Thématique » de votre carnet d’adresses. Allez, choisissez un autre contact !");
+				addStep(chatDelay, function() {
+					// show info popup
+					$scope.tooltip.content = "Choisissez un contact";
+					$scope.tooltip.position(jQuery('#skoupe .inner'), 0, 100);
+					$scope.tooltip.active = true;
+					callContactCallback = function() {
+						scenarii.level3Phase4();
+					};
+				});
+			} else {
+				$scope.canCall = false;
+				addChat(chatDelay, 'other', "Bravo ! Vous voyez, maintenant, vous connaissez la crédibilité de l’info. Il y a quatre niveaux possibles, de 0 étoiles pour une info pas crédible à trois étoiles pour une super info. A vous de décider si vous la publiez ou pas !");
+				addChat(chatDelay, 'me', "Je vois... Et je peux demander à mes contacts d’évaluer la crédibilité d’une source ?");
+				addChat(chatDelay, 'other', "Bien sûr ! En cliquant sur une photo d’avatar ou sur un nom dans le fil Cuicuitter, vous pourrez vérifier la crédibilité de n’importe qui. Mais il faudra d’abord analyser la source, pour savoir quelles sont ses thématiques préférées.");
+				addChat(chatDelay, 'me', "Ah... Ca n’a pas l’air facile !");
+				addChat(chatDelay, 'other', "Le mieux, c’est d’apprendre en faisant. Alors je vous laisse essayer. N’oubliez pas de publier des infos qui parlent de " + $scope.themes[$scope.currentTheme] + " ou de " + $scope.themes[$scope.mandatory] + ". Bonne journée !");
+				addStep(2500, function() {
+					$scope.closeWin('chat');
+				});
+			}
+
+			doSteps();
+		};
+
+		scenarii.level3End = function() {
+			$log.log(">level3End");
+			showScoring();
+		};
+
+		// Publish Cuit
 
 		$scope.posts = [];
 		$scope.publishCuit = function(cuit, force) {
 			$scope.currentCuit = cuit;
 
-			if ($scope.posts.length === 5) {
+			if (false && $scope.posts.length === 5) {
 				$log.log("already 5 posts");
 				$scope.tooltip.content = "vous avez déjà publié 5 articles aujourd'hui";
 				$scope.tooltip.position(jQuery('#blog'), 0, 100);
@@ -839,6 +1019,8 @@ angular.module('newsGameApp')
 
 			updateScore();
 
+			$scope.tooltip.active = false;
+
 			$scope.closeWin('prompt');
 			promptCallback = null;
 		}
@@ -866,7 +1048,7 @@ angular.module('newsGameApp')
 			$scope.promptContent = "Êtes-vous sûr de vouloir dépublier cet article ?";
 			$scope.openWin('prompt');
 
-			addStep(1500, function() {
+			addStep(chatDelay, function() {
 				if ($scope.debug) {
 					jQuery('#prompt .confirm').click();
 				}
@@ -917,6 +1099,10 @@ angular.module('newsGameApp')
 				expires: 365
 			});
 			$location.path('/intro');
+		};
+
+		$scope.playAgain = function() {
+			$location.path('/play');
 		};
 
 		function showScoring() {

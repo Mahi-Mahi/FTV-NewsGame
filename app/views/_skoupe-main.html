@@ -6,6 +6,10 @@
 				<a href="" ng-click="openContact(id)">
 					{{contact.name}}
 				</a>
+				<div class="contact-item-themes">
+					<span ng-repeat="theme in contact.themes" ng-class="['item-theme', theme]"></span>
+				</div>
+				<a href="" class="call" ng-click="callContact(contact)" ng-if="canCall">Call</a>
 			</li>
 		</ul>
 	</div><!-- .inner__body -->

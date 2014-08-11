@@ -1,10 +1,11 @@
 	<div class="inner contact-skoupe">
 		<div class="inner__body">
 			<div class="media">
-				<img src="/images/default-skoupe-avatar.png" alt="" class="avatar" />
+				<img ng-src="/images/skoupe/{{currentContact.id}}.png" alt="" class="avatar" />
 				<div class="media">
 					<h3>
 						{{currentContact.name}}
+						<a href="" class="call" ng-click="callContact(currentContact)" ng-if="canCall">Call</a>
 					</h3>
 					<p>
 						{{currentContact.bio}}
@@ -14,7 +15,7 @@
 		</div><!-- .inner__body -->
 		<ul class="metas">
 			<li class="theme">Thématique de prédilection
-					<span ng-repeat="theme in currentContact.themes" ng-class="['item-theme', theme]">{{theme}}</span>
+				<span ng-repeat="theme in currentContact.themes" ng-class="['item-theme', theme]">{{theme}}</span>
 			</li>
 		</ul>
 	</div>

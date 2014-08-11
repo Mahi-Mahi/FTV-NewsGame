@@ -25,10 +25,12 @@
 				<ul class="metas">
 					<li class="theme">Thématique
 						<span class="off"><button ng-click="verifyCuitTheme(cuit)" class="bt">Vérifier</button></span>
-						<span class="on"><span ng-class="['item-theme', cuit.theme]">{{cuit.theme}}</span></span>
+						<span class="on"><span ng-class="['item-theme', cuit.theme]">{{themes[cuit.theme]}}</span></span>
 
 					</li>
-					<li class="credibility">Crédibilité <span class="off"><button class="bt">Vérifier</button></span><span class="on">{{cuit.credibility}}<div class="stars stars--0">2</div></span></li>
+					<li class="credibility">Crédibilité
+						<span class="off"><button ng-click="verifyCuitCredibility(cuit)" class="bt">Vérifier</button></span>
+						<span class="on">{{cuit.credibility}}<div class="stars stars--0">2</div></span></li>
 					<li class="exclusivity">Scoop <span class="off"><button class="bt">Vérifier</button></span><span class="on">{{cuit.exclusivity}}</span><div class="stars stars--0">3</div></li>
 				</ul>
 			</div>

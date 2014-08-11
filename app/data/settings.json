@@ -1,4 +1,6 @@
 {
+	"chatDelay": 1500,
+	"chatInterval": 50,
 	"totalTime": {
 		"level-2": 360,
 		"level-3": 480,
