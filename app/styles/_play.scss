@@ -499,6 +499,15 @@ div.k-window-content#chat {
     }
 }
 
+.contact-item, .contact-skoupe {
+    &.disabled.canCall {
+        background: #eee;
+        .call {
+            display: none;
+        }
+    }
+}
+
 .publish {
     margin: 0 5px 0 0;
     width: 150px;

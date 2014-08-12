@@ -21,7 +21,8 @@
 		"level-2": {
 			"select-cuit-in-correct-theme": 50,
 			"select-cuit-in-wrong-theme": -50,
-			"winning-score": 200
+			"winning-score": 200,
+			"min-posts": 4
 		},
 		"level-3": {
 			"select-cuit-in-correct-theme-credibility-0": -30,
@@ -29,7 +30,8 @@
 			"select-cuit-in-correct-theme-credibility-2": 80,
 			"select-cuit-in-correct-theme-credibility-3": 100,
 			"select-cuit-in-wrong-theme": -60,
-			"winning-score": 500
+			"winning-score": 500,
+			"min-posts": 5
 		},
 		"level-4": {
 			"select-cuit-credibility-0": -40,
@@ -47,7 +49,8 @@
 				"header": 9
 			},
 			"winning-score": 2000
-		}
+		},
+		"excellent-score": 3000
 	},
 	"messages": {
 		"haltime": "Attention ! La journée est déjà à moitié écoulée ! N'oubliez pas de publier des informations ou vos lecteurs seront déçus.",

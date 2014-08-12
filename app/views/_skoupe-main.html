@@ -2,9 +2,9 @@
 <div class="inner">
 	<div class="inner__body inner__body--fullwidth">
 		<ul class="unstyled">
-			<li ng-repeat="(id, contact) in contacts" class="inner-item contact-item">
+			<li ng-repeat="(id, contact) in contacts" ng-class="['inner-item', 'contact-item', contact.verifiedCuits.length ? 'disabled' : '', canCall ? 'canCall' : '']">
 				<a href="" ng-click="openContact(id)">
-					{{contact.name}}
+					{{contact.name}} {{contact.verifiedCuits.length}}
 				</a>
 				<div class="contact-item-themes">
 					<span ng-repeat="theme in contact.themes" ng-class="['item-theme', theme]"></span>
@@ -14,4 +14,4 @@
 		</ul>
 	</div><!-- .inner__body -->
 </div><!-- .inner -->
-<button class="bt right"><span>Nouveau contact <strong>+</strong></span></button>
+<button class="bt right" id="new-contact" ng-click="newContact()"><span>Nouveau contact <strong>+</strong></span></button>

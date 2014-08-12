@@ -1,4 +1,4 @@
-	<div class="inner contact-skoupe">
+	<div ng-class="['inner', 'contact-skoupe', contact.verifiedCuits.length ? 'disabled' : '', canCall ? 'canCall' : '']">
 		<div class="inner__body">
 			<div class="media">
 				<img ng-src="/images/skoupe/{{currentContact.id}}.png" alt="" class="avatar" />
