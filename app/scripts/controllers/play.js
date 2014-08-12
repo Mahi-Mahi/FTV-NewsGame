@@ -3,12 +3,12 @@
 angular.module('newsGameApp')
 	.controller('PlayCtrl', function($document, $rootScope, $scope, $routeParams, $location, ipCookie, $log, prod, $timeout, $interval, dataService, titleService, utils) {
 
-		$scope.debug = ($routeParams.debug);
+		$scope.debug = ($routeParams.debug === 'debug');
 
 		titleService.setTitle('Play');
 
 		// debug config
-		var delayModifier = ($scope.debug ? 0.05 : 1);
+		var delayModifier = ($scope.debug ? 0.05 : 1) * ($routeParams.debug === 'fast' ? 0.1 : 1);
 
 		var chatDelay = dataService.data.settings.chatDelay;
 
@@ -145,18 +145,20 @@ angular.module('newsGameApp')
 		var verifyCuitCredibilityCallback = false;
 		$scope.verifyCuitCredibility = function(cuit) {
 			// $log.log("verifyCuitCredibility(" + cuit);
+			selectedCuit = cuit;
+			$scope.skipCuits = true;
+			$scope.canCall = true;
 			if (verifyCuitCredibilityCallback) {
-				selectedCuit = cuit;
-				$scope.canCall = true;
 				verifyCuitCredibilityCallback();
+				verifyCuitCredibilityCallback = null;
 			}
 		};
 
 		function updateCuitCredibility() {
-			$log.log(selectedCuit);
-			$log.log(selectedContact);
-			if (selectedContact.themes.indexOf(selectedCuit.theme) === -1) {
+			if (selectedContact.themes.indexOf(selectedCuit.theme) !== -1) {
 				selectedCuit.credibilityVerified = true;
+				$scope.skipCuits = false;
+				$scope.canCall = false;
 			}
 		}
 
@@ -200,10 +202,10 @@ angular.module('newsGameApp')
 		$scope.canCall = false;
 		$scope.callContact = function(contact) {
 			$log.log("callContact(", contact.id);
+			decrementTime('verify-cuit-credibility');
+			selectedContact = contact;
+			updateCuitCredibility();
 			if (callContactCallback) {
-				decrementTime('verify-cuit-credibility');
-				selectedContact = contact;
-				updateCuitCredibility();
 				callContactCallback();
 			}
 		};
@@ -876,12 +878,12 @@ angular.module('newsGameApp')
 				addCuit(false, true, null, $scope.currentTheme);
 				addCuit(false, true, null, $scope.currentTheme);
 				// show info popup
-				$scope.skipCuits = true;
 				$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Vérifier la thématique</strong>";
 				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.metas .theme button'), 0, 100);
 				$scope.tooltip.active = true;
 				verifyCuitThemeCallback = function() {
 					scenarii.level3Phase2();
+					verifyCuitThemeCallback = null;
 				};
 			});
 
@@ -907,6 +909,7 @@ angular.module('newsGameApp')
 				$scope.tooltip.active = true;
 				verifyCuitCredibilityCallback = function() {
 					scenarii.level3Phase3();
+					verifyCuitCredibilityCallback = null;
 				};
 			});
 
@@ -925,8 +928,11 @@ angular.module('newsGameApp')
 			addStep(500, function() {
 				$scope.openWin('skoupe');
 				addContact();
-				addContact(selectedCuit.theme);
-				addContact();
+				if ($scope.contacts.length < 3) {
+					addContact(selectedCuit.theme);
+					addContact($scope.currentTheme);
+					addContact($scope.mandatory);
+				}
 			});
 
 			addChat(chatDelay, 'other', "Pour vérifier une info, vous devez contacter quelqu’un en qui vous avez confiance. J’ai rajouté trois personnes dans votre carnet d’adresses. Mais attention ! Il faut que vous choisissiez un contact qui s’y connaît dans la thématique " + $scope.themes[selectedCuit.theme] + ". A vous de jouer !");
@@ -983,6 +989,9 @@ angular.module('newsGameApp')
 				addStep(2500, function() {
 					$scope.closeWin('chat');
 					$scope.openWin('blog');
+					$scope.skipCuits = false;
+					verifyCuitCredibilityCallback = null;
+					callContactCallback = null;
 				});
 			}
 
@@ -1095,6 +1104,18 @@ angular.module('newsGameApp')
 					feedback('bad', dataService.data.settings.messages['level-2']['feedback-wrong-theme']);
 				}
 			}
+			if ($scope.level === 3) {
+				if ([$scope.currentTheme, $scope.mandatory].indexOf(post.cuit.theme) === -1) {
+					if (post.cuit.credibility > 1) {
+						feedback('good', dataService.data.settings.messages['level-3']['feedback-good-theme']);
+					} else {
+						feedback('bad', dataService.data.settings.messages['level-3']['feedback-bad-credibility']);
+
+					}
+				} else {
+					feedback('bad', dataService.data.settings.messages['level-3']['feedback-wrong-theme']);
+				}
+			}
 		}
 
 		function feedback(type, detail) {
@@ -1140,13 +1161,23 @@ angular.module('newsGameApp')
 			var scoring = $scope.scoring['level-' + $scope.level];
 			if ($scope.level === 2) {
 				angular.forEach($scope.posts, function(post, idx) {
-					$log.log(post.cuit.theme, '===', $scope.currentTheme);
 					if (post.cuit.theme === $scope.currentTheme) {
 						score += scoring['select-cuit-in-correct-theme'];
 						$scope.posts[idx].score = scoring['select-cuit-in-correct-theme'];
 					} else {
 						score += scoring['select-cuit-in-wrong-theme'];
 						$scope.posts[idx].score = scoring['select-cuit-in-wrong-theme'];
+					}
+				});
+			}
+			if ($scope.level === 3) {
+				angular.forEach($scope.posts, function(post, idx) {
+					if ([$scope.currentTheme, $scope.mandatory].indexOf(post.cuit.theme) === -1) {
+						score += scoring['select-cuit-in-wrong-theme'];
+						$scope.posts[idx].score = scoring['select-cuit-in-wrong-theme'];
+					} else {
+						score += scoring['select-cuit-in-correct-theme-credibility-' + post.cuit.credibility];
+						$scope.posts[idx].score = scoring['select-cuit-in-correct-theme-credibility-' + post.cuit.credibility];
 					}
 				});
 			}

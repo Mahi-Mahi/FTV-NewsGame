@@ -9,7 +9,7 @@
 						<img ng-src="/images/avatars/{{cuit.author.id|removeAT}}.png" alt="" class="avatar" ng-click="openSource(cuit.author.id)" />
 						<div class="media">
 							<div class="publish right">
-								<button class="bt bt--publish" ng-click="publishCuit(cuit)" ng-if="!cuit.published"><span>Publier ({{actionsCost['publish-cuit']}} min) </span></button>
+								<button class="bt bt--publish" ng-click="publishCuit(cuit)" ng-if="!cuit.published"><span>Publier <small>({{actionsCost['publish-cuit']}} min)</small> </span></button>
 							</div>
 							<p>
 								<a href="" ng-click="openSource(cuit.author.id)" class="source">
@@ -24,12 +24,12 @@
 				</div><!-- .inner__body -->
 				<ul class="metas">
 					<li class="theme">Thématique
-						<span class="off"><button ng-click="verifyCuitTheme(cuit)" class="bt">Vérifier</button></span>
+						<span class="off"><button ng-click="verifyCuitTheme(cuit)" class="bt">Vérifier <small>({{actionsCost['verify-cuit-theme']}} min)</small></button></span>
 						<span class="on"><span ng-class="['item-theme', cuit.theme]">{{themes[cuit.theme]}}</span></span>
 
 					</li>
 					<li class="credibility">Crédibilité
-						<span class="off"><button ng-click="verifyCuitCredibility(cuit)" class="bt">Vérifier</button></span>
+						<span class="off"><button ng-click="verifyCuitCredibility(cuit)" class="bt">Vérifier <small>({{actionsCost['verify-cuit-credibility']}} min)</small></button></span>
 						<span class="on"><div class="stars stars--{{cuit.credibility}}">{{cuit.credibility}}</div></span></li>
 					<li class="exclusivity">Scoop <span class="off"><button class="bt">Vérifier</button></span><span class="on">{{cuit.exclusivity}}</span><div class="stars stars--0">3</div></li>
 				</ul>
