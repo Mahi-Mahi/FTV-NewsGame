@@ -707,7 +707,7 @@ div.k-window-content#chat {
         border: 1px solid #cecdcd;
         border-radius: 4px;
         font-size:em(10px);
-        margin:0 0 70px 0;  
+        margin:0 0 70px 0;
     }
     .media {
         text-align: left;
@@ -871,9 +871,11 @@ div.k-window-content#chat {
     }
 }
 
-.play-level-2 .postActions {
-    .up, .down {
-        display: none;
+.play-level-2, .play-level-3 {
+    .postActions {
+        .up, .down {
+            display: none;
+        }
     }
 }
 
@@ -895,7 +897,7 @@ div.k-window-content#chat {
 .blog__category__list {
     text-align: center;
     .active {
-        background:#566473;    
+        background:#566473;
     }
 }
 

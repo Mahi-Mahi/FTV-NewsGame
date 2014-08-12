@@ -95,7 +95,7 @@ angular.module('newsGameApp')
 			if (!force && ($scope.cuitsHover || $scope.skipCuits)) {
 				$timeout(function() {
 					addCuit(true);
-				}, (Math.random() * chatDelay * delayModifier) + 800);
+				}, (Math.random() * chatDelay * delayModifier) + 1800);
 			} else {
 				var added = false;
 				// iterate through all cuits ( loaded from /data/all.json )
@@ -120,7 +120,7 @@ angular.module('newsGameApp')
 							if (next) {
 								$timeout(function() {
 									addCuit(true);
-								}, (Math.random() * chatDelay * delayModifier) + 800);
+								}, (Math.random() * chatDelay * delayModifier) + 1800);
 							}
 						}
 					}
