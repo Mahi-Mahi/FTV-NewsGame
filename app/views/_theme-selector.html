@@ -2,7 +2,7 @@
 	<div class="inner__body inner__body--fullwidth">
 		<ul class="unstyled thematique-list">
 			<li ng-repeat="(theme, name) in themes" ng-class="['inner-item', theme]">
-				<input type="radio" name="thematique" class="theme-{{theme}}" id="theme-{{theme}}" ng-model="$parent.$parent.selectedTheme" value="{{theme}}" ng-disabled="selectedCuit && selectedCuit.theme!==theme">
+				<input type="radio" name="thematique" class="theme-{{theme}}" id="theme-{{theme}}" ng-model="$parent.$parent.selectedTheme" value="{{theme}}" ng-disabled="tuto && selectedCuit && selectedCuit.theme!==theme">
 				<label for="theme-{{theme}}">{{name}} </label>
 			</li>
 		</ul>

@@ -501,7 +501,9 @@ div.k-window-content#chat {
 
 .contact-item, .contact-skoupe {
     &.disabled.canCall {
-        background: #eee;
+        .tuto & {
+            background: #eee;
+        }
         .call {
             display: none;
         }
