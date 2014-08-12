@@ -224,6 +224,10 @@
             max-height: 220px;
         }
     }
+    .source {
+        display: block;
+        padding:0 0 10px 0;
+    }
 }
 
 .off {
@@ -446,6 +450,11 @@ div.k-window-content#chat {
         display: block;
         font-size: em(16px);
         margin: 0;
+        padding: 0;
+    }
+    p {
+        display: block;
+        margin:0;
         padding: 0;
     }
 }
