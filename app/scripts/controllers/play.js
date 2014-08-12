@@ -152,6 +152,14 @@ angular.module('newsGameApp')
 			}
 		};
 
+		function updateCuitCredibility() {
+			$log.log(selectedCuit);
+			$log.log(selectedContact);
+			if (selectedContact.themes.indexOf(selectedCuit.theme) === -1) {
+				selectedCuit.credibilityVerified = true;
+			}
+		}
+
 		/*
 		Skoupe
 		*/
@@ -191,9 +199,11 @@ angular.module('newsGameApp')
 		var selectedContact;
 		$scope.canCall = false;
 		$scope.callContact = function(contact) {
-			$log.log("callContact(", contact);
+			$log.log("callContact(", contact.id);
 			if (callContactCallback) {
+				decrementTime('verify-cuit-credibility');
 				selectedContact = contact;
+				updateCuitCredibility();
 				callContactCallback();
 			}
 		};
@@ -406,7 +416,7 @@ angular.module('newsGameApp')
 			active: true,
 			template: 'blog',
 			height: 360,
-			width:285,
+			width: 285,
 			position: {
 				top: 250,
 				left: 550
@@ -931,6 +941,13 @@ angular.module('newsGameApp')
 				};
 			});
 
+			addStep(chatDelay, function() {
+				if ($scope.debug) {
+					var contact = utils.shuffle($scope.contacts)[0];
+					$scope.callContact(contact);
+				}
+			});
+
 			doSteps();
 		};
 
@@ -949,8 +966,15 @@ angular.module('newsGameApp')
 						scenarii.level3Phase4();
 					};
 				});
+				addStep(chatDelay, function() {
+					if ($scope.debug) {
+						var contact = utils.shuffle($scope.contacts)[0];
+						$scope.callContact(contact);
+					}
+				});
 			} else {
 				$scope.canCall = false;
+				$scope.tooltip.active = false;
 				addChat(chatDelay, 'other', "Bravo ! Vous voyez, maintenant, vous connaissez la crédibilité de l’info. Il y a quatre niveaux possibles, de 0 étoiles pour une info pas crédible à trois étoiles pour une super info. A vous de décider si vous la publiez ou pas !");
 				addChat(chatDelay, 'me', "Je vois... Et je peux demander à mes contacts d’évaluer la crédibilité d’une source ?");
 				addChat(chatDelay, 'other', "Bien sûr ! En cliquant sur une photo d’avatar ou sur un nom dans le fil Cuicuitter, vous pourrez vérifier la crédibilité de n’importe qui. Mais il faudra d’abord analyser la source, pour savoir quelles sont ses thématiques préférées.");
@@ -958,6 +982,7 @@ angular.module('newsGameApp')
 				addChat(chatDelay, 'other', "Le mieux, c’est d’apprendre en faisant. Alors je vous laisse essayer. N’oubliez pas de publier des infos qui parlent de " + $scope.themes[$scope.currentTheme] + " ou de " + $scope.themes[$scope.mandatory] + ". Bonne journée !");
 				addStep(2500, function() {
 					$scope.closeWin('chat');
+					$scope.openWin('blog');
 				});
 			}
 
