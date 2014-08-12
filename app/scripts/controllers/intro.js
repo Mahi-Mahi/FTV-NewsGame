@@ -176,9 +176,45 @@ angular.module('newsGameApp')
 			addChat(chatDelay, 'me', "" + $scope.themes[$scope.mandatoryTheme] + " ? Ok, c'est noté !", "moi");
 			addChat(chatDelay, interlocutor + '1', "Et ce n’est pas tout ! Nos lecteurs DÉTESTENT qu’on leur donne de mauvaises infos.", "Jessica");
 			addChat(chatDelay, 'me', "Je comprends...", "moi");
-			addChat(chatDelay, interlocutor + '1', "Du coup, vous allez devoir apprendre à VERIFIER vous informations. Vous savez comment faire ?", "Jessica");
+			addChat(chatDelay, interlocutor + '1', "Du coup, vous allez devoir apprendre à VERIFIER vous informations. Vous savez comment faire ?", "Jessica");
 			addChat(chatDelay, 'me', "Hum... Non.", "moi");
 			addChat(chatDelay, interlocutor + '1', "Alors connectez-vous sur votre ordi, je vais vous montrer.", "Jessica");
+			addStep(chatDelay, function() {
+				$location.path('/play');
+			});
+
+		};
+
+		// Level 4
+		scenarii.level4 = function() {
+			$log.log(">scenario4");
+
+			steps = [];
+
+			$scope.currentTheme = ipCookie('theme') ? ipCookie('theme') : null;
+
+			var mandatory = utils.shuffle(Object.keys(dataService.data.all.themes))[0];
+			$scope.mandatoryTheme = ipCookie('mandatory') ? ipCookie('mandatory') : mandatory;
+			ipCookie('mandatory', $scope.mandatoryTheme, {
+				expire: 365
+			});
+
+			$log.log($scope.mandatoryTheme);
+
+			var interlocutor = 'Daniel';
+
+			addChat(chatDelay, interlocutor + '1', "Ah vous voilà ! Je vous attendais !", "Jessica");
+			addChat(chatDelay, 'me', "Oups... Qu’est-ce qui se passe, chef, j’ai fait une bêtise ?", "moi");
+			addChat(chatDelay, interlocutor + '1', "Au contraire ! Vous vous débrouillez très bien ! Alors comme je pars en vacances ce matin, j’ai pensé que vous alliez me remplacer !", "Jessica");
+			addChat(chatDelay, 'me', "Ah bon ?!! Mais je... Heu...", "moi");
+			addChat(chatDelay, interlocutor + '1', "Mais si, mais si, vous allez vous en sortir ! Il y a seulement deux règles à connaître !", "Jessica");
+			addChat(chatDelay, 'me', "Ah ? Les quelles ?", "moi");
+			addChat(chatDelay, interlocutor + '1', "La première : les gens aiment qu’on leur parle de tout ! Vous devez donc essayer de publier des infos qui portent sur chacune des six thématiques existantes !", "Jessica");
+			addChat(chatDelay, 'me', "Ah. Ca, c’est plutôt bien : je ne suis plus obligé de chercher seulement les infos parlant de " + $scope.themes[$scope.currentTheme] + " et " + $scope.themes[$scope.mandatoryTheme] + "...", "moi");
+			addChat(chatDelay, interlocutor + '1', "Eh non. Mais attention à la règle numéro 2 : il faut HIERARCHISER l’information !", "Jessica");
+			addChat(chatDelay, 'me', "Hiérarchi... quoi ?", "moi");
+			addChat(chatDelay, interlocutor + '1', "Pffff... Bon, connectez-vous sur mon ordinateur, je vais vous montrer en utilisant ma tablette. Allez, je vous laisse, je me connecte dès que je suis dans le taxi. A bientôôôôôôt !", "Jessica");
+			addChat(chatDelay, 'me', "Mais... attendez, je... Ah, elle est partie.", "moi");
 			addStep(chatDelay, function() {
 				$location.path('/play');
 			});
