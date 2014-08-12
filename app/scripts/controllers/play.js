@@ -416,7 +416,7 @@ angular.module('newsGameApp')
 			active: true,
 			template: 'blog',
 			height: 360,
-			width: 285,
+			width: 385,
 			position: {
 				top: 250,
 				left: 550
@@ -929,7 +929,7 @@ angular.module('newsGameApp')
 				addContact();
 			});
 
-			addChat(chatDelay, 'other', "Pour vérifier une info, vous devez contacter quelqu’un en qui vous avez confiance. J’ai rajouté trois personnes dans votre carnet d’adresses. Mais attention ! Il faut que vous choisissiez un contact qui s’y connaît dans la thématique " + $scope.themes[$scope.mandatory] + ". A vous de jouer !");
+			addChat(chatDelay, 'other', "Pour vérifier une info, vous devez contacter quelqu’un en qui vous avez confiance. J’ai rajouté trois personnes dans votre carnet d’adresses. Mais attention ! Il faut que vous choisissiez un contact qui s’y connaît dans la thématique " + $scope.themes[selectedCuit.theme] + ". A vous de jouer !");
 
 			addStep(chatDelay, function() {
 				// show info popup
