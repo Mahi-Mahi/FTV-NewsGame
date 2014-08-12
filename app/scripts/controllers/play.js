@@ -238,6 +238,7 @@ angular.module('newsGameApp')
 			var added = false;
 			angular.forEach(contacts, function(contactIdx) {
 				var contact = dataService.data.all.contacts[contactIdx];
+				contact.verifiedCuits = [];
 				if (!added && $scope.allContacts.indexOf(contactIdx) === -1) {
 					if ((!theme) || contact.themes.indexOf(theme) !== -1) {
 						$scope.allContacts.push(contactIdx);
