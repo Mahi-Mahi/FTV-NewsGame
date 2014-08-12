@@ -505,6 +505,18 @@ angular.module('newsGameApp')
 			}
 		});
 
+		createWindow('publish', {
+			title: "L'International ::: Système de publication",
+			active: true,
+			template: 'publish',
+			height: 600,
+			width: 500,
+			position: {
+				top: 250,
+				left: 550
+			}
+		});
+
 		/*
 		Timeout.then wrapper
 		*/
@@ -719,7 +731,6 @@ angular.module('newsGameApp')
 
 			steps = [];
 
-			$log.log(selectedCuit.theme, " === ", $scope.currentTheme);
 			if (selectedCuit.theme === $scope.currentTheme) {
 				scenarii.level1Phase5();
 				return;
@@ -1112,8 +1123,8 @@ angular.module('newsGameApp')
 			addStep(50, function() {
 				$scope.openWin('cuicuiter');
 				$scope.openWin('skoupe');
-				$scope.openWin('blog');
 				$scope.openWin('chat');
+				$scope.openWin('publish');
 			});
 
 			addStep(50, function() {
@@ -1223,7 +1234,6 @@ angular.module('newsGameApp')
 				$scope.openWin('themeSelector');
 
 				$scope.themeSelectorAction = function() {
-					$log.log($scope.selectedTheme);
 					addContact($scope.selectedTheme);
 					$scope.closeWin('themeSelector');
 					$scope.themeSelectorAction = null;
@@ -1261,7 +1271,6 @@ angular.module('newsGameApp')
 
 			addStep(chatDelay, function() {
 				if ($scope.debug) {
-					$log.log($scope.contacts[0]);
 					$scope.callContact($scope.contacts[0]);
 				}
 			});
@@ -1302,7 +1311,6 @@ angular.module('newsGameApp')
 		$scope.publishCuit = function(cuit, force) {
 
 			if (false && $scope.posts.length === 5) {
-				$log.log("already 5 posts");
 				$scope.tooltip.content = "vous avez déjà publié 5 articles aujourd'hui";
 				$scope.tooltip.position(jQuery('#blog'), 0, 100);
 				$scope.tooltip.active = true;
@@ -1421,7 +1429,6 @@ angular.module('newsGameApp')
 			}
 			$scope.feedback.detail = detail;
 			$scope.feedback.active = true;
-			$log.log($scope.feedback);
 			$timeout(function() {
 				$scope.feedback.active = false;
 			}, 2000);
@@ -1483,14 +1490,11 @@ angular.module('newsGameApp')
 				expires: 21
 			});
 			$scope.scores = cookieScores;
-			$log.log(scoring);
-			$log.log($scope.scoring);
 			if (scoring) {
 				$scope.scoreStatus = score > $scope.scoring['level-' + $scope.level]['winning-score'] ? 'victory' : 'defeat';
 			} else {
 				$scope.scoreStatus = 'victory';
 			}
-			$log.log(cookieScores);
 		}
 
 		/*

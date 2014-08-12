@@ -1,21 +1,21 @@
-	<div ng-class="['inner', 'contact-skoupe', contact.verifiedCuits.length ? 'disabled' : '', canCall ? 'canCall' : '']">
-		<div class="inner__body">
+<div ng-class="['inner', 'contact-skoupe', contact.verifiedCuits.length ? 'disabled' : '', canCall ? 'canCall' : '']">
+	<div class="inner__body">
+		<div class="media">
+			<img ng-src="/images/contacts/{{currentContact.id}}.jpg" alt="" class="avatar" />
 			<div class="media">
-				<img ng-src="/images/contacts/{{currentContact.id}}.jpg" alt="" class="avatar" />
-				<div class="media">
-					<h3>
-						{{currentContact.name}}
-						<a href="" class="call" ng-click="callContact(currentContact)" ng-if="canCall">Call</a>
-					</h3>
-					<p>
-						{{currentContact.bio}}
-					</p>
-				</div>
+				<h3>
+					{{currentContact.name}}
+					<a href="" class="call" ng-click="callContact(currentContact)" ng-if="canCall">Call</a>
+				</h3>
+				<p>
+					{{currentContact.bio}}
+				</p>
 			</div>
-		</div><!-- .inner__body -->
-		<ul class="metas">
-			<li class="theme">Thématique de prédilection
-				<span ng-repeat="theme in currentContact.themes" ng-class="['item-theme', theme]">{{theme}}</span>
-			</li>
-		</ul>
-	</div>
+		</div>
+	</div><!-- .inner__body -->
+	<ul class="metas">
+		<li class="theme">Thématique de prédilection
+			<span ng-repeat="theme in currentContact.themes" ng-class="['item-theme', theme]">{{theme}}</span>
+		</li>
+	</ul>
+</div>

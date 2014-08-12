@@ -1,6 +1,122 @@
-<h3>Mon blog</h3>
-<ul>
-	<li ng-repeat="post in posts">
-		{{post.title}}
-	</li>
-</ul>
+
+	<div class="blog__category clearfix">
+		<ul class="unstyled blog__category__list">
+			<li class="blog__category__item active">Accueil</li>
+			<li class="blog__category__item">Société</li>
+			<li class="blog__category__item">Politique</li>
+			<li class="blog__category__item">Monde</li>
+			<li class="blog__category__item">Economie</li>
+			<li class="blog__category__item">Médias</li>
+			<li class="blog__category__item">Science</li>
+			<li class="blog__category__item">Sport</li>
+			<li ng-if="false" class="blog__category__item" ng-repeat="(theme, name) in themes">{{name}}</li>
+		</ul>
+	</div>
+
+	<div class="grid">
+		<div class="grid2-1">
+			<div class="grid-block">
+				<div class="grid-block__item grid-block__item--large">
+					<p class="grid-block__item__headline"><span>A la une</span></p>
+					<h2 class="grid-block__item__title">Lorem Ipsum sed etiam dolor</h2>
+					<ul class="metas">
+						<li class="date">à 20h30</li>
+						<li class="theme"><span class="theme-title">Thématique : </span> <span class="item-theme economie"><span class="visuallyhidden">Economie</span></span></li>
+						<li class="source"><span class="source-title">Source : </span> Monsieur Robert Chapatte</li>
+					</ul>
+					<img src="/images/blog-default-image.png" alt="" />
+					<p class="grid-block__item--body">Lorem Elsass ipsum réchime amet non Choucroute</p>
+					<div class="postActions">
+						<span class="remove" ng-click="unpublish(post)"><span class="visuallyhidden">X</span></span>
+						<span class="up"><span class="visuallyhidden">Haut</span></span>
+						<span class="down"><span class="visuallyhidden">Bas</span></span>
+					</div>
+				</div>
+			</div>
+			<div class="grid-block">
+				<div class="grid-block__item grid-block__item--medium">
+					<h2 class="grid-block__item__title">Lorem Ipsum sed etiam dolor</h2>
+					<ul class="metas">
+						<li class="date">à 20h30</li>
+						<li class="theme"><span class="theme-title">Thématique : </span> <span class="item-theme economie"><span class="visuallyhidden">Economie</span></span></li>
+						<li class="source"><span class="source-title">Source : </span> Monsieur Robert Chapatte</li>
+					</ul>
+					<img src="/images/blog-default-image.png" alt="" />
+					<p>Lorem Ipsum sed etiam dolor</p>
+					<div class="postActions">
+						<span class="remove" ng-click="unpublish(post)"><span class="visuallyhidden">X</span></span>
+						<span class="up"><span class="visuallyhidden">Haut</span></span>
+						<span class="down"><span class="visuallyhidden">Bas</span></span>
+					</div>
+				</div>
+				<div class="grid-block__item grid-block__item--medium">
+					<h2 class="grid-block__item__title">Lorem Ipsum sed etiam dolor</h2>
+					<ul class="metas">
+						<li class="date">à 20h30</li>
+						<li class="theme"><span class="theme-title">Thématique : </span> <span class="item-theme economie"><span class="visuallyhidden">Economie</span></span></li>
+						<li class="source"><span class="source-title">Source : </span> Monsieur Robert Chapatte</li>
+					</ul>
+					<img src="/images/blog-default-image.png" alt="" />
+					<p>Lorem Ipsum sed etiam dolor</p>
+					<div class="postActions">
+						<span class="remove" ng-click="unpublish(post)"><span class="visuallyhidden">X</span></span>
+						<span class="up"><span class="visuallyhidden">Haut</span></span>
+						<span class="down"><span class="visuallyhidden">Bas</span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<p class="grid-block__item__headline"><span>Brèves</span></p>
+	<div class="grid">
+	  <div class="grid3">
+	    <div class="grid-block">
+			<div class="grid-block__item grid-block__item--small">
+				<h2 class="grid-block__item__title">Lorem Ipsum sed etiam dolor</h2>
+				<ul class="metas">
+					<li class="date">à 20h30</li>
+					<li class="theme"><span class="theme-title">Thématique : </span> <span class="item-theme economie"><span class="visuallyhidden">Economie</span></span></li>
+					<li class="source"><span class="source-title">Source : </span> Monsieur Robert Chapatte</li>
+				</ul>
+				<p class="grid-block__item--body">Lorem Elsass ipsum réchime amet non Choucroute</p>
+				<div class="postActions">
+					<span class="remove" ng-click="unpublish(post)"><span class="visuallyhidden">X</span></span>
+					<span class="up"><span class="visuallyhidden">Haut</span></span>
+					<span class="down"><span class="visuallyhidden">Bas</span></span>
+				</div>
+			</div>
+	    </div>
+	    <div class="grid-block">
+			<div class="grid-block__item grid-block__item--small">
+				<h2 class="grid-block__item__title">Lorem Ipsum sed etiam dolor</h2>
+				<ul class="metas">
+					<li class="date">à 20h30</li>
+					<li class="theme"><span class="theme-title">Thématique : </span> <span class="item-theme economie"><span class="visuallyhidden">Economie</span></span></li>
+					<li class="source"><span class="source-title">Source : </span> Monsieur Robert Chapatte</li>
+				</ul>
+				<p class="grid-block__item--body">Lorem Elsass ipsum réchime amet non Choucroute</p>
+				<div class="postActions">
+					<span class="remove" ng-click="unpublish(post)"><span class="visuallyhidden">X</span></span>
+					<span class="up"><span class="visuallyhidden">Haut</span></span>
+					<span class="down"><span class="visuallyhidden">Bas</span></span>
+				</div>
+			</div>
+	    </div>
+	    <div class="grid-block">
+			<div class="grid-block__item grid-block__item--small">
+				<h2 class="grid-block__item__title">Lorem Ipsum sed etiam dolor</h2>
+				<ul class="metas">
+					<li class="date">à 20h30</li>
+					<li class="theme"><span class="theme-title">Thématique : </span> <span class="item-theme economie"><span class="visuallyhidden">Economie</span></span></li>
+					<li class="source"><span class="source-title">Source : </span> Monsieur Robert Chapatte</li>
+				</ul>
+				<p class="grid-block__item--body">Lorem Elsass ipsum réchime amet non Choucroute</p>
+				<div class="postActions">
+					<span class="remove" ng-click="unpublish(post)"><span class="visuallyhidden">X</span></span>
+					<span class="up"><span class="visuallyhidden">Haut</span></span>
+					<span class="down"><span class="visuallyhidden">Bas</span></span>
+				</div>
+			</div>
+	    </div>
+	  </div>
+	</div>
