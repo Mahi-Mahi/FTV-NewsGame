@@ -75,6 +75,10 @@
     }
 }
 
+.k-button:focus:active:not(.k-state-disabled):not([disabled]) {
+    box-shadow:none !important;
+}
+
 // TIMELINE
 .timeline {
     background:#e7e6e6;
