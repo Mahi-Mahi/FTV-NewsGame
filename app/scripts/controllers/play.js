@@ -4,6 +4,7 @@ angular.module('newsGameApp')
 	.controller('PlayCtrl', function($document, $rootScope, $scope, $routeParams, $location, ipCookie, $log, prod, $timeout, $interval, dataService, titleService, utils) {
 
 		$scope.debug = ($routeParams.debug === 'debug');
+		$scope.fake = ($routeParams.debug === 'fake');
 		$scope.fast = ($routeParams.debug);
 
 		titleService.setTitle('Play');
@@ -96,7 +97,6 @@ angular.module('newsGameApp')
 		function addCuit(next, force, author, theme) {
 			// $log.log("addCuit", next, force, author, theme);
 			if (!force && ($scope.cuitsHover || $scope.skipCuits)) {
-				$log.log('standby');
 				$timeout(function() {
 					addCuit(true);
 				}, (Math.random() * chatDelay * delayModifier) + 1800);
@@ -127,7 +127,6 @@ angular.module('newsGameApp')
 							added = true;
 							// scheduled next cuit
 							if (next) {
-								$log.log("next");
 								$timeout(function() {
 									addCuit(true);
 								}, (Math.random() * chatDelay * delayModifier) + 1800);
@@ -138,6 +137,7 @@ angular.module('newsGameApp')
 				});
 			}
 		}
+		$scope.addCuit = addCuit;
 
 		// Verify Cuit Theme ( + decrement time counter )
 		var verifyCuitThemeCallback = false;
@@ -159,6 +159,7 @@ angular.module('newsGameApp')
 			$scope.selectedCuit = selectedCuit;
 			$scope.skipCuits = true;
 			$scope.canCall = true;
+			$scope.openWin('skoupe');
 			callContactAction = updateCuitCredibility;
 			if (verifyCuitCredibilityCallback) {
 				verifyCuitCredibilityCallback();
@@ -184,6 +185,7 @@ angular.module('newsGameApp')
 			$scope.selectedCuit = selectedCuit;
 			$scope.skipCuits = true;
 			$scope.canCall = true;
+			$scope.openWin('skoupe');
 			callContactAction = updateCuitExclusivity;
 			if (verifyCuitExclusivityCallback) {
 				verifyCuitExclusivityCallback();
@@ -451,7 +453,7 @@ angular.module('newsGameApp')
 		createWindow('skoupe', {
 			title: 'Skoupe',
 			visible: false,
-			active: false,
+			active: true,
 			template: 'skoupe-main',
 			height: 450,
 			position: {
@@ -523,7 +525,7 @@ angular.module('newsGameApp')
 
 		if ($scope.level === 2 || $scope.level === 3) {
 			createWindow('blog', {
-				title: 'Mon blog ::: Publier',
+				title: 'Mon blog',
 				active: true,
 				template: 'blog',
 				height: 360,
@@ -536,7 +538,7 @@ angular.module('newsGameApp')
 		}
 		if ($scope.level === 4) {
 			createWindow('publish', {
-				title: "L'International ::: Système de publication",
+				title: "L'International",
 				active: true,
 				template: 'publish',
 				height: 600,
@@ -1033,6 +1035,7 @@ angular.module('newsGameApp')
 				$scope.tooltip.orientation = "top left";
 				$scope.tooltip.active = true;
 				verifyCuitThemeCallback = function() {
+					$scope.tooltip.active = false;
 					scenarii.level3Phase2();
 					verifyCuitThemeCallback = null;
 				};
@@ -1060,6 +1063,7 @@ angular.module('newsGameApp')
 				$scope.tooltip.orientation = "top left";
 				$scope.tooltip.active = true;
 				verifyCuitCredibilityCallback = function() {
+					$scope.tooltip.active = false;
 					scenarii.level3Phase3();
 					verifyCuitCredibilityCallback = null;
 				};
@@ -1099,8 +1103,10 @@ angular.module('newsGameApp')
 			addStep(chatDelay, function() {
 				// show info popup
 				$scope.openWin('skoupe');
+			});
+			addStep(chatDelay, function() {
 				$scope.tooltip.content = "Choisissez un contact";
-				$scope.tooltip.position(jQuery('#skoupe .inner'), -200, -300);
+				$scope.tooltip.position(jQuery('#skoupe .inner__body .inner-item').first(), -160, -240);
 				$scope.tooltip.orientation = "bottom right";
 				$scope.tooltip.active = true;
 				callContactCallback = function() {
@@ -1189,7 +1195,7 @@ angular.module('newsGameApp')
 				$scope.openWin('chat', {
 					position: {
 						left: 100,
-						top: 250
+						top: 300
 					}
 				});
 			});
@@ -1317,7 +1323,7 @@ angular.module('newsGameApp')
 
 			addStep(chatDelay, function() {
 				if ($scope.debug) {
-					// $scope.themeSelectorAction();
+					$scope.themeSelectorAction();
 				}
 			});
 
@@ -1335,7 +1341,8 @@ angular.module('newsGameApp')
 			addStep(chatDelay, function() {
 				// show info popup
 				$scope.tooltip.content = "Appelez votre contact";
-				$scope.tooltip.position(jQuery('#skoupe'), 0, 100);
+				$scope.tooltip.position(jQuery('#skoupe'), -50, -150);
+				$scope.tooltip.orientation = "bottom right";
 				$scope.tooltip.active = true;
 				callContactCallback = function() {
 					scenarii.level4Phase6();
@@ -1368,7 +1375,8 @@ angular.module('newsGameApp')
 			addChat(chatDelay, 'me', "Mais attendez, je...");
 			addChat(chatDelay, 'other', "deconnexion");
 			addChat(chatDelay, 'me', "Ah. On dirait bien que je vais devoir me débrouiller seul(e) !");
-			addStep(chatDelay, function() {
+			addStep(2500, function() {
+				$scope.closeWin('chat');
 				endTuto();
 			});
 			doSteps();
@@ -1377,6 +1385,44 @@ angular.module('newsGameApp')
 		scenarii.level4End = function() {
 			$log.log(">level4End");
 			showScoring();
+		};
+
+		// Fake scenarii
+
+		function fake() {
+			if (fakes['level' + $scope.level]) {
+				fakes['level' + $scope.level]();
+			}
+		}
+
+		var fakes = {};
+
+		// Level 4
+		fakes.level4 = function() {
+			$log.log("fakes.level1");
+			$scope.openWin('cuicuiter');
+			$scope.openWin('publish');
+			for (var i = 0; i < 6; i++) {
+				addCuit();
+			}
+			steps = [];
+			// publish 6 cuits
+			i = 6; //2 + Math.round(Math.random() * 3);
+			var max = 10;
+			while (i && max) {
+				addCuit(false, true);
+				var cuit = Math.floor(Math.random() * Object.keys($scope.cuits).length);
+				if (!$scope.cuits[cuit].published) {
+					$scope.publishCuit($scope.cuits[cuit], true);
+					i--;
+				}
+				max--;
+			}
+			addStep(1500, function() {
+				var post = utils.shuffle(jQuery('.grid-block__item'))[0];
+				jQuery(post).find('.down').click();
+			});
+			doSteps();
 		};
 
 		// Publish Cuit
@@ -1421,6 +1467,13 @@ angular.module('newsGameApp')
 				}
 			});
 			$scope.posts.push(post);
+
+			if ($scope.level === 4) {
+				$scope.openWin('publish');
+			} else {
+				$scope.openWin('blog');
+			}
+
 			decrementTime("publish-cuit");
 
 			updateFeedback(post);
@@ -1461,7 +1514,22 @@ angular.module('newsGameApp')
 					jQuery('#prompt .confirm').click();
 				}
 			});
+		};
 
+		$scope.publishDown = function(pos) {
+			$log.log("publishDown(", pos);
+			if (pos < $scope.posts.length - 1) {
+				var tmp = $scope.posts[pos + 1];
+				$scope.posts[pos + 1] = $scope.posts[pos];
+				$scope.posts[pos] = tmp;
+			}
+		};
+
+		$scope.publishUp = function(pos) {
+			$log.log("publishUp(", pos);
+			var tmp = $scope.posts[pos - 1];
+			$scope.posts[pos - 1] = $scope.posts[pos];
+			$scope.posts[pos] = tmp;
 		};
 
 		$scope.feedback = {
@@ -1576,7 +1644,12 @@ angular.module('newsGameApp')
 		*/
 
 		$timeout(function() {
-			scenario();
+			$log.log($scope.fake);
+			if ($scope.fake) {
+				fake();
+			} else {
+				scenario();
+			}
 		}, 500);
 
 	});
