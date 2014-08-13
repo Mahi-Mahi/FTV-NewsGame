@@ -521,29 +521,32 @@ angular.module('newsGameApp')
 			}
 		});
 
-		createWindow('blog', {
-			title: 'Mon blog ::: Publier',
-			active: true,
-			template: 'blog',
-			height: 360,
-			width: 385,
-			position: {
-				top: 250,
-				left: 550
-			}
-		});
-
-		createWindow('publish', {
-			title: "L'International ::: Système de publication",
-			active: true,
-			template: 'publish',
-			height: 600,
-			width: 500,
-			position: {
-				top: 150,
-				left: 450
-			}
-		});
+		if ($scope.level === 2 || $scope.level === 3) {
+			createWindow('blog', {
+				title: 'Mon blog ::: Publier',
+				active: true,
+				template: 'blog',
+				height: 360,
+				width: 385,
+				position: {
+					top: 250,
+					left: 550
+				}
+			});
+		}
+		if ($scope.level === 4) {
+			createWindow('publish', {
+				title: "L'International ::: Système de publication",
+				active: true,
+				template: 'publish',
+				height: 600,
+				width: 500,
+				position: {
+					top: 150,
+					left: 450
+				}
+			});
+		}
 
 		/*
 		Timeout.then wrapper
@@ -1022,9 +1025,12 @@ angular.module('newsGameApp')
 			addStep(chatDelay, function() {
 				addCuit(false, true, null, $scope.currentTheme);
 				addCuit(false, true, null, $scope.currentTheme);
+			});
+			addStep(chatDelay, function() {
 				// show info popup
 				$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Vérifier la thématique</strong>";
-				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.metas .theme button'), 0, 100);
+				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.metas .theme button'), 50, 20);
+				$scope.tooltip.orientation = "top left";
 				$scope.tooltip.active = true;
 				verifyCuitThemeCallback = function() {
 					scenarii.level3Phase2();
@@ -1050,7 +1056,8 @@ angular.module('newsGameApp')
 			addStep(chatDelay, function() {
 				// show info popup
 				$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Vérifier la crédibilité</strong>";
-				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-credibility").first().find('.metas .credibility button'), 0, 100);
+				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-credibility").first().find('.metas .credibility button'), 50, 20);
+				$scope.tooltip.orientation = "top left";
 				$scope.tooltip.active = true;
 				verifyCuitCredibilityCallback = function() {
 					scenarii.level3Phase3();
@@ -1080,12 +1087,21 @@ angular.module('newsGameApp')
 				}
 			});
 
+			$scope.openWin('chat', {
+				position: {
+					left: 250,
+					top: 250
+				}
+			});
+
 			addChat(chatDelay, 'other', "Pour vérifier une info, vous devez contacter quelqu’un en qui vous avez confiance. J’ai rajouté trois personnes dans votre carnet d’adresses. Mais attention ! Il faut que vous choisissiez un contact qui s’y connaît dans la thématique " + $scope.themes[selectedCuit.theme] + ". A vous de jouer !");
 
 			addStep(chatDelay, function() {
 				// show info popup
+				$scope.openWin('skoupe');
 				$scope.tooltip.content = "Choisissez un contact";
-				$scope.tooltip.position(jQuery('#skoupe .inner'), 0, 100);
+				$scope.tooltip.position(jQuery('#skoupe .inner'), -200, -300);
+				$scope.tooltip.orientation = "bottom right";
 				$scope.tooltip.active = true;
 				callContactCallback = function() {
 					scenarii.level3Phase4();
@@ -1110,6 +1126,8 @@ angular.module('newsGameApp')
 				addChat(chatDelay, 'other', "Eh non ! Ce contact n’est pas spécialiste de " + $scope.themes[selectedCuit.theme] + ". Regardez bien les petites icônes dans la colonne « Thématique » de votre carnet d’adresses. Allez, choisissez un autre contact !");
 				addStep(chatDelay, function() {
 					// show info popup
+					$scope.canCall = true;
+					$scope.openWin('skoupe');
 					$scope.tooltip.content = "Choisissez un contact";
 					$scope.tooltip.position(jQuery('#skoupe .inner'), 0, 100);
 					$scope.tooltip.active = true;
@@ -1134,6 +1152,7 @@ angular.module('newsGameApp')
 				addStep(2500, function() {
 					$scope.closeWin('chat');
 					$scope.openWin('blog');
+					addCuit(true);
 					$scope.skipCuits = false;
 					verifyCuitCredibilityCallback = null;
 					callContactCallback = null;
