@@ -9,7 +9,7 @@ angular.module('newsGameApp')
 		titleService.setTitle('Play');
 
 		// debug config
-		var delayModifier = ($scope.debug ? 0.05 : 1) * ($routeParams.debug === 'fast' ? 0.1 : 1);
+		var delayModifier = ($scope.debug ? 0.05 : 1) * ($routeParams.debug === 'fast' ? 0.05 : 1);
 
 		var chatDelay = dataService.data.settings.chatDelay;
 
@@ -238,9 +238,9 @@ angular.module('newsGameApp')
 			var added = false;
 			angular.forEach(contacts, function(contactIdx) {
 				var contact = dataService.data.all.contacts[contactIdx];
-				contact.verifiedCuits = [];
 				if (!added && $scope.allContacts.indexOf(contactIdx) === -1) {
 					if ((!theme) || contact.themes.indexOf(theme) !== -1) {
+						contact.verifiedCuits = [];
 						$scope.allContacts.push(contactIdx);
 						$scope.contacts.unshift(contact);
 						added = true;
@@ -326,6 +326,14 @@ angular.module('newsGameApp')
 			if ($scope.remainingTime / $scope.totalTime <= 0.15) {
 				$scope.gaugeLevel = 'red';
 			}
+			jQuery(".timeline").css({
+				'z-index': 99999
+			});
+			$timeout(function() {
+				jQuery(".timeline").css({
+					'z-index': 999
+				});
+			}, 1500);
 		}
 
 		/*
@@ -349,10 +357,18 @@ angular.module('newsGameApp')
 		$scope.tooltip = {
 			active: false,
 			content: 'Quisque id neque scelerisque velit.',
+			_pos: {},
 			position: function($elt, top, left) {
+				if ($elt) {
+					this._pos = {
+						elt: $elt,
+						top: top,
+						left: left
+					};
+				}
 				jQuery('#tooltip').css({
-					top: $elt.offset().top + top,
-					left: $elt.offset().left + left
+					top: this._pos.elt.offset().top + this._pos.top,
+					left: this._pos.elt.offset().left + this._pos.left
 				});
 			}
 		};
@@ -383,15 +399,27 @@ angular.module('newsGameApp')
 				$scope.openWin(id);
 			}
 		};
-		$scope.openWin = function(id) {
+		$scope.openWin = function(id, options) {
 			if (!$scope.windows[id].visible) {
 				jQuery('#' + id).data('kendoWindow').open();
+				$scope.setOptionsWin(id, {
+					dragend: function() {
+						$scope.tooltip.position();
+					}
+				});
+			}
+			jQuery('#' + id).data('kendoWindow').toFront();
+			if (options) {
+				$scope.setOptionsWin(id, options);
 			}
 		};
 		$scope.closeWin = function(id) {
 			if ($scope.windows[id].visible) {
 				jQuery('#' + id).data('kendoWindow').close();
 			}
+		};
+		$scope.setOptionsWin = function(id, options) {
+			jQuery('#' + id).data('kendoWindow').setOptions(options);
 		};
 
 		/*
@@ -512,8 +540,8 @@ angular.module('newsGameApp')
 			height: 600,
 			width: 500,
 			position: {
-				top: 250,
-				left: 550
+				top: 150,
+				left: 450
 			}
 		});
 
@@ -546,6 +574,7 @@ angular.module('newsGameApp')
 
 		function addChat(delay, speaker, content) {
 			addStep(500, function() {
+				$scope.openWin('chat');
 				$scope.currentChat.status = ((speaker === 'other') ? 'reading' : 'writing');
 				var $container = angular.element(document.getElementById('chat-scroll'));
 				var chatBottom = angular.element(document.getElementById('chat-bottom'));
@@ -661,7 +690,8 @@ angular.module('newsGameApp')
 				// show info popup
 				$scope.skipCuits = true;
 				$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Vérifier la thématique</strong>";
-				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.metas .theme button'), 0, 100);
+				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.metas .theme button'), 50, 20);
+				$scope.tooltip.orientation = "top left";
 				$scope.tooltip.active = true;
 				verifyCuitThemeCallback = function() {
 					scenarii.level1Phase3();
@@ -702,9 +732,13 @@ angular.module('newsGameApp')
 			addStep(chatDelay, function() {
 				// show info popup
 				addCuit(false, true);
+			});
+
+			addStep(chatDelay, function() {
 				$scope.skipCuits = true;
 				$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Vérifier la thématique</strong>";
-				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.metas .theme button'), 0, 100);
+				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.metas .theme button'), 50, 20);
+				$scope.tooltip.orientation = "top left";
 				$scope.tooltip.active = true;
 				verifyCuitThemeCallback = function() {
 					scenarii.level1Phase4();
@@ -751,9 +785,12 @@ angular.module('newsGameApp')
 						}, Math.round(500 + Math.random() * 500));
 					}
 					*/
+				});
+				addStep(chatDelay, function() {
 					$scope.skipCuits = true;
 					$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Vérifier la thématique</strong>";
-					$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.metas .theme button'), 0, 100);
+					$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.metas .theme button'), 50, 20);
+					$scope.tooltip.orientation = "top left";
 					$scope.tooltip.active = true;
 				});
 			}
@@ -796,9 +833,12 @@ angular.module('newsGameApp')
 				addCuit(false, true, author);
 				addCuit(false, true, author);
 				addCuit(false, true, author);
+			});
+			addStep(chatDelay, function() {
 				// show info popup
 				$scope.tooltip.content = "Cliquez sur le profil de l'auteur";
-				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.source'), 0, 100);
+				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.source'), -100, -50);
+				$scope.tooltip.orientation = "bottom left";
 				$scope.tooltip.active = true;
 				openSourceThemeCallback = function() {
 					scenarii.level1Phase6();
@@ -827,7 +867,8 @@ angular.module('newsGameApp')
 			addStep(chatDelay, function() {
 				// show info popup
 				$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Analyser la source</strong>";
-				$scope.tooltip.position(jQuery('#source .metas .theme button'), 0, 100);
+				$scope.tooltip.position(jQuery('#source .metas .theme button'), 80, -30);
+				$scope.tooltip.orientation = "top left";
 				$scope.tooltip.active = true;
 				verifySourceThemeCallback = function() {
 					scenarii.level1Phase7();
@@ -874,6 +915,8 @@ angular.module('newsGameApp')
 		scenarii.level2 = function() {
 			$log.log(">scenario2");
 
+			addCuit(true);
+
 			$scope.currentChat = {
 				contact: "Medhi",
 				discussion: []
@@ -912,13 +955,14 @@ angular.module('newsGameApp')
 			addStep(500, function() {
 				// show info popup
 				$scope.tooltip.content = "Choisissez des infos dans votre fil Cuicuitter et publiez-les sur votre blog. Attention : choisissez-les bien dans la thématique " + $scope.themes[$scope.currentTheme] + ". Et faites attention : le temps passe vite ! ";
-				$scope.tooltip.position(jQuery('#cuicuiter'), 0, 100);
+				$scope.tooltip.position(jQuery('#cuicuiter'), 100, 270);
+				$scope.tooltip.orientation = "top left";
 				$scope.tooltip.active = true;
 				$scope.openWin('blog');
 			});
 
-			addStep(500, function() {
-				// $scope.tooltip.active = false;
+			addStep(5000, function() {
+				$scope.tooltip.active = false;
 			});
 
 			addStep(chatDelay, function() {
@@ -951,7 +995,7 @@ angular.module('newsGameApp')
 		scenarii.level3 = function() {
 			$log.log(">scenario3");
 
-			$scope.skipCuits = true;
+			// $scope.skipCuits = true;
 
 			$scope.currentChat = {
 				contact: "Jessica",
@@ -1122,9 +1166,13 @@ angular.module('newsGameApp')
 
 			addStep(50, function() {
 				$scope.openWin('cuicuiter');
-				$scope.openWin('skoupe');
-				$scope.openWin('chat');
 				$scope.openWin('publish');
+				$scope.openWin('chat', {
+					position: {
+						left: 100,
+						top: 250
+					}
+				});
 			});
 
 			addStep(50, function() {
@@ -1134,6 +1182,7 @@ angular.module('newsGameApp')
 				}
 				$scope.selectedCuit = selectedCuit;
 				addContact(selectedCuit.theme);
+				selectedContact = $scope.contacts[0];
 				selectedCuit.themeVerified = true;
 				updateCuitCredibility(true);
 			});
@@ -1169,7 +1218,8 @@ angular.module('newsGameApp')
 			addStep(chatDelay, function() {
 				// show info popup
 				$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Vérifier l'exclusivité</strong>";
-				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-exclusivity").first().find('.metas .exclusivity button'), 0, 100);
+				$scope.tooltip.position(jQuery('#cuicuiter .cuit').not(".verified-exclusivity").first().find('.metas .exclusivity button'), -100, 20);
+				$scope.tooltip.orientation = 'bottom left';
 				$scope.tooltip.active = true;
 				verifyCuitExclusivityCallback = function() {
 					scenarii.level4Phase3();
@@ -1191,6 +1241,10 @@ angular.module('newsGameApp')
 			$log.log(">scenario4Phase3");
 			steps = [];
 
+			$scope.tooltip.active = false;
+
+			$scope.openWin('skoupe');
+
 			addChat(chatDelay, 'other', "Pour vérifier le niveau d’exclusivité d’une info, vous devez demander de l’aide à vos contacts.");
 			addChat(chatDelay, 'me', "Ah... Mais le contact que j’ai dans cette thématique semble indisponible.");
 			addChat(chatDelay, 'other', "Eh oui... C’est parce que c’est à lui que j’ai déjà demandé de vérifier la crédibilité de cette info. Vous ne pouvez pas demander au même contact de vérifier à la fois la crédibilité et l’exclusivité d’une info. Il faut demander à quelqu’un d’autre : ça s’appelle « recouper ses sources » !");
@@ -1200,7 +1254,8 @@ angular.module('newsGameApp')
 			addStep(chatDelay, function() {
 				// show info popup
 				$scope.tooltip.content = "Cliquez maintenant sur le bouton <strong>Nouveaux contacts</strong>";
-				$scope.tooltip.position(jQuery('#skoupe #new-contact'), 0, 100);
+				$scope.tooltip.position(jQuery('#skoupe #new-contact'), 50, -200);
+				$scope.tooltip.orientation = "top right";
 				$scope.tooltip.active = true;
 
 				var $container = angular.element(document.getElementById('skoupe'));
@@ -1229,7 +1284,7 @@ angular.module('newsGameApp')
 
 			addChat(chatDelay, 'other', "Super ! Maintenant, choisissez la thématique " + $scope.themes[selectedCuit.theme] + " dans la liste.");
 
-			addStep(1500, function() {
+			addStep(2500, function() {
 				$scope.selectedTheme = selectedCuit.theme;
 				$scope.openWin('themeSelector');
 
@@ -1243,7 +1298,7 @@ angular.module('newsGameApp')
 
 			addStep(chatDelay, function() {
 				if ($scope.debug) {
-					$scope.themeSelectorAction();
+					// $scope.themeSelectorAction();
 				}
 			});
 

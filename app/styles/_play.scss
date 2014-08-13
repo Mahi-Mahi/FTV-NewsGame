@@ -84,11 +84,11 @@
     background:#e7e6e6;
     border-radius:4px;
     box-shadow: rgba(128, 128, 128, .3) 1px 1px 7px 1px;
-    position: absolute;
+    position: fixed;
     margin:0;
     padding:10px;
     bottom: 50px;
-    left: 50px;
+    left: 20px;
     h2 {
         display: block;
         font-size: em(16px);
@@ -365,7 +365,7 @@ div.k-window-content#chat {
         min-width:26%;
         max-width:75%;
     }
-    .me {
+    .other {
         border: 2px solid #16a085;
         color: #16a085;
         &:after, &:before {
@@ -391,7 +391,7 @@ div.k-window-content#chat {
             margin-top: -7px;
         }
     }
-    .other {
+    .me {
         border: 2px solid #f15a24;
         color: #f15a24;
         float: right;
@@ -540,16 +540,27 @@ div.k-window-content#chat {
     padding:16px;
     width:320px;
     &:after {
-        top: 100%;
-        left: 280px;
         border: solid transparent;
         content: " ";
         height: 0;
         width: 0;
         position: absolute;
         pointer-events: none;
-        border-top-color:rgba(46, 33, 20, .7);
         border-width: 20px;
+    }
+    &.bottom:after{
+        border-top-color:rgba(46, 33, 20, .7);
+        top: 100%;
+    }
+    &.top:after {
+        border-bottom-color:rgba(46, 33, 20, .7);
+        bottom: 100%;
+    }
+    &.right:after {
+        left: 280px;
+    }
+    &.left:after {
+        right: 280px;
     }
     p {
         display: block;
