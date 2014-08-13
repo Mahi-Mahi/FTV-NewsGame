@@ -1434,6 +1434,30 @@ angular.module('newsGameApp')
 			doSteps();
 			showScoring();
 		};
+		// Level 3
+		fakes.level3 = function() {
+			$log.log("fakes.level3");
+			$scope.openWin('cuicuiter');
+			$scope.openWin('blog');
+			for (var i = 0; i < 6; i++) {
+				addCuit();
+			}
+			steps = [];
+			// publish 6 cuits
+			i = 6; //2 + Math.round(Math.random() * 3);
+			var max = 10;
+			while (i && max) {
+				addCuit(false, true);
+				var cuit = Math.floor(Math.random() * Object.keys($scope.cuits).length);
+				if (!$scope.cuits[cuit].published) {
+					$scope.publishCuit($scope.cuits[cuit], true);
+					i--;
+				}
+				max--;
+			}
+			doSteps();
+			showScoring();
+		};
 		// Level 4
 		fakes.level4 = function() {
 			$log.log("fakes.level4");
@@ -1687,7 +1711,9 @@ angular.module('newsGameApp')
 
 		function showScoring() {
 			updateScore();
-			$scope.showScoring = true;
+			$rootScope.posts = $scope.posts;
+			$rootScope.scoreStatus = $scope.scoreStatus;
+			$location.path('/outro');
 		}
 
 		function updateScore() {

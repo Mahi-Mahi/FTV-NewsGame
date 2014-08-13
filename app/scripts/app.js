@@ -35,6 +35,24 @@ angular
 					}
 				}
 			})
+			.when('/outro/:debug?', {
+				templateUrl: 'views/outro.html',
+				controller: 'OutroCtrl',
+				resolve: {
+					load: function($route, dataService) {
+						return dataService.load('all');
+					}
+				}
+			})
+			.when('/score/:debug?', {
+				templateUrl: 'views/score.html',
+				controller: 'ScoreCtrl',
+				resolve: {
+					load: function($route, dataService) {
+						return dataService.load('all');
+					}
+				}
+			})
 			.otherwise({
 				redirectTo: '/'
 			});
