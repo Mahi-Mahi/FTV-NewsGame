@@ -1522,6 +1522,7 @@ angular.module('newsGameApp')
 				var tmp = $scope.posts[pos + 1];
 				$scope.posts[pos + 1] = $scope.posts[pos];
 				$scope.posts[pos] = tmp;
+				updateScore();
 			}
 		};
 
@@ -1530,6 +1531,7 @@ angular.module('newsGameApp')
 			var tmp = $scope.posts[pos - 1];
 			$scope.posts[pos - 1] = $scope.posts[pos];
 			$scope.posts[pos] = tmp;
+			updateScore();
 		};
 
 		$scope.feedback = {
@@ -1621,6 +1623,30 @@ angular.module('newsGameApp')
 						$scope.posts[idx].score = scoring['select-cuit-in-correct-theme-credibility-' + post.cuit.credibility];
 					}
 				});
+			}
+			if ($scope.level === 4) {
+				var base, multiplier, cuitScore, themes = [];
+				angular.forEach($scope.posts, function(post, idx) {
+					$log.log(idx, post.cuit.id, post.cuit.credibility, post.cuit.scoop);
+
+					base = 'select-cuit-credibility-' + post.cuit.credibility;
+					if (post.cuit.credibility > 0) {
+						base = base + (post.cuit.scoop ? '-exclusive' : '-not-exclusive');
+					}
+					multiplier = scoring['cuit-position'][idx];
+					cuitScore = scoring[base] * multiplier;
+					score += cuitScore;
+
+					if (themes.indexOf(post.cuit.theme) === -1) {
+						themes.push(post.cuit.theme);
+					}
+
+					$log.log(base, multiplier, cuitScore);
+
+					$scope.posts[idx].score = cuitScore;
+				});
+				$log.log(themes);
+				score = score * themes.length;
 			}
 			$log.log("score : " + score);
 			var cookieScores = ipCookie('scores');

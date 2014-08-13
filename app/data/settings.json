@@ -43,14 +43,10 @@
 			"select-cuit-credibility-3-exclusive": 30,
 			"select-cuit-credibility-4-not-exclusive": 20,
 			"select-cuit-credibility-4-exclusive": 50,
-			"cuit-position": {
-				"short": 1,
-				"middle": 3,
-				"header": 9
-			},
+			"cuit-position": [9, 3, 3, 1, 1, 1],
 			"winning-score": 2000
 		},
-		"excellent-score": 3000
+		"excellent-score": 6000
 	},
 	"messages": {
 		"haltime": "Attention ! La journée est déjà à moitié écoulée ! N'oubliez pas de publier des informations ou vos lecteurs seront déçus.",
