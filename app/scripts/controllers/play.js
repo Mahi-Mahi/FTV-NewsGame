@@ -5,7 +5,8 @@ angular.module('newsGameApp')
 
 		$scope.debug = ($routeParams.debug === 'debug');
 		$scope.fake = ($routeParams.debug === 'fake');
-		$scope.fast = ($routeParams.debug);
+		$scope.skip = ($routeParams.debug === 'skip');
+		$scope.fast = ($routeParams.debug === 'fast');
 
 		titleService.setTitle('Play');
 
@@ -336,6 +337,13 @@ angular.module('newsGameApp')
 					'z-index': 999
 				});
 			}, 1500);
+			$log.log($scope.remainingTime, " <= ", $scope.totalTime / 2);
+			if ($scope.remainingTime + value > $scope.totalTime / 2 && $scope.remainingTime <= $scope.totalTime / 2) {
+				// feedback('bad', "Plus que 50% du temps<br />Attention ! La journée est déjà à moitié écoulée ! N'oubliez pas de publier des informations ou vos lecteurs seront déçus.");
+			}
+			if ($scope.remainingTime + value > $scope.totalTime / 4 && $scope.remainingTime <= $scope.totalTime / 4) {
+				// feedback('bad', "Plus que 25% du temps<br />Vous n'avez presque plus de temps, la journée touche bientôt à sa fin. Si ce n'est pas déjà fait, vous devriez vite publier des informations.");
+			}
 		}
 
 		/*
@@ -402,6 +410,7 @@ angular.module('newsGameApp')
 			}
 		};
 		$scope.openWin = function(id, options) {
+			$log.log("openWin(", id);
 			if (!$scope.windows[id].visible) {
 				jQuery('#' + id).data('kendoWindow').open();
 				$scope.setOptionsWin(id, {
@@ -473,16 +482,18 @@ angular.module('newsGameApp')
 			}
 		});
 
-		createWindow('chat', {
-			title: 'Conversation',
-			active: true,
-			template: 'skoupe-chat',
-			height: 300,
-			position: {
-				top: 225,
-				left: 600
-			}
-		});
+		if (!$scope.skip) {
+			createWindow('chat', {
+				title: 'Conversation',
+				active: true,
+				template: 'skoupe-chat',
+				height: 300,
+				position: {
+					top: 225,
+					left: 600
+				}
+			});
+		}
 
 		createWindow('notepad', {
 			title: 'Bloc-Notes',
@@ -606,8 +617,10 @@ angular.module('newsGameApp')
 		$scope.tuto = false;
 
 		function endTuto() {
+			$log.log("endTuto");
 			$scope.tuto = false;
 		}
+		$scope.endTuto = endTuto;
 
 		function scenario() {
 			if (scenarii['level' + $scope.level]) {
@@ -1397,9 +1410,36 @@ angular.module('newsGameApp')
 
 		var fakes = {};
 
+		// Level 2
+		fakes.level2 = function() {
+			$log.log("fakes.level2");
+			$scope.openWin('cuicuiter');
+			$scope.openWin('blog');
+			for (var i = 0; i < 6; i++) {
+				addCuit();
+			}
+			steps = [];
+			// publish 6 cuits
+			i = 6; //2 + Math.round(Math.random() * 3);
+			var max = 10;
+			while (i && max) {
+				addCuit(false, true);
+				var cuit = Math.floor(Math.random() * Object.keys($scope.cuits).length);
+				if (!$scope.cuits[cuit].published) {
+					$scope.publishCuit($scope.cuits[cuit], true);
+					i--;
+				}
+				max--;
+			}
+			doSteps();
+			showScoring();
+		};
 		// Level 4
 		fakes.level4 = function() {
-			$log.log("fakes.level1");
+			$log.log("fakes.level4");
+
+			$scope.score = 2000;
+
 			$scope.openWin('cuicuiter');
 			$scope.openWin('publish');
 			for (var i = 0; i < 6; i++) {
@@ -1423,6 +1463,48 @@ angular.module('newsGameApp')
 				jQuery(post).find('.down').click();
 			});
 			doSteps();
+			showScoring();
+		};
+
+		// Play level ( skip tuto)
+
+		function play() {
+			if (plays['level' + $scope.level]) {
+				plays['level' + $scope.level]();
+			}
+		}
+
+		var plays = {};
+
+		// Level 2
+		plays.level2 = function() {
+			$log.log("plays.level2");
+			$scope.openWin('cuicuiter');
+			$scope.openWin('blog');
+			addCuit(true);
+		};
+		// Level 3
+		plays.level3 = function() {
+			$log.log("plays.level3");
+			$scope.openWin('cuicuiter');
+			$scope.openWin('skoupe');
+			addContact();
+			addContact($scope.currentTheme);
+			addContact($scope.mandatory);
+			$scope.openWin('blog');
+			addCuit(true);
+		};
+
+		// Level 4
+		plays.level4 = function() {
+			$log.log("plays.level3");
+			$scope.openWin('cuicuiter');
+			$scope.openWin('skoupe');
+			addContact();
+			addContact($scope.currentTheme);
+			addContact($scope.mandatory);
+			$scope.openWin('publish');
+			addCuit(true);
 		};
 
 		// Publish Cuit
@@ -1492,6 +1574,13 @@ angular.module('newsGameApp')
 			promptCallback = function() {
 
 				$log.log("unpublish(", $scope.currentPost.cuit.id);
+
+				angular.forEach($scope.cuits, function(c, idx) {
+					if (c.id === post.cuit.id) {
+						$scope.cuits[idx].published = false;
+					}
+				});
+
 				angular.forEach($scope.posts, function(p, idx) {
 					if (p.cuit.id === $scope.currentPost.cuit.id) {
 						$scope.posts.splice(idx, 1);
@@ -1549,7 +1638,8 @@ angular.module('newsGameApp')
 				}
 			}
 			if ($scope.level === 3) {
-				if ([$scope.currentTheme, $scope.mandatory].indexOf(post.cuit.theme) === -1) {
+				$log.log([$scope.currentTheme, $scope.mandatory], post.cuit.theme);
+				if ([$scope.currentTheme, $scope.mandatory].indexOf(post.cuit.theme) !== -1) {
 					if (post.cuit.credibility > 1) {
 						feedback('good', dataService.data.settings.messages['level-3']['feedback-good-theme']);
 					} else {
@@ -1591,6 +1681,7 @@ angular.module('newsGameApp')
 		};
 
 		$scope.playAgain = function() {
+			$log.log("playAgain");
 			$location.path('/play');
 		};
 
@@ -1600,7 +1691,7 @@ angular.module('newsGameApp')
 		}
 
 		function updateScore() {
-			var score = 0;
+			var score = $scope.score ? $scope.score : 0;
 			var scoring = $scope.scoring['level-' + $scope.level];
 			if ($scope.level === 2) {
 				angular.forEach($scope.posts, function(post, idx) {
@@ -1659,7 +1750,7 @@ angular.module('newsGameApp')
 			});
 			$scope.scores = cookieScores;
 			if (scoring) {
-				$scope.scoreStatus = score > $scope.scoring['level-' + $scope.level]['winning-score'] ? 'victory' : 'defeat';
+				$scope.scoreStatus = score >= $scope.scoring['level-' + $scope.level]['winning-score'] ? 'victory' : 'defeat';
 			} else {
 				$scope.scoreStatus = 'victory';
 			}
@@ -1674,7 +1765,11 @@ angular.module('newsGameApp')
 			if ($scope.fake) {
 				fake();
 			} else {
-				scenario();
+				if ($scope.skip) {
+					play();
+				} else {
+					scenario();
+				}
 			}
 		}, 500);
 

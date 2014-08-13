@@ -1,5 +1,11 @@
 <div ng-class="['level-'+level, tuto ? 'tuto' : '']">
 
+	<div class="top-skip" ng-if="level>1 && !skip">
+		<a href="/#/play/skip">Esc</a>
+		<span>pour <br />passer</span>
+	</div>
+
+
 	<div class="windows">
 		<div  ng-repeat="(id, win) in windows"
 					id="{{id}}"
@@ -71,7 +77,18 @@
 						Bravo ! Vous êtes vigilant : avec vous, pas question de publier n’importe quoi ! <br />
 						Vous commencez à être un journaliste confirmé. Mais si vous êtiez aux commandes, sauriez-vous détecter les scoops et choisir quelles infos mettre en avant sur votre site ?
  					</p>
-					<button ng-click="nextLevel()" class="bt bt--nextlevel">Niveau Suivant</button>
+					<span ng-if="level<4">
+						<button ng-click="nextLevel()" class="bt bt--nextlevel">Niveau Suivant</button> |
+					</span>
+
+					<div class="share">
+						Partager mon score
+						<ul class="unstyled">
+							<li class="top-social__item"><a href="#" class="bt-twitter" target="_blank">Twitter</a></li>
+							<li class="top-social__item"><a href="#" class="bt-facebook" target="_blank">Facebook</a></li>
+							<li class="top-social__item"><a href="#" class="bt-googleplus" target="_blank">Google +</a></li>
+						</ul>
+					</div>
 				</div>
 				<div ng-if="scoreStatus=='defeat'">
 					<h2 class="scoring__title">Défaite</h2>
