@@ -1,12 +1,17 @@
 'use strict';
 
 angular.module('newsGameApp')
-	.controller('PlayCtrl', function($document, $rootScope, $scope, $routeParams, $location, ipCookie, $log, prod, $timeout, $interval, dataService, titleService, utils) {
+	.controller('PlayCtrl', function($document, $rootScope, $scope, $routeParams, $location, $log, prod, $timeout, $interval, dataService, titleService, utils, $localStorage) {
 
 		$scope.debug = ($routeParams.debug === 'debug');
 		$scope.fake = ($routeParams.debug === 'fake');
 		$scope.skip = ($routeParams.debug === 'skip');
 		$scope.fast = ($routeParams.debug === 'fast');
+
+		$scope.$storage = $localStorage.$default({
+			level: 1,
+			scores: {}
+		});
 
 		titleService.setTitle('Play');
 
@@ -19,10 +24,7 @@ angular.module('newsGameApp')
 		$scope.windows = {};
 
 		// current difficulty level
-		$scope.level = ipCookie('level') ? parseInt(ipCookie('level'), 10) : 1;
-		ipCookie('level', $scope.level, {
-			expires: 365
-		});
+		$scope.level = $scope.$storage.level;
 
 		// Scoring
 		$scope.scoring = dataService.data.settings.scoring;
@@ -32,10 +34,6 @@ angular.module('newsGameApp')
 
 		// all themes are loaded from /data/all.json
 		$scope.themes = dataService.data.all.themes;
-
-		// selected theme
-		$scope.currentTheme = ipCookie('theme') ? ipCookie('theme') : $scope.currentTheme;
-		$scope.mandatory = ipCookie('mandatory') ? ipCookie('mandatory') : $scope.mandatory;
 
 		$scope.actionsCost = dataService.data.settings.actionsCost;
 
@@ -671,10 +669,8 @@ angular.module('newsGameApp')
 				$scope.closeWin('notepad');
 				$scope.openWin('themeSelector');
 				$scope.themeSelectorAction = function() {
-					$scope.currentTheme = $scope.selectedTheme;
-					ipCookie('theme', $scope.currentTheme, {
-						expires: 365
-					});
+					$scope.$storage.chosenTheme = $scope.selectedTheme;
+					$scope.$storage.chosenTheme = $scope.$storage.chosenTheme;
 					$scope.closeWin('themeSelector');
 					scenarii.level1Phase2();
 				};
@@ -694,11 +690,11 @@ angular.module('newsGameApp')
 
 		scenarii.level1Phase2 = function() {
 
-			$log.log(">level1Phase2 : " + $scope.currentTheme);
+			$log.log(">level1Phase2 : " + $scope.$storage.chosenTheme);
 
 			steps = [];
 
-			addChat(500, 'me', $scope.themes[$scope.currentTheme] + "! Si je veux trouver des infos sur ce sujet-là, je fais comment ?");
+			addChat(500, 'me', $scope.themes[$scope.$storage.chosenTheme] + "! Si je veux trouver des infos sur ce sujet-là, je fais comment ?");
 			addChat(chatDelay, 'other', "Tu ouvres grands tes yeux... et tu fais marcher ton cerveau ! En lisant les Cuitts, tu pourras déterminer de quoi ils parlent.");
 
 			addChat(chatDelay, 'me', "Hum... pas facile !");
@@ -740,12 +736,12 @@ angular.module('newsGameApp')
 			addChat(chatDelay, 'other', "Et voilà ! Tu vois, ça a pris un peu de temps mais ça en valait la peine ! Maintenant, tu sais que ce cuitt parle de " + selectedCuit.theme + ".");
 			addChat(chatDelay, 'other', "Tu vois, c’est signalé par le petit picto qui a remplacé le point d’interrogation en dessous du message !");
 
-			if (selectedCuit.theme === $scope.currentTheme) {
+			if (selectedCuit.theme === $scope.$storage.chosenTheme) {
 				addChat(chatDelay, 'me', "Ah, géniale, cette info ! justement ce qui m’intéresse !");
 			} else {
-				addChat(chatDelay, 'me', "Ah ouais... Pas mal, cette info, mais, moi, ce qui m’intéresse, c’est " + $scope.themes[$scope.currentTheme] + ".");
+				addChat(chatDelay, 'me', "Ah ouais... Pas mal, cette info, mais, moi, ce qui m’intéresse, c’est " + $scope.themes[$scope.$storage.chosenTheme] + ".");
 			}
-			addChat(chatDelay, 'other', "Ce qui est cool avec Cuicuitter, c’est que je suis sûr qu’en fouillant dans la timeline, tu peux trouver un autre cuit qui parle de " + $scope.themes[$scope.currentTheme] + ". A toi de jouer !");
+			addChat(chatDelay, 'other', "Ce qui est cool avec Cuicuitter, c’est que je suis sûr qu’en fouillant dans la timeline, tu peux trouver un autre cuit qui parle de " + $scope.themes[$scope.$storage.chosenTheme] + ". A toi de jouer !");
 
 			addStep(chatDelay, function() {
 				// show info popup
@@ -783,7 +779,7 @@ angular.module('newsGameApp')
 
 			steps = [];
 
-			if (selectedCuit.theme === $scope.currentTheme) {
+			if (selectedCuit.theme === $scope.$storage.chosenTheme) {
 				scenarii.level1Phase5();
 				return;
 			} else {
@@ -839,7 +835,7 @@ angular.module('newsGameApp')
 			addChat(chatDelay, 'other', "Ben, pour voir la fiche de quelqu’un, il faut cliquer sur sa photo d’avatar ou sur son nom d’utilisateur.");
 			addStep(chatDelay, function() {
 				addCuit(false, true);
-				addCuit(false, true, null, $scope.currentTheme);
+				addCuit(false, true, null, $scope.$storage.chosenTheme);
 				addCuit(false, true);
 			});
 			addChat(chatDelay, 'other', "Regarde, tu vois le gars qui vient de poster trois messages ? Tu peux cliquer sur sa photo...");
@@ -940,8 +936,6 @@ angular.module('newsGameApp')
 				discussion: []
 			};
 
-			$scope.currentTheme = ipCookie('theme');
-
 			steps = [];
 
 			addStep(50, function() {
@@ -957,7 +951,7 @@ angular.module('newsGameApp')
 			addChat(chatDelay, 'other', "Bien, et toi ? Alors, tu révises le concours pour les écoles de journalisme ?");
 			addChat(chatDelay, 'me', "Pfff... M’en parle pas, c’est crevant x_x. En plus, j’ai ouvert un blog pour m’entrainer à écrire des articles...");
 			addChat(chatDelay, 'other', "Ah bon ? Un blog ? Cool ! Sur quel sujet ?");
-			addChat(chatDelay, 'me', "Sur " + $scope.themes[$scope.currentTheme] + ".");
+			addChat(chatDelay, 'me', "Sur " + $scope.themes[$scope.$storage.chosenTheme] + ".");
 			addChat(chatDelay, 'other', "Ah, j’aurais dû m’en douter ! C’est super ! Comment tu fais pour trouver des sujets ?");
 			addChat(chatDelay, 'me', "J’utilise Cuicuitter ! Mais je dois faire gaffe. Si je veux que mes lecteurs soient contents, j’ai intérêt à choisir des infos sur la bonne thématique...");
 			addChat(chatDelay, 'other', "Et comment tu fais pour le savoir ?");
@@ -972,7 +966,7 @@ angular.module('newsGameApp')
 
 			addStep(500, function() {
 				// show info popup
-				$scope.tooltip.content = "Choisissez des infos dans votre fil Cuicuitter et publiez-les sur votre blog. Attention : choisissez-les bien dans la thématique " + $scope.themes[$scope.currentTheme] + ". Et faites attention : le temps passe vite ! ";
+				$scope.tooltip.content = "Choisissez des infos dans votre fil Cuicuitter et publiez-les sur votre blog. Attention : choisissez-les bien dans la thématique " + $scope.themes[$scope.$storage.chosenTheme] + ". Et faites attention : le temps passe vite ! ";
 				$scope.tooltip.position(jQuery('#cuicuiter'), 100, 270);
 				$scope.tooltip.orientation = "top left";
 				$scope.tooltip.active = true;
@@ -1020,9 +1014,6 @@ angular.module('newsGameApp')
 				discussion: []
 			};
 
-			$scope.currentTheme = ipCookie('theme');
-			$scope.mandatoryTheme = ipCookie('mandatory');
-
 			steps = [];
 
 			addStep(50, function() {
@@ -1038,8 +1029,8 @@ angular.module('newsGameApp')
 			addChat(chatDelay, 'other', "Alors je vais vous montrer comment vérifier une info. Commencez par vérifier la thématique d'un cuit.");
 
 			addStep(chatDelay, function() {
-				addCuit(false, true, null, $scope.currentTheme);
-				addCuit(false, true, null, $scope.currentTheme);
+				addCuit(false, true, null, $scope.$storage.chosenTheme);
+				addCuit(false, true, null, $scope.$storage.chosenTheme);
 			});
 			addStep(chatDelay, function() {
 				// show info popup
@@ -1099,8 +1090,8 @@ angular.module('newsGameApp')
 				addContact();
 				if ($scope.contacts.length < 3) {
 					addContact(selectedCuit.theme);
-					addContact($scope.currentTheme);
-					addContact($scope.mandatory);
+					addContact($scope.$storage.chosenTheme);
+					addContact($scope.$storage.mandatoryTheme);
 				}
 			});
 
@@ -1167,7 +1158,7 @@ angular.module('newsGameApp')
 				addChat(chatDelay, 'me', "Je vois... Et je peux demander à mes contacts d’évaluer la crédibilité d’une source ?");
 				addChat(chatDelay, 'other', "Bien sûr ! En cliquant sur une photo d’avatar ou sur un nom dans le fil Cuicuitter, vous pourrez vérifier la crédibilité de n’importe qui. Mais il faudra d’abord analyser la source, pour savoir quelles sont ses thématiques préférées.");
 				addChat(chatDelay, 'me', "Ah... Ca n’a pas l’air facile !");
-				addChat(chatDelay, 'other', "Le mieux, c’est d’apprendre en faisant. Alors je vous laisse essayer. N’oubliez pas de publier des infos qui parlent de " + $scope.themes[$scope.currentTheme] + " ou de " + $scope.themes[$scope.mandatory] + ". Bonne journée !");
+				addChat(chatDelay, 'other', "Le mieux, c’est d’apprendre en faisant. Alors je vous laisse essayer. N’oubliez pas de publier des infos qui parlent de " + $scope.themes[$scope.$storage.chosenTheme] + " ou de " + $scope.themes[$scope.$storage.mandatoryTheme] + ". Bonne journée !");
 				addStep(2500, function() {
 					$scope.closeWin('chat');
 					$scope.openWin('blog');
@@ -1196,9 +1187,6 @@ angular.module('newsGameApp')
 				contact: "Jessica",
 				discussion: []
 			};
-
-			$scope.currentTheme = ipCookie('theme');
-			$scope.mandatoryTheme = ipCookie('mandatory');
 
 			steps = [];
 
@@ -1513,8 +1501,8 @@ angular.module('newsGameApp')
 			$scope.openWin('cuicuiter');
 			$scope.openWin('skoupe');
 			addContact();
-			addContact($scope.currentTheme);
-			addContact($scope.mandatory);
+			addContact($scope.$storage.chosenTheme);
+			addContact($scope.$storage.mandatoryTheme);
 			$scope.openWin('blog');
 			addCuit(true);
 		};
@@ -1525,8 +1513,8 @@ angular.module('newsGameApp')
 			$scope.openWin('cuicuiter');
 			$scope.openWin('skoupe');
 			addContact();
-			addContact($scope.currentTheme);
-			addContact($scope.mandatory);
+			addContact($scope.$storage.chosenTheme);
+			addContact($scope.$storage.mandatoryTheme);
 			$scope.openWin('publish');
 			addCuit(true);
 		};
@@ -1655,15 +1643,15 @@ angular.module('newsGameApp')
 
 		function updateFeedback(post) {
 			if ($scope.level === 2) {
-				if (post.cuit.theme === $scope.currentTheme) {
+				if (post.cuit.theme === $scope.$storage.chosenTheme) {
 					feedback('good', dataService.data.settings.messages['level-2']['feedback-good-theme']);
 				} else {
 					feedback('bad', dataService.data.settings.messages['level-2']['feedback-wrong-theme']);
 				}
 			}
 			if ($scope.level === 3) {
-				$log.log([$scope.currentTheme, $scope.mandatory], post.cuit.theme);
-				if ([$scope.currentTheme, $scope.mandatory].indexOf(post.cuit.theme) !== -1) {
+				$log.log([$scope.$storage.chosenTheme, $scope.$storage.mandatoryTheme], post.cuit.theme);
+				if ([$scope.$storage.chosenTheme, $scope.$storage.mandatoryTheme].indexOf(post.cuit.theme) !== -1) {
 					if (post.cuit.credibility > 1) {
 						feedback('good', dataService.data.settings.messages['level-3']['feedback-good-theme']);
 					} else {
@@ -1697,18 +1685,6 @@ angular.module('newsGameApp')
 			scenarii['level' + $scope.level + 'End']();
 		};
 
-		$scope.nextLevel = function() {
-			ipCookie('level', parseInt($scope.level, 10) + 1, {
-				expires: 365
-			});
-			$location.path('/intro');
-		};
-
-		$scope.playAgain = function() {
-			$log.log("playAgain");
-			$location.path('/play');
-		};
-
 		function showScoring() {
 			updateScore();
 			$rootScope.posts = $scope.posts;
@@ -1721,7 +1697,7 @@ angular.module('newsGameApp')
 			var scoring = $scope.scoring['level-' + $scope.level];
 			if ($scope.level === 2) {
 				angular.forEach($scope.posts, function(post, idx) {
-					if (post.cuit.theme === $scope.currentTheme) {
+					if (post.cuit.theme === $scope.$storage.chosenTheme) {
 						score += scoring['select-cuit-in-correct-theme'];
 						$scope.posts[idx].score = scoring['select-cuit-in-correct-theme'];
 					} else {
@@ -1732,7 +1708,7 @@ angular.module('newsGameApp')
 			}
 			if ($scope.level === 3) {
 				angular.forEach($scope.posts, function(post, idx) {
-					if ([$scope.currentTheme, $scope.mandatory].indexOf(post.cuit.theme) === -1) {
+					if ([$scope.$storage.chosenTheme, $scope.$storage.mandatoryTheme].indexOf(post.cuit.theme) === -1) {
 						score += scoring['select-cuit-in-wrong-theme'];
 						$scope.posts[idx].score = scoring['select-cuit-in-wrong-theme'];
 					} else {
@@ -1766,20 +1742,15 @@ angular.module('newsGameApp')
 				score = score * themes.length;
 			}
 			$log.log("score : " + score);
-			var cookieScores = ipCookie('scores');
-			if (!cookieScores) {
-				cookieScores = {};
-			}
-			cookieScores['level-' + $scope.level] = score;
-			ipCookie('scores', cookieScores, {
-				expires: 21
-			});
-			$scope.scores = cookieScores;
+
 			if (scoring) {
 				$scope.scoreStatus = score >= $scope.scoring['level-' + $scope.level]['winning-score'] ? 'victory' : 'defeat';
 			} else {
 				$scope.scoreStatus = 'victory';
 			}
+			$scope.$storage.scores['level-' + $scope.level] = score;
+			$scope.$storage.posts = $scope.posts;
+			$scope.$storage.scoreStatus = $scope.scoreStatus;
 		}
 
 		/*

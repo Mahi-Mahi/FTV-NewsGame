@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('newsGameApp')
-	.controller('IntroCtrl', function($rootScope, $scope, $routeParams, ipCookie, $log, $location, $timeout, $interval, $q, dataService, titleService, utils) {
+	.controller('IntroCtrl', function($rootScope, $scope, $routeParams, $log, $location, $timeout, $interval, $q, dataService, titleService, utils, $localStorage) {
 
 		$log.log('Intro');
 
@@ -9,16 +9,15 @@ angular.module('newsGameApp')
 
 		$scope.debug = ($routeParams.debug);
 
-		// current difficulty level
-		$scope.level = ipCookie('level') ? parseInt(ipCookie('level'), 10) : 1;
-		ipCookie('level', $scope.level, {
-			expires: 365
+		$scope.$storage = $localStorage.$default({
+			level: 1,
+			scores: {}
 		});
 
 		// all themes are loaded from /data/all.json
 		$scope.themes = dataService.data.all.themes;
 
-		$rootScope.background = 'intro-level-' + $scope.level;
+		$rootScope.background = 'intro-level-' + $scope.$storage.level;
 
 		var chatDelay = dataService.data.settings.chatDelay;
 		var chatInterval = dataService.data.settings.chatInterval;
@@ -102,8 +101,8 @@ angular.module('newsGameApp')
 		*/
 
 		function scenario() {
-			if (scenarii['level' + $scope.level]) {
-				scenarii['level' + $scope.level]();
+			if (scenarii['level' + $scope.$storage.level]) {
+				scenarii['level' + $scope.$storage.level]();
 			}
 		}
 
@@ -156,15 +155,8 @@ angular.module('newsGameApp')
 
 			steps = [];
 
-			$scope.currentTheme = ipCookie('theme') ? ipCookie('theme') : null;
-
 			var mandatory = utils.shuffle(Object.keys(dataService.data.all.themes))[0];
-			$scope.mandatoryTheme = ipCookie('mandatory') ? ipCookie('mandatory') : mandatory;
-			ipCookie('mandatory', $scope.mandatoryTheme, {
-				expire: 365
-			});
-
-			$log.log($scope.mandatoryTheme);
+			$scope.$storage.mandatoryTheme = mandatory;
 
 			var interlocutor = 'SoniaA';
 
@@ -172,8 +164,8 @@ angular.module('newsGameApp')
 			addChat(chatDelay, 'me', "Heu... un peu, si !", "moi");
 			addChat(chatDelay, interlocutor + "3", "C’est vrai que nous sommes un site d’information très populaire... Mais ne vous en faites pas, ça va aller. Avec votre blog, vous avez montré que vous saviez sélectionner une information. C’est une bonne base !", "Sonia");
 			addChat(chatDelay, 'me', "Merci ! Je compte faire de mon mieux !", "moi");
-			addChat(chatDelay, interlocutor + "3", "Ici, vous allez continuer à vous occuper de " + $scope.themes[$scope.currentTheme] + ". Mais attention, ce n’est pas tout ! Je vous charge aussi de trouver des infos sur " + $scope.themes[$scope.mandatoryTheme] + " !", "Sonia");
-			addChat(chatDelay, 'me', "" + $scope.themes[$scope.mandatoryTheme] + " ? Ok, c'est noté !", "moi");
+			addChat(chatDelay, interlocutor + "3", "Ici, vous allez continuer à vous occuper de " + $scope.themes[$scope.$storage.chosenTheme] + ". Mais attention, ce n’est pas tout ! Je vous charge aussi de trouver des infos sur " + $scope.themes[$scope.$storage.mandatoryTheme] + " !", "Sonia");
+			addChat(chatDelay, 'me', "" + $scope.themes[$scope.$storage.mandatoryTheme] + " ? Ok, c'est noté !", "moi");
 			addChat(chatDelay, interlocutor + "3", "Et ce n’est pas tout ! Nos lecteurs DÉTESTENT qu’on leur donne de mauvaises infos.", "Sonia");
 			addChat(chatDelay, 'me', "Je comprends...", "moi");
 			addChat(chatDelay, interlocutor + "3", "Du coup, vous allez devoir apprendre à VERIFIER vous informations. Vous savez comment faire ?", "Sonia");
@@ -191,16 +183,6 @@ angular.module('newsGameApp')
 
 			steps = [];
 
-			$scope.currentTheme = ipCookie('theme') ? ipCookie('theme') : null;
-
-			var mandatory = utils.shuffle(Object.keys(dataService.data.all.themes))[0];
-			$scope.mandatoryTheme = ipCookie('mandatory') ? ipCookie('mandatory') : mandatory;
-			ipCookie('mandatory', $scope.mandatoryTheme, {
-				expire: 365
-			});
-
-			$log.log($scope.mandatoryTheme);
-
 			var interlocutor = 'SoniaB';
 
 			addChat(chatDelay, interlocutor + "3", "Ah vous voilà ! Je vous attendais !", "Sonia");
@@ -210,7 +192,7 @@ angular.module('newsGameApp')
 			addChat(chatDelay, interlocutor + "3", "Mais si, mais si, vous allez vous en sortir ! Il y a seulement deux règles à connaître !", "Sonia");
 			addChat(chatDelay, 'me', "Ah ? Les quelles ?", "moi");
 			addChat(chatDelay, interlocutor + "3", "La première : les gens aiment qu’on leur parle de tout ! Vous devez donc essayer de publier des infos qui portent sur chacune des six thématiques existantes !", "Sonia");
-			addChat(chatDelay, 'me', "Ah. Ca, c’est plutôt bien : je ne suis plus obligé de chercher seulement les infos parlant de " + $scope.themes[$scope.currentTheme] + " et " + $scope.themes[$scope.mandatoryTheme] + "...", "moi");
+			addChat(chatDelay, 'me', "Ah. Ca, c’est plutôt bien : je ne suis plus obligé de chercher seulement les infos parlant de " + $scope.themes[$scope.$storage.chosenTheme] + " et " + $scope.themes[$scope.$storage.mandatoryTheme] + "...", "moi");
 			addChat(chatDelay, interlocutor + "3", "Eh non. Mais attention à la règle numéro 2 : il faut HIERARCHISER l’information !", "Sonia");
 			addChat(chatDelay, 'me', "Hiérarchi... quoi ?", "moi");
 			addChat(chatDelay, interlocutor + "3", "Pffff... Bon, connectez-vous sur mon ordinateur, je vais vous montrer en utilisant ma tablette. Allez, je vous laisse, je me connecte dès que je suis dans le taxi. A bientôôôôôôt !", "Sonia");
