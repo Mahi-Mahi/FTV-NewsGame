@@ -37,7 +37,7 @@ angular.module('newsGameApp')
 
 		$scope.actionsCost = dataService.data.settings.actionsCost;
 
-		$scope.selectedTheme = 'economie';
+		$scope.selectedTheme = null;
 
 		$scope.showScoring = false;
 

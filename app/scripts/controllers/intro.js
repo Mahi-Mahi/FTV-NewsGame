@@ -114,7 +114,7 @@ angular.module('newsGameApp')
 
 			steps = [];
 
-			var interlocutor = 'Daniel3';
+			var interlocutor = 'Daniel';
 
 			addChat(chatDelay, 'me', "Hé ! Salut", 'Moi');
 			addChat(chatDelay, interlocutor + "3", "Ah, salut !", "Medhi");
