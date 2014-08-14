@@ -232,6 +232,10 @@
     }
 }
 
+.source--disabled {
+    cursor:default
+}
+
 .off {
     display: inline;
 }
@@ -895,6 +899,10 @@ div.k-window-content#chat {
     font-size:em(18px) !important;
     margin: 0;
     padding:20px !important;
+    position: relative;
+    left: -10px;
+    top: -10px;
+    width: 100%;
 }
 
 .blog-subtitle {
