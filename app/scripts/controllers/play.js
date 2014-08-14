@@ -78,8 +78,10 @@ angular.module('newsGameApp')
 
 		function applySourceTheme() {
 			angular.forEach($scope.cuits, function(cuit, id) {
-				$scope.cuits[id].author = dataService.data.all.sources[cuit.source];
-				$scope.cuits[id].themeVerified = true;
+				if ($scope.currentSource.id === $scope.cuits[id].source) {
+					$scope.cuits[id].author = dataService.data.all.sources[cuit.source];
+					$scope.cuits[id].themeVerified = true;
+				}
 			});
 		}
 

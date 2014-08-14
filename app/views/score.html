@@ -49,7 +49,15 @@
 						</li>
 					</ul>
 
-					<button class="bt bt--nextlevel" ng-if="$storage.scoreStatus=='defeat'" ng-click="playAgain()">Recommencer</button>
+					<button class="bt bt--nextlevel" ng-if="$storage.scoreStatus=='defeat'" ng-click="playAgain()">Recommencer</button> |
+					<div class="share">
+						Partager mon score
+						<ul class="unstyled">
+							<li class="top-social__item"><a href="#" class="bt-twitter" target="_blank">Twitter</a></li>
+							<li class="top-social__item"><a href="#" class="bt-facebook" target="_blank">Facebook</a></li>
+							<li class="top-social__item"><a href="#" class="bt-googleplus" target="_blank">Google +</a></li>
+						</ul>
+					</div>
 
 					<h2 class="scoring__title scoring__title--details">Détail du score</h2>
 					<ul class="scoring__details unstyled">
