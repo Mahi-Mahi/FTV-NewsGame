@@ -113,11 +113,11 @@ angular.module('newsGameApp')
 				$scope.character = "SoniaB5";
 				text = "Oups.... On dirait que les subtilités du travail de rédacteur en chef vous échappent encore... Normal : ce n'est pas facile de sélectionner, de vérifier et de hiérarchiser l'information ! Si vous ne voulez pas que je revienne précipitemment de vacances pour mettre les points sur les i, vous devriez tenter à nouveau l'aventure...";
 			} else {
-				if (totalScore < dataService.data.settings.scoring['excellent-score']) {
-					text = "Félicitations ! Vous maîtrisez tous les rouages du métier de journaliste : vous êtes capable de sélectionner, de vérifier et de hiérarchiser l'information. Mais... Vous avez comme la vague impression que vous auriez pu faire ENCORE mieux... ";
-				} else {
+				if (totalScore > dataService.data.settings.scoring['excellent-score']) {
 					$scope.characterName = null;
 					$scope.albert = true;
+				} else {
+					text = "Félicitations ! Vous maîtrisez tous les rouages du métier de journaliste : vous êtes capable de sélectionner, de vérifier et de hiérarchiser l'information. Mais... Vous avez comme la vague impression que vous auriez pu faire ENCORE mieux... ";
 				}
 			}
 			if (text) {
@@ -131,6 +131,12 @@ angular.module('newsGameApp')
 
 		if (outro['level' + $scope.$storage.level]) {
 			outro['level' + $scope.$storage.level]();
+		}
+
+		if ($routeParams.debug === 'albert') {
+			$scope.characterName = null;
+			$scope.albert = true;
+
 		}
 
 	});
