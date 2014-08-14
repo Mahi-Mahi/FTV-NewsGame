@@ -679,7 +679,7 @@ div.k-window-content#chat {
 }
 
 .score__list, .scoring__details {
-    margin:50px 0 50px -70px;
+    margin:50px 0 0 -70px;
 }
 
 .score__item, .scoring__details__item {
@@ -700,6 +700,19 @@ div.k-window-content#chat {
     height: 40px;
     margin:0 0 70px 0;
     padding:10px 5px 5px 5px;
+    @media (max-width: 980px) {
+        font-size:1em;
+    }
+}
+
+.score__item__body__inner {
+    display: block;
+    margin:0;
+    padding:0;
+    width:100%;
+    @media (max-width: 980px) {
+        width:66%;
+    }
 }
 
 .score__item__result {
@@ -710,11 +723,16 @@ div.k-window-content#chat {
     font-size:em(30px);
     height: 70px;
     line-height:2.5;
+    padding:0 5px;
     position:absolute;
     right:0;
     top:-10px;
     text-align: center;
-    width: 70px;
+    min-width: 70px;
+    @media (max-width: 980px) {
+        font-size:em(24px);
+        line-height: 3.2;
+    }
     .score__item__currentlevel & {
         background:#e44f42;
     }

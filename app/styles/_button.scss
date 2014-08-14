@@ -61,4 +61,9 @@
   margin:25px auto;
   padding:8px 8px 0 8px;
   text-transform: none;
+  .score__actions & {
+    display: inline-block;
+    margin:0;
+    vertical-align: top;
+  }
 }

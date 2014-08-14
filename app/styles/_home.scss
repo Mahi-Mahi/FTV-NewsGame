@@ -20,6 +20,32 @@
 }
 
 // SHARE
+
+.score__actions {
+	padding:0 0 50px 0;
+}
+
+.share {
+	border-left:1px solid #bfb7a6;
+	display: inline-block;
+	height: 40px;
+	line-height: 2.3;
+	margin:0 0 0 40px;
+	padding:0 0 0 40px;
+	vertical-align: top;
+	span, ul {
+		display: inline-block;
+		vertical-align: top;
+	}
+	span {
+		color:#bfb7a6;
+		font-size: 2em;
+	}
+	ul {
+		padding:10px 0 0 10px;
+	}
+}
+
 .top-social {
 	display: block;
 	position:absolute;
