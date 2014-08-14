@@ -4,16 +4,16 @@
 		<ul class="unstyled">
 			<li ng-repeat="(id, contact) in contacts"
 				ng-class="['inner-item', 'contact-item', contact.verifiedCuits.indexOf(selectedCuit.id) === -1 ? '' : 'disabled', canCall ? 'canCall' : '']">
-				<a href="" ng-click="openContact(id)">
+				<a href="" ng-click="openContact(id)" class="contact-item__name">
 					{{contact.name}}
 					<div ng-if="debug">
 						{{contact.verifiedCuits}} {{selectedCuit.id}} {{contact.verifiedCuits.length}} {{contact.verifiedCuits.indexOf(selectedCuit.id)}}
 					</div>
 				</a>
 				<div class="contact-item-themes">
-					<span ng-repeat="theme in contact.themes" ng-class="['item-theme', theme]"></span>
+					<span ng-repeat="theme in contact.themes" ng-class="['item-theme', theme]" title="{{themes[theme]}}"></span>
 				</div>
-				<a href="" class="call" ng-click="callContact(contact)" ng-if="canCall">Call</a>
+				<a href="" class="call" ng-click="callContact(contact)" ng-if="canCall" title="Appeler"><span class="visuallyhidden">Appeler</span></a>
 			</li>
 		</ul>
 	</div><!-- .inner__body -->
