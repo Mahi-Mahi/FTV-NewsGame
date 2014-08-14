@@ -1,5 +1,19 @@
 <div ng-class="['level-'+level, tuto ? 'tuto' : '']">
 
+	<div id="waiting" ng-show="waiting.active">
+		<div ng-class="['detail', waiting.type]" ng-if="waiting.type">
+			{{waiting.detail}}
+		</div>
+		<div class="gauge-container">
+			<div class="gauge">
+				<div class="gauge__inner">
+					<div class="fill" style="width:{{waiting.level}}%;"></div>
+				</div>
+			</div>
+			<span>{{waiting.duration|duration}}</span>
+		</div>
+	</div>
+
 	<div class="top-skip" ng-if="level>1 && !skip && tuto">
 		<a href="/#/play/skip">Esc</a>
 		<span>pour <br />passer</span>
@@ -62,5 +76,6 @@
 	</div>
 
 </div>
+
 
 <div id="debug" ng-include="'/views/_debug.html'" ng-if="debug||fast"></div>
