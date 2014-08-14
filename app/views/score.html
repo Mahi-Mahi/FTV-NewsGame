@@ -79,13 +79,19 @@
 										</div>
 									</div>
 								</div><!-- .inner__body -->
+
 								<ul class="metas">
 									<li class="theme">Thématique
-										<span class="item-theme {{post.cuit.theme}}">{{post.cuit.theme}}</span>
+										<span ng-class="['item-theme', post.cuit.theme]">{{themes[post.cuit.theme]}}</span>
 									</li>
-									<li class="credibility">Crédibilité <div class="stars stars--0">2</div></span></li>
-									<li class="exclusivity">Scoop <div class="stars stars--0">3</div></li>
+									<li class="credibility">Crédibilité
+										<div class="stars stars--{{post.cuit.credibility}}">{{post.cuit.credibility}}</div>
+									</li>
+									<li class="exclusivity">Scoop
+										<div class="scoop--{{post.cuit.scoop}}">{{post.cuit.scoop ? "Oui" : "Non"}}</div>
+									</li>
 								</ul>
+
 							</div>
 							<div class="starburst"><span><span><span><span><span><span><span><span><strong>{{post.score}}</strong>pts</span></span></span></span></span></span></span></span></div>
 						</li>

@@ -14,21 +14,16 @@ angular.module('newsGameApp')
 			scores: {}
 		});
 
-		var chatDelay = dataService.data.settings.chatDelay;
-		var chatInterval = dataService.data.settings.chatInterval;
+		$rootScope.background = 'intro-level-' + $scope.$storage.level;
 
-		// debug config
-		var delayModifier = ($scope.debug ? 0.1 : 1);
+		$scope.scoring = dataService.data.settings.scoring['level-' + $scope.$storage.level];
+
+		$scope.themes = dataService.data.all.themes;
 
 		$log.log($scope.$storage.level);
 		$log.log($scope.$storage.scores);
 		$log.log($scope.$storage.scoreStatus);
 		$log.log($scope.$storage.posts);
-
-		$rootScope.background = 'intro-level-' + $scope.$storage.level;
-
-		$scope.scoring = dataService.data.settings.scoring['level-' + $scope.$storage.level];
-
 		$log.log($scope.scoring);
 
 		$scope.nextLevel = function() {
