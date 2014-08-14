@@ -663,6 +663,11 @@ div.k-window-content#chat {
     }
 }
 
+#scoring.albert {
+    background:image-url("background/outro-albert-londres.jpg") 50% 50% no-repeat fixed;
+    background-size:cover;
+}
+
 .scoring__body {
     display: block;
     margin:100px auto 0 auto;
@@ -809,6 +814,42 @@ div.k-window-content#chat {
     }
     .stars {
         margin-top:5px;
+    }
+}
+
+.scoring__body__content__text { 
+    background:rgba(0,0,0,.7);
+    border-radius:12px;
+    color:#9a979a; 
+    position:relative;
+    margin: 70px 25px 0 0;
+    padding:25px;
+    &:before {
+        left: 100%;
+        top: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(136, 183, 213, 0);
+        border-left-color: rgba(0,0,0,.7);
+        border-width: 20px;
+        margin-top: -20px;
+    }
+    p {
+        display: block;
+        line-height:1.5;
+        margin:0;
+        padding: 0 0 20px 0;
+    }
+    strong {
+        color:#fff;
+    }
+    em {
+        font-size:1.6;
+        font-style:normal;
     }
 }
 

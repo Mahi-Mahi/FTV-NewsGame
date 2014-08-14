@@ -27,6 +27,10 @@ angular.module('newsGameApp')
 
 		$rootScope.background = 'intro-level-' + $scope.$storage.level;
 
+		$scope.showScore = function() {
+			$location.path('/score');
+		};
+
 		function showText(content) {
 			$log.log("showText(", content);
 			var deferred = $q.defer();
@@ -129,14 +133,14 @@ angular.module('newsGameApp')
 			}
 		};
 
-		if (outro['level' + $scope.$storage.level]) {
-			outro['level' + $scope.$storage.level]();
-		}
 
 		if ($routeParams.debug === 'albert') {
 			$scope.characterName = null;
 			$scope.albert = true;
-
+		} else {
+			if (outro['level' + $scope.$storage.level]) {
+				outro['level' + $scope.$storage.level]();
+			}
 		}
 
 	});

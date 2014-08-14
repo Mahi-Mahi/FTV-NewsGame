@@ -5,7 +5,7 @@
 		<span>pour <br />passer</span>
 	</div>
 
-	<div ng-include="'/views/_intro-discussion.html'" ng-if="characterName"></div>
+	<div ng-include="'/views/_intro-discussion.html'" ng-if="characterName && !albert"></div>
 	<div ng-include="'/views/_outro-albert.html'" ng-if="albert"></div>
 
 </div>
