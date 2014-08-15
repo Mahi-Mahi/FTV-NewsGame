@@ -887,8 +887,9 @@ div.k-window-content#chat {
 
 // BLOG
 
-#blog {
+#blog, #publish {
     background:#fff;
+    overflow-x:hidden;
 }
 
 .blog-title {
@@ -1029,6 +1030,8 @@ div.k-window-content#chat {
 
 .blog__category__list {
     text-align: center;
+    position:relative;
+    top:-20px;
     .active {
         background:#566473;
     }
@@ -1043,7 +1046,7 @@ div.k-window-content#chat {
     height: 15px;
     line-height:2.5;
     margin:0 5px 0 0;
-    padding:0 5px;
+    padding:0 5px 5px 5px;
     text-shadow: 0 0 3px #2c3d4d;
     text-transform: uppercase;
     vertical-align: top;
