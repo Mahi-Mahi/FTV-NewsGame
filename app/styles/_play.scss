@@ -904,6 +904,11 @@ div.k-window-content#chat {
     left: -10px;
     top: -10px;
     width: 100%;
+    img {
+        display: block;
+        margin:0 auto;
+        padding:0;
+    }
 }
 
 .blog-subtitle {
