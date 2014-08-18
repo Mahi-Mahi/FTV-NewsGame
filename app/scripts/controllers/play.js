@@ -334,23 +334,27 @@ angular.module('newsGameApp')
 			// the cost of each actions are specified in /data/settings.json
 			var duration = dataService.data.settings.actionsCost[action];
 
-			$scope.waiting.active = true;
-			$scope.waiting.type = type;
-			$scope.waiting.detail = detail;
-			$scope.waiting.duration = duration;
-			$scope.waiting.level = 0;
+			if ($scope.tuto) {
+				decrementedTime(duration);
+			} else {
+				$scope.waiting.active = true;
+				$scope.waiting.type = type;
+				$scope.waiting.detail = detail;
+				$scope.waiting.duration = duration;
+				$scope.waiting.level = 0;
 
-			$scope.waiting.interval = $interval(function() {
-				$log.log($scope.waiting.level);
-				if ($scope.waiting.level < 100) {
-					$scope.waiting.level += 1;
-				} else {
-					$interval.cancel($scope.waiting.interval);
-					$timeout(function() {
-						decrementedTime(duration);
-					}, 800);
-				}
-			}, 1 * duration);
+				$scope.waiting.interval = $interval(function() {
+					$log.log($scope.waiting.level);
+					if ($scope.waiting.level < 100) {
+						$scope.waiting.level += 1;
+					} else {
+						$interval.cancel($scope.waiting.interval);
+						$timeout(function() {
+							decrementedTime(duration);
+						}, 800);
+					}
+				}, 1 * duration);
+			}
 
 		}
 
