@@ -422,10 +422,12 @@ angular.module('newsGameApp')
 						left: left
 					};
 				}
-				jQuery('#tooltip').css({
-					top: this._pos.elt.offset().top + this._pos.top,
-					left: this._pos.elt.offset().left + this._pos.left
-				});
+				if (this._pos.elt) {
+					jQuery('#tooltip').css({
+						top: this._pos.elt.offset().top + this._pos.top,
+						left: this._pos.elt.offset().left + this._pos.left
+					});
+				}
 			}
 		};
 
