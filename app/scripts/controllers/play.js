@@ -501,7 +501,7 @@ angular.module('newsGameApp')
 			}
 		});
 		createWindow('source', {
-			title: 'Source',
+			title: 'Profil Cuicuiter',
 			active: false,
 			template: 'cuicuiter-source',
 			width: 400,

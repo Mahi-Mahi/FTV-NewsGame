@@ -1219,3 +1219,114 @@ a:focus,button:focus {
     height: 12px !important;
     width:12px !important;
 }
+
+// WINDOW SKIN
+
+.k-window-title {
+    text-indent: 100%;  
+}
+
+.k-window-title {
+    opacity:.5;
+    .k-state-focused {
+        opactiy:1;
+    }
+}
+
+#win-cuicuiter, #win-source {
+    .k-header {
+        background:#4890a8;
+    }
+    .k-window-title {
+        background:image-url("kendo/bg-win-cuicuiter-active-title.svg") center center no-repeat;
+    }
+}
+
+#win-source {
+    .k-window-title {
+        background:image-url("kendo/bg-win-source-active-title.svg") center center no-repeat;
+        height: 28px;
+    }
+}
+
+#win-cuicuiter.k-state-focused, #win-source.k-state-focused {
+    .k-header {
+        background:image-url("kendo/bg-win-cuicuiter-active.png") center top no-repeat;
+        background-size:cover;
+    }
+    .k-window-title {
+         background:image-url("kendo/bg-win-cuicuiter-active-title.svg") center center no-repeat;
+    }
+}
+
+#win-source.k-state-focused {
+    .k-window-title {
+        background:image-url("kendo/bg-win-source-active-title.svg") center center no-repeat;
+    }
+}
+
+#win-chat {
+    .k-header {
+        background:#c286b4;
+    }
+    .k-window-title {
+        background:image-url("kendo/bg-win-chat-active-title.png") center center no-repeat;
+    }
+}
+
+#win-chat.k-state-focused, {
+    .k-header {
+        background:image-url("kendo/bg-win-source-active.png") center top no-repeat;
+        background-size:cover;
+    }
+}
+
+#win-skoupe {
+    .k-header {
+        background:#c286b4;
+
+    }
+    .k-window-title {
+        background:image-url("kendo/bg-win-skoupe-active-title.png") center center no-repeat;
+    }
+}
+
+#win-skoupe.k-state-focused, {
+    .k-header {
+        background:image-url("kendo/bg-win-source-active.png") center top no-repeat;
+        background-size:cover;
+    }
+}
+
+#win-contact {
+    .k-header {
+        background:#c286b4;
+
+    }
+    .k-window-title {
+        background:image-url("kendo/bg-win-contact-active-title.png") center center no-repeat;
+    }
+}
+
+#win-contact.k-state-focused {
+    .k-header {
+        background:image-url("kendo/bg-win-source-active.png") center top no-repeat;
+        background-size:cover;
+    }
+}
+
+#win-notepad {
+    .k-header {
+        background:#e6c887;
+    }
+    .k-window-title {
+        background:image-url("kendo/bg-notepad-active-title.png") center center no-repeat;
+    }
+}
+
+#win-notepad.k-state-focused, {
+    .k-header {
+        background:image-url("kendo/bg-notepad-active.png") center top no-repeat;
+        background-size:cover;
+    }
+}
