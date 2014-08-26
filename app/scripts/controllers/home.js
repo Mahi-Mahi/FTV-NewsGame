@@ -1,6 +1,6 @@
 'use strict';
 angular.module('newsGameApp')
-	.controller('HomeCtrl', function($rootScope, $scope, ipCookie, $log, $location, titleService) {
+	.controller('HomeCtrl', function($rootScope, $scope, $localStorage, $log, $location, titleService) {
 
 		$log.log('Home');
 
@@ -8,25 +8,14 @@ angular.module('newsGameApp')
 
 		titleService.setTitle('Accueil');
 
-		// current difficulty level
-		$scope.level = ipCookie('level') ? parseInt(ipCookie('level'), 10) : 1;
-		ipCookie('level', $scope.level, {
-			expires: 365
+		$scope.$storage = $localStorage.$default({
+			level: 1,
+			scores: {}
 		});
 
 		$scope.newGame = function() {
-			ipCookie('level', 1, {
-				expires: 365
-			});
-			ipCookie('scores', {}, {
-				expires: 365
-			});
-			ipCookie('theme', null, {
-				expires: 365
-			});
-			ipCookie('mandatory', null, {
-				expires: 365
-			});
+			$scope.level = 1;
+			$scope.scores = {};
 			$location.path("/intro");
 		};
 

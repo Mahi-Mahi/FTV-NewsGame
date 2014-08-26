@@ -7,14 +7,16 @@
 		<li class="top-social__item"><a href="#" class="bt-googleplus" target="_blank">Google +</a></li>
 	</ul>
 </div>
-
-<div class="bt-start">
-	<a href="#/intro" class="start">
-		<span ng-if="level==1">Nouvelle partie</span>
-		<span ng-if="level>1">Continuer la partie</span>
+<div class="button-block">
+	<a href="#/intro" class="bt-start" ng-if="level==1">
+		<span>Nouvelle partie</span>
 	</a>
-	<a href="" ng-if="level>1" ng-click="newGame()">Nouvelle partie</a>
+	<a href="#/intro" class="bt-continue" ng-if="level>1">
+		<span>Continuer la partie</span>
+	</a>
+	<a href="" ng-if="level>1" class="bt-start" ng-click="newGame()"><span>Nouvelle partie</span></a>
 </div>
+
 
 <div class="credits">
 	<a href="#" id="credits">crédits</a>

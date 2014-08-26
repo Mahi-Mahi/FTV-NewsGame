@@ -111,27 +111,36 @@
 }
 
 // BUTTON START
-.bt-start {
-	background:image-url("svg/bt-start.svg") left top no-repeat;
+
+.button-block {
 	display: block;
-	margin: 0 0 0 -191px;
+	margin: 0;
 	padding: 0;
 	position:absolute;
-	height: 86px;
 	text-align: center;
-	width: 382px;
 	bottom:50px;
-	left:50%;
+	left:0;
 	z-index:2;
-	a {
-		color:#fff;
-		display: block;
-		font:normal 3.2em 'Amatic SC', sans-serif;
-		height: 100%;
-		line-height: 2;
-		text-transform: uppercase;
-		width: 100%;
-	}
+	width: 100%;
+}
+
+.bt-start, .bt-continue {
+	background:image-url("svg/bt-start.svg") left top no-repeat;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	height: 86px;
+	width: 382px;
+	vertical-align: top;
+	color:#fff;
+	font:normal 3.2em 'Amatic SC', sans-serif;
+	line-height: 2.3;
+	text-transform: uppercase;
+}
+
+.bt-continue {
+	background-image:image-url("svg/bt-continue.svg");
+	margin:0 0 0 40px;
 }
 
 // LOGO FRANCE TV EDUCATION
