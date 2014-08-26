@@ -109,6 +109,14 @@
 	}
 }
 
+.me {
+	text-align: right;
+	img {
+		float: right;
+		margin:0 10px 0 10px;
+	}
+}
+
 .dialogue__name {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -126,13 +134,15 @@
 	margin:-40px 0 0 0;
 	overflow: hidden;
 	padding:8px;
+	.me & {
+		float: right;
+	}
 }
 
 #typed-cursor {
   opacity: 1;
   font-weight: 100;
-  // add prefixes
-  animation: blink 0.7s infinite;
+  @include animation(blink 0.7s infinite);
 }
 
 @-keyframes blink{
