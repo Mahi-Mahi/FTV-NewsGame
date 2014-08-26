@@ -14,9 +14,12 @@ angular.module('newsGameApp')
 		});
 
 		$scope.newGame = function() {
-			$scope.level = 1;
-			$scope.scores = {};
+			$scope.$storage.level = 1;
+			$scope.$storage.scores = {};
 			$location.path("/intro");
 		};
+
+		$log.log($scope.$storage.level);
+		$log.log($scope.$storage.scores);
 
 	});
