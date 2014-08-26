@@ -1228,8 +1228,8 @@ a:focus,button:focus {
 
 .k-window-title {
     opacity:.5;
-    .k-state-focused {
-        opactiy:1;
+    .k-state-focused & {
+        opacity:1;
     }
 }
 
@@ -1253,15 +1253,6 @@ a:focus,button:focus {
     .k-header {
         background:image-url("kendo/bg-win-cuicuiter-active.png") center top no-repeat;
         background-size:cover;
-    }
-    .k-window-title {
-         background:image-url("kendo/bg-win-cuicuiter-active-title.svg") center center no-repeat;
-    }
-}
-
-#win-source.k-state-focused {
-    .k-window-title {
-        background:image-url("kendo/bg-win-source-active-title.svg") center center no-repeat;
     }
 }
 
@@ -1330,3 +1321,24 @@ a:focus,button:focus {
         background-size:cover;
     }
 }
+
+#win-blog {
+    .k-header {
+        background:#4790a8;
+    }
+    .k-window-title {
+        background:image-url("kendo/bg-win-blog-active-title.png") center center no-repeat;
+        height: 33px;
+        margin-top: -10px;
+    }
+}
+
+#win-blog.k-state-focused, {
+    .k-header {
+        background:image-url("kendo/bg-win-blog-active.png") center top no-repeat;
+        background-size:cover;
+    }
+}
+
+
+
