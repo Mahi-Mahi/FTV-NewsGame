@@ -447,6 +447,11 @@ angular.module('newsGameApp')
 					left: 300
 				}
 			}, args);
+			$timeout(function() {
+				jQuery('#' + id).data('kendoWindow').bind('activate', function() {
+					jQuery('#' + id).parent().attr('id', 'win-' + id);
+				});
+			}, 50);
 		}
 
 		// show/hide window
