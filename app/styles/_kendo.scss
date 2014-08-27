@@ -1220,6 +1220,15 @@ a:focus,button:focus {
     width:12px !important;
 }
 
+.blog-title {
+    height:55px;
+    img {
+        display: block;
+        margin: 5px 0 0 12px;
+        padding:0;
+    }
+}
+
 // WINDOW SKIN
 
 .k-window-title {
@@ -1340,5 +1349,28 @@ a:focus,button:focus {
     }
 }
 
+#win-publish {
+    .k-header {
+        background:image-url("kendo/bg-win-publish-active.png") center top no-repeat;
+        background-size:cover;
+        opacity:.5;
+    }
+    .k-window-title {
+        background:image-url("kendo/bg-publish-active-title.png") center center no-repeat;
+        height: 37px;
+        margin-top: -13px;
+    }
+}
 
+#win-publish.k-state-focused, {
+    .k-header {
+        background:image-url("kendo/bg-win-publish-active.png") center top no-repeat;
+        background-size:cover;
+        opacity:1;
+    }
+}
 
+#publish {
+    background: image-url("kendo//blog-title-bg-articles-a-la-une.png") left top no-repeat #fff !important;
+    background-size:100% !important;
+}
