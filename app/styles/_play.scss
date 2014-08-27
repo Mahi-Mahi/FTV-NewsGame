@@ -897,6 +897,13 @@ div.k-window-content#chat {
     display: block;
     margin:0;
     padding: 15px 0;
+    span {
+        font-size: 1.5em;
+        padding: 8px 0 0 0;
+        display: inline-block;
+        vertical-align: top;
+        font-weight: normal;
+    }
     &:before {
         color:#29abe2;
         content: "\60";
@@ -914,6 +921,8 @@ div.k-window-content#chat {
         -moz-osx-font-smoothing: grayscale;
         font-size: 2.5em;
         vertical-align: top;
+        width: 36px;
+        overflow: hidden;
     }
 }
 
@@ -924,7 +933,7 @@ div.k-window-content#chat {
     color:#29abe2;
     padding:10px 20px 10px 10px;
     position:relative;
-    margin:0 0 10px 0;
+    margin:0 5px 10px 5px;
     .metas li {
         border:none;
         color:#29abe2;

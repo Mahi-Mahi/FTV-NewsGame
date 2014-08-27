@@ -1232,7 +1232,10 @@ a:focus,button:focus {
 // WINDOW SKIN
 
 .k-window-title {
-    text-indent: 100%;  
+    text-indent: 100%; 
+    #win-prompt & {
+        text-indent: 0;
+    }
 }
 
 .k-window-title {
@@ -1373,4 +1376,38 @@ a:focus,button:focus {
 #publish {
     background: image-url("kendo//blog-title-bg-articles-a-la-une.png") left top no-repeat #e7e6e6 !important;
     background-size:100% !important;
+}
+
+.default-post-message {
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    background:#e6f5fb;
+    border-radius:4px;
+    border:1px dashed #8dd0ee;
+    color:#29abe2;
+    display: block;
+    margin:10px auto;
+    padding:20px;
+    text-align: center;
+    width:95%;
+    p {
+        display: block;
+        font-size:em(19px);
+        margin: 0;
+        padding:0 0 10px 0;
+    }
+    strong {
+        display: block;
+        font-size:5.5em;
+        line-height: 1;
+        margin: 0;
+        padding:0 0 10px 0;       
+    }
+    span {
+        display: block;
+        font-size:em(13px);
+        margin: 0;
+        padding:0;       
+    }
 }
