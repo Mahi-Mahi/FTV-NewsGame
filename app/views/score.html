@@ -96,7 +96,8 @@
 								</ul>
 
 							</div>
-							<div class="starburst"><span><span><span><span><span><span><span><span><strong>{{post.score}}</strong>pts</span></span></span></span></span></span></span></span></div>
+							<div class="starburst" ng-if="post.score>1"><span><span><span><span><span><span><span><span><strong>{{post.score}}</strong>pts</span></span></span></span></span></span></span></span></div>
+							<div class="starburst starburst--minus" ng-if="post.score<1"><span><span><span><span><span><span><span><span><strong>{{post.score}}</strong>pts</span></span></span></span></span></span></span></span></div>
 						</li>
 
 					</ul>
