@@ -16,7 +16,7 @@ angular.module('newsGameApp')
 		titleService.setTitle('Play');
 
 		// debug config
-		var delayModifier = ($scope.debug ? 0.05 : 1) * ($routeParams.debug === 'fast' ? 0.05 : 1);
+		var delayModifier = ($scope.debug ? 0.05 : 1) * ($routeParams.debug === 'fast' ? 0.5 : 1);
 
 		var chatDelay = dataService.data.settings.chatDelay;
 
@@ -662,7 +662,7 @@ angular.module('newsGameApp')
 		// Add Chat Step
 
 		function addChat(delay, speaker, content) {
-			addStep(500, function() {
+			addStep(delay, function() {
 				$scope.openWin('chat');
 				$scope.currentChat.status = ((speaker === 'other') ? 'reading' : 'writing');
 				var $container = angular.element(document.getElementById('chat-scroll'));
@@ -734,11 +734,11 @@ angular.module('newsGameApp')
 			addChat(chatDelay, 'me', "Mais justement, qui les poste ?");
 			addChat(chatDelay, 'other', "Tout le monde ! Des stars, des sportifs, des pros de l’économie ou de la politique... Y en a pour tous les goûts ! En gros, il y a six grandes thématiques. Attends, je t’envoie la liste...");
 
-			addStep(500, function() {
+			addStep(1500, function() {
 				$scope.openWin('notepad');
 			});
 
-			addChat(chatDelay, 'me', "Ah merci ! Mais... tout ne m’intéresse pas, là-dedans. Tu sais que moi, ma passion, c’est...");
+			addChat(5500 + chatDelay, 'me', "Ah merci ! Mais... tout ne m’intéresse pas, là-dedans. Tu sais que moi, ma passion, c’est...");
 
 			addStep(1500, function() {
 				$scope.closeWin('notepad');
