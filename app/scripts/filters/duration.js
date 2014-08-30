@@ -6,7 +6,7 @@ angular.module('newsGameApp')
 			var minutes = input % 60;
 			var result = '';
 			if (hours) {
-				result = hours + ' heures';
+				result = hours + ' heure' + (hours > 1 ? 's' : '');
 			}
 			if (minutes) {
 				result += ' ' + minutes + ' minutes';
