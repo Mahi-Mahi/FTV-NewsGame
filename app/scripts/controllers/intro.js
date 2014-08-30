@@ -160,7 +160,7 @@ angular.module('newsGameApp')
 
 			var interlocutor = 'SoniaA';
 
-			addChat(chatDelay, interlocutor + "3", "Bonjour et bienvenue chez L’Univers ! Pas trop tendu(e) pour ta première journée ?", "Sonia");
+			addChat(chatDelay, interlocutor + "3", "Bonjour et bienvenue chez L’International ! Pas trop tendu(e) pour ta première journée ?", "Sonia");
 			addChat(chatDelay, 'me', "Heu... un peu, si !", "moi");
 			addChat(chatDelay, interlocutor + "3", "C’est vrai que nous sommes un site d’information très populaire... Mais ne vous en faites pas, ça va aller. Avec votre blog, vous avez montré que vous saviez sélectionner une information. C’est une bonne base !", "Sonia");
 			addChat(chatDelay, 'me', "Merci ! Je compte faire de mon mieux !", "moi");
