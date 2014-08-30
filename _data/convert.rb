@@ -31,7 +31,7 @@ CSV.foreach("BDD_newsgame/Infos-Table 1.csv", :col_sep => ';') do |row|
 
 		cuit = {}
 		cuit[:id] = "cuit-#{idx}"
-		cuit[:source] = row[0].sanitize
+		cuit[:source] = row[0].sanitize.gsub(/\-/, '_')
 		# cuit[:name] = row[1]
 		cuit[:content] = row[2]
 		cuit[:theme] = row[3].sanitize
@@ -54,6 +54,8 @@ end
 pp "#{cuits.length} cuits"
 
 
+pp themes
+
 sources = {}
 
 idx = 0
@@ -66,7 +68,7 @@ CSV.foreach("BDD_newsgame/Sources-Table 1.csv", :col_sep => ';') do |row|
 	if idx > 0
 
 		source = {}
-		source[:id] = row[0].sanitize
+		source[:id] = row[0].sanitize.gsub(/\-/, '_')
 		source[:name] = row[1]
 		source[:bio] = row[2]
 		source[:themes] = []

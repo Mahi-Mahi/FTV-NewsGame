@@ -732,7 +732,7 @@
     },
     "cuit-74": {
       "id": "cuit-74",
-      "source": "@bpp-pbb",
+      "source": "@bpp_pbb",
       "content": "Étudiants ? Ouvrez un compte chez BPP-PPP. Vous ne savez pas gérer votre argent, nous si. ",
       "theme": "economie",
       "credibility": 1,
@@ -1465,8 +1465,8 @@
       ],
       "credibility": "tres-credible"
     },
-    "@bpp-pbb": {
-      "id": "@bpp-pbb",
+    "@bpp_pbb": {
+      "id": "@bpp_pbb",
       "name": "BPP - PariBaBas",
       "bio": "Ce compte, qui vous fournit les dernières infos sur l'économie, est sponsorisé par la banque BPP- PariBaBas",
       "themes": [
