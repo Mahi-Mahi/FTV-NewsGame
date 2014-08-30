@@ -343,12 +343,14 @@ angular.module('newsGameApp')
 				$scope.waiting.duration = duration;
 				$scope.waiting.level = 0;
 
-				$scope.waiting.interval = $interval(function() {
-					$log.log($scope.waiting.level);
+				var stop;
+
+				stop = $interval(function() {
 					if ($scope.waiting.level < 100) {
 						$scope.waiting.level += 1;
 					} else {
-						$interval.cancel($scope.waiting.interval);
+						$interval.cancel(stop);
+						stop = undefined;
 						$timeout(function() {
 							decrementedTime(duration);
 						}, 800);
@@ -389,6 +391,9 @@ angular.module('newsGameApp')
 			}
 			if ($scope.remainingTime + duration > $scope.totalTime / 4 && $scope.remainingTime <= $scope.totalTime / 4) {
 				// feedback('bad', "Plus que 25% du temps<br />Vous n'avez presque plus de temps, la journée touche bientôt à sa fin. Si ce n'est pas déjà fait, vous devriez vite publier des informations.");
+			}
+			if ($scope.remainingTime < 0) {
+				doEndDay();
 			}
 		}
 
@@ -1037,6 +1042,7 @@ angular.module('newsGameApp')
 					var i = 6; //2 + Math.round(Math.random() * 3);
 					var max = 10;
 					while (i && max) {
+						$log.log("debug", i, max);
 						addCuit(false, true);
 						var cuit = Math.floor(Math.random() * Object.keys($scope.cuits).length);
 						if (!$scope.cuits[cuit].published) {
@@ -1463,19 +1469,20 @@ angular.module('newsGameApp')
 			}
 			steps = [];
 			// publish 6 cuits
-			i = 6; //2 + Math.round(Math.random() * 3);
-			var max = 10;
+			i = 20; //2 + Math.round(Math.random() * 3);
+			var max = 40;
 			while (i && max) {
+				$log.log("fakes", i, max);
 				addCuit(false, true);
 				var cuit = Math.floor(Math.random() * Object.keys($scope.cuits).length);
 				if (!$scope.cuits[cuit].published) {
 					$scope.publishCuit($scope.cuits[cuit], true);
 					i--;
 				}
-				max--;
+				max = max - 1;
 			}
 			doSteps();
-			showScoring();
+			// showScoring();
 		};
 		// Level 3
 		fakes.level3 = function() {
@@ -1742,17 +1749,21 @@ angular.module('newsGameApp')
 
 				$log.log("endDay");
 
-				$scope.skipCuits = true;
-				scenarii['level' + $scope.level + 'End']();
-
 				$scope.closeWin('prompt');
 				promptCallback = null;
+
+				doEndDay();
 			};
 
 			$scope.promptContent = "Êtes-vous sûrs de vouloir terminer votre journée ?";
 			$scope.openWin('prompt');
 
 		};
+
+		function doEndDay() {
+			$scope.skipCuits = true;
+			scenarii['level' + $scope.level + 'End']();
+		}
 
 		function showScoring() {
 			updateScore();
