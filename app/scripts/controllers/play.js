@@ -592,7 +592,7 @@ angular.module('newsGameApp')
 			}
 		});
 
-		if ($scope.level === 2 || $scope.level === 3) {
+		if ($scope.level === 2) {
 			createWindow('blog', {
 				title: 'Mon blog',
 				active: true,
@@ -605,6 +605,21 @@ angular.module('newsGameApp')
 				}
 			});
 		}
+
+		if ($scope.level === 3) {
+			createWindow('blog', {
+				title: "L'international",
+				active: true,
+				template: 'publish_lite',
+				height: 360,
+				width: 385,
+				position: {
+					top: 250,
+					left: 550
+				}
+			});
+		}
+
 		if ($scope.level === 4) {
 			createWindow('publish', {
 				title: "L'International",
