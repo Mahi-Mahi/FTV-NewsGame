@@ -1737,8 +1737,21 @@ angular.module('newsGameApp')
 		}
 
 		$scope.endDay = function() {
-			$scope.skipCuits = true;
-			scenarii['level' + $scope.level + 'End']();
+
+			promptCallback = function() {
+
+				$log.log("endDay");
+
+				$scope.skipCuits = true;
+				scenarii['level' + $scope.level + 'End']();
+
+				$scope.closeWin('prompt');
+				promptCallback = null;
+			};
+
+			$scope.promptContent = "Êtes-vous sûrs de vouloir terminer votre journée ?";
+			$scope.openWin('prompt');
+
 		};
 
 		function showScoring() {
