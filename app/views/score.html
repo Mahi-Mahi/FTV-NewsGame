@@ -5,6 +5,11 @@
 				<div ng-if="$storage.scoreStatus=='victory'">
 					<h2 class="scoring__title">Victoire</h2>
 					<h3 class="scoring__subtitle">Félicitations</h3>
+					<p ng-if="$storage.level===1">
+  						Vous avez appris les bases de l'utilisation de Cuicuitter pour chercher des infos<br />
+						et savoir de quoi elles parlent. Mais la route est encore longue avant de devenir<br />
+						un journaliste chevronné. Maintenant les choses sérieuses vont commencer !
+					</p>
 					<p ng-if="$storage.level===2">
   						Vous avez appris les bases de l'utilisation de Cuicuitter pour chercher des infos<br />
 						et savoir de quoi elles parlent. Mais la route est encore longue avant de devenir<br />
@@ -14,6 +19,8 @@
 						Bravo ! Vous êtes vigilant : avec vous, pas question de publier n’importe quoi ! <br />
 						Vous commencez à être un journaliste confirmé. Mais si vous êtiez aux commandes, sauriez-vous détecter les scoops et choisir quelles infos mettre en avant sur votre site ?
  					</p>
+
+					<p>&nbsp;</p>
 
 					<div class="clearfix score__actions">
 						<span ng-if="$storage.level<4">

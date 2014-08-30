@@ -96,7 +96,7 @@ angular.module('newsGameApp')
 		};
 
 		function addCuit(next, force, author, theme) {
-			// $log.log("addCuit", next, force, author, theme);
+			$log.log("addCuit", next, force, author, theme);
 			if (!force && ($scope.cuitsHover || $scope.skipCuits)) {
 				$timeout(function() {
 					addCuit(true);
@@ -744,6 +744,7 @@ angular.module('newsGameApp')
 				$scope.closeWin('notepad');
 				$scope.openWin('themeSelector');
 				$scope.themeSelectorAction = function() {
+					$log.log("themeSelectorAction");
 					$scope.$storage.chosenTheme = $scope.selectedTheme;
 					$scope.$storage.chosenTheme = $scope.$storage.chosenTheme;
 					$scope.closeWin('themeSelector');
@@ -756,6 +757,7 @@ angular.module('newsGameApp')
 					var $choices = jQuery('#themeSelector :radio');
 					$choices.eq(Math.round(Math.random() * $choices.length)).click();
 					jQuery('#themeSelector button').click();
+					$scope.$storage.chosenTheme = 'politique';
 				}
 			});
 
@@ -865,7 +867,7 @@ angular.module('newsGameApp')
 				addChat(chatDelay, 'me', "Ah... ce Cuitt-là ne m’intéresse pas trop. Attends, j’en cherche un autre !");
 				addStep(chatDelay, function() {
 					// show info popup
-					addCuit(false, true);
+					addCuit(false, true, null, $scope.$storage.chosenTheme);
 					/*
 					var nbCuits = Math.round(Math.random() * 3);
 					while (nbCuits--) {
@@ -993,6 +995,7 @@ angular.module('newsGameApp')
 
 			addStep(2500, function() {
 				// show scoring
+				updateScore();
 				showScoring();
 			});
 
@@ -1790,6 +1793,9 @@ angular.module('newsGameApp')
 		function updateScore() {
 			var score = $scope.score ? $scope.score : 0;
 			var scoring = $scope.scoring['level-' + $scope.level];
+			if ($scope.level === 1) {
+				$scope.scoreStatus = 'victory';
+			}
 			if ($scope.level === 2) {
 				angular.forEach($scope.posts, function(post, idx) {
 					if (post.cuit.theme === $scope.$storage.chosenTheme) {
