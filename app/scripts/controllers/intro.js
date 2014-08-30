@@ -209,6 +209,6 @@ angular.module('newsGameApp')
 			$timeout(function() {
 				doSteps();
 			}, chatDelay * delayModifier);
-		}, chatDelay * delayModifier);
+		}, 2000 + chatDelay * delayModifier);
 
 	});
