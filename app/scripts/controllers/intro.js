@@ -160,17 +160,17 @@ angular.module('newsGameApp')
 
 			var interlocutor = 'SoniaA';
 
-			addChat(chatDelay, interlocutor + "3", "Bonjour et bienvenue chez L’International ! Pas trop tendu(e) pour ta première journée ?", "Sonia");
+			addChat(chatDelay, interlocutor + "3", "Bonjour et bienvenue chez L’International ! Pas trop tendu(e) pour ta première journée ?", "Sonia, rédactrice en chef");
 			addChat(chatDelay, 'me', "Heu... un peu, si !", "moi");
-			addChat(chatDelay, interlocutor + "3", "C’est vrai que nous sommes un site d’information très populaire... Mais ne vous en faites pas, ça va aller. Avec votre blog, vous avez montré que vous saviez sélectionner une information. C’est une bonne base !", "Sonia");
+			addChat(chatDelay, interlocutor + "3", "C’est vrai que nous sommes un site d’information très populaire... Mais ne vous en faites pas, ça va aller. Avec votre blog, vous avez montré que vous saviez sélectionner une information. C’est une bonne base !", "Sonia, rédactrice en chef");
 			addChat(chatDelay, 'me', "Merci ! Je compte faire de mon mieux !", "moi");
-			addChat(chatDelay, interlocutor + "3", "Ici, vous allez continuer à vous occuper de " + $scope.themes[$scope.$storage.chosenTheme] + ". Mais attention, ce n’est pas tout ! Je vous charge aussi de trouver des infos sur " + $scope.themes[$scope.$storage.mandatoryTheme] + " !", "Sonia");
+			addChat(chatDelay, interlocutor + "3", "Ici, vous allez continuer à vous occuper de " + $scope.themes[$scope.$storage.chosenTheme] + ". Mais attention, ce n’est pas tout ! Je vous charge aussi de trouver des infos sur " + $scope.themes[$scope.$storage.mandatoryTheme] + " !", "Sonia, rédactrice en chef");
 			addChat(chatDelay, 'me', "" + $scope.themes[$scope.$storage.mandatoryTheme] + " ? Ok, c'est noté !", "moi");
-			addChat(chatDelay, interlocutor + "3", "Et ce n’est pas tout ! Nos lecteurs DÉTESTENT qu’on leur donne de mauvaises infos.", "Sonia");
+			addChat(chatDelay, interlocutor + "3", "Et ce n’est pas tout ! Nos lecteurs DÉTESTENT qu’on leur donne de mauvaises infos.", "Sonia, rédactrice en chef");
 			addChat(chatDelay, 'me', "Je comprends...", "moi");
-			addChat(chatDelay, interlocutor + "3", "Du coup, vous allez devoir apprendre à VERIFIER vous informations. Vous savez comment faire ?", "Sonia");
+			addChat(chatDelay, interlocutor + "3", "Du coup, vous allez devoir apprendre à VERIFIER vous informations. Vous savez comment faire ?", "Sonia, rédactrice en chef");
 			addChat(chatDelay, 'me', "Hum... Non.", "moi");
-			addChat(chatDelay, interlocutor + "3", "Alors connectez-vous sur votre ordi, je vais vous montrer.", "Sonia");
+			addChat(chatDelay, interlocutor + "3", "Alors connectez-vous sur votre ordi, je vais vous montrer.", "Sonia, rédactrice en chef");
 			addStep(chatDelay, function() {
 				$location.path('/play');
 			});
@@ -185,17 +185,17 @@ angular.module('newsGameApp')
 
 			var interlocutor = 'SoniaB';
 
-			addChat(chatDelay, interlocutor + "3", "Ah vous voilà ! Je vous attendais !", "Sonia");
+			addChat(chatDelay, interlocutor + "3", "Ah vous voilà ! Je vous attendais !", "Sonia, rédactrice en chef");
 			addChat(chatDelay, 'me', "Oups... Qu’est-ce qui se passe, chef, j’ai fait une bêtise ?", "moi");
-			addChat(chatDelay, interlocutor + "3", "Au contraire ! Vous vous débrouillez très bien ! Alors comme je pars en vacances ce matin, j’ai pensé que vous alliez me remplacer !", "Sonia");
+			addChat(chatDelay, interlocutor + "3", "Au contraire ! Vous vous débrouillez très bien ! Alors comme je pars en vacances ce matin, j’ai pensé que vous alliez me remplacer !", "Sonia, rédactrice en chef");
 			addChat(chatDelay, 'me', "Ah bon ?!! Mais je... Heu...", "moi");
-			addChat(chatDelay, interlocutor + "3", "Mais si, mais si, vous allez vous en sortir ! Il y a seulement deux règles à connaître !", "Sonia");
+			addChat(chatDelay, interlocutor + "3", "Mais si, mais si, vous allez vous en sortir ! Il y a seulement deux règles à connaître !", "Sonia, rédactrice en chef");
 			addChat(chatDelay, 'me', "Ah ? Les quelles ?", "moi");
-			addChat(chatDelay, interlocutor + "3", "La première : les gens aiment qu’on leur parle de tout ! Vous devez donc essayer de publier des infos qui portent sur chacune des six thématiques existantes !", "Sonia");
+			addChat(chatDelay, interlocutor + "3", "La première : les gens aiment qu’on leur parle de tout ! Vous devez donc essayer de publier des infos qui portent sur chacune des six thématiques existantes !", "Sonia, rédactrice en chef");
 			addChat(chatDelay, 'me', "Ah. Ca, c’est plutôt bien : je ne suis plus obligé de chercher seulement les infos parlant de " + $scope.themes[$scope.$storage.chosenTheme] + " et " + $scope.themes[$scope.$storage.mandatoryTheme] + "...", "moi");
-			addChat(chatDelay, interlocutor + "3", "Eh non. Mais attention à la règle numéro 2 : il faut HIERARCHISER l’information !", "Sonia");
+			addChat(chatDelay, interlocutor + "3", "Eh non. Mais attention à la règle numéro 2 : il faut HIERARCHISER l’information !", "Sonia, rédactrice en chef");
 			addChat(chatDelay, 'me', "Hiérarchi... quoi ?", "moi");
-			addChat(chatDelay, interlocutor + "3", "Pffff... Bon, connectez-vous sur mon ordinateur, je vais vous montrer en utilisant ma tablette. Allez, je vous laisse, je me connecte dès que je suis dans le taxi. A bientôôôôôôt !", "Sonia");
+			addChat(chatDelay, interlocutor + "3", "Pffff... Bon, connectez-vous sur mon ordinateur, je vais vous montrer en utilisant ma tablette. Allez, je vous laisse, je me connecte dès que je suis dans le taxi. A bientôôôôôôt !", "Sonia, rédactrice en chef");
 			addChat(chatDelay, 'me', "Mais... attendez, je... Ah, elle est partie.", "moi");
 			addStep(chatDelay, function() {
 				$location.path('/play');

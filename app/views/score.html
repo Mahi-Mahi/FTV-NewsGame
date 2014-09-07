@@ -1,3 +1,4 @@
+	<div class="scoring-bg"></div>
 	<div id="scoring" ng-class="[level, status]">
 		<div class="inner-content">
 			<div class="scoring__body scoring__body--{{$storage.scoreStatus}}">
@@ -105,6 +106,12 @@
 							</div>
 							<div class="starburst" ng-if="post.score>1"><span><span><span><span><span><span><span><span><strong>{{post.score}}</strong>pts</span></span></span></span></span></span></span></span></div>
 							<div class="starburst starburst--minus" ng-if="post.score<1"><span><span><span><span><span><span><span><span><strong>{{post.score}}</strong>pts</span></span></span></span></span></span></span></span></div>
+							<p ng-if="post.score<1" class="scoring__details__text">
+								L'info choisie était complètement bidon&nbsp;! <br />La prochaine fois vérifiez sa crédibilité&nbsp;!
+							</p>
+							<p ng-if="post.score>1" class="scoring__details__text">
+								La thématique de l’info choisie est exactement celle pour laquelle vous êtes apprécié
+							</p>
 						</li>
 
 					</ul>

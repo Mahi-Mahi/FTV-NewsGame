@@ -1263,7 +1263,7 @@ angular.module('newsGameApp')
 			$scope.skipCuits = true;
 
 			$scope.currentChat = {
-				contact: "Jessica",
+				contact: "Sonia",
 				discussion: []
 			};
 

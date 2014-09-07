@@ -27,7 +27,7 @@
 	font-style: normal;
 }
 
-html { font-size: 75%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; height:100%; }
+html { font-size: 87.5%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; height:100%; }
 html, button, input, select, textarea { font-family:'HelveticaNeueLight', Helvetica, Verdana, sans-serif; color:$default-color; }
 body {
 	@each $bgd in home, intro-level-1, intro-level-2, intro-level-3, intro-level-4, play-level-1, play-level-2, play-level-3, play-level-4 {
