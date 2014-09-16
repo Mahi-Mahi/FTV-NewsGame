@@ -117,7 +117,7 @@ angular.module('newsGameApp')
 			var interlocutor = 'Daniel';
 
 			addChat(chatDelay, 'me', "Hé ! Salut", 'Moi');
-		addChat(chatDelay, interlocutor + "3", "Ah, salut !", "Mehdi");
+			addChat(chatDelay, interlocutor + "3", "Ah, salut !", "Mehdi");
 			addChat(chatDelay, 'me', "T’as passé un bon week-end ? Tu as trouvé ce que tu allais mettre sur ta fiche d’orientation ?", "Moi");
 			addChat(chatDelay, interlocutor + "3", "Pffft ! Pas du tout. Comment on est censés savoir ce qu’on voudra faire plus tard... Et toi, t’as une idée ?", "Mehdi");
 			if ($routeParams.debug === 'stop') {
@@ -162,13 +162,13 @@ angular.module('newsGameApp')
 
 			addChat(chatDelay, interlocutor + "3", "Bonjour et bienvenue chez L’International ! Pas trop tendu(e) pour ta première journée ?", "Sonia, rédactrice en chef");
 			addChat(chatDelay, 'me', "Heu... un peu, si !", "moi");
-			addChat(chatDelay, interlocutor + "3", "C’est vrai que nous sommes un site d’information très populaire... Mais ne vous en faites pas, ça va aller. Avec votre blog, vous avez montré que vous saviez sélectionner une information. C’est une bonne base !", "Sonia, rédactrice en chef");
+			addChat(chatDelay, interlocutor + "3", "C’est vrai que nous sommes un site d’informations très populaire... Mais ne vous en faites pas, ça va aller. Avec votre blog, vous avez montré que vous saviez sélectionner une information. C’est une bonne base !", "Sonia, rédactrice en chef");
 			addChat(chatDelay, 'me', "Merci ! Je compte faire de mon mieux !", "moi");
 			addChat(chatDelay, interlocutor + "3", "Ici, vous allez continuer à vous occuper de " + $scope.themes[$scope.$storage.chosenTheme] + ". Mais attention, ce n’est pas tout ! Je vous charge aussi de trouver des infos sur " + $scope.themes[$scope.$storage.mandatoryTheme] + " !", "Sonia, rédactrice en chef");
 			addChat(chatDelay, 'me', "" + $scope.themes[$scope.$storage.mandatoryTheme] + " ? Ok, c'est noté !", "moi");
 			addChat(chatDelay, interlocutor + "3", "Et ce n’est pas tout ! Nos lecteurs DÉTESTENT qu’on leur donne de mauvaises infos.", "Sonia, rédactrice en chef");
 			addChat(chatDelay, 'me', "Je comprends...", "moi");
-			addChat(chatDelay, interlocutor + "3", "Du coup, vous allez devoir apprendre à VERIFIER vous informations. Vous savez comment faire ?", "Sonia, rédactrice en chef");
+			addChat(chatDelay, interlocutor + "3", "Du coup, vous allez devoir apprendre à VERIFIER vos informations. Vous savez comment faire ?", "Sonia, rédactrice en chef");
 			addChat(chatDelay, 'me', "Hum... Non.", "moi");
 			addChat(chatDelay, interlocutor + "3", "Alors connectez-vous sur votre ordi, je vais vous montrer.", "Sonia, rédactrice en chef");
 			addStep(chatDelay, function() {
