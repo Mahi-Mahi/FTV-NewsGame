@@ -1,5 +1,5 @@
 .splash {
-
+	background:#000;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -7,24 +7,80 @@
 	left: 0;
 	z-index: 99;
 
-	&.level-1 {
-		background:image-url("background/splash-intro-level-1.jpg") 50% 50% no-repeat fixed #000;
-	}
-	&.level-2 {
-		background:image-url("background/splash-intro-level-2.jpg") 50% 50% no-repeat fixed #000;
-	}
-	&.level-3 {
-		background:image-url("background/splash-intro-level-3.jpg") 50% 50% no-repeat fixed #000;
-	}
-
-	-webkit-transition:all linear 1s;
-	transition:all linear 1s;
+	// -webkit-transition:all linear 1s;
+	// transition:all linear 1s;
 
 	&.ng-hide {
 		opacity: 0;
 		z-index: -1;
 	}
+}
 
+.splash__body {
+    display: table;
+    height: 100%;
+    width: 100%;	
+}
+
+.splash__body__inner {
+	color:#fff;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+	h2 {
+	    color:#fff;
+	    font:normal 3.2em 'Amatic SC', sans-serif;
+	    margin: 0;
+	    padding: 50px 0 0 0;
+	    text-transform: uppercase;
+	    overflow: hidden;
+	    text-align: center;
+	    &:before, &:after {
+	        border-top: 1px solid #fff;
+	        content: "";
+	        display: inline-block;
+	        height: .1em;
+	        position: relative;
+	        vertical-align: middle;
+	        width: 50%;
+	    }
+	    &:before {
+	        right: 0.5em;
+	        margin-left: -50%;
+	    }
+	    &:after {
+	        left: 0.5em;
+	        margin-right: -50%;
+	    }
+	}
+	h3 {
+		color:#fff;
+		display: block;
+		font-size:3em;
+		font-weight: normal;
+		margin: 0;
+		padding:10px 0;
+	}
+	p {
+		line-height: 1.6;
+	}
+}
+
+.logo-splash {
+	background:image-url("logo-splash.png") left top no-repeat;
+	display: block;
+	height: 378px;
+	margin:0 auto;
+	padding:0;
+	width:369px;
+	@include image-2x("logo-splash-2x.png", 369px, 378px);
+}
+
+.splash__body__inner__text {
+	display: block;
+	margin:0 auto;
+	padding:0;
+	width:55%;
 }
 
 .top-skip {
