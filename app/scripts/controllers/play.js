@@ -392,7 +392,7 @@ angular.module('newsGameApp')
 			if ($scope.remainingTime + duration > $scope.totalTime / 4 && $scope.remainingTime <= $scope.totalTime / 4) {
 				// feedback('bad', "Plus que 25% du temps<br />Vous n'avez presque plus de temps, la journée touche bientôt à sa fin. Si ce n'est pas déjà fait, vous devriez vite publier des informations.");
 			}
-			if ($scope.remainingTime < 0) {
+			if ($scope.remainingTime <= 0) {
 				doEndDay();
 			}
 		}
