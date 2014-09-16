@@ -117,20 +117,20 @@ angular.module('newsGameApp')
 			var interlocutor = 'Daniel';
 
 			addChat(chatDelay, 'me', "Hé ! Salut", 'Moi');
-			addChat(chatDelay, interlocutor + "3", "Ah, salut !", "Medhi");
+		addChat(chatDelay, interlocutor + "3", "Ah, salut !", "Mehdi");
 			addChat(chatDelay, 'me', "T’as passé un bon week-end ? Tu as trouvé ce que tu allais mettre sur ta fiche d’orientation ?", "Moi");
-			addChat(chatDelay, interlocutor + "3", "Pffft ! Pas du tout. Comment on est censés savoir ce qu’on voudra faire plus tard... Et toi, t’as une idée ?", "Medhi");
+			addChat(chatDelay, interlocutor + "3", "Pffft ! Pas du tout. Comment on est censés savoir ce qu’on voudra faire plus tard... Et toi, t’as une idée ?", "Mehdi");
 			if ($routeParams.debug === 'stop') {
 				return;
 			}
 			addChat(chatDelay, 'me', "Non, pas trop. Tu fais quoi avec ton aïePhone ? Tu admires tes selfies du week-end ?", "Moi");
-			addChat(chatDelay, interlocutor + "3", "Ah non, plus sérieux que ça ! Je checkais ma timeline sur Cuicuitter !", "Medhi");
+			addChat(chatDelay, interlocutor + "3", "Ah non, plus sérieux que ça ! Je checkais ma timeline sur Cuicuitter !", "Mehdi");
 			addChat(chatDelay, 'me', "Tu quoi ta quoi sur kuikuiquoi ? J’ai rien compris !", "Moi");
-			addChat(chatDelay, interlocutor + "3", "Attends, je vais te montrer... Tu vas voir, c’est génial !", "Medhi");
+			addChat(chatDelay, interlocutor + "3", "Attends, je vais te montrer... Tu vas voir, c’est génial !", "Mehdi");
 			// addChat(chatDelay, 'off', "(On entend la sonnerie du lycée. Les deux personnages ont l’air dépités)");
-			addChat(chatDelay, interlocutor + "3", "Arf, faut aller en cours. Bon c’est pas grave : ce soir, t’allumes ton ordi, tu me captes sur Skoupe et je t’expliquerai.", "Medhi");
+			addChat(chatDelay, interlocutor + "3", "Arf, faut aller en cours. Bon c’est pas grave : ce soir, t’allumes ton ordi, tu me captes sur Skoupe et je t’expliquerai.", "Mehdi");
 			addChat(chatDelay, 'me', "Ok, super! A ce soir !", "Moi");
-			addChat(chatDelay, interlocutor + "3", "A plus!", "Medhi");
+			addChat(chatDelay, interlocutor + "3", "A plus!", "Mehdi");
 			addStep(chatDelay, function() {
 				$location.path('/play');
 			});
