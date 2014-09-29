@@ -157,7 +157,10 @@ angular.module('newsGameApp')
 
 			steps = [];
 
-			var mandatory = utils.shuffle(Object.keys(dataService.data.all.themes))[0];
+			var mandatory;
+			while (!mandatory || mandatory === $scope.$storage.selectedTheme) {
+				mandatory = utils.shuffle(Object.keys(dataService.data.all.themes))[0];
+			}
 			$scope.$storage.mandatoryTheme = mandatory;
 
 			var interlocutor = 'SoniaA';

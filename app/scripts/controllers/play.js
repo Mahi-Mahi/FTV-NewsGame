@@ -560,9 +560,9 @@ angular.module('newsGameApp')
 			template: 'notepad',
 			visible: false,
 			active: true,
-			height: 200,
+			height: 220,
 			position: {
-				top: 250,
+				top: 50,
 				left: 450
 			}
 		});
@@ -1862,6 +1862,7 @@ angular.module('newsGameApp')
 
 		$timeout(function() {
 			$log.log($scope.fake);
+			$log.log($scope.chosenTheme);
 			if ($scope.fake) {
 				fake();
 			} else {

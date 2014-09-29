@@ -1,7 +1,38 @@
-<h3 class="notepad__title notepad__title--warning">Attention !! </h3>
-<p>
-	&nbsp;
-</p>
-<ul class="unstyled notepad__list">
-	<li ng-repeat="(theme, title) in themes" ng-class="theme">{{title}}</li>
-</ul>
+
+<div ng-if="level === 2">
+	<h3 class="notepad__title ">Ma rubrique </h3>
+	<p></p>
+	<ul class="unstyled notepad__list">
+		<li ng-repeat="(theme, title) in themes" ng-class="theme" ng-if="theme === $storage.chosenTheme">{{title}}</li>
+	</ul>
+	<p></p>
+	<h3 class="notepad__title ">Les autres rubriques </h3>
+	<p></p>
+	<ul class="unstyled notepad__list">
+		<li ng-repeat="(theme, title) in themes" ng-class="theme" ng-if="theme !== $storage.chosenTheme">{{title}}</li>
+	</ul>
+</div>
+
+<div ng-if="level === 3">
+	<h3 class="notepad__title ">Mes rubriques </h3>
+	<p></p>
+	<ul class="unstyled notepad__list">
+		<li ng-repeat="(theme, title) in themes" ng-class="theme" ng-if="theme === $storage.chosenTheme || theme === $storage.mandatoryTheme ">{{title}}</li>
+	</ul>
+	<p></p>
+	<h3 class="notepad__title ">Les autres rubriques </h3>
+	<p></p>
+	<ul class="unstyled notepad__list">
+		<li ng-repeat="(theme, title) in themes" ng-class="theme" ng-if="theme !== $storage.chosenTheme && theme !== $storage.mandatoryTheme">{{title}}</li>
+	</ul>
+</div>
+
+<div ng-if="level === 4">
+	<h3 class="notepad__title notepad__title--warning">Attention !! </h3>
+	<p>
+		Veiller à publier des infos de rubriques différentes :
+	</p>
+	<ul class="unstyled notepad__list">
+		<li ng-repeat="(theme, title) in themes" ng-class="theme">{{title}}</li>
+	</ul>
+</div>
