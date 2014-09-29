@@ -71,7 +71,7 @@ angular.module('newsGameApp')
 		outro.level2 = function() {
 			var text;
 			$scope.character = "Daniel3";
-			$scope.characterName = "Medhi";
+			$scope.characterName = "Mehdi";
 			if ($scope.$storage.scoreStatus === 'defeat') {
 				if ($scope.$storage.posts.length < 4) {
 					text = "Pas mal ton blog,... mais y a pas assez d'info. Faut te secouer un peu ! Maintenant c'est l'heure de réviser tes cours, non ? Mais ne lâche pas l'affaire, tu feras mieux demain ! ";

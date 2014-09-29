@@ -711,7 +711,7 @@ angular.module('newsGameApp')
 			$log.log(">scenario1");
 
 			$scope.currentChat = {
-				contact: "Medhi",
+				contact: "Mehdi",
 				discussion: []
 			};
 
@@ -1012,7 +1012,7 @@ angular.module('newsGameApp')
 			addCuit(true);
 
 			$scope.currentChat = {
-				contact: "Medhi",
+				contact: "Mehdi",
 				discussion: []
 			};
 
