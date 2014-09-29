@@ -1,6 +1,6 @@
 'use strict';
 angular.module('newsGameApp')
-	.controller('HomeCtrl', function($rootScope, $scope, $localStorage, $log, $location, titleService) {
+	.controller('HomeCtrl', function($rootScope, $scope, $localStorage, $log, $location, titleService, Xiti) {
 
 		$log.log('Home');
 
@@ -19,6 +19,7 @@ angular.module('newsGameApp')
 			$location.path("/intro");
 		};
 
+		Xiti.click(null, "Serious Game::home");
 		$log.log($scope.$storage.level);
 		$log.log($scope.$storage.scores);
 

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('newsGameApp')
-	.controller('OutroCtrl', function($rootScope, $scope, $routeParams, $log, $location, $timeout, $interval, $q, dataService, titleService, utils, $localStorage) {
+	.controller('OutroCtrl', function($rootScope, $scope, $routeParams, $log, $location, $timeout, $interval, $q, dataService, titleService, Xiti, utils, $localStorage) {
 
 		$log.log('Outro');
 
@@ -13,6 +13,8 @@ angular.module('newsGameApp')
 			level: 1,
 			scores: {}
 		});
+
+		Xiti.click(null, "Serious Game::outro::level-" + $scope.$storage.level);
 
 		var chatDelay = dataService.data.settings.chatDelay;
 		var chatInterval = dataService.data.settings.chatInterval;

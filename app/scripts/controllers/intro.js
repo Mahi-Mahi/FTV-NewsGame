@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('newsGameApp')
-	.controller('IntroCtrl', function($rootScope, $scope, $routeParams, $log, $location, $timeout, $interval, $q, dataService, titleService, utils, $localStorage) {
+	.controller('IntroCtrl', function($rootScope, $scope, $routeParams, $log, $location, $timeout, $interval, $q, dataService, titleService, Xiti, utils, $localStorage) {
 
 		$log.log('Intro');
 
@@ -13,6 +13,8 @@ angular.module('newsGameApp')
 			level: 1,
 			scores: {}
 		});
+
+		Xiti.click(null, "Serious Game::intro::level-" + $scope.$storage.level);
 
 		// all themes are loaded from /data/all.json
 		$scope.themes = dataService.data.all.themes;

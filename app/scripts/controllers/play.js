@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('newsGameApp')
-	.controller('PlayCtrl', function($document, $rootScope, $scope, $routeParams, $location, $log, prod, $timeout, $interval, dataService, titleService, utils, $localStorage) {
+	.controller('PlayCtrl', function($document, $rootScope, $scope, $routeParams, $location, $log, prod, $timeout, $interval, dataService, titleService, Xiti, utils, $localStorage) {
 
 		$scope.debug = ($routeParams.debug === 'debug');
 		$scope.fake = ($routeParams.debug === 'fake');
@@ -14,6 +14,8 @@ angular.module('newsGameApp')
 		});
 
 		titleService.setTitle('Play');
+
+		Xiti.click(null, "Serious Game::play::level-" + $scope.$storage.level);
 
 		// debug config
 		var delayModifier = ($scope.debug ? 0.05 : 1) * ($routeParams.debug === 'fast' ? 0.5 : 1);

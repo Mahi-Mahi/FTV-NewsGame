@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('newsGameApp')
-	.controller('ScoreCtrl', function($rootScope, $scope, $routeParams, $log, $location, $timeout, $interval, $q, dataService, titleService, utils, $localStorage) {
+	.controller('ScoreCtrl', function($rootScope, $scope, $routeParams, $log, $location, $timeout, $interval, $q, dataService, titleService, Xiti, utils, $localStorage) {
 
 		$log.log('Score');
 
@@ -13,6 +13,8 @@ angular.module('newsGameApp')
 			level: 1,
 			scores: {}
 		});
+
+		Xiti.click(null, "Serious Game::score::level-" + $scope.$storage.level);
 
 		$rootScope.background = 'intro-level-' + $scope.$storage.level;
 
