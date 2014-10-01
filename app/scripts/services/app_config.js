@@ -10,10 +10,10 @@ angular.module("newsGameApp").constant("config", {
 		feedbackBad: 'sounds/feedback_bad',
 		feedbackGood: 'sounds/feedback_good',
 		home: 'sounds/home',
-		introText: 'sounds/introText',
-		schoolBell: 'sounds/schoolBell',
-		skoupeMsg: 'sounds/skoupeMsg',
-		skoupeText: 'sounds/skoupeText',
+		introText: 'sounds/intro_text',
+		schoolBell: 'sounds/school_bell',
+		skoupeMsg: 'sounds/skoupe_msg',
+		skoupeText: 'sounds/skoupe_text',
 		verification: 'sounds/verification',
 	}
 });

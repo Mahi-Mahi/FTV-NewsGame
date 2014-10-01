@@ -1,11 +1,15 @@
 'use strict';
 
 angular.module('newsGameApp')
-	.controller('OutroCtrl', function($rootScope, $scope, $routeParams, $log, $location, $timeout, $interval, $q, dataService, titleService, Xiti, utils, $localStorage) {
+	.controller('OutroCtrl', function($rootScope, $scope, $routeParams, $log, $location, $timeout, $interval, $q, dataService, titleService, Xiti, Sound, utils, $localStorage) {
 
 		$log.log('Outro');
 
 		titleService.setTitle('Outro');
+
+		Sound.init();
+
+		Sound.sounds.introText.play();
 
 		$scope.debug = ($routeParams.debug);
 

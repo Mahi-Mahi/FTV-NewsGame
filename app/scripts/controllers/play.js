@@ -1,12 +1,14 @@
 'use strict';
 
 angular.module('newsGameApp')
-	.controller('PlayCtrl', function($document, $rootScope, $scope, $routeParams, $location, $log, prod, $timeout, $interval, dataService, titleService, Xiti, utils, $localStorage) {
+	.controller('PlayCtrl', function($document, $rootScope, $scope, $routeParams, $location, $log, prod, $timeout, $interval, dataService, titleService, Xiti, Sound, utils, $localStorage) {
 
 		$scope.debug = ($routeParams.debug === 'debug');
 		$scope.fake = ($routeParams.debug === 'fake');
 		$scope.skip = ($routeParams.debug === 'skip');
 		$scope.fast = ($routeParams.debug === 'fast');
+
+		Sound.init();
 
 		$scope.$storage = $localStorage.$default({
 			level: 1,
@@ -57,6 +59,7 @@ angular.module('newsGameApp')
 		var openSourceThemeCallback = false;
 		$scope.openSource = function(id) {
 			// $log.log("openSource(" + id);
+			Sound.sounds.click.play();
 			$scope.closeWin('source');
 			$scope.currentSource = dataService.data.all.sources[id];
 			$scope.openWin('source');
@@ -69,6 +72,7 @@ angular.module('newsGameApp')
 		var verifySourceThemeCallback = false;
 		$scope.verifySourceTheme = function(id) {
 			// $log.log("verifySourceTheme(" + id);
+			Sound.sounds.click.play();
 			dataService.data.all.sources[id].themeVerified = true;
 			$scope.currentSource = dataService.data.all.sources[id];
 			decrementTime('verify-source-theme', 'verify');
@@ -148,8 +152,11 @@ angular.module('newsGameApp')
 		}
 		$scope.addCuit = addCuit;
 
-		$scope.showCuits = function() {
+		$scope.showCuits = function(click) {
 			$log.log("showCuits");
+			if (click) {
+				Sound.sounds.click.play();
+			}
 			angular.forEach($scope.cuits, function(cuit) {
 				if (cuit.visible === false) {
 					$log.log("show", cuit);
@@ -162,6 +169,7 @@ angular.module('newsGameApp')
 		// Verify Cuit Theme ( + decrement time counter )
 		var verifyCuitThemeCallback = false;
 		$scope.verifyCuitTheme = function(cuit) {
+			Sound.sounds.verification.play();
 			$log.log("verifyCuitTheme(" + cuit);
 			selectedCuit = cuit;
 			cuit.themeVerified = true;
@@ -175,6 +183,7 @@ angular.module('newsGameApp')
 		var verifyCuitCredibilityCallback = false;
 		$scope.verifyCuitCredibility = function(cuit) {
 			// $log.log("verifyCuitCredibility(" + cuit);
+			Sound.sounds.verification.play();
 			selectedCuit = cuit;
 			$scope.selectedCuit = selectedCuit;
 			$scope.skipCuits = true;
@@ -211,6 +220,7 @@ angular.module('newsGameApp')
 		var verifyCuitExclusivityCallback = false;
 		$scope.verifyCuitExclusivity = function(cuit) {
 			$log.log("verifyCuitExclusivity(" + cuit);
+			Sound.sounds.verification.play();
 			selectedCuit = cuit;
 			$scope.selectedCuit = selectedCuit;
 			$scope.skipCuits = true;
@@ -243,6 +253,7 @@ angular.module('newsGameApp')
 		}
 
 		function contactVerify(force) {
+			Sound.sounds.click.play();
 			var added = false;
 			angular.forEach($scope.contacts, function(contact, key) {
 				if (!added && (force || contact.id === selectedContact.id)) {
@@ -287,6 +298,7 @@ angular.module('newsGameApp')
 
 		var newContactCallback;
 		$scope.newContact = function() {
+			Sound.sounds.click.play();
 			$scope.openWin('themeSelector');
 			$scope.themeSelectorAction = function() {
 				addContact($scope.selectedTheme);
@@ -303,6 +315,7 @@ angular.module('newsGameApp')
 		// open contact detail window
 		$scope.openContact = function(id) {
 			// $log.log("openContact(" + id);
+			Sound.sounds.click.play();
 			$scope.closeWin('contact');
 			$scope.currentContact = $scope.contacts[id];
 			$scope.openWin('contact');
@@ -313,6 +326,7 @@ angular.module('newsGameApp')
 		var selectedContact;
 		$scope.canCall = false;
 		$scope.callContact = function(contact) {
+			Sound.sounds.click.play();
 			$log.log("callContact(", contact.id);
 			selectedContact = contact;
 			if (callContactAction) {
@@ -331,6 +345,7 @@ angular.module('newsGameApp')
 		// open chat window
 		$scope.openChat = function(id) {
 			// $log.log("openChat(" + id);
+			Sound.sounds.click.play();
 			$scope.closeWin('chat');
 			$scope.currentchatContact = $scope.chat[id];
 			$scope.openWin('chat');
@@ -480,6 +495,7 @@ angular.module('newsGameApp')
 
 		// show/hide window
 		$scope.toggleWin = function(id) {
+			Sound.sounds.click.play();
 			if ($scope.windows[id].visible) {
 				$scope.closeWin(id);
 			} else {
@@ -495,6 +511,10 @@ angular.module('newsGameApp')
 						$scope.tooltip.position();
 					}
 				});
+				if (id === 'chat') {
+					Sound.sounds.skoupeMsg.play();
+				}
+
 			}
 			jQuery('#' + id).data('kendoWindow').toFront();
 			if (options) {
@@ -683,12 +703,13 @@ angular.module('newsGameApp')
 		function addChat(delay, speaker, content) {
 			addStep(delay, function() {
 				$scope.openWin('chat');
+				Sound.sounds.skoupeText.play();
 				$scope.currentChat.status = ((speaker === 'other') ? 'reading' : 'writing');
 				var $container = angular.element(document.getElementById('chat-scroll'));
 				var chatBottom = angular.element(document.getElementById('chat-bottom'));
 				$container.scrollToElement(chatBottom, 30, 100);
 			});
-			addStep(delay - 500, function() {
+			addStep(delay - 400, function() {
 				$scope.currentChat.discussion.push({
 					speaker: speaker,
 					content: content
@@ -1768,9 +1789,11 @@ angular.module('newsGameApp')
 			$log.log("feedback(", type, detail);
 			$scope.feedback.type = type;
 			if (type === "good") {
+				Sound.sounds.feedbackGood.play();
 				$scope.feedback.status = "Vos lecteurs vont aimer cette publication !";
 			}
 			if (type === "bad") {
+				Sound.sounds.feedbackBad.play();
 				$scope.feedback.status = "Vos lecteurs ne vont aimer pas cette publication !";
 			}
 			$scope.feedback.detail = detail;

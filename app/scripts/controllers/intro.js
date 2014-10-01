@@ -1,11 +1,15 @@
 'use strict';
 
 angular.module('newsGameApp')
-	.controller('IntroCtrl', function($rootScope, $scope, $routeParams, $log, $location, $timeout, $interval, $q, dataService, titleService, Xiti, utils, $localStorage) {
+	.controller('IntroCtrl', function($rootScope, $scope, $routeParams, $log, $location, $timeout, $interval, $q, dataService, titleService, Xiti, Sound, utils, $localStorage) {
 
 		$log.log('Intro');
 
 		titleService.setTitle('Intro');
+
+		Sound.init();
+
+		Sound.sounds.introText.play();
 
 		$scope.debug = ($routeParams.debug);
 
@@ -130,6 +134,7 @@ angular.module('newsGameApp')
 			addChat(chatDelay, 'me', "Tu quoi ta quoi sur kuikuiquoi ? J’ai rien compris !", "Moi");
 			addChat(chatDelay, interlocutor + "3", "Attends, je vais te montrer... Tu vas voir, c’est génial !", "Mehdi");
 			// addChat(chatDelay, 'off', "(On entend la sonnerie du lycée. Les deux personnages ont l’air dépités)");
+			Sound.sounds.schollBell.play();
 			addChat(chatDelay, interlocutor + "3", "Arf, faut aller en cours. Bon c’est pas grave : ce soir, t’allumes ton ordi, tu me captes sur Skoupe et je t’expliquerai.", "Mehdi");
 			addChat(chatDelay, 'me', "Ok, super! A ce soir !", "Moi");
 			addChat(chatDelay, interlocutor + "3", "A plus!", "Mehdi");
