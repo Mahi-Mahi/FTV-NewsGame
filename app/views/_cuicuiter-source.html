@@ -2,7 +2,7 @@
 	<div ng-class="['level-'+level]">
 		<div class="inner__body">
 			<div class="media">
-				<img src="/images/avatars/{{currentSource.id|removeAT}}.png" alt="" class="avatar" />
+				<img ng-src="/images/avatars/{{currentSource.id|removeAT}}.png" ng-if="currentSource.id" alt="" class="avatar" />
 				<div class="media">
 					<p>
 						{{currentSource.name}}

@@ -16,6 +16,10 @@
   text-align: center;
   text-transform: uppercase;
   width:auto;
+  &.showCuits {
+    margin-bottom: 10px;
+    padding: 5px 8px 0;
+  }
  	span {
     display: block;
     margin:0;

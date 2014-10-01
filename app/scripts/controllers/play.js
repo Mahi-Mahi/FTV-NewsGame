@@ -99,7 +99,7 @@ angular.module('newsGameApp')
 
 		function addCuit(next, force, author, theme) {
 			$log.log("addCuit", next, force, author, theme);
-			if (!force && ($scope.cuitsHover || $scope.skipCuits)) {
+			if (!force && $scope.skipCuits) {
 				$timeout(function() {
 					addCuit(true);
 				}, (Math.random() * chatDelay * delayModifier) + 1800);
@@ -120,13 +120,19 @@ angular.module('newsGameApp')
 							}
 
 							cuit.scoop = (Math.random() < cuit.exclusivity);
+							cuit.visible = false;
+							if ($scope.cuitsHover) {
+								$scope.newCuits = true;
+							} else {
+								$timeout(function() {
+									// $scope.showCuits();
+									cuit.visible = true;
+								}, 1);
+							}
 
 							$scope.allCuits.push(cuitIdx);
 							$scope.cuits.unshift(cuit);
 
-							$timeout(function() {
-								cuit.visible = true;
-							}, 1);
 							added = true;
 							// scheduled next cuit
 							if (next) {
@@ -141,6 +147,17 @@ angular.module('newsGameApp')
 			}
 		}
 		$scope.addCuit = addCuit;
+
+		$scope.showCuits = function() {
+			$log.log("showCuits");
+			angular.forEach($scope.cuits, function(cuit) {
+				if (cuit.visible === false) {
+					$log.log("show", cuit);
+					cuit.visible = true;
+				}
+			});
+			$scope.newCuits = false;
+		};
 
 		// Verify Cuit Theme ( + decrement time counter )
 		var verifyCuitThemeCallback = false;
