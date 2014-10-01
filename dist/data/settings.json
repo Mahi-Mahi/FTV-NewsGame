@@ -1,0 +1,90 @@
+{
+	"chatDelay": 3500,
+	"chatInterval": 50,
+	"totalTime": {
+		"level-2": 360,
+		"level-3": 480,
+		"level-4": 600
+	},
+	"actionsCost": {
+		"verify-cuit-theme": 5,
+		"verify-cuit-credibility": 10,
+		"verify-cuit-exclusivity": 10,
+		"verify-source": 20,
+		"verify-source-theme": 15,
+		"verify-source-credibility": 15,
+		"publish-cuit": 20,
+		"unpublish-cuit": 10,
+		"find-new-contact": 15
+	},
+	"scoring": {
+		"level-2": {
+			"select-cuit-in-correct-theme": 50,
+			"select-cuit-in-wrong-theme": -50,
+			"winning-score": 200,
+			"min-posts": 4
+		},
+		"level-3": {
+			"select-cuit-in-correct-theme-credibility-0": -30,
+			"select-cuit-in-correct-theme-credibility-1": 20,
+			"select-cuit-in-correct-theme-credibility-2": 80,
+			"select-cuit-in-correct-theme-credibility-3": 100,
+			"select-cuit-in-wrong-theme": -60,
+			"winning-score": 500,
+			"min-posts": 5
+		},
+		"level-4": {
+			"select-cuit-credibility-0": -40,
+			"select-cuit-credibility-1-not-exclusive": -20,
+			"select-cuit-credibility-1-exclusive": 0,
+			"select-cuit-credibility-2-not-exclusive": 10,
+			"select-cuit-credibility-2-exclusive": 20,
+			"select-cuit-credibility-3-not-exclusive": 20,
+			"select-cuit-credibility-3-exclusive": 30,
+			"select-cuit-credibility-4-not-exclusive": 20,
+			"select-cuit-credibility-4-exclusive": 50,
+			"cuit-position": [9, 3, 3, 1, 1, 1],
+			"winning-score": 2000
+		},
+		"excellent-score": 6000
+	},
+	"messages": {
+		"haltime": "Attention ! La journée est déjà à moitié écoulée ! N'oubliez pas de publier des informations ou vos lecteurs seront déçus.",
+		"quartertime": "Vous n'avez presque plus de temps, la journée touche bientôt à sa fin. Si ce n'est pas déjà fait, vous devriez vite publier des informations.",
+		"feedback-start": "Cet indicateur vous indique ce que vos lecteurs vont penser des infos que vous publiez.",
+		"level-2": {
+			"feedback-good-theme": "La thématique de cette info est exactement celle que vos lecteurs apprécient !",
+			"feedback-wrong-theme": "Mauvais choix : vos lecteurs ne s'intéressent pas à la thématique de cette info..."
+		},
+		"level-3": {
+			"feedback-good-theme": "La thématique de cette info fait partie de celles que vos lecteurs apprécient !",
+			"feedback-wrong-theme": "Mauvais choix : vos lecteurs ne s'intéressent pas à la thématique de cette info...",
+			"feedback-bad-credibility": "Mauvais choix : la crédibilité de cette info laisse franchement à désirer..."
+		},
+		"level-4": {
+			"feedback-négatif info peu crédible (cases A1, B1, C1, D1)": "Mauvais choix : la crédibilité de cette info laisse franchement à désirer...",
+			"feedback-négatif thématique déjà traitée (cases A2, A3)": "Mauvais choix : vous avez déjà publié une info sur cette thématique.",
+			"feedback-neutre thématique déjà traitée (case A4, B2)": "Cette info est inéressante, mais vous en avez déjà une autre sur la même thématique.",
+			"feedback-neutre info pas très crédible (case C2)": "Cette info n'est pas 100% fausse, mais elle n'est pas non plus très crédible.",
+
+			"feedback-positif scoop pas encore publié (cases D2, D3, D4)": "Cette info est un scoop, vous l'avez publiée en premier. Bravo !",
+			"feedback-positif scoop déjà publié (cases B3, B4)": "Vous aviez déjà publié une info sur cette thématique, mais celle-ci est un scoop. Bravo !",
+			"feedback-positif bonne info (cases C3, C4)": "Voici une info crédible, sur une thématique pas encore publiée : bien joué !",
+			"Message contact capable de vérifier la crédibilité d'un Cuitt (crédibilité 0)": "J'ai fait quelques recherches et cette info est complètement bidon. Je vous déconseille de la publier !",
+			"Message contact capable de vérifier la crédibilité d'un Cuitt (crédibilité 1)": "Cette info n'est pas vraiment crédible. Ne la publiez que si vous n'avez rien d'autre.",
+			"Message contact capable de vérifier la crédibilité d'un Cuitt (crédibilité 2)": "Cette info est crédible. Vous pouvez la publier sans souci !",
+			"Message contact capable de vérifier la crédibilité d'un Cuitt (crédibilité 3)": "Ah ! Voilà une super info ! Très crédible et intéressante… Foncez, publiez-la !",
+			"Message contact incapable de vérifier la crédibilité d'un Cuitt": "Je ne peux rien vous dire sur cette info… Sa thématique n'est pas ma spécialité.",
+
+			"Message contact capable de vérifier la crédibilité d'une source (peu crédible)": "Hum… Cette source n'est pas très crédible. Je serais vous, je me méfierais de ce qu'elle dit.",
+			"Message contact capable de vérifier la crédibilité d'une source (assez crédible)": "Cette source est assez crédible. Il peut lui arriver de dire des bêtises, mais globalement, ça va.",
+			"Message contact capable de vérifier la crédibilité d'une source (très crédible)": "Ah, je connais très bien cette personne. Vous pouvez lui faire confiance les yeux fermés !",
+			"Message contact incapable de vérifier la crédibilité d'une source": "Je ne peux rien vous dire sur cette source… Sa thématique n'est pas ma spécialité.",
+
+			"Message contact : c'est un scoop !": "Incroyable ! Vous avez déniché un scoop ! Si cette info est crédible, publiez-la absolument !",
+			"Message contact : c'est pas un scoop.": "Ah… Cette info n'est pas un scoop. Mais si elle est crédible, elle intéressera peut-être vos lecteurs.",
+			"Message contact incapable de vérifier si c'est un scoop": "Je ne peux pas vous dire si cette info est un scoop… Sa thématique n'est pas ma spécialité."
+
+		}
+	}
+}
