@@ -55,11 +55,11 @@ angular.module('newsGameApp').factory('Sound', function(config, $log, prod) {
 					} else {
 						this.sounds[sound].loop().play().fadeIn(1000);
 					}
-					this.playing = sound;
 				}
 			} else {
 				this.sounds[sound].play();
 			}
+			this.playing = sound;
 		},
 		toggleMute: function() {
 			$log.log("toggleMute");

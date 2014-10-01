@@ -134,11 +134,17 @@ angular.module('newsGameApp')
 			addChat(chatDelay, 'me', "Tu quoi ta quoi sur kuikuiquoi ? J’ai rien compris !", "Moi");
 			addChat(chatDelay, interlocutor + "3", "Attends, je vais te montrer... Tu vas voir, c’est génial !", "Mehdi");
 			// addChat(chatDelay, 'off', "(On entend la sonnerie du lycée. Les deux personnages ont l’air dépités)");
-			Sound.sounds.schollBell.play();
+			addStep(chatDelay,
+				function() {
+					Sound.play('schoolBell');
+				}
+			);
 			addChat(chatDelay, interlocutor + "3", "Arf, faut aller en cours. Bon c’est pas grave : ce soir, t’allumes ton ordi, tu me captes sur Skoupe et je t’expliquerai.", "Mehdi");
 			addChat(chatDelay, 'me', "Ok, super! A ce soir !", "Moi");
 			addChat(chatDelay, interlocutor + "3", "A plus!", "Mehdi");
 			addStep(chatDelay, function() {
+				$log.log(Sound.playing);
+				Sound.sounds[Sound.playing].fadeOut(500);
 				$location.path('/play');
 			});
 
