@@ -1,8 +1,10 @@
 'use strict';
 angular.module('newsGameApp')
-	.controller('HomeCtrl', function($rootScope, $scope, $localStorage, $log, $location, titleService, Xiti) {
+	.controller('HomeCtrl', function($rootScope, $scope, $localStorage, $log, $location, titleService, Xiti, Sound) {
 
 		$log.log('Home');
+
+		Sound.init();
 
 		$rootScope.background = 'home';
 
