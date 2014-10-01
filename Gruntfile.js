@@ -458,8 +458,8 @@ module.exports = function(grunt) {
     'rev',
     'usemin',
     'htmlmin',
-    'createConfig:dev',
-    'rsync:staging'
+    'createConfig:dev'
+    // 'rsync:staging'
   ]);
 
   grunt.registerTask('default', [
