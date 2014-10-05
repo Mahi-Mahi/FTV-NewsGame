@@ -7,44 +7,58 @@
 		</div>
 		<div class="waiting__inner">
 			<div class="waiting__inner__body">
-<!-- 				<div class="waiting-check-thematique">
+				<div class="waiting-check-thematique">
 					<h2>Patientez</h2>
 					<p>Vérification d'une thématique en cours</p>
 					<span class="timer">15 min</span>
-				</div> -->
-<!--  				<div class="waiting-check-credibility">
+					<div class="gauge-container">
+						<div class="gauge">
+							<div class="gauge__inner">
+								<div class="fill" id="fill-waiting"></div>
+							</div>
+						</div>
+					</div>					
+				</div>
+ 				<div class="waiting-check-credibility">
 					<h2 class="title-checked">Crédibilité vérifiée</h2>
 					<p>"J'ai fait quelques recherches <br />et cette info est complètement bidon.<br />Je vous déconseille de la publier !"</p>
 					<div class="stars stars--2">2</div>
 					<div class="stars stars--negative--2">2</div>
-				</div> -->
-<!--  				<div class="waiting-check-credibility">
+				</div>
+ 				<div class="waiting-check-credibility">
 					<h2 class="title-unchecked">Crédibilité non vérifiée</h2>
 					<p>"Je ne peux rien vous dire sur cette info... <br />Sa thématique n'est pas ma spécialité."</p>
 					<img src="images/icon-credibility-unchecked.png" alt="" />
-				</div> -->
-<!--  				<div class="waiting-check-source">
+				</div>
+ 				<div class="waiting-check-source">
 					<h2 class="title-checked">Source vérifiée</h2>
 					<p>"Hum... Cette source n'est pas très crédible... <br />Je serais vous, je me méfierais de ce qu'elle dit."</p>
 					<div class="source-status status-unchecked"></div>
 					<div class="source-status status-checked status-checked--2"></div>
 					<div class="source-status status-checked status-checked--3"></div>
-				</div> -->
+				</div>
  				<div class="waiting-check-source">
 					<h2 class="title-unchecked">Source non vérifiée</h2>
 					<p>"Je ne peux rien vous dire sur cette source... <br />Sa thématique n'est pas ma spécialité"</p>
 					<img src="images/icon-source-unchecked.png" alt="" />
 				</div>
-			</div>
-		</div><!-- .waiting__inner -->
-		<div class="gauge-container">
-			<div class="gauge">
-				<div class="gauge__inner">
-					<div class="fill" style="width:{{waiting.level}}%;"></div>
+ 				<div class="waiting-check-scoop">
+					<h2 class="title-checked">C'est un scoop</h2>
+					<p>"Incroyable ! Vous avez déniché un scoop ! <br />Si cette info est crédible, publiez-la absolument !"</p>
+					<img src="images/icon-scoop-ok.png" alt="" />
+				</div>
+ 				<div class="waiting-check-scoop">
+					<h2 class="title-checked title-checked--no-scoop">Ce n'est pas un scoop</h2>
+					<p>"Ah... Cette info n'est pas un scoop. Mais si elle est crédible, <br />elle intéressera peut-être vos lecteurs."</p>
+					<img src="images/icon-scoop-nok.png" alt="" />
+				</div>
+ 				<div class="waiting-check-scoop">
+					<h2 class="title-unchecked ">Scoop non vérifié</h2>
+					<p>"Je ne peux pas vous dire si cette info est un scoop... <br />Sa thématique n'est pas ma spécialité."</p>
+					<img src="images/icon-scoop-unchecked.png" alt="" />
 				</div>
 			</div>
-			<span>{{waiting.duration|duration}}</span>
-		</div>
+		</div><!-- .waiting__inner -->
 	</div>
 
 	<div class="top-skip" ng-if="level>1 && !skip && tuto">
