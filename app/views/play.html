@@ -1,7 +1,6 @@
 <div ng-class="['level-'+level, tuto ? 'tuto' : '']">
 
-	<!-- <div id="waiting" ng-show="waiting.active"> -->
-	<div id="waiting">
+	<div id="waiting" ng-show="waiting.active">
 		<div ng-class="['detail', waiting.type]" ng-if="waiting.type">
 			{{waiting.detail}}
 		</div>
