@@ -59,7 +59,7 @@ angular.module('newsGameApp')
 		var openSourceThemeCallback = false;
 		$scope.openSource = function(id) {
 			// $log.log("openSource(" + id);
-			Sound.sounds.click.play();
+			Sound.play('click');
 			$scope.closeWin('source');
 			$scope.currentSource = dataService.data.all.sources[id];
 			$scope.openWin('source');
@@ -72,7 +72,7 @@ angular.module('newsGameApp')
 		var verifySourceThemeCallback = false;
 		$scope.verifySourceTheme = function(id) {
 			// $log.log("verifySourceTheme(" + id);
-			Sound.sounds.click.play();
+			Sound.play('click');
 			dataService.data.all.sources[id].themeVerified = true;
 			$scope.currentSource = dataService.data.all.sources[id];
 			decrementTime('verify-source-theme', 'verify');
@@ -101,7 +101,7 @@ angular.module('newsGameApp')
 			$scope.cuitsHover = false;
 		};
 
-		function addCuit(next, force, author, theme) {
+		function addCuit(next, force, author, theme, sources) {
 			$log.log("addCuit", next, force, author, theme);
 			if (!force && $scope.skipCuits) {
 				$timeout(function() {
@@ -116,7 +116,7 @@ angular.module('newsGameApp')
 
 					// if cuit is not currenlty displayed
 					if (!added && $scope.allCuits.indexOf(cuitIdx) === -1) {
-						if ((!author && !theme) || cuit.source === author || cuit.theme === theme) {
+						if ((!author && !theme && !sources) || cuit.source === author || cuit.theme === theme || sources.indexOf(cuit.source) > -1) {
 
 							cuit.author = dataService.data.all.sources[cuit.source];
 							if (cuit.author) {
@@ -155,7 +155,7 @@ angular.module('newsGameApp')
 		$scope.showCuits = function(click) {
 			$log.log("showCuits");
 			if (click) {
-				Sound.sounds.click.play();
+				Sound.play('click');
 			}
 			angular.forEach($scope.cuits, function(cuit) {
 				if (cuit.visible === false) {
@@ -253,7 +253,7 @@ angular.module('newsGameApp')
 		}
 
 		function contactVerify(force) {
-			Sound.sounds.click.play();
+			Sound.play('click');
 			var added = false;
 			angular.forEach($scope.contacts, function(contact, key) {
 				if (!added && (force || contact.id === selectedContact.id)) {
@@ -273,8 +273,13 @@ angular.module('newsGameApp')
 		*/
 
 		// all contacts are loaded from /data/all.json
-		$scope.contacts = []; //dataService.data.all.contacts;
-		$scope.allContacts = [];
+		if (!$scope.$storage.contacts) {
+			$scope.$storage.contacts = []; //dataService.data.all.contacts;
+		}
+
+		if (!$scope.$storage.allContacts) {
+			$scope.$storage.allContacts = [];
+		}
 
 		// current contact displayed in contact detail window
 		$scope.currentContact = null;
@@ -285,11 +290,11 @@ angular.module('newsGameApp')
 			var added = false;
 			angular.forEach(contacts, function(contactIdx) {
 				var contact = dataService.data.all.contacts[contactIdx];
-				if (!added && $scope.allContacts.indexOf(contactIdx) === -1) {
+				if (!added && $scope.$storage.allContacts.indexOf(contactIdx) === -1) {
 					if ((!theme) || contact.themes.indexOf(theme) !== -1) {
 						contact.verifiedCuits = [];
-						$scope.allContacts.push(contactIdx);
-						$scope.contacts.unshift(contact);
+						$scope.$storage.allContacts.push(contactIdx);
+						$scope.$storage.contacts.unshift(contact);
 						added = true;
 					}
 				}
@@ -298,7 +303,7 @@ angular.module('newsGameApp')
 
 		var newContactCallback;
 		$scope.newContact = function() {
-			Sound.sounds.click.play();
+			Sound.play('click');
 			$scope.openWin('themeSelector');
 			$scope.themeSelectorAction = function() {
 				addContact($scope.selectedTheme);
@@ -315,7 +320,7 @@ angular.module('newsGameApp')
 		// open contact detail window
 		$scope.openContact = function(id) {
 			// $log.log("openContact(" + id);
-			Sound.sounds.click.play();
+			Sound.play('click');
 			$scope.closeWin('contact');
 			$scope.currentContact = $scope.contacts[id];
 			$scope.openWin('contact');
@@ -326,7 +331,7 @@ angular.module('newsGameApp')
 		var selectedContact;
 		$scope.canCall = false;
 		$scope.callContact = function(contact) {
-			Sound.sounds.click.play();
+			Sound.play('click');
 			$log.log("callContact(", contact.id);
 			selectedContact = contact;
 			if (callContactAction) {
@@ -345,7 +350,7 @@ angular.module('newsGameApp')
 		// open chat window
 		$scope.openChat = function(id) {
 			// $log.log("openChat(" + id);
-			Sound.sounds.click.play();
+			Sound.play('click');
 			$scope.closeWin('chat');
 			$scope.currentchatContact = $scope.chat[id];
 			$scope.openWin('chat');
@@ -495,7 +500,7 @@ angular.module('newsGameApp')
 
 		// show/hide window
 		$scope.toggleWin = function(id) {
-			Sound.sounds.click.play();
+			Sound.play('click');
 			if ($scope.windows[id].visible) {
 				$scope.closeWin(id);
 			} else {
@@ -1047,7 +1052,19 @@ angular.module('newsGameApp')
 		scenarii.level2 = function() {
 			$log.log(">scenario2");
 
-			addCuit(true);
+			var themedSources = [];
+			var otherSources = [];
+
+			angular.forEach(dataService.data.all.sources, function(source, key) {
+				if (source.themes.indexOf($scope.$storage.chosenTheme) > -1 && themedSources.length < 5) {
+					themedSources.push(key);
+				}
+				if (source.themes.indexOf($scope.$storage.chosenTheme) === -1 && otherSources.length < 5) {
+					otherSources.push(key);
+				}
+			});
+
+			addCuit(true, null, null, null, themedSources.concat(otherSources));
 
 			$scope.currentChat = {
 				contact: "Mehdi",
@@ -1127,6 +1144,9 @@ angular.module('newsGameApp')
 			$log.log(">scenario3");
 
 			// $scope.skipCuits = true;
+
+			$scope.$storage.contacts = []; //dataService.data.all.contacts;
+			$scope.$storage.allContacts = []; //dataService.data.all.contacts;
 
 			$scope.currentChat = {
 				contact: "Sonia",
@@ -1281,7 +1301,25 @@ angular.module('newsGameApp')
 				addStep(2500, function() {
 					$scope.closeWin('chat');
 					$scope.openWin('blog');
-					addCuit(true);
+
+					var chosenThemedSources = [];
+					var mandatoryThemedSources = [];
+					var otherSources = [];
+
+					angular.forEach(dataService.data.all.sources, function(source, key) {
+						if (source.themes.indexOf($scope.$storage.chosenTheme) > -1 && chosenThemedSources.length < 5) {
+							chosenThemedSources.push(key);
+						}
+						if (source.themes.indexOf($scope.$storage.mandatoryTheme) > -1 && mandatoryThemedSources.length < 5) {
+							mandatoryThemedSources.push(key);
+						}
+						if (source.themes.indexOf($scope.$storage.chosenTheme) === -1 && otherSources.length < 8) {
+							otherSources.push(key);
+						}
+					});
+
+					addCuit(true, null, null, null, chosenThemedSources.concat(mandatoryThemedSources).concat(otherSources));
+
 					$scope.skipCuits = false;
 					verifyCuitCredibilityCallback = null;
 					callContactCallback = null;
@@ -1614,18 +1652,59 @@ angular.module('newsGameApp')
 			$log.log("plays.level2");
 			$scope.openWin('cuicuiter');
 			$scope.openWin('blog');
-			addCuit(true);
+
+			var themedSources = [];
+			var otherSources = [];
+
+			angular.forEach(dataService.data.all.sources, function(source, key) {
+				if (source.themes.indexOf($scope.$storage.chosenTheme) > -1 && themedSources.length < 5) {
+					themedSources.push(key);
+				}
+				if (source.themes.indexOf($scope.$storage.chosenTheme) === -1 && otherSources.length < 5) {
+					otherSources.push(key);
+				}
+			});
+
+			addCuit(true, null, null, null, themedSources.concat(otherSources));
 		};
 		// Level 3
 		plays.level3 = function() {
 			$log.log("plays.level3");
+
 			$scope.openWin('cuicuiter');
 			$scope.openWin('skoupe');
+
+			$scope.$storage.contacts = []; //dataService.data.all.contacts;
+			$scope.$storage.allContacts = []; //dataService.data.all.contacts;
+
 			addContact();
 			addContact($scope.$storage.chosenTheme);
 			addContact($scope.$storage.mandatoryTheme);
+
+			$log.log($scope.$storage.contacts);
+
 			$scope.openWin('blog');
-			addCuit(true);
+
+			var chosenThemedSources = [];
+			var mandatoryThemedSources = [];
+			var otherSources = [];
+
+			angular.forEach(dataService.data.all.sources, function(source, key) {
+				if (source.themes.indexOf($scope.$storage.chosenTheme) > -1 && chosenThemedSources.length < 5) {
+					chosenThemedSources.push(key);
+				}
+				if (source.themes.indexOf($scope.$storage.mandatoryTheme) > -1 && mandatoryThemedSources.length < 5) {
+					mandatoryThemedSources.push(key);
+				}
+				if (source.themes.indexOf($scope.$storage.chosenTheme) === -1 && otherSources.length < 8) {
+					otherSources.push(key);
+				}
+			});
+
+			$log.log(chosenThemedSources.concat(mandatoryThemedSources).concat(otherSources));
+			$log.log((chosenThemedSources.concat(mandatoryThemedSources).concat(otherSources)).length);
+
+			addCuit(true, null, null, null, chosenThemedSources.concat(mandatoryThemedSources).concat(otherSources));
 		};
 
 		// Level 4
