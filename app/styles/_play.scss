@@ -161,6 +161,27 @@
     padding:0 0 0 10px;
 }
 
+.widget-scoring {
+    background:#fbb03b;
+    border-radius:4px;
+    box-shadow: rgba(128, 128, 128, .3) 1px 1px 7px 1px;
+    position: fixed;
+    margin:0;
+    padding:10px;
+    top: 10px;
+    right: 65px;
+    h2 {
+        display: block;
+        font-size: 1.2em;
+        margin:0;
+        padding:0;
+    }
+    .gauge {
+        border-color:#c6903a;
+        padding:4px 3px 4px 2px;
+    }
+}
+
 //FEEDBACK
 
 .feedback {
@@ -1220,12 +1241,23 @@ div.k-window-content#chat {
     .cuits & {
         margin:8px auto 0 auto;
     }
+    .waiting__inner__body & {
+        background-image:image-url("bg-stars-large.png");
+        height:31px;
+        width:122px;
+    }
 }
 
-$stars: 0 0, 1 -8px, 2 -16px, 3 -24px;
+$stars: 0 0 0 0, 1 -8px -31px -124px, 2 -16px -62px -155px, 3 -24px -93px -186px;
 @each $star-number in $stars {
     .stars--#{nth($star-number, 1)} {
         background-position: 0 nth($star-number, 2);
+        .waiting__inner__body & {
+            background-position: 0 nth($star-number, 4);
+        }
+    }
+    .stars--negative--#{nth($star-number, 1)} {
+        background-position: 0 nth($star-number, 3);
     }
 }
 
@@ -1268,14 +1300,83 @@ $stars: 0 0, 1 -8px, 2 -16px, 3 -24px;
 }
 
 #waiting {
-    background: rgba(0,0,0,0.5);
-    z-index: 15000;
+    background: rgba(0,0,0,0.75);
+    color:#fff;
+    z-index: 100000;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    text-align: center;
+    h2, span {
+        font-size:1.6em;
+    }
+    .title-checked {
+        color:#46c9ae;
+    }
+    .title-unchecked {
+        color:#94a4a5;
+    }
+    p {
+        font-size:2.2em;
+    }
+    .timer {
+        &:before {
+        color:#fff;
+        content: "\27";
+        display: inline-block;
+        margin: -4px 0 0 0;
+        padding: 0 8px 0 0;
+        font-family: 'icomoon';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 1em;
+        vertical-align: top;
+        }
+    }
 }
+
+.waiting__inner {
+   display: table;
+   height: 100%;
+   width: 100%;
+}
+
+.waiting__inner__body {
+    display: table-cell;
+    padding: 0 2em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.source-status {
+    background:image-url("bg-credibility-status.png") left top no-repeat;
+    display: block;
+    margin: 10px auto;
+    padding:0;
+    height:30px;
+    width:127px;
+}
+
+.status-unchecked {
+    background-position:0 0;
+}
+
+.status-checked--1 {
+    background-position:0 -30px;
+}
+
+.status-checked--2 {
+    background-position:0 -60px;
+}
+
 // AUTOSAVE
 
 .autosave {

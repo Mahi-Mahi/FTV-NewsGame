@@ -1,9 +1,37 @@
 <div ng-class="['level-'+level, tuto ? 'tuto' : '']">
 
-	<div id="waiting" ng-show="waiting.active">
+	<!-- <div id="waiting" ng-show="waiting.active"> -->
+	<div id="waiting">
 		<div ng-class="['detail', waiting.type]" ng-if="waiting.type">
 			{{waiting.detail}}
 		</div>
+		<div class="waiting__inner">
+			<div class="waiting__inner__body">
+<!-- 				<div class="waiting-check-thematique">
+					<h2>Patientez</h2>
+					<p>Vérification d'une thématique en cours</p>
+					<span class="timer">15 min</span>
+				</div> -->
+<!--  				<div class="waiting-check-credibility">
+					<h2 class="title-checked">Crédibilité vérifiée</h2>
+					<p>"J'ai fait quelques recherches <br />et cette info est complètement bidon.<br />Je vous déconseille de la publier !"</p>
+					<div class="stars stars--2">2</div>
+					<div class="stars stars--negative--2">2</div>
+				</div> -->
+<!--  				<div class="waiting-check-credibility">
+					<h2 class="title-unchecked">Crédibilité non vérifiée</h2>
+					<p>"Je ne peux rien vous dire sur cette info... <br />Sa thématique n'est pas ma spécialité."</p>
+					<img src="images/icon-credibility-unchecked.png" alt="" />
+				</div> -->
+ 				<div class="waiting-check-source">
+					<h2 class="title-unchecked">Source vérifiée</h2>
+					<p>"Hum... Cette source n'est pas très crédible... <br />Je serais vous, je me méfierais de ce qu'elle dit."</p>
+					<div class="source-status status-unchecked"></div>
+					<div class="source-status status-checked status-checked--2"></div>
+					<div class="source-status status-checked status-checked--3"></div>
+				</div>
+			</div>
+		</div><!-- .waiting__inner -->
 		<div class="gauge-container">
 			<div class="gauge">
 				<div class="gauge__inner">
@@ -46,6 +74,18 @@
 			</button>
 		</li>
 	</ul>
+
+	<div class="widget-scoring">
+		<div class="clearfix">
+			<h2>Score</h2>
+			<div class="gauge left">
+				<div class="gauge__inner">
+					<div class="fill" style="width:80%;"></div>
+				</div>
+			</div>
+			<span class="remaining left">1500 points</span>
+		</div>
+	</div>
 
 	<div class="widgets">
 		<div class="timeline">
