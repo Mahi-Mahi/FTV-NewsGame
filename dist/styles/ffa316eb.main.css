@@ -5157,9 +5157,9 @@ div.k-window-content#chat {
 /* line 1365, ../../app/styles/_play.scss */
 
 #fill-waiting {
-  -webkit-animation: expandWidth 5s linear;
-  -ms-animation: expandWidth 5s linear;
-  animation: expandWidth 5s linear;
+  -webkit-animation: expandWidth 2s linear;
+  -ms-animation: expandWidth 2s linear;
+  animation: expandWidth 2s linear;
   -webkit-transform: translateZ(0);
 }
 
@@ -5180,7 +5180,30 @@ div.k-window-content#chat {
   vertical-align: middle;
 }
 
-/* line 1382, ../../app/styles/_play.scss */
+/* line 1380, ../../app/styles/_play.scss */
+
+.waiting__inner__body > div {
+  display: none;
+}
+
+/* line 1383, ../../app/styles/_play.scss */
+
+.waiting__inner__body .waiting-check-thematique {
+  display: block;
+}
+
+/* line 1390, ../../app/styles/_play.scss */
+
+.verify-cuit-theme .verify-cuit-theme,
+.verify-source-theme .verify-source-theme,
+.verify-cuit-credibility .verify-cuit-credibility,
+.verify-cuit-exclusivity .verify-cuit-exclusivity,
+.verify-source-theme .verify-source-theme,
+.publish-cuit .publish-cuit {
+  display: block;
+}
+
+/* line 1400, ../../app/styles/_play.scss */
 
 .source-status {
   background: url('/images/bg-credibility-status.png') left top no-repeat;
@@ -5191,25 +5214,25 @@ div.k-window-content#chat {
   width: 127px;
 }
 
-/* line 1391, ../../app/styles/_play.scss */
+/* line 1409, ../../app/styles/_play.scss */
 
 .status-unchecked {
   background-position: 0 0;
 }
 
-/* line 1395, ../../app/styles/_play.scss */
+/* line 1413, ../../app/styles/_play.scss */
 
 .status-checked--1 {
   background-position: 0 -30px;
 }
 
-/* line 1399, ../../app/styles/_play.scss */
+/* line 1417, ../../app/styles/_play.scss */
 
 .status-checked--2 {
   background-position: 0 -60px;
 }
 
-/* line 1405, ../../app/styles/_play.scss */
+/* line 1423, ../../app/styles/_play.scss */
 
 .autosave {
   color: #bfb7a6;
@@ -5222,7 +5245,7 @@ div.k-window-content#chat {
   z-index: 99999;
 }
 
-/* line 1416, ../../app/styles/_play.scss */
+/* line 1434, ../../app/styles/_play.scss */
 
 .autosave-loader {
   font-size: 10px;
@@ -5240,7 +5263,7 @@ div.k-window-content#chat {
   animation: loader 1.4s infinite linear;
 }
 
-/* line 1434, ../../app/styles/_play.scss */
+/* line 1452, ../../app/styles/_play.scss */
 
 .autosave-loader:before {
   width: 50%;
@@ -5253,7 +5276,7 @@ div.k-window-content#chat {
   content: '';
 }
 
-/* line 1444, ../../app/styles/_play.scss */
+/* line 1462, ../../app/styles/_play.scss */
 
 .autosave-loader:after {
   background: #000;
