@@ -127,7 +127,7 @@ angular.module('newsGameApp')
 
 							cuit.scoop = (Math.random() < cuit.exclusivity);
 							cuit.visible = false;
-							if ($scope.cuitsHover) {
+							if ($scope.cuitsHover || $scope.newCuits) {
 								$scope.newCuits = true;
 							} else {
 								$timeout(function() {
