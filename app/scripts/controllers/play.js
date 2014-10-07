@@ -1233,7 +1233,7 @@ angular.module('newsGameApp')
 			addStep(50, function() {
 				$scope.openWin('skoupe');
 				addContact();
-				if ($scope.contacts.length < 3) {
+				if ($scope.$storage.contacts.length < 3) {
 					addContact(selectedCuit.theme);
 					addContact($scope.$storage.chosenTheme);
 					addContact($scope.$storage.mandatoryTheme);
@@ -1265,7 +1265,7 @@ angular.module('newsGameApp')
 
 			addStep(chatDelay, function() {
 				if ($scope.debug) {
-					var contact = utils.shuffle($scope.contacts)[0];
+					var contact = utils.shuffle($scope.$storage.contacts)[0];
 					$scope.callContact(contact);
 				}
 			});
@@ -1292,7 +1292,7 @@ angular.module('newsGameApp')
 				});
 				addStep(chatDelay, function() {
 					if ($scope.debug) {
-						var contact = utils.shuffle($scope.contacts)[0];
+						var contact = utils.shuffle($scope.$storage.contacts)[0];
 						// $scope.callContact(contact);
 					}
 				});
