@@ -4,7 +4,7 @@
 
 angular.module('newsGameApp').factory('Sound', function(config, $log, prod) {
 	return {
-		muteDev: false,
+		muteDev: true,
 		sounds: {},
 		playing: null,
 		muted: false,
@@ -18,7 +18,6 @@ angular.module('newsGameApp').factory('Sound', function(config, $log, prod) {
 			if (!prod && this.muteDev) {
 				return;
 			}
-
 			$log.log("buzz.isSupported", buzz.isSupported());
 
 			if (buzz.isOGGSupported()) {

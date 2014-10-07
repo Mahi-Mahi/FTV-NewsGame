@@ -10,7 +10,7 @@ angular.module('newsGameApp')
 
 		Sound.sounds.home = new buzz.sound("sounds/home");
 		if (prod || !Sound.muteDev) {
-			Sound.sounds.home.play();
+			Sound.play('home');
 		}
 
 		$rootScope.background = 'home';
@@ -23,7 +23,7 @@ angular.module('newsGameApp')
 		});
 
 		$scope.newGame = function() {
-			Sound.sounds.click.play();
+			Sound.play('click');
 			$scope.$storage.level = 1;
 			$scope.$storage.scores = {};
 			$location.path("/intro");

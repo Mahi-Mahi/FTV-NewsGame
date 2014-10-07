@@ -9,7 +9,9 @@ angular.module('newsGameApp')
 
 		Sound.init();
 
-		Sound.sounds.introText.play();
+		$log.log(Sound.sounds);
+
+		Sound.play('introText');
 
 		$scope.debug = ($routeParams.debug);
 

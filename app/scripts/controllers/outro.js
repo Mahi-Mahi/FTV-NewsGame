@@ -9,7 +9,7 @@ angular.module('newsGameApp')
 
 		Sound.init();
 
-		Sound.sounds.introText.play();
+		Sound.play('introText');
 
 		$scope.debug = ($routeParams.debug);
 
@@ -95,14 +95,14 @@ angular.module('newsGameApp')
 
 		outro.level3 = function() {
 			var text;
-			$scope.character = "SoniaB5";
+			$scope.character = "SoniaA5";
 			$scope.characterName = "Sonia";
 			if ($scope.$storage.scoreStatus === 'defeat') {
 				if ($scope.$storage.posts.length < 4) {
 					$scope.characterName = "CleaningGuy";
 					text = "Vous n'êtes pas mauvais... Mais pas assez rapide !\n Vous n'avez pas publié assez de bonnes infos aujourd'hui, et maintenant c'est l'heure de rentrer chez vous. Allez, rentrez chez vous... et réessayez demain !";
 				} else {
-					$scope.character = "SoniaB5";
+					$scope.character = "SoniaA2";
 					text = "Vous espérez faire une grande carrière de journaliste en publiant autant d'anêries ? Le moins que l'on puisse dire, c'est que je ne suis pas de cet avis ! Allez, oubliez cette mauvaise journée et essayez de faire mieux demain !";
 				}
 			} else {

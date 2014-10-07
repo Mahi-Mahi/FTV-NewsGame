@@ -2,7 +2,7 @@
 <div class="inner">
 	<div class="inner__body inner__body--fullwidth">
 		<ul class="unstyled">
-			<li ng-repeat="(id, contact) in contacts"
+			<li ng-repeat="(id, contact) in $storage.contacts"
 				ng-class="['inner-item', 'contact-item', contact.verifiedCuits.indexOf(selectedCuit.id) === -1 ? '' : 'disabled', canCall ? 'canCall' : '']">
 				<a href="" ng-click="openContact(id)" class="contact-item__name">
 					{{contact.name}}

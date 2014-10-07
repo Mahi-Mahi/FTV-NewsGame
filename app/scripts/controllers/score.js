@@ -31,25 +31,25 @@ angular.module('newsGameApp')
 		$log.log($scope.scoring);
 
 		if ($scope.$storage.scoreStatus === 'defeat') {
-			Sound.sounds.endLoose.play();
+			Sound.play('endLoose');
 		}
 
 		if ($scope.$storage.scoreStatus === 'victory') {
 			if ($scope.$storage.level < 4) {
-				Sound.sounds.endWin.play();
+				Sound.play('endWin');
 			} else {
-				Sound.sounds.endGame.play();
+				Sound.play('endGame');
 			}
 		}
 
 		$scope.nextLevel = function() {
-			Sound.sounds.click.play();
+			Sound.play('click');
 			$scope.$storage.level = parseInt($scope.$storage.level, 10) + 1;
 			$location.path('/intro');
 		};
 
 		$scope.playAgain = function() {
-			Sound.sounds.click.play();
+			Sound.play('click');
 			$log.log("playAgain");
 			$location.path('/play');
 		};
