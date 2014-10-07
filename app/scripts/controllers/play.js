@@ -842,7 +842,7 @@ angular.module('newsGameApp')
 
 			addStep(chatDelay, function() {
 				if ($scope.debug) {
-					jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.theme button').click();
+					// jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.theme button').click();
 				}
 			});
 
@@ -889,7 +889,7 @@ angular.module('newsGameApp')
 
 			addStep(chatDelay, function() {
 				if ($scope.debug) {
-					jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.theme button').click();
+					// jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.theme button').click();
 				}
 			});
 
@@ -1293,7 +1293,7 @@ angular.module('newsGameApp')
 				addStep(chatDelay, function() {
 					if ($scope.debug) {
 						var contact = utils.shuffle($scope.contacts)[0];
-						$scope.callContact(contact);
+						// $scope.callContact(contact);
 					}
 				});
 			} else {

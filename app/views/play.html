@@ -1,5 +1,31 @@
 <div ng-class="['level-'+level, tuto ? 'tuto' : '']">
 
+
+	<div class="widgets">
+		<div class="timeline">
+			<div class="clearfix timeline-row">
+				<h2 class="left">Temps restant</h2>
+				<a ng-click="endDay()" class="endDay bt bt--finish right">Terminer la journée</a>
+			</div>
+			<div class="clearfix">
+				<div class="gauge left">
+					<div ng-class="['gauge__inner', gaugeLevel]">
+						<div class="fill" style="width:{{100-((totalTime-remainingTime)/totalTime)*100}}%;"></div>
+					</div>
+				</div>
+				<span class="remaining left">{{remainingTime | duration}}</span>
+			</div>
+		</div>
+
+		<div class="feedback feedback--{{feedback.type}}" ng-if="feedback.active">
+			<div class="feedback__title">
+				{{feedback.status}}
+			</div>
+			<p class="feedback__body">{{feedback.detail}}</p>
+		</div>
+	</div>
+
+
 	<div id="waiting" ng-show="waiting.active">
 		<div ng-class="['waiting__inner', waiting.action, waiting.extra]" ng-if="waiting.type">
 			<div class="waiting__inner__body">
@@ -96,35 +122,11 @@
 		<div class="clearfix">
 			<h2>Score</h2>
 			<div class="gauge left">
-				<div ng-class="['gauge__inner', scoreLevel]">
+				<div ng-class="['gauge__inner']">
 					<div class="fill" style="width:{{ $storage.scores['level-'+level] / scoring['level-'+level]['winning-score'] * 100  }}%;"></div>
 				</div>
 			</div>
 			<span class="remaining left">{{$storage.scores['level-' + level] || '0'}} point{{$storage.scores['level-' + level]>1  ? 's' : ''}}</span>
-		</div>
-	</div>
-
-	<div class="widgets">
-		<div class="timeline">
-			<div class="clearfix timeline-row">
-				<h2 class="left">Temps restant</h2>
-				<a ng-click="endDay()" class="endDay bt bt--finish right">Terminer la journée</a>
-			</div>
-			<div class="clearfix">
-				<div class="gauge left">
-					<div ng-class="['gauge__inner', gaugeLevel]">
-						<div class="fill" style="width:{{100-((totalTime-remainingTime)/totalTime)*100}}%;"></div>
-					</div>
-				</div>
-				<span class="remaining left">{{remainingTime | duration}}</span>
-			</div>
-		</div>
-
-		<div class="feedback feedback--{{feedback.type}}" ng-if="feedback.active">
-			<div class="feedback__title">
-				{{feedback.status}}
-			</div>
-			<p class="feedback__body">{{feedback.detail}}</p>
 		</div>
 	</div>
 

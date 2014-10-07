@@ -31,7 +31,7 @@ angular.module('newsGameApp')
 		$log.log($scope.scoring);
 
 		if ($scope.$storage.scoreStatus === 'defeat') {
-			Sound.sounds.endLoose.play();
+			Sound.play('endLoose');
 		}
 
 		if ($scope.$storage.scoreStatus === 'victory') {
