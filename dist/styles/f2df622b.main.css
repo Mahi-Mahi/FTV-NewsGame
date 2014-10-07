@@ -3480,7 +3480,7 @@ textarea {
   top: 25px;
   right: 25px;
   width: 260px;
-  z-index: 99999;
+  z-index: 199999;
 }
 
 /* line 200, ../../app/styles/_play.scss */
