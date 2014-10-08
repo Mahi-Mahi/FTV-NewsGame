@@ -1,1 +1,1 @@
-<p ng-bind-html="promptContent"></p><button class="bt bt--cancel" ng-click="promptCancel()">Annuler</button> <button class="bt" ng-click="promptConfirm()">Continuer</button>
+<p ng-bind-html="promptContent"></p><button class="bt bt--cancel" ng-click="promptCancel()" ng-show="!promptNoCancel">Annuler</button> <button class="bt" ng-click="promptConfirm()">Continuer</button>
