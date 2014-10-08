@@ -95,19 +95,18 @@ angular.module('newsGameApp')
 
 		outro.level3 = function() {
 			var text;
-			$scope.character = "SoniaA5";
 			$scope.characterName = "Sonia";
 			if ($scope.$storage.scoreStatus === 'defeat') {
 				if ($scope.$storage.posts.length < 4) {
-					$scope.characterName = "CleaningGuy";
+					$scope.character = "SoniaA4";
 					text = "Vous n'êtes pas mauvais... Mais pas assez rapide !\n Vous n'avez pas publié assez de bonnes infos aujourd'hui, et maintenant c'est l'heure de rentrer chez vous. Allez, rentrez chez vous... et réessayez demain !";
 				} else {
-					$scope.character = "SoniaA2";
+					$scope.character = "SoniaA5";
 					text = "Vous espérez faire une grande carrière de journaliste en publiant autant d'anêries ? Le moins que l'on puisse dire, c'est que je ne suis pas de cet avis ! Allez, oubliez cette mauvaise journée et essayez de faire mieux demain !";
 				}
 			} else {
+				$scope.character = "SoniaA2";
 				text = "Bravo ! Vous êtes vigilant : avec vous, pas question de publier n'importe quoi ! Et vos lecteurs aiment ça ! Vous commencez à être un journaliste confirmé. Mais si vous étiez aux commandes, sauriez vous détecter les scoops et choisir quelles infos mettre en avant sur votre site ?";
-
 			}
 			showText(text).then(function() {
 				$timeout(function() {

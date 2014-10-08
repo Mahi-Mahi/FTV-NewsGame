@@ -127,7 +127,7 @@ angular.module('newsGameApp')
 
 							cuit.scoop = (Math.random() < cuit.exclusivity);
 							cuit.visible = false;
-							if ($scope.cuitsHover || $scope.newCuits) {
+							if (($scope.cuitsHover || $scope.newCuits) && !force) {
 								$scope.newCuits = true;
 							} else {
 								$timeout(function() {
@@ -436,7 +436,26 @@ angular.module('newsGameApp')
 				// feedback('bad', "Plus que 25% du temps<br />Vous n'avez presque plus de temps, la journée touche bientôt à sa fin. Si ce n'est pas déjà fait, vous devriez vite publier des informations.");
 			}
 			if ($scope.remainingTime <= 0) {
-				doEndDay();
+
+				$scope.endDay = function() {
+
+					promptCallback = function() {
+
+						$log.log("endDay");
+
+						$scope.promptNoCancel = true;
+
+						$scope.closeWin('prompt');
+						promptCallback = null;
+
+						doEndDay();
+					};
+
+					$scope.promptContent = "Votre journée est terminée. Avez-vous bien travaillé ?";
+					$scope.openWin('prompt');
+
+				};
+
 			}
 		}
 
@@ -478,6 +497,9 @@ angular.module('newsGameApp')
 				}
 			}
 		};
+		$interval(function() {
+			$scope.tooltip.position();
+		}, 50);
 
 		// create a new window (KendoUI will automattically instatiate ir)
 
@@ -574,7 +596,7 @@ angular.module('newsGameApp')
 			template: 'skoupe-main',
 			height: 450,
 			position: {
-				top: 50,
+				top: 70,
 				left: 600
 			}
 		});
@@ -842,7 +864,7 @@ angular.module('newsGameApp')
 
 			addStep(chatDelay, function() {
 				if ($scope.debug) {
-					// jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.theme button').click();
+					jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.theme button').click();
 				}
 			});
 
@@ -889,7 +911,7 @@ angular.module('newsGameApp')
 
 			addStep(chatDelay, function() {
 				if ($scope.debug) {
-					// jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.theme button').click();
+					jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.theme button').click();
 				}
 			});
 
@@ -918,6 +940,8 @@ angular.module('newsGameApp')
 				addChat(chatDelay, 'me', "Ah... ce Cuitt-là ne m’intéresse pas trop. Attends, j’en cherche un autre !");
 				addStep(chatDelay, function() {
 					// show info popup
+					$scope.cuitsHover = false;
+					$scope.newCuits = false;
 					addCuit(false, true, null, $scope.$storage.chosenTheme);
 					/*
 					var nbCuits = Math.round(Math.random() * 3);
@@ -966,7 +990,7 @@ angular.module('newsGameApp')
 				addCuit(false, true, null, $scope.$storage.chosenTheme);
 				addCuit(false, true);
 			});
-			addChat(chatDelay, 'other', "Regarde, tu vois le gars qui vient de poster trois messages ? Tu peux cliquer sur sa photo...");
+			addChat(chatDelay, 'other', "Regarde, tu vois le compte qui vient de poster trois messages ? Tu peux cliquer sur sa photo...");
 			addStep(chatDelay, function() {
 				// add new cuits
 				$scope.skipCuits = true;
@@ -1019,7 +1043,7 @@ angular.module('newsGameApp')
 
 			addStep(chatDelay, function() {
 				if ($scope.debug) {
-					jQuery('#source .metas .theme button').click();
+					// jQuery('#source .metas .theme button').click();
 				}
 			});
 
@@ -1044,7 +1068,7 @@ angular.module('newsGameApp')
 
 			addChat(chatDelay, 'other', "Ah ouais ? Cool ! Ben voilà, plus besoin de te prendre la tête, tu sais quoi mettre sur ta fiche d’orientation ! Mais tu vas devoir apprendre à maîtriser Cuicuitter à mort, alors !");
 
-			addStep(2500, function() {
+			addStep(5000, function() {
 				// show scoring
 				updateScore();
 				showScoring();
@@ -1885,7 +1909,7 @@ angular.module('newsGameApp')
 			$scope.feedback.active = true;
 			$timeout(function() {
 				$scope.feedback.active = false;
-			}, 2000);
+			}, 4000);
 		}
 
 		$scope.endDay = function() {

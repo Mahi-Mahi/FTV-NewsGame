@@ -78,9 +78,10 @@ angular.module('newsGameApp')
 		function showText(content) {
 			$log.log("showText(", content);
 			var deferred = $q.defer();
+
 			var contentIdx = 0;
 			$scope.typed = '';
-			$scope.skipText = 0;
+			$scope.skipText = 1;
 			var interval = $interval(function() {
 				if ($scope.skipText === 0) {
 					$scope.typed = $scope.typed + content[contentIdx];
@@ -146,7 +147,9 @@ angular.module('newsGameApp')
 			addChat(chatDelay, interlocutor + "3", "A plus!", "Mehdi");
 			addStep(chatDelay, function() {
 				$log.log(Sound.playing);
-				Sound.sounds[Sound.playing].fadeOut(500);
+				if (Sound.playing) {
+					Sound.sounds[Sound.playing].fadeOut(500);
+				}
 				$location.path('/play');
 			});
 
