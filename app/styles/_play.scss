@@ -771,7 +771,10 @@ div.k-window-content#chat {
     padding: 0 0 0 70px;
     position: relative;
     width: 33%;
-    box-sizing: border-box;
+    box-sizing: border-box; 
+}
+
+.scoring__details__item {
     min-height:300px;
 }
 
