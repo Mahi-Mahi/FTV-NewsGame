@@ -1342,6 +1342,9 @@ a:focus,button:focus {
         background:image-url("kendo/bg-win-blog-active-title.png") center center no-repeat;
         height: 33px;
         margin-top: -10px;
+        .play-level-3 &, .play-level-4 & {
+            background-image:image-url("kendo/bg-win-blog-international-title.png");
+        }
     }
 }
 
