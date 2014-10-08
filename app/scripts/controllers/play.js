@@ -103,8 +103,8 @@ angular.module('newsGameApp')
 			}, 1000);
 		};
 
-		function addCuit(next, force, author, theme, sources) {
-			$log.log("addCuit", next, force, author, theme);
+		function addCuit(next, force, author, theme, sources, credibility) {
+			$log.log("addCuit", next, force, author, theme, credibility);
 			if (!force && $scope.skipCuits) {
 				$timeout(function() {
 					addCuit(true);
@@ -118,7 +118,7 @@ angular.module('newsGameApp')
 
 					// if cuit is not currenlty displayed
 					if (!added && $scope.allCuits.indexOf(cuitIdx) === -1) {
-						if ((!author && !theme && !sources) || cuit.source === author || cuit.theme === theme || (sources && sources.indexOf(cuit.source) > -1)) {
+						if ((!author && !theme && !sources && credibility === undefined) || cuit.source === author || cuit.theme === theme || (sources && sources.indexOf(cuit.source) > -1) || (cuit.credibility === credibility)) {
 
 							cuit.author = dataService.data.all.sources[cuit.source];
 							if (cuit.author) {
@@ -642,7 +642,7 @@ angular.module('newsGameApp')
 		createWindow('notepad', {
 			title: 'Bloc-Notes',
 			template: 'notepad',
-			visible: false,
+			visible: true,
 			active: true,
 			height: 220,
 			position: {
@@ -1294,7 +1294,7 @@ angular.module('newsGameApp')
 				$scope.openWin('skoupe');
 			});
 			addStep(chatDelay, function() {
-				$scope.tooltip.content = "Choisissez un contact";
+				$scope.tooltip.content = "Choisissez un contact, et cliquez sur le bouton 'Appeler'";
 				$scope.tooltip.position(jQuery('#skoupe .inner__body .inner-item').first(), -160, -240);
 				$scope.tooltip.orientation = "bottom right";
 				$scope.tooltip.active = true;
@@ -1306,7 +1306,7 @@ angular.module('newsGameApp')
 			addStep(chatDelay, function() {
 				if ($scope.debug) {
 					var contact = utils.shuffle($scope.$storage.contacts)[0];
-					$scope.callContact(contact);
+					// $scope.callContact(contact);
 				}
 			});
 
@@ -1323,7 +1323,7 @@ angular.module('newsGameApp')
 					// show info popup
 					$scope.canCall = true;
 					$scope.openWin('skoupe');
-					$scope.tooltip.content = "Choisissez un contact";
+					$scope.tooltip.content = "Choisissez un contact, et cliquez sur le bouton 'Appeler'";
 					$scope.tooltip.position(jQuery('#skoupe .inner'), 0, 100);
 					$scope.tooltip.active = true;
 					callContactCallback = function() {
@@ -1406,9 +1406,10 @@ angular.module('newsGameApp')
 
 			addStep(50, function() {
 				var i;
-				for (i = 0; i < 8; i++) {
+				for (i = 0; i < 7; i++) {
 					addCuit(false, true);
 				}
+				addCuit(false, true, null, null, null, 1);
 				$scope.selectedCuit = selectedCuit;
 				addContact(selectedCuit.theme);
 				selectedContact = $scope.$storage.contacts[0];
@@ -1458,7 +1459,7 @@ angular.module('newsGameApp')
 
 			addStep(chatDelay, function() {
 				if ($scope.debug) {
-					jQuery('#cuicuiter .cuit').not(".verified-exclusivity").first().find('.exclusivity button').click();
+					// jQuery('#cuicuiter .cuit').not(".verified-exclusivity").first().find('.exclusivity button').click();
 				}
 			});
 
@@ -1499,7 +1500,7 @@ angular.module('newsGameApp')
 
 			addStep(chatDelay, function() {
 				if ($scope.debug) {
-					jQuery('#new-contact').click();
+					// jQuery('#new-contact').click();
 				}
 			});
 

@@ -331,6 +331,7 @@
             display: inline;
         }
     }
+    display: none !important;
 }
 
 .scoop-true {
@@ -365,17 +366,30 @@
     }
 }
 .level-3, .intro-level-3 {
-    .credibility {
+    .verified-theme .credibility {
         display: table-cell !important;
     }
-    .exclusivity {
+    .exclusivity, .credibility {
         display: none !important;
     }
 }
 
+.play-level-3 {
+    #new-contact {
+        display: none;
+    }
+}
+
+.level-4 {
+    .verified-theme .credibility, .verified-theme .exclusivity {
+        display: table-cell !important;
+    }
+}
+
+
 .level-4 {
     #scoring {
-        .credibility, .exclusivity {
+        .verified-theme .credibility, .verified-theme .exclusivity {
             display: table-cell !important;
         }
     }
