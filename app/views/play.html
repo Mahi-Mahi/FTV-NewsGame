@@ -16,7 +16,7 @@
 								<div class="fill" id="fill-waiting"></div>
 							</div>
 						</div>
-					</div>					
+					</div>
 				</div>
  				<div class="waiting-check-credibility">
 					<h2 class="title-checked">Crédibilité vérifiée</h2>
@@ -97,15 +97,11 @@
 		<div class="clearfix">
 			<h2>Score</h2>
 			<div class="gauge left">
-<<<<<<< HEAD
 				<div ng-class="['gauge__inner', 'green']">
 					<div class="fill" style="width:{{ $storage.scores['level-'+level] / scoring['level-'+level]['winning-score'] * 100  }}%;"></div>
-=======
-				<div class="gauge__inner">
-					<div class="fill" style="width:80%;"></div>
 				</div>
 			</div>
-			<span class="remaining left">1500 points</span>
+			<span class="remaining left">{{$storage.scores['level-' + level] || '0'}} point{{-1 > $storage.scores['level-' + level] || $storage.scores['level-' + level]>1  ? 's' : ''}}</span>
 		</div>
 	</div>
 
@@ -120,13 +116,9 @@
 					<div ng-class="['gauge__inner', gaugeLevel]">
 						<div class="fill" style="width:{{100-((totalTime-remainingTime)/totalTime)*100}}%;"></div>
 					</div>
->>>>>>> FETCH_HEAD
 				</div>
 				<span class="remaining left">{{remainingTime | duration}}</span>
 			</div>
-<<<<<<< HEAD
-			<span class="remaining left">{{$storage.scores['level-' + level] || '0'}} point{{-1 > $storage.scores['level-' + level] || $storage.scores['level-' + level]>1  ? 's' : ''}}</span>
-=======
 		</div>
 
 		<div class="feedback feedback--{{feedback.type}}" ng-if="feedback.active">
@@ -134,7 +126,6 @@
 				{{feedback.status}}
 			</div>
 			<p class="feedback__body">{{feedback.detail}}</p>
->>>>>>> FETCH_HEAD
 		</div>
 	</div>
 

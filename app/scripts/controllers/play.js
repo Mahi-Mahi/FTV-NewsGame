@@ -210,6 +210,13 @@ angular.module('newsGameApp')
 			if (force || selectedContact.themes.indexOf(selectedCuit.theme) !== -1) {
 				decrementTime('verify-cuit-credibility', 'skoupe', details[selectedCuit.credibility], selectedCuit.credibility);
 				selectedCuit.credibilityVerified = true;
+
+				if (selectedCuit.credibility > 1) {
+					Sound.play('feedbackGood');
+				} else {
+					Sound.play('feedbackBad');
+				}
+
 			} else {
 				decrementTime('verify-cuit-credibility', 'skoupe', "Je ne peux rien vous dire sur cette info… Sa thématique n'est pas ma spécialité.");
 			}
@@ -238,6 +245,11 @@ angular.module('newsGameApp')
 		function updateCuitExclusivity() {
 			$log.log("updateCuitExclusivity");
 			if (selectedContact.themes.indexOf(selectedCuit.theme) !== -1) {
+				if (selectedCuit.scoop) {
+					Sound.play('feedbackGood');
+				} else {
+					Sound.play('feedbackBad');
+				}
 				decrementTime('verify-cuit-exclusivity', 'skoupe', selectedCuit.scoop ? "Incroyable ! Vous avez déniché un scoop ! Si cette info est crédible, publiez-la absolument !" : "Ah… Cette info n'est pas un scoop. Mais si elle est crédible, elle intéressera peut-être vos lecteurs.", selectedCuit.scoop ? 1 : 0);
 				selectedCuit.exclusivityVerified = true;
 				angular.forEach($scope.cuits, function(cuit, id) {
@@ -437,26 +449,28 @@ angular.module('newsGameApp')
 			}
 			if ($scope.remainingTime <= 0) {
 
-				$scope.endDay = function() {
-
-					promptCallback = function() {
-
-						$log.log("endDay");
-
-						$scope.promptNoCancel = true;
-
-						$scope.closeWin('prompt');
-						promptCallback = null;
-
-						doEndDay();
-					};
-
-					$scope.promptContent = "Votre journée est terminée. Avez-vous bien travaillé ?";
-					$scope.openWin('prompt');
-
-				};
+				promptEndDay();
 
 			}
+
+		}
+
+		function promptEndDay() {
+
+			$scope.promptNoCancel = true;
+			promptCallback = function() {
+
+				$log.log("endDay");
+
+				$scope.closeWin('prompt');
+				promptCallback = null;
+
+				doEndDay();
+			};
+
+			$scope.promptContent = "Votre journée est terminée.<br />Avez-vous bien travaillé ?";
+			$scope.openWin('prompt');
+
 		}
 
 		/*
