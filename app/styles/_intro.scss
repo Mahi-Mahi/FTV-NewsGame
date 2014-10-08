@@ -6,10 +6,6 @@
 	bottom: 0;
 	left: 0;
 	z-index: 99;
-
-	// -webkit-transition:all linear 1s;
-	// transition:all linear 1s;
-
 	&.ng-hide {
 		opacity: 0;
 		z-index: -1;
@@ -29,7 +25,7 @@
     vertical-align: middle;
 	h2 {
 	    color:#fff;
-	    font:normal 3.2em 'Amatic SC', sans-serif;
+	    font:normal 1.8em 'Amatic SC', sans-serif;
 	    margin: 0;
 	    padding: 50px 0 0 0;
 	    text-transform: uppercase;
@@ -56,10 +52,10 @@
 	h3 {
 		color:#fff;
 		display: block;
-		font-size:3em;
+		font-size:1.6em;
 		font-weight: normal;
 		margin: 0;
-		padding:10px 0;
+		padding:10px 0 0 0;
 	}
 	p {
 		line-height: 1.6;
