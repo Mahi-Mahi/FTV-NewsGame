@@ -70,6 +70,11 @@
 	padding:0;
 	width:369px;
 	@include image-2x("logo-splash-2x.png", 369px, 378px);
+	@media (max-width: 1024px) {
+		background-size:292px 300px;
+		height:300px;
+		width:292px;
+	}
 }
 
 .splash__body__inner__text {
