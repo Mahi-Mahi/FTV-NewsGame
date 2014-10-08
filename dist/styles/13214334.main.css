@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 /**
  * Copyright 2014 Telerik AD
  *
@@ -239,7 +237,7 @@ textarea.k-textbox:hover,
 .k-tabstrip-items .k-item,
 .km-pane-wrapper > .km-pane > .km-view > .km-content {
   background-image: url("textures/highlight.png");
-  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0, rgba(255, 255, 255, 0) 100%);
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
   background-position: 50% 50%;
   background-color: #e3e3e3;
 }
@@ -382,7 +380,7 @@ html .km-pane-wrapper .k-header {
   border-color: #c5c5c5;
   background-color: #e3e3e3;
   background-image: url("textures/highlight.png");
-  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0, rgba(255, 255, 255, 0) 100%);
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 /* line 183, ../../app/styles/_kendo.scss */
@@ -723,7 +721,7 @@ td.k-state-focused.k-state-selected {
 .k-button:active,
 .k-draghandle.k-state-selected:hover {
   background-image: url("textures/highlight.png");
-  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0) 100%);
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 /* line 390, ../../app/styles/_kendo.scss */
@@ -788,7 +786,7 @@ td.k-state-focused.k-state-selected {
 div.k-imagebrowser-dropzone em,
 .k-draghandle:hover {
   background-image: url("textures/highlight.png");
-  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0, rgba(255, 255, 255, 0) 100%);
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 /* line 422, ../../app/styles/_kendo.scss */
@@ -838,7 +836,7 @@ div.k-imagebrowser-dropzone em {
 .k-dropdown-wrap.k-state-focused {
   background-color: #bcb4b0;
   background-image: url("textures/highlight.png");
-  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0, rgba(255, 255, 255, 0) 100%);
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
   background-position: 50% 50%;
   border-color: #bcb4b0;
 }
@@ -1659,7 +1657,7 @@ html .km-pane-wrapper .km-widget,
 .k-numeric-wrap.k-state-default,
 .k-dropdown-wrap.k-state-default {
   background-image: url("textures/highlight.png");
-  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0, rgba(255, 255, 255, 0) 100%);
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
   background-position: 50% 50%;
   background-color: #e9e9e9;
   border-color: #c5c5c5;
@@ -1673,7 +1671,7 @@ html .km-pane-wrapper .km-widget,
 .k-dropdown-wrap.k-state-hover {
   background-color: #bcb4b0;
   background-image: url("textures/highlight.png");
-  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0, rgba(255, 255, 255, 0) 100%);
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
   background-position: 50% 50%;
   border-color: #bcb4b0;
 }
@@ -1699,7 +1697,7 @@ html .km-pane-wrapper .km-widget,
 .k-multiselect.k-header.k-state-focused {
   background-color: #bcb4b0;
   background-image: url("textures/highlight.png");
-  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0, rgba(255, 255, 255, 0) 100%);
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
   background-position: 50% 50%;
   border-color: #bcb4b0;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
@@ -1863,7 +1861,7 @@ html .km-pane-wrapper .km-widget,
   color: #fff;
   border-color: #ef671a;
   background-image: url("textures/highlight.png");
-  background-image: none, linear-gradient(to bottom, #f6813f 0, #f35a03 100%);
+  background-image: none, linear-gradient(to bottom, #f6813f 0%, #f35a03 100%);
   background-position: 50% 50%;
   background-color: #f35800;
   box-shadow: none;
@@ -1876,7 +1874,7 @@ html .km-pane-wrapper .km-widget,
   color: #fff;
   border-color: #e84200;
   background-image: url("textures/highlight.png");
-  background-image: none, linear-gradient(to bottom, #f1713f 0, #ed4503 100%);
+  background-image: none, linear-gradient(to bottom, #f1713f 0%, #ed4503 100%);
   box-shadow: 0 0 3px 1px #e10000;
 }
 
@@ -1886,7 +1884,7 @@ html .km-pane-wrapper .km-widget,
   color: #fff;
   border-color: #ef671a;
   background-image: url("textures/highlight.png");
-  background-image: none, linear-gradient(to bottom, #f1713f 0, #ed4503 100%);
+  background-image: none, linear-gradient(to bottom, #f1713f 0%, #ed4503 100%);
   background-color: #ed4300;
   box-shadow: none;
 }
@@ -1904,7 +1902,7 @@ html .km-pane-wrapper .km-widget,
   color: #fff;
   border-color: #ef671a;
   background-image: url("textures/highlight.png");
-  background-image: none, linear-gradient(to bottom, #f6813f 0, #f35a03 100%);
+  background-image: none, linear-gradient(to bottom, #f6813f 0%, #f35a03 100%);
   background-color: #f35800;
   box-shadow: none;
 }
@@ -1922,7 +1920,7 @@ html .km-pane-wrapper .km-widget,
   border-color: #ef671a;
   background-color: #f35800;
   background-image: url("textures/highlight.png");
-  background-image: none, linear-gradient(to bottom, #f6813f 0, #f35a03 100%);
+  background-image: none, linear-gradient(to bottom, #f6813f 0%, #f35a03 100%);
   box-shadow: none;
 }
 
@@ -2060,7 +2058,7 @@ button:focus {
 /* line 1204, ../../app/styles/_kendo.scss */
 
 .k-content .inner {
-  background: #fff;
+  background: white;
   border: 1px solid #cecdcd;
   border-radius: 4px;
   margin: 0 0 20px 0;
@@ -2450,7 +2448,7 @@ input,
 select,
 textarea {
   font-family: 'HelveticaNeueLight', Helvetica, Verdana, sans-serif;
-  color: #333;
+  color: #333333;
 }
 
 /* line 34, ../../app/styles/main.scss */
@@ -2522,7 +2520,7 @@ a {
   transition: all 0.5s linear;
   -webkit-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
-  color: #29ABE2;
+  color: #29abe2;
   text-decoration: none;
 }
 
@@ -2926,14 +2924,14 @@ textarea {
   z-index: 99;
 }
 
-/* line 13, ../../app/styles/_intro.scss */
+/* line 9, ../../app/styles/_intro.scss */
 
 .splash.ng-hide {
   opacity: 0;
   z-index: -1;
 }
 
-/* line 19, ../../app/styles/_intro.scss */
+/* line 15, ../../app/styles/_intro.scss */
 
 .splash__body {
   display: table;
@@ -2941,7 +2939,7 @@ textarea {
   width: 100%;
 }
 
-/* line 25, ../../app/styles/_intro.scss */
+/* line 21, ../../app/styles/_intro.scss */
 
 .splash__body__inner {
   color: #fff;
@@ -2950,11 +2948,11 @@ textarea {
   vertical-align: middle;
 }
 
-/* line 30, ../../app/styles/_intro.scss */
+/* line 26, ../../app/styles/_intro.scss */
 
 .splash__body__inner h2 {
   color: #fff;
-  font: normal 3.2em 'Amatic SC', sans-serif;
+  font: normal 1.8em 'Amatic SC', sans-serif;
   margin: 0;
   padding: 50px 0 0 0;
   text-transform: uppercase;
@@ -2962,7 +2960,7 @@ textarea {
   text-align: center;
 }
 
-/* line 38, ../../app/styles/_intro.scss */
+/* line 34, ../../app/styles/_intro.scss */
 
 .splash__body__inner h2:before,
 .splash__body__inner h2:after {
@@ -2975,38 +2973,38 @@ textarea {
   width: 50%;
 }
 
-/* line 47, ../../app/styles/_intro.scss */
+/* line 43, ../../app/styles/_intro.scss */
 
 .splash__body__inner h2:before {
   right: 0.5em;
   margin-left: -50%;
 }
 
-/* line 51, ../../app/styles/_intro.scss */
+/* line 47, ../../app/styles/_intro.scss */
 
 .splash__body__inner h2:after {
   left: 0.5em;
   margin-right: -50%;
 }
 
-/* line 56, ../../app/styles/_intro.scss */
+/* line 52, ../../app/styles/_intro.scss */
 
 .splash__body__inner h3 {
   color: #fff;
   display: block;
-  font-size: 3em;
+  font-size: 1.6em;
   font-weight: normal;
   margin: 0;
-  padding: 10px 0;
+  padding: 10px 0 0 0;
 }
 
-/* line 64, ../../app/styles/_intro.scss */
+/* line 60, ../../app/styles/_intro.scss */
 
 .splash__body__inner p {
   line-height: 1.6;
 }
 
-/* line 69, ../../app/styles/_intro.scss */
+/* line 65, ../../app/styles/_intro.scss */
 
 .logo-splash {
   background: url('/images/logo-splash.png') left top no-repeat;
@@ -3018,7 +3016,7 @@ textarea {
 }
 
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 69, ../../app/styles/_intro.scss */
+  /* line 65, ../../app/styles/_intro.scss */
 
   .logo-splash {
     background-image: url('/images/logo-splash-2x.png');
@@ -3026,7 +3024,17 @@ textarea {
   }
 }
 
-/* line 79, ../../app/styles/_intro.scss */
+@media (max-width: 1024px) {
+  /* line 65, ../../app/styles/_intro.scss */
+
+  .logo-splash {
+    background-size: 292px 300px;
+    height: 300px;
+    width: 292px;
+  }
+}
+
+/* line 80, ../../app/styles/_intro.scss */
 
 .splash__body__inner__text {
   display: block;
@@ -3036,7 +3044,7 @@ textarea {
   font-size: 1.3333333333em;
 }
 
-/* line 87, ../../app/styles/_intro.scss */
+/* line 88, ../../app/styles/_intro.scss */
 
 .top-skip {
   display: block;
@@ -3049,7 +3057,7 @@ textarea {
   z-index: 3;
 }
 
-/* line 96, ../../app/styles/_intro.scss */
+/* line 97, ../../app/styles/_intro.scss */
 
 .top-skip a {
   background: none;
@@ -3064,14 +3072,14 @@ textarea {
   width: 45px;
 }
 
-/* line 111, ../../app/styles/_intro.scss */
+/* line 112, ../../app/styles/_intro.scss */
 
 .media {
   overflow: hidden;
   zoom: 1;
 }
 
-/* line 116, ../../app/styles/_intro.scss */
+/* line 117, ../../app/styles/_intro.scss */
 
 .dialogue {
   -moz-box-sizing: border-box;
@@ -3090,7 +3098,7 @@ textarea {
   font-size: 1.3333333333em;
 }
 
-/* line 132, ../../app/styles/_intro.scss */
+/* line 133, ../../app/styles/_intro.scss */
 
 .dialogue img {
   float: left;
@@ -3100,14 +3108,14 @@ textarea {
   width: 105px;
 }
 
-/* line 139, ../../app/styles/_intro.scss */
+/* line 140, ../../app/styles/_intro.scss */
 
 .dialogue .typed {
   display: block;
   padding: 10px;
 }
 
-/* line 143, ../../app/styles/_intro.scss */
+/* line 144, ../../app/styles/_intro.scss */
 
 .dialogue .skip {
   font-size: 1.6666666667em;
@@ -3123,7 +3131,7 @@ textarea {
   width: 25px;
 }
 
-/* line 155, ../../app/styles/_intro.scss */
+/* line 156, ../../app/styles/_intro.scss */
 
 .dialogue .skip:after {
   content: "\25B8";
@@ -3134,23 +3142,23 @@ textarea {
   padding: 0;
   position: absolute;
   right: 0;
-  top: 0;
+  top: -5px;
 }
 
-/* line 169, ../../app/styles/_intro.scss */
+/* line 170, ../../app/styles/_intro.scss */
 
 .me {
   text-align: right;
 }
 
-/* line 171, ../../app/styles/_intro.scss */
+/* line 172, ../../app/styles/_intro.scss */
 
 .me img {
   float: right;
   margin: 0 10px 0 10px;
 }
 
-/* line 177, ../../app/styles/_intro.scss */
+/* line 178, ../../app/styles/_intro.scss */
 
 .dialogue__name {
   -moz-box-sizing: border-box;
@@ -3170,13 +3178,13 @@ textarea {
   padding: 8px;
 }
 
-/* line 194, ../../app/styles/_intro.scss */
+/* line 195, ../../app/styles/_intro.scss */
 
 .me .dialogue__name {
   float: right;
 }
 
-/* line 199, ../../app/styles/_intro.scss */
+/* line 200, ../../app/styles/_intro.scss */
 
 #typed-cursor {
   opacity: 1;
@@ -3188,28 +3196,34 @@ textarea {
 }
 
 @-webkit-keyframes blink {
+  /* line 207, ../../app/styles/_intro.scss */
   0% {
     opacity: 1;
   }
 
+  /* line 208, ../../app/styles/_intro.scss */
   50% {
     opacity: 0;
   }
 
+  /* line 209, ../../app/styles/_intro.scss */
   100% {
     opacity: 1;
   }
 }
 
 @keyframes blink {
+  /* line 207, ../../app/styles/_intro.scss */
   0% {
     opacity: 1;
   }
 
+  /* line 208, ../../app/styles/_intro.scss */
   50% {
     opacity: 0;
   }
 
+  /* line 209, ../../app/styles/_intro.scss */
   100% {
     opacity: 1;
   }
@@ -4655,13 +4669,13 @@ div.k-window-content#chat {
 /* line 1033, ../../app/styles/_play.scss */
 
 .postActions .up:before {
-  content: "(";
+  content: "\28";
 }
 
 /* line 1036, ../../app/styles/_play.scss */
 
 .postActions .down:before {
-  content: "§";
+  content: "\a7";
 }
 
 /* line 1039, ../../app/styles/_play.scss */
@@ -5202,7 +5216,7 @@ div.k-window-content#chat {
   display: block;
 }
 
-/* line 1394, ../../app/styles/_play.scss */
+/* line 1400, ../../app/styles/_play.scss */
 
 .verify-cuit-theme .verify-cuit-theme,
 .verify-source-theme .verify-source-theme,
@@ -5303,11 +5317,13 @@ div.k-window-content#chat {
 }
 
 @-webkit-keyframes loader {
+  /* line 1482, ../../app/styles/_play.scss */
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
+  /* line 1486, ../../app/styles/_play.scss */
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -5315,11 +5331,13 @@ div.k-window-content#chat {
 }
 
 @keyframes loader {
+  /* line 1492, ../../app/styles/_play.scss */
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
+  /* line 1496, ../../app/styles/_play.scss */
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -5327,20 +5345,24 @@ div.k-window-content#chat {
 }
 
 @-webkit-keyframes expandWidth {
+  /* line 1503, ../../app/styles/_play.scss */
   0% {
     width: 0;
   }
 
+  /* line 1506, ../../app/styles/_play.scss */
   100% {
     width: 100%;
   }
 }
 
 @keyframes loader {
+  /* line 1511, ../../app/styles/_play.scss */
   0% {
     width: 0;
   }
 
+  /* line 1514, ../../app/styles/_play.scss */
   100% {
     width: 100%;
   }
@@ -5549,7 +5571,7 @@ div.k-window-content#chat {
   top: 10px;
 }
 
-/* line 138, ../../app/styles/_notepad.scss */
+/* line 139, ../../app/styles/_notepad.scss */
 
 .thematique-list [type="radio"]:not(:checked),
 .thematique-list [type="radio"]:checked {
@@ -5557,7 +5579,7 @@ div.k-window-content#chat {
   left: -999em;
 }
 
-/* line 143, ../../app/styles/_notepad.scss */
+/* line 144, ../../app/styles/_notepad.scss */
 
 .thematique-list [type="radio"]:not(:checked) + label,
 .thematique-list [type="radio"]:checked + label {
@@ -5567,7 +5589,7 @@ div.k-window-content#chat {
   display: block;
 }
 
-/* line 151, ../../app/styles/_notepad.scss */
+/* line 152, ../../app/styles/_notepad.scss */
 
 .thematique-list [type="radio"]:not(:checked) + label:before,
 .thematique-list [type="radio"]:checked + label:before {
@@ -5582,7 +5604,7 @@ div.k-window-content#chat {
   border-radius: 3px;
 }
 
-/* line 161, ../../app/styles/_notepad.scss */
+/* line 162, ../../app/styles/_notepad.scss */
 
 .thematique-list [type="radio"]:not(:checked) + label:after,
 .thematique-list [type="radio"]:checked + label:after {
