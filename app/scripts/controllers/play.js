@@ -750,7 +750,9 @@ angular.module('newsGameApp')
 		function addChat(delay, speaker, content) {
 			addStep(delay, function() {
 				$scope.openWin('chat');
-				Sound.play('skoupeText');
+				if (speaker !== 'other') {
+					Sound.play('skoupeText');
+				}
 				$scope.currentChat.status = ((speaker === 'other') ? 'reading' : 'writing');
 				var $container = angular.element(document.getElementById('chat-scroll'));
 				var chatBottom = angular.element(document.getElementById('chat-bottom'));
