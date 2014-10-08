@@ -1,85 +1,59 @@
 <div ng-class="['level-'+level, tuto ? 'tuto' : '']">
 
-
-	<div class="widgets">
-		<div class="timeline">
-			<div class="clearfix timeline-row">
-				<h2 class="left">Temps restant</h2>
-				<a ng-click="endDay()" class="endDay bt bt--finish right">Terminer la journée</a>
-			</div>
-			<div class="clearfix">
-				<div class="gauge left">
-					<div ng-class="['gauge__inner', gaugeLevel]">
-						<div class="fill" style="width:{{100-((totalTime-remainingTime)/totalTime)*100}}%;"></div>
-					</div>
-				</div>
-				<span class="remaining left">{{remainingTime | duration}}</span>
-			</div>
-		</div>
-
-		<div class="feedback feedback--{{feedback.type}}" ng-if="feedback.active">
-			<div class="feedback__title">
-				{{feedback.status}}
-			</div>
-			<p class="feedback__body">{{feedback.detail}}</p>
-		</div>
-	</div>
-
-
 	<div id="waiting" ng-show="waiting.active">
-		<div ng-class="['waiting__inner', waiting.action, waiting.extra]" ng-if="waiting.type">
+		<div ng-class="['detail', waiting.type]" ng-if="waiting.type">
+			{{waiting.detail}}
+		</div>
+		<div class="waiting__inner">
 			<div class="waiting__inner__body">
 				<div class="waiting-check-thematique">
-					<!-- <h2>Patientez</h2> -->
-					<!-- <p>Vérification d'une thématique en cours</p> -->
-					<span class="timer">{{waiting.duration}} min</span>
+					<h2>Patientez</h2>
+					<p>Vérification d'une thématique en cours</p>
+					<span class="timer">15 min</span>
 					<div class="gauge-container">
 						<div class="gauge">
 							<div class="gauge__inner">
 								<div class="fill" id="fill-waiting"></div>
 							</div>
 						</div>
-					</div>
+					</div>					
 				</div>
- 				<div class="publish-cuit">
-					<h2 class="title-checked">Publication en cours</h2>
-				</div>
- 				<div class="unpublish-cuit">
-					<h2 class="title-checked">Dépublication en cours</h2>
-				</div>
- 				<div class="verify-cuit-theme">
-					<h2 class="title-checked">Thématique vérifiée</h2>
-				</div>
- 				<div class="verify-cuit-credibility" ng-show="waiting.extra > 0">
+ 				<div class="waiting-check-credibility">
 					<h2 class="title-checked">Crédibilité vérifiée</h2>
-					<p>{{waiting.detail}}</p>
-					<div class="stars stars--{{waiting.extra}}">{{waiting.extra}}</div>
-					<!-- <div class="stars stars--negative--2">2</div> -->
+					<p>"J'ai fait quelques recherches <br />et cette info est complètement bidon.<br />Je vous déconseille de la publier !"</p>
+					<div class="stars stars--2">2</div>
+					<div class="stars stars--negative--2">2</div>
 				</div>
- 				<div class="verify-cuit-credibility" ng-show="waiting.extra === 0">
+ 				<div class="waiting-check-credibility">
 					<h2 class="title-unchecked">Crédibilité non vérifiée</h2>
-					<p>{{waiting.detail}}</p>
+					<p>"Je ne peux rien vous dire sur cette info... <br />Sa thématique n'est pas ma spécialité."</p>
 					<img src="images/icon-credibility-unchecked.png" alt="" />
 				</div>
- 				<div class="verify-source-theme">
+ 				<div class="waiting-check-source">
 					<h2 class="title-checked">Source vérifiée</h2>
-					<p>{{waiting.detail}}</p>
-					<!-- <div class="source-status status-unchecked"></div> -->
-					<!-- <div class="source-status status-checked status-checked--{{waiting.extra}}"></div> -->
+					<p>"Hum... Cette source n'est pas très crédible... <br />Je serais vous, je me méfierais de ce qu'elle dit."</p>
+					<div class="source-status status-unchecked"></div>
+					<div class="source-status status-checked status-checked--2"></div>
+					<div class="source-status status-checked status-checked--3"></div>
 				</div>
- 				<div class="verify-cuit-exclusivity" ng-show="waiting.extra > 0">
+ 				<div class="waiting-check-source">
+					<h2 class="title-unchecked">Source non vérifiée</h2>
+					<p>"Je ne peux rien vous dire sur cette source... <br />Sa thématique n'est pas ma spécialité"</p>
+					<img src="images/icon-source-unchecked.png" alt="" />
+				</div>
+ 				<div class="waiting-check-scoop">
 					<h2 class="title-checked">C'est un scoop</h2>
-					<p>{{waiting.detail}}</p>
+					<p>"Incroyable ! Vous avez déniché un scoop ! <br />Si cette info est crédible, publiez-la absolument !"</p>
 					<img src="images/icon-scoop-ok.png" alt="" />
 				</div>
- 				<div class="verify-cuit-exclusivity" ng-show="waiting.extra === 0">
+ 				<div class="waiting-check-scoop">
 					<h2 class="title-checked title-checked--no-scoop">Ce n'est pas un scoop</h2>
-					<p>{{waiting.detail}}</p>
+					<p>"Ah... Cette info n'est pas un scoop. Mais si elle est crédible, <br />elle intéressera peut-être vos lecteurs."</p>
 					<img src="images/icon-scoop-nok.png" alt="" />
 				</div>
- 				<div class="verify-cuit-exclusivity" ng-show="waiting.extra < 0">
+ 				<div class="waiting-check-scoop">
 					<h2 class="title-unchecked ">Scoop non vérifié</h2>
-					<p>{{waiting.detail}}</p>
+					<p>"Je ne peux pas vous dire si cette info est un scoop... <br />Sa thématique n'est pas ma spécialité."</p>
 					<img src="images/icon-scoop-unchecked.png" alt="" />
 				</div>
 			</div>
@@ -90,6 +64,7 @@
 		<a href="/#/play/skip">Esc</a>
 		<span>pour <br />passer</span>
 	</div>
+
 
 	<div class="windows">
 		<div  ng-repeat="(id, win) in windows"
@@ -122,11 +97,44 @@
 		<div class="clearfix">
 			<h2>Score</h2>
 			<div class="gauge left">
+<<<<<<< HEAD
 				<div ng-class="['gauge__inner', 'green']">
 					<div class="fill" style="width:{{ $storage.scores['level-'+level] / scoring['level-'+level]['winning-score'] * 100  }}%;"></div>
+=======
+				<div class="gauge__inner">
+					<div class="fill" style="width:80%;"></div>
 				</div>
 			</div>
+			<span class="remaining left">1500 points</span>
+		</div>
+	</div>
+
+	<div class="widgets">
+		<div class="timeline">
+			<div class="clearfix timeline-row">
+				<h2 class="left">Temps restant</h2>
+				<a ng-click="endDay()" class="endDay bt bt--finish right">Terminer la journée</a>
+			</div>
+			<div class="clearfix">
+				<div class="gauge left">
+					<div ng-class="['gauge__inner', gaugeLevel]">
+						<div class="fill" style="width:{{100-((totalTime-remainingTime)/totalTime)*100}}%;"></div>
+					</div>
+>>>>>>> FETCH_HEAD
+				</div>
+				<span class="remaining left">{{remainingTime | duration}}</span>
+			</div>
+<<<<<<< HEAD
 			<span class="remaining left">{{$storage.scores['level-' + level] || '0'}} point{{-1 > $storage.scores['level-' + level] || $storage.scores['level-' + level]>1  ? 's' : ''}}</span>
+=======
+		</div>
+
+		<div class="feedback feedback--{{feedback.type}}" ng-if="feedback.active">
+			<div class="feedback__title">
+				{{feedback.status}}
+			</div>
+			<p class="feedback__body">{{feedback.detail}}</p>
+>>>>>>> FETCH_HEAD
 		</div>
 	</div>
 
