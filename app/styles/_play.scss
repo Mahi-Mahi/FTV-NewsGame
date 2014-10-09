@@ -249,7 +249,7 @@
         overflow-y: hidden;
         @include transition(max-height 0.5s ease-in-out);
         &.visible {
-            max-height: 220px;
+            max-height: 210px;
         }
     }
     .source {
@@ -525,6 +525,9 @@ div.k-window-content#chat {
 
 .inner__body--fullwidth {
     padding: 10px 0;
+    #win-themeSelector & {
+        padding: 0;
+    }
 }
 
 .inner-item {
