@@ -596,7 +596,7 @@ angular.module('newsGameApp')
 			active: false,
 			template: 'cuicuiter-source',
 			width: 400,
-			height: 225,
+			height: 240,
 			position: {
 				top: 125,
 				left: 250
