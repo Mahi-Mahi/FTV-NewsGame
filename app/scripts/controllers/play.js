@@ -608,7 +608,7 @@ angular.module('newsGameApp')
 			visible: false,
 			active: true,
 			template: 'skoupe-main',
-			height: 450,
+			height: 200,
 			position: {
 				top: 70,
 				left: 600

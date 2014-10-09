@@ -142,6 +142,7 @@
 }
 
 .fill {
+    width: 0;
     max-width: 100%;
     .green & {
         background:#009245;
@@ -175,6 +176,7 @@
     padding:10px;
     top: 10px;
     right: 65px;
+    width: 240px;
     h2 {
         display: block;
         font-size: 1.2em;
@@ -193,8 +195,8 @@
     position: absolute;
     margin:0;
     padding:0;
-    top: 25px;
-    right: 25px;
+    top: 90px;
+    right: 65px;
     width: 260px;
     z-index:199999;
 }
@@ -618,6 +620,10 @@ div.k-window-content#chat {
     }
 }
 
+.call--contact__disabled {
+    opacity: .3;
+}
+
 #tooltip {
     border-radius:4px;
     color:#fff;
@@ -955,7 +961,7 @@ div.k-window-content#chat {
     color:#29abe2;
     display: block;
     margin:0;
-    padding: 15px 0;
+    padding: 3px 0 0 0;
     span {
         font-size: 1.5em;
         padding: 8px 0 0 5px;

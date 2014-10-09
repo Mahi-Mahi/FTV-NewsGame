@@ -5,7 +5,7 @@
 			<li ng-repeat="message in currentChat.discussion" ng-class="message.speaker">
 					{{message.content}}
 			</li>
-			<li ng-if="currentChat.status == 'reading'" class="other">...<small>Rédige un message</small></li>
+			<li ng-if="currentChat.status == 'reading'" class="other">... Rédige un message</li>
 			<li ng-if="currentChat.status == 'writing'" class="me">...</li>
 		</ul>
 		<div id="chat-bottom"></div>
