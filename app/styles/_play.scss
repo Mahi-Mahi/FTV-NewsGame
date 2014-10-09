@@ -185,7 +185,7 @@
     }
     .gauge {
         border-color:#c6903a;
-        padding:4px 3px 4px 2px;
+        padding:4px;
     }
 }
 
@@ -254,7 +254,7 @@
     }
     .source {
         display: inline-block;
-        padding:0 0 10px 0;
+        padding:5px 0 10px 0;
         margin: 0;
         vertical-align: top;
     }
@@ -286,12 +286,15 @@
         color: #95a5a6;
         display: table-cell;
         margin: 0;
-        padding: 5px 10px;
+        padding: 10px;
         text-align: center;
         vertical-align: top;
         &:first-child {
             border-left: none;
         }
+    }
+    span {
+        padding:10px 0 0 0;
     }
     .contact-skoupe & li {
         text-align: left;
@@ -421,7 +424,6 @@ div.k-window-content#chat {
         margin: 0 0 10px 0;
         background: #fff;
         float:left;
-        min-width:26%;
         max-width:75%;
         font-size: em(13px);
     }
