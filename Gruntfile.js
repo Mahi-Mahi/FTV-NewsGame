@@ -235,6 +235,9 @@ module.exports = function(grunt) {
 
     imagemin: {
       dist: {
+        options: {
+          optimizationLevel: 1
+        },
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>/images',
