@@ -83,13 +83,13 @@
         content: "\2c";
         color: #974a83;
     }
-    .blog .k-button:before {
+    .blog .k-button:before, .publish .k-button:before {
         background: #29abe2;
         content: "\f9";
         color: #e7e6e6;
         height:17px;
     }
-    .blog.visible .k-button:before {
+    .blog.visible .k-button:before, .publish.visible .k-button:before {
         color: #c2ccd1;
     }  
 }
@@ -546,7 +546,7 @@ div.k-window-content#chat {
 
 .inner__body--fullwidth {
     padding: 10px 0;
-    #win-themeSelector & {
+    #win-themeSelector &, #themeSelector &, #skoupe & {
         padding: 0;
     }
 }

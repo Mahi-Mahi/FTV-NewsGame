@@ -620,6 +620,7 @@ angular.module('newsGameApp')
 			active: false,
 			visible: false,
 			template: 'skoupe-contact',
+			height: 245,
 			position: {
 				top: 125,
 				left: 550
