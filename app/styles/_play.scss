@@ -142,7 +142,7 @@
     border:1px solid #95a5a6;
     border-radius:8px;
     margin: 0;
-    padding:4px 3px 2px 2px;
+    padding:4px 4px 2px 4px;
     width: 145px;
     .gauge__inner {
         background:#dbd9d6;
@@ -195,7 +195,7 @@
     padding:10px 0 10px 10px;
     top: 10px;
     right: 65px;
-    width: 240px;
+    width: 250px;
     h2 {
         display: block;
         font-size: 1.2em;
@@ -272,10 +272,12 @@
         }
     }
     .source {
-        display: inline-block;
-        padding:5px 0 10px 0;
-        margin: 0;
-        vertical-align: top;
+        display: block;
+        padding: 5px 0px 10px;
+        margin: 0px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }
 
