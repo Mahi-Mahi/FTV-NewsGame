@@ -44,7 +44,6 @@
     }
     .visible .k-button {
         background:#c2ccd1 !important;
-        color:#fff !important;
         &:after {
             bottom: 100%;
             left: 15px;
@@ -64,6 +63,7 @@
         background:#e7e6e6;
         content: "\24";
         color: #fff;
+        font-size: 1em;
     }
     .cuicuiter.visible .k-button:before {
         background:#c2ccd1;
@@ -73,6 +73,25 @@
         content: "\2c";
         color: #189a99;
     }
+    .notepad .k-button:before {
+        background:none;
+        content: "\3d";
+        color: #34485e;
+    } 
+    .chat .k-button:before {
+        background:none;
+        content: "\2c";
+        color: #974a83;
+    }
+    .blog .k-button:before {
+        background: #29abe2;
+        content: "\f9";
+        color: #e7e6e6;
+        height:17px;
+    }
+    .blog.visible .k-button:before {
+        color: #c2ccd1;
+    }  
 }
 
 .k-button:focus:active:not(.k-state-disabled):not([disabled]) {
@@ -162,8 +181,8 @@
 }
 
 .remaining {
-    font-size: em(14px);
-    padding:0 0 0 10px;
+    font-size: em(12px);
+    padding:2px 0 0 5px;
 }
 
 .widget-scoring {
@@ -173,7 +192,7 @@
     box-shadow: rgba(128, 128, 128, .3) 1px 1px 7px 1px;
     position: fixed;
     margin:0;
-    padding:10px;
+    padding:10px 0 10px 10px;
     top: 10px;
     right: 65px;
     width: 240px;
