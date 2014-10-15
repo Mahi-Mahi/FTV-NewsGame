@@ -16,8 +16,6 @@ $notepad-color:#29abe2;
   -o-transition:$transition;
   -ms-transition:$transition;
   transition:$transition;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 // CSS TRANSFORM

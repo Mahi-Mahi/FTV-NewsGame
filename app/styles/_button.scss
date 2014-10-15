@@ -49,8 +49,10 @@
 }
 
 .bt--puslish--selected {
-  background:#95a5a6;
-  border-color:#95a5a6;
+	background:#95a5a6;
+	border-color:#95a5a6;
+	cursor:default;
+	pointer-events: none !important;
 }
 
 .bt--finish {

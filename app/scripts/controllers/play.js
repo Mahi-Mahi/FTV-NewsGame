@@ -469,7 +469,7 @@ angular.module('newsGameApp')
 			};
 
 			$scope.promptContent = "Votre journée est terminée.<br />Avez-vous bien travaillé ?";
-			$scope.openWin('prompt');
+			$scope.openWin('promptEndDay');
 
 		}
 
@@ -666,6 +666,20 @@ angular.module('newsGameApp')
 		});
 
 		createWindow('prompt', {
+			title: "Avertissement",
+			template: 'prompt',
+			active: false,
+			actions: [],
+			modal: true,
+			height: 130,
+			width: 220,
+			position: {
+				top: '45%',
+				left: '45%'
+			}
+		});
+
+		createWindow('promptEndDay', {
 			title: "Avertissement",
 			template: 'prompt',
 			active: false,
