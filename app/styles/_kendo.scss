@@ -1233,7 +1233,7 @@ a:focus,button:focus {
 
 .k-window-title {
     text-indent: 100%; 
-    #win-prompt & {
+    #win-prompt &, #win-promptEndDay & {
         text-indent: 0;
     }
 }

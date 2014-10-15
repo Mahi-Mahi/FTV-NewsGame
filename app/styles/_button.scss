@@ -40,12 +40,12 @@
 }
 
 .bt--publish {
-  @include transition(all .5s ease);
+	@include transition(all .5s ease);
 	background:$bt-color;
 	color:#fff;
-  float: right;
-  font-size: .8em;
-  margin:0;
+	float: right;
+	font-size: .8em;
+	margin:0;
 }
 
 .bt--puslish--selected {

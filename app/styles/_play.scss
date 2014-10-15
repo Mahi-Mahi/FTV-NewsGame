@@ -953,7 +953,7 @@ div.k-window-content#chat {
 
 // PROMPT
 
-#prompt {
+#prompt, #promptEndDay {
     background:#d7d8d8 !important;
     border-top: 1px solid #edeeee;
     padding: 20px;
@@ -974,6 +974,12 @@ div.k-window-content#chat {
         color:#d35400;
         float: left;
     }
+}
+
+#win-promptEndDay {
+	.bt {
+		float:none;
+	}
 }
 
 // BLOG
