@@ -31,7 +31,7 @@ angular.module('newsGameApp')
 		var chatInterval = dataService.data.settings.chatInterval;
 
 		// debug config
-		var delayModifier = ($scope.debug ? 0.1 : 1);
+		var delayModifier = ($scope.debug ? 0.1 : 2);
 
 		var steps = [];
 

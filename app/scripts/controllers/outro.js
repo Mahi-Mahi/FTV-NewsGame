@@ -24,7 +24,7 @@ angular.module('newsGameApp')
 		var chatInterval = dataService.data.settings.chatInterval;
 
 		// debug config
-		var delayModifier = ($scope.debug ? 0.1 : 1);
+		var delayModifier = ($scope.debug ? 0.1 : 2);
 
 		$log.log($scope.$storage.level);
 		$log.log($scope.$storage.scores);
@@ -37,12 +37,14 @@ angular.module('newsGameApp')
 			$location.path('/score');
 		};
 
+
 		function showText(content) {
 			$log.log("showText(", content);
 			var deferred = $q.defer();
+
 			var contentIdx = 0;
 			$scope.typed = '';
-			$scope.skipText = 0;
+			$scope.skipText = 1;
 			var interval = $interval(function() {
 				if ($scope.skipText === 0) {
 					$scope.typed = $scope.typed + content[contentIdx];
