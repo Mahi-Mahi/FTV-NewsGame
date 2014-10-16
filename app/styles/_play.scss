@@ -360,7 +360,8 @@
     }
     //display: none !important;
     display: none;
-    #source .verified-theme &,
+    .play-level-3 #source .verified-theme &,
+    .play-level-4 #source .verified-theme &,
     .intro-level-3 .scoring__details__item &,
     .intro-level-4 .scoring__details__item & {
         display: block !important;
@@ -391,17 +392,17 @@
     }
 }
 
-.level-1 {
+.play-level-1 {
     .publish, .credibility, .exclusivity, .timeline {
         display: none !important;
     }
 }
-.level-2, .intro-level-2 {
+.play-level-2, .intro-level-2 {
     .credibility, .exclusivity {
         display: none !important;
     }
 }
-.level-3, .intro-level-3 {
+.play-level-3, .intro-level-3 {
     .verified-theme .credibility {
         display: table-cell !important;
     }
@@ -416,14 +417,14 @@
     }
 }
 
-.level-4, .intro-level-4 {
+.play-level-4, .intro-level-4 {
     .verified-theme .credibility, .verified-theme .exclusivity {
         display: table-cell !important;
     }
 }
 
 
-.level-4, .intro-level-4 {
+.play-level-4, .intro-level-4 {
     #scoring {
         .verified-theme .credibility, .verified-theme .exclusivity {
             display: table-cell !important;

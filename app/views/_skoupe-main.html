@@ -7,13 +7,13 @@
 				<a href="" ng-click="openContact(id)" class="contact-item__name">
 					{{contact.name}}
 					<div ng-if="debug">
-						{{contact.verifiedCuits}} {{selectedCuit.id}} {{contact.verifiedCuits.length}} {{contact.verifiedCuits.indexOf(selectedCuit.id)}} {{contact.themes}} {{contact.themes.indexOf(selectedCuit.theme)}}
+						{{$storage.contacts[id].verifiedCuits}} {{selectedCuit.id}} {{$storage.contacts[id].verifiedCuits.length}} {{$storage.contacts[id].verifiedCuits.indexOf(selectedCuit.id)}} {{contact.themes}} {{contact.themes.indexOf(selectedCuit.theme)}}
 					</div>
 				</a>
 				<div class="contact-item-themes">
 					<span ng-repeat="theme in contact.themes" ng-class="['item-theme', theme]" title="{{themes[theme]}}"></span>
 				</div>
-				<a href="" ng-class="['call', canCall && contact.verifiedCuits.indexOf(selectedCuit.id) < 0 && contact.themes.indexOf(selectedCuit.theme) > -1 ? '' : 'call--contact--disabled']" ng-click="callContact(contact)" title="Appeler"><span class="visuallyhidden">Appeler</span></a>
+				<a href="" ng-class="['call']" ng-if="canCall && ( $storage.contacts[id].verifiedCuits.length === 0 || $storage.contacts[id].verifiedCuits.indexOf(selectedCuit.id) < 0 ) " ng-click="callContact(contact)" title="Appeler"><span class="visuallyhidden">Appeler</span></a>
 			</li>
 		</ul>
 	</div><!-- .inner__body -->

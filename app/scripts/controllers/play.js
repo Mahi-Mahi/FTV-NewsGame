@@ -71,6 +71,13 @@ angular.module('newsGameApp')
 		// Verify source Theme ( + decrement time counter )
 		var verifySourceThemeCallback = false;
 		$scope.verifySourceTheme = function(id) {
+			if (tutoAction && !verifySourceThemeCallback) {
+				return;
+			}
+			if (!checkRemainingTime('verify-source-theme')) {
+				return;
+			}
+
 			Sound.play('click');
 			dataService.data.all.sources[id].themeVerified = true;
 			$scope.currentSource = dataService.data.all.sources[id];
@@ -83,7 +90,8 @@ angular.module('newsGameApp')
 
 		function applySourceTheme() {
 			angular.forEach($scope.cuits, function(cuit, id) {
-				if ($scope.currentSource.id === $scope.cuits[id].source) {
+				var source = dataService.data.all.sources[$scope.cuits[id].source];
+				if (source.themeVerified) {
 					$scope.cuits[id].author = dataService.data.all.sources[cuit.source];
 					$scope.cuits[id].themeVerified = true;
 				}
@@ -93,6 +101,12 @@ angular.module('newsGameApp')
 		// Verify source Credibility ( + decrement time counter )
 		var verifySourceCredibilityCallback = false;
 		$scope.verifySourceCredibility = function(id) {
+			if (tutoAction && !verifySourceCredibilityCallback) {
+				return;
+			}
+			if (!checkRemainingTime('verify-source-credibility')) {
+				return;
+			}
 			Sound.play('click');
 			dataService.data.all.sources[id].credibilityVerified = true;
 			$scope.currentSource = dataService.data.all.sources[id];
@@ -105,7 +119,8 @@ angular.module('newsGameApp')
 
 		function applySourceCredibility() {
 			angular.forEach($scope.cuits, function(cuit, id) {
-				if ($scope.currentSource.id === $scope.cuits[id].source) {
+				var source = dataService.data.all.sources[$scope.cuits[id].source];
+				if (source.credibilityVerified) {
 					$scope.cuits[id].author = dataService.data.all.sources[cuit.source];
 					$scope.cuits[id].credibilityVerified = true;
 				}
@@ -196,6 +211,13 @@ angular.module('newsGameApp')
 		// Verify Cuit Theme ( + decrement time counter )
 		var verifyCuitThemeCallback = false;
 		$scope.verifyCuitTheme = function(cuit) {
+			if (tutoAction && !verifyCuitThemeCallback) {
+				return;
+			}
+			if (!checkRemainingTime('verify-cuit-theme')) {
+				return;
+			}
+
 			Sound.play('verification');
 			$log.log("verifyCuitTheme(" + cuit);
 			selectedCuit = cuit;
@@ -210,6 +232,12 @@ angular.module('newsGameApp')
 		var verifyCuitCredibilityCallback = false;
 		$scope.verifyCuitCredibility = function(cuit) {
 			// $log.log("verifyCuitCredibility(" + cuit);
+			if (tutoAction && !verifyCuitCredibilityCallback) {
+				return;
+			}
+			if (!checkRemainingTime('verify-cuit-credibility')) {
+				return;
+			}
 			Sound.play('verification');
 			selectedCuit = cuit;
 			$scope.selectedCuit = selectedCuit;
@@ -254,6 +282,9 @@ angular.module('newsGameApp')
 		// Verify Cuit Exclusivity ( + decrement time counter )
 		var verifyCuitExclusivityCallback = false;
 		$scope.verifyCuitExclusivity = function(cuit) {
+			if (!checkRemainingTime('verify-cuit-exclusivity')) {
+				return;
+			}
 			$log.log("verifyCuitExclusivity(" + cuit);
 			Sound.play('verification');
 			selectedCuit = cuit;
@@ -298,10 +329,14 @@ angular.module('newsGameApp')
 			var added = false;
 			angular.forEach($scope.$storage.contacts, function(contact, key) {
 				if (!added && (force || contact.id === selectedContact.id)) {
+					$log.log(contact.verifiedCuits);
 					if (!contact.verifiedCuits) {
 						$scope.$storage.contacts[key].verifiedCuits = [];
 					}
+					$log.log(contact.themes.indexOf(selectedCuit.theme));
+					$log.log(contact.verifiedCuits.indexOf(selectedCuit.id));
 					if (contact.themes.indexOf(selectedCuit.theme) !== -1 && contact.verifiedCuits.indexOf(selectedCuit.id) === -1) {
+						$log.log("added");
 						$scope.$storage.contacts[key].verifiedCuits.push(selectedCuit.id);
 						added = true;
 					}
@@ -407,6 +442,11 @@ angular.module('newsGameApp')
 		$scope.waiting = {
 			active: false
 		};
+
+		function checkRemainingTime(action) {
+			var duration = dataService.data.settings.actionsCost[action];
+			return $scope.remainingTime > duration;
+		}
 
 		function decrementTime(action, type, detail, extra) {
 			$log.log("decrementTime(", action, type, detail, extra);
@@ -825,6 +865,7 @@ angular.module('newsGameApp')
 		function endTuto() {
 			$log.log("endTuto");
 			$scope.tuto = false;
+			tutoAction = null;
 		}
 		$scope.endTuto = endTuto;
 
@@ -837,9 +878,13 @@ angular.module('newsGameApp')
 
 		var scenarii = {};
 
+		var tutoAction = null;
+
 		// Level 1
 		scenarii.level1 = function() {
 			$log.log(">scenario1");
+
+			tutoAction = true;
 
 			$scope.currentChat = {
 				contact: "Mehdi",
@@ -887,10 +932,10 @@ angular.module('newsGameApp')
 
 			addStep(chatDelay, function() {
 				if ($scope.debug) {
-					var $choices = jQuery('#themeSelector :radio');
-					$choices.eq(Math.round(Math.random() * $choices.length)).click();
-					jQuery('#themeSelector button').click();
-					$scope.$storage.chosenTheme = 'politique';
+					// var $choices = jQuery('#themeSelector :radio');
+					// $choices.eq(Math.round(Math.random() * $choices.length)).click();
+					// jQuery('#themeSelector button').click();
+					// $scope.$storage.chosenTheme = 'politique';
 				}
 			});
 
@@ -904,11 +949,11 @@ angular.module('newsGameApp')
 
 			steps = [];
 
-			addChat(500, 'me', $scope.themes[$scope.$storage.chosenTheme] + "! Si je veux trouver des infos sur ce sujet-là, je fais comment ?");
+			addChat(500, 'me', $scope.themes[$scope.$storage.chosenTheme] + " &nbsp;! Si je veux trouver des infos sur ce sujet-là, je fais comment ?");
 			addChat(chatDelay, 'other', "Tu ouvres grands tes yeux... et tu fais marcher ton cerveau ! En lisant les Cuitts, tu pourras déterminer de quoi ils parlent.");
 
 			addChat(chatDelay, 'me', "Hum... pas facile !");
-			addChat(chatDelay, 'other', "Je vois. Si tu as un doute, tu peux faire une recherche pour vérifier la thématique de chaque Cuitt. Regarde : choisis-en un, n’importe lequel !");
+			addChat(chatDelay, 'other', "Je vois. Si tu as un doute, tu peux faire une recherche pour vérifier la thématique de chaque Cuitt. Regarde, clique sur celui-ci !");
 
 			addStep(chatDelay, function() {
 				// show info popup
@@ -943,11 +988,11 @@ angular.module('newsGameApp')
 
 			steps = [];
 
-			addChat(chatDelay, 'other', "Et voilà ! Tu vois, ça a pris un peu de temps mais ça en valait la peine ! Maintenant, tu sais que ce cuitt parle de " + selectedCuit.theme + ".");
+			addChat(chatDelay, 'other', "Et voilà ! Tu vois, ça a pris un peu de temps mais ça en valait la peine ! Maintenant, tu sais que ce cuitt parle de " + $scope.themes[selectedCuit.theme] + ".");
 			addChat(chatDelay, 'other', "Tu vois, c’est signalé par le petit picto qui a remplacé le point d’interrogation en dessous du message !");
 
 			if (selectedCuit.theme === $scope.$storage.chosenTheme) {
-				addChat(chatDelay, 'me', "Ah, géniale, cette info ! justement ce qui m’intéresse !");
+				addChat(chatDelay, 'me', "Ah, géniale, cette info ! Justement ce qui m’intéresse !");
 			} else {
 				addChat(chatDelay, 'me', "Ah ouais... Pas mal, cette info, mais, moi, ce qui m’intéresse, c’est " + $scope.themes[$scope.$storage.chosenTheme] + ".");
 			}
@@ -1040,9 +1085,9 @@ angular.module('newsGameApp')
 
 			steps = [];
 
-			addChat(chatDelay, 'me', "Ouah, génial ! C’est super intéressant ce truc !.");
+			addChat(chatDelay, 'me', "Ouah, génial ! C’est super intéressant ce truc&nbsp;!");
 			addChat(chatDelay, 'other', "T’as vu ? J’apprends plein d’infos de première fraîcheur depuis que je m’en sers... ");
-			addChat(chatDelay, 'other', "Bon, il y a aussi des trucs un peu bidon, mais en général, quand tu vérifies qui poste, tu peux savoir si c’est du solide ou pas...");
+			addChat(chatDelay, 'other', "Bon, il y a aussi des trucs un peu bidon, mais en général, quand tu vérifies qui poste, tu peux savoir si c’est du solide ou pas...");
 			addChat(chatDelay, 'me', "Ah ? Comment on fait ça ?");
 			addChat(chatDelay, 'other', "Ben, pour voir la fiche de quelqu’un, il faut cliquer sur sa photo d’avatar ou sur son nom d’utilisateur.");
 			addStep(chatDelay, function() {
@@ -1132,6 +1177,7 @@ angular.module('newsGameApp')
 				// show scoring
 				updateScore();
 				showScoring();
+				tutoAction = null;
 			});
 
 			doSteps();
@@ -1141,6 +1187,8 @@ angular.module('newsGameApp')
 		// Level 2
 		scenarii.level2 = function() {
 			$log.log(">scenario2");
+
+			tutoAction = true;
 
 			var themedSources = [];
 			var otherSources = [];
@@ -1175,7 +1223,7 @@ angular.module('newsGameApp')
 			addChat(chatDelay, 'me', "Salut ! Ca roule ?");
 			addChat(chatDelay, 'other', "Bien, et toi ? Alors, tu révises le concours pour les écoles de journalisme ?");
 			addChat(chatDelay, 'me', "Pfff... M’en parle pas, c’est crevant x_x. En plus, j’ai ouvert un blog pour m’entrainer à écrire des articles...");
-			addChat(chatDelay, 'other', "Ah bon ? Un blog ? Cool ! Sur quel sujet ?");
+			addChat(chatDelay, 'other', "Ah bon ? Un blog ? Cool ! Sur quel sujet&nbsp;?");
 			addChat(chatDelay, 'me', "Sur " + $scope.themes[$scope.$storage.chosenTheme] + ".");
 			addChat(chatDelay, 'other', "Ah, j’aurais dû m’en douter ! C’est super ! Comment tu fais pour trouver des sujets ?");
 			addChat(chatDelay, 'me', "J’utilise Cuicuitter ! Mais je dois faire gaffe. Si je veux que mes lecteurs soient contents, j’ai intérêt à choisir des infos sur la bonne thématique...");
@@ -1200,6 +1248,7 @@ angular.module('newsGameApp')
 
 			addStep(5000, function() {
 				$scope.tooltip.active = false;
+				tutoAction = null;
 			});
 
 			addStep(chatDelay, function() {
@@ -1226,12 +1275,15 @@ angular.module('newsGameApp')
 
 		scenarii.level2End = function() {
 			$log.log(">level2End");
+
 			showScoring();
 		};
 
 		// Level 3
 		scenarii.level3 = function() {
 			$log.log(">scenario3");
+
+			tutoAction = true;
 
 			// $scope.skipCuits = true;
 
@@ -1376,7 +1428,7 @@ angular.module('newsGameApp')
 				});
 				addStep(chatDelay, function() {
 					if ($scope.debug) {
-						var contact = utils.shuffle($scope.$storage.contacts)[0];
+						// var contact = utils.shuffle($scope.$storage.contacts)[0];
 						// $scope.callContact(contact);
 					}
 				});
@@ -1427,6 +1479,8 @@ angular.module('newsGameApp')
 		// Level 4
 		scenarii.level4 = function() {
 			$log.log(">scenario4");
+
+			tutoAction = true;
 
 			$scope.skipCuits = true;
 
@@ -1618,11 +1672,12 @@ angular.module('newsGameApp')
 			addChat(chatDelay, 'me', "D’accord. Mais si je voulais la publier...");
 			addChat(chatDelay, 'other', "Tu n’aurais qu’à cliquer sur le bouton « publier », en dessous du cuitt, et à choisir l’emplacement que tu veux dans la maquette.");
 			addChat(chatDelay, 'other', "Mais si vous publiez une info peu crédible, qui EN PLUS n’est pas un scoop... vous êtes VIRÉ !");
+			addChat(chatDelay, 'other', "Ah, et si vous vous avisez de vous moquer de mon chat Grumphy en fond d'écran, VOUS ETES VIRE AUSSI !");
 			addChat(chatDelay, 'me', "Ah...");
 			addChat(chatDelay, 'other', "Et n’oubliez pas : il faut remplir les 6 emplacements de la maquette, si possible avec des infos qui concernent les 6 thématiques différentes !");
 			addChat(chatDelay, 'other', "Bon allez, je vous laisse, j’arrive à l’aéroport. A moi les plages de sable fin et les cocktails ! Youhou !!!");
 			addChat(chatDelay, 'me', "Mais attendez, je...");
-			addChat(chatDelay, 'other', "deconnexion");
+			addChat(chatDelay, 'other', "déconnexion");
 			addChat(chatDelay, 'me', "Ah. On dirait bien que je vais devoir me débrouiller seul(e) !");
 			addStep(2500, function() {
 				$scope.closeWin('chat');
@@ -1817,6 +1872,9 @@ angular.module('newsGameApp')
 			if (cuit.published) {
 				return;
 			}
+			if (!checkRemainingTime('publish-cuit')) {
+				return;
+			}
 			if (false && $scope.posts.length === 5) {
 				$scope.tooltip.content = "vous avez déjà publié 5 articles aujourd'hui";
 				$scope.tooltip.position(jQuery('#blog'), 0, 100);
@@ -1843,6 +1901,7 @@ angular.module('newsGameApp')
 
 		function doPublishCuit(cuit) {
 			$log.log("publishCuit(", cuit);
+
 			var post = {
 				cuit: cuit,
 				title: cuit.articleTitle,
@@ -1875,6 +1934,10 @@ angular.module('newsGameApp')
 
 		$scope.unpublish = function(post) {
 			$scope.currentPost = post;
+
+			if (!checkRemainingTime('unpublish-cuit')) {
+				return;
+			}
 
 			promptCallback = function() {
 
