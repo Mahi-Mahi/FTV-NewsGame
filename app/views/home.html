@@ -8,10 +8,10 @@
 	</ul>
 </div>
 <div class="button-block">
-	<a href="#/intro" class="bt-start" ng-if="$storage.level === 1">
+	<a href="" class="bt-start" ng-if="$storage.level === 1" ng-click="newGame()">
 		<span>Nouvelle partie</span>
 	</a>
-	<a href="#/intro" class="bt-continue" ng-if="$storage.level > 1">
+	<a href="#/play/skip" class="bt-continue" ng-if="$storage.level > 1">
 		<span>Continuer la partie</span>
 	</a>
 	<a href="" ng-if="$storage.level > 1" class="bt-start" ng-click="newGame()"><span>Nouvelle partie</span></a>

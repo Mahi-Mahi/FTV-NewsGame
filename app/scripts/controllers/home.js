@@ -23,9 +23,12 @@ angular.module('newsGameApp')
 		});
 
 		$scope.newGame = function() {
+		$log.log("newGame");
 			Sound.play('click');
+			$localStorage.$reset();
+			$log.log($scope.$storage);
+			$log.log($scope.$storage.chosenTheme);
 			$scope.$storage.level = 1;
-			$scope.$storage.scores = {};
 			$location.path("/intro");
 		};
 

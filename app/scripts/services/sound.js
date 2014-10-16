@@ -4,7 +4,7 @@
 
 angular.module('newsGameApp').factory('Sound', function(config, $log, prod) {
 	return {
-		muteDev: false,
+		muteDev: true,
 		sounds: {},
 		playing: null,
 		muted: false,

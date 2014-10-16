@@ -1,4 +1,4 @@
-<div ng-class="['inner',currentSource.themeVerified ? 'verified-theme' : '']">
+<div ng-class="['inner', currentSource.themeVerified ? 'verified-theme' : '', currentSource.credibilityVerified ? 'verified-credibility' : '']">
 	<div ng-class="['level-'+level]">
 		<div class="inner__body">
 			<div class="media">
@@ -22,10 +22,13 @@
 			<li class="theme">Thématique
 				<span class="off"><button ng-click="verifySourceTheme(currentSource.id)" class="bt">Analyser la source <small>(15 min)</small></button></span>
 				<span class="on">
-					<span ng-repeat="theme in currentSource.themes" ng-class="['item-theme', theme]">{{theme}}</span>
+					<span ng-repeat="theme in currentSource.themes" ng-class="['item-theme', theme]">{{themes[theme]}}</span>
 				</span>
 			</li>
-			<li ng-if="false" class="credibility">Crédibilité <span class="off"><button class="bt">Vérifier</button></span><span class="on"><!-- TO DO --></span></li>
+			<li class="credibility">Crédibilité
+				<span class="off"><button class="bt" ng-click="verifySourceCredibility(currentSource.id)">Vérifier <small>(15 min)</small></button></span>
+				<span class="on">vérifiée</span>
+			</li>
 		</ul>
 	</div>
 </div>

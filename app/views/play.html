@@ -1,15 +1,12 @@
 <div ng-class="['level-'+level, tuto ? 'tuto' : '']">
 
 	<div id="waiting" ng-show="waiting.active">
-		<div ng-class="['detail', waiting.type]" ng-if="waiting.type">
-			{{waiting.detail}}
-		</div>
-		<div class="waiting__inner">
+		<div ng-class="['waiting__inner', waiting.action, waiting.extra]" ng-if="waiting.type">
 			<div class="waiting__inner__body">
 				<div class="waiting-check-thematique">
-					<h2>Patientez</h2>
-					<p>Vérification d'une thématique en cours</p>
-					<span class="timer">15 min</span>
+					<!-- <h2>Patientez</h2> -->
+					<!-- <p>Vérification d'une thématique en cours</p> -->
+					<span class="timer">{{waiting.duration}} min</span>
 					<div class="gauge-container">
 						<div class="gauge">
 							<div class="gauge__inner">
@@ -18,42 +15,47 @@
 						</div>
 					</div>
 				</div>
- 				<div class="waiting-check-credibility">
-					<h2 class="title-checked">Crédibilité vérifiée</h2>
-					<p>"J'ai fait quelques recherches <br />et cette info est complètement bidon.<br />Je vous déconseille de la publier !"</p>
-					<div class="stars stars--2">2</div>
-					<div class="stars stars--negative--2">2</div>
+ 				<div class="publish-cuit">
+					<h2 class="title-checked">Publication en cours</h2>
 				</div>
- 				<div class="waiting-check-credibility">
+ 				<div class="unpublish-cuit">
+					<h2 class="title-checked">Dépublication en cours</h2>
+				</div>
+ 				<div class="verify-cuit-theme">
+					<h2 class="title-checked">Thématique vérifiée</h2>
+				</div>
+ 				<div class="verify-cuit-credibility" ng-show="waiting.extra > 0">
+					<h2 class="title-checked">Crédibilité vérifiée</h2>
+					<p>{{waiting.detail}}</p>
+					<div class="stars stars--{{waiting.extra}}">{{waiting.extra}}</div>
+					<!-- <div class="stars stars--negative--2">2</div> -->
+				</div>
+ 				<div class="verify-cuit-credibility" ng-show="waiting.extra === 0 || waiting.extra  === undefined">
 					<h2 class="title-unchecked">Crédibilité non vérifiée</h2>
-					<p>"Je ne peux rien vous dire sur cette info... <br />Sa thématique n'est pas ma spécialité."</p>
+					<p>{{waiting.detail}}</p>
 					<img src="images/icon-credibility-unchecked.png" alt="" />
 				</div>
- 				<div class="waiting-check-source">
-					<h2 class="title-checked">Source vérifiée</h2>
-					<p>"Hum... Cette source n'est pas très crédible... <br />Je serais vous, je me méfierais de ce qu'elle dit."</p>
-					<div class="source-status status-unchecked"></div>
-					<div class="source-status status-checked status-checked--2"></div>
-					<div class="source-status status-checked status-checked--3"></div>
+ 				<div class="verify-source-theme">
+					<h2 class="title-checked">Vérification de la source</h2>
+					<p>{{waiting.detail}}</p>
 				</div>
- 				<div class="waiting-check-source">
-					<h2 class="title-unchecked">Source non vérifiée</h2>
-					<p>"Je ne peux rien vous dire sur cette source... <br />Sa thématique n'est pas ma spécialité"</p>
-					<img src="images/icon-source-unchecked.png" alt="" />
+ 				<div class="verify-source-credibility">
+					<h2 class="title-checked">Vérification de la source</h2>
+					<p>{{waiting.detail}}</p>
 				</div>
- 				<div class="waiting-check-scoop">
+ 				<div class="verify-cuit-exclusivity" ng-show="waiting.extra > 0">
 					<h2 class="title-checked">C'est un scoop</h2>
-					<p>"Incroyable ! Vous avez déniché un scoop ! <br />Si cette info est crédible, publiez-la absolument !"</p>
+					<p>{{waiting.detail}}</p>
 					<img src="images/icon-scoop-ok.png" alt="" />
 				</div>
- 				<div class="waiting-check-scoop">
+ 				<div class="verify-cuit-exclusivity" ng-show="waiting.extra === 0">
 					<h2 class="title-checked title-checked--no-scoop">Ce n'est pas un scoop</h2>
-					<p>"Ah... Cette info n'est pas un scoop. Mais si elle est crédible, <br />elle intéressera peut-être vos lecteurs."</p>
+					<p>{{waiting.detail}}</p>
 					<img src="images/icon-scoop-nok.png" alt="" />
 				</div>
- 				<div class="waiting-check-scoop">
+ 				<div class="verify-cuit-exclusivity" ng-show="waiting.extra < 0">
 					<h2 class="title-unchecked ">Scoop non vérifié</h2>
-					<p>"Je ne peux pas vous dire si cette info est un scoop... <br />Sa thématique n'est pas ma spécialité."</p>
+					<p>{{waiting.detail}}</p>
 					<img src="images/icon-scoop-unchecked.png" alt="" />
 				</div>
 			</div>
