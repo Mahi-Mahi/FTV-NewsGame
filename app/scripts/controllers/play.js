@@ -1290,6 +1290,17 @@ angular.module('newsGameApp')
 			$scope.$storage.contacts = []; //dataService.data.all.contacts;
 			$scope.$storage.allContacts = []; //dataService.data.all.contacts;
 
+			if ($scope.$storage.savedContacts) {
+				$scope.$storage.contacts = $scope.$storage.savedContacts;
+				$scope.$storage.allContacts = $scope.$storage.savedAllContacts;
+			} else {
+				addContact();
+				addContact($scope.$storage.chosenTheme);
+				addContact($scope.$storage.mandatoryTheme);
+				$scope.$storage.savedContacts = $scope.$storage.contacts;
+				$scope.$storage.savedAllContacts = $scope.$storage.allContacts;
+			}
+
 			$scope.currentChat = {
 				contact: "Sonia",
 				discussion: []
@@ -1823,9 +1834,16 @@ angular.module('newsGameApp')
 			$scope.$storage.contacts = []; //dataService.data.all.contacts;
 			$scope.$storage.allContacts = []; //dataService.data.all.contacts;
 
-			addContact();
-			addContact($scope.$storage.chosenTheme);
-			addContact($scope.$storage.mandatoryTheme);
+			if ($scope.$storage.savedContacts) {
+				$scope.$storage.contacts = $scope.$storage.savedContacts;
+				$scope.$storage.allContacts = $scope.$storage.savedAllContacts;
+			} else {
+				addContact();
+				addContact($scope.$storage.chosenTheme);
+				addContact($scope.$storage.mandatoryTheme);
+				$scope.$storage.savedContacts = $scope.$storage.contacts;
+				$scope.$storage.savedAllContacts = $scope.$storage.allContacts;
+			}
 
 			$log.log($scope.$storage.contacts);
 
@@ -1858,9 +1876,11 @@ angular.module('newsGameApp')
 			$log.log("plays.level3");
 			$scope.openWin('cuicuiter');
 			$scope.openWin('skoupe');
-			addContact();
-			addContact($scope.$storage.chosenTheme);
-			addContact($scope.$storage.mandatoryTheme);
+
+			// addContact();
+			// addContact($scope.$storage.chosenTheme);
+			// addContact($scope.$storage.mandatoryTheme);
+
 			$scope.openWin('publish');
 			addCuit(true);
 		};
