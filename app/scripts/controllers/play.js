@@ -91,7 +91,7 @@ angular.module('newsGameApp')
 		function applySourceTheme() {
 			angular.forEach($scope.cuits, function(cuit, id) {
 				var source = dataService.data.all.sources[$scope.cuits[id].source];
-				if (source.themeVerified) {
+				if (source && source.themeVerified) {
 					$scope.cuits[id].author = dataService.data.all.sources[cuit.source];
 					$scope.cuits[id].themeVerified = true;
 				}
@@ -120,7 +120,7 @@ angular.module('newsGameApp')
 		function applySourceCredibility() {
 			angular.forEach($scope.cuits, function(cuit, id) {
 				var source = dataService.data.all.sources[$scope.cuits[id].source];
-				if (source.credibilityVerified) {
+				if (source && source.credibilityVerified) {
 					$scope.cuits[id].author = dataService.data.all.sources[cuit.source];
 					$scope.cuits[id].credibilityVerified = true;
 				}
