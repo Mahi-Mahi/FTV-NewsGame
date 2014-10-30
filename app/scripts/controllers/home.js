@@ -4,7 +4,7 @@
 angular.module('newsGameApp')
 	.controller('HomeCtrl', function($rootScope, $scope, $localStorage, $log, $location, prod, titleService, Xiti, Sound) {
 
-		$log.log('Home');
+		$log.debug('Home');
 
 		Sound.init();
 
@@ -23,18 +23,18 @@ angular.module('newsGameApp')
 		});
 
 		$scope.newGame = function() {
-		$log.log("newGame");
+			$log.debug("newGame");
 			Sound.play('click');
 			$localStorage.$reset();
-			$log.log($scope.$storage);
-			$log.log($scope.$storage.chosenTheme);
+			$log.debug($scope.$storage);
+			$log.debug($scope.$storage.chosenTheme);
 			$scope.$storage.level = 1;
 			$location.path("/intro");
 		};
 
 		Xiti.click(null, "Serious Game::home");
 
-		$log.log($scope.$storage.level);
-		$log.log($scope.$storage.scores);
+		$log.debug($scope.$storage.level);
+		$log.debug($scope.$storage.scores);
 
 	});

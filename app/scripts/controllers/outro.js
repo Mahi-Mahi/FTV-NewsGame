@@ -3,7 +3,7 @@
 angular.module('newsGameApp')
 	.controller('OutroCtrl', function($rootScope, $scope, $routeParams, $log, $location, $timeout, $interval, $q, dataService, titleService, Xiti, Sound, utils, $localStorage) {
 
-		$log.log('Outro');
+		$log.debug('Outro');
 
 		titleService.setTitle('Outro');
 
@@ -26,10 +26,10 @@ angular.module('newsGameApp')
 		// debug config
 		var delayModifier = ($scope.debug ? 0.1 : 2);
 
-		$log.log($scope.$storage.level);
-		$log.log($scope.$storage.scores);
-		$log.log($scope.$storage.posts);
-		$log.log($scope.$storage.scoreStatus);
+		$log.debug($scope.$storage.level);
+		$log.debug($scope.$storage.scores);
+		$log.debug($scope.$storage.posts);
+		$log.debug($scope.$storage.scoreStatus);
 
 		$rootScope.background = 'intro-level-' + $scope.$storage.level;
 
@@ -38,7 +38,7 @@ angular.module('newsGameApp')
 		};
 
 		function showText(content) {
-			$log.log("showText(", content);
+			$log.debug("showText(", content);
 			var deferred = $q.defer();
 
 			var contentIdx = 0;

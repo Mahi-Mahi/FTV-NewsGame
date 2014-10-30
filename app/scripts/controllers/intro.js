@@ -3,13 +3,13 @@
 angular.module('newsGameApp')
 	.controller('IntroCtrl', function($rootScope, $scope, $routeParams, $log, $location, $timeout, $interval, $q, dataService, titleService, Xiti, Sound, utils, $localStorage) {
 
-		$log.log('Intro');
+		$log.debug('Intro');
 
 		titleService.setTitle('Intro');
 
 		Sound.init();
 
-		$log.log(Sound.sounds);
+		$log.debug(Sound.sounds);
 
 		Sound.play('introText');
 
@@ -85,7 +85,7 @@ angular.module('newsGameApp')
 		};
 
 		function showText(content) {
-			$log.log("showText(", content);
+			$log.debug("showText(", content);
 			var deferred = $q.defer();
 
 			var contentIdx = 0;
@@ -128,7 +128,7 @@ angular.module('newsGameApp')
 
 		// Level 1
 		scenarii.level1 = function() {
-			$log.log(">scenario1");
+			$log.debug(">scenario1");
 
 			steps = [];
 
@@ -155,7 +155,7 @@ angular.module('newsGameApp')
 			addChat(chatDelay, 'me', "Ok, super&nbsp;! A ce soir&nbsp;!", "Moi");
 			addChat(chatDelay, interlocutor + "3", "A plus&nbsp;!", "Mehdi");
 			addStep(chatDelay, function() {
-				$log.log(Sound.playing);
+				$log.debug(Sound.playing);
 				if (Sound.playing) {
 					Sound.sounds[Sound.playing].fadeOut(500);
 				}
@@ -166,7 +166,7 @@ angular.module('newsGameApp')
 
 		// Level 2
 		scenarii.level2 = function() {
-			$log.log(">scenario2");
+			$log.debug(">scenario2");
 
 			steps = [];
 
@@ -178,7 +178,7 @@ angular.module('newsGameApp')
 
 		// Level 3
 		scenarii.level3 = function() {
-			$log.log(">scenario3");
+			$log.debug(">scenario3");
 
 			steps = [];
 
@@ -209,7 +209,7 @@ angular.module('newsGameApp')
 
 		// Level 4
 		scenarii.level4 = function() {
-			$log.log(">scenario4");
+			$log.debug(">scenario4");
 
 			steps = [];
 

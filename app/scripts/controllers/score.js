@@ -3,7 +3,7 @@
 angular.module('newsGameApp')
 	.controller('ScoreCtrl', function($rootScope, $scope, $routeParams, $log, $location, $timeout, $interval, $q, dataService, titleService, Xiti, Sound, utils, $localStorage) {
 
-		$log.log('Score');
+		$log.debug('Score');
 
 		Sound.init();
 
@@ -24,11 +24,11 @@ angular.module('newsGameApp')
 
 		$scope.themes = dataService.data.all.themes;
 
-		$log.log($scope.$storage.level);
-		$log.log($scope.$storage.scores);
-		$log.log($scope.$storage.scoreStatus);
-		$log.log($scope.$storage.posts);
-		$log.log($scope.scoring);
+		$log.debug($scope.$storage.level);
+		$log.debug($scope.$storage.scores);
+		$log.debug($scope.$storage.scoreStatus);
+		$log.debug($scope.$storage.posts);
+		$log.debug($scope.scoring);
 
 		if ($scope.$storage.scoreStatus === 'defeat') {
 			Sound.play('endLoose');
@@ -50,7 +50,7 @@ angular.module('newsGameApp')
 
 		$scope.playAgain = function() {
 			Sound.play('click');
-			$log.log("playAgain");
+			$log.debug("playAgain");
 			$location.path('/play');
 		};
 

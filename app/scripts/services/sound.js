@@ -11,14 +11,14 @@ angular.module('newsGameApp').factory('Sound', function(config, $log, prod) {
 		extension: 'mp3',
 		init: function() {
 			//
-			$log.log("Sound.init(), prod : ", prod);
+			$log.debug("Sound.init(), prod : ", prod);
 
 			buzz.defaults.formats = ['ogg', 'mp3', 'aac'];
 
 			if (!prod && this.muteDev) {
 				return;
 			}
-			$log.log("buzz.isSupported", buzz.isSupported());
+			$log.debug("buzz.isSupported", buzz.isSupported());
 
 			if (buzz.isOGGSupported()) {
 				this.extension = 'ogg';
@@ -27,11 +27,11 @@ angular.module('newsGameApp').factory('Sound', function(config, $log, prod) {
 				this.extension = 'aac';
 			}
 
-			$log.log("Sound.extension", this.extension);
+			$log.debug("Sound.extension", this.extension);
 
 			var sounds = this.sounds;
 			angular.forEach(config.sounds, function(value, key) {
-				$log.log(value);
+				$log.debug(value);
 				if (!sounds[key]) {
 					sounds[key] = new buzz.sound(value);
 				}
@@ -40,7 +40,7 @@ angular.module('newsGameApp').factory('Sound', function(config, $log, prod) {
 		},
 		play: function(sound, bgd) {
 
-			// $log.log("Sound.play(", sound, bgd);
+			// $log.debug("Sound.play(", sound, bgd);
 			if (!prod && this.muteDev) {
 				return;
 			}
@@ -61,18 +61,18 @@ angular.module('newsGameApp').factory('Sound', function(config, $log, prod) {
 			this.playing = sound;
 		},
 		toggleMute: function() {
-			$log.log("toggleMute");
+			$log.debug("toggleMute");
 			if (this.playing) {
-				$log.log("playing");
+				$log.debug("playing");
 				if (this.muted) {
-					$log.log("muted");
+					$log.debug("muted");
 					this.sounds[this.playing].fadeIn(1000);
 					this.muted = false;
 					jQuery('#footer-tools__item--unmute').hide();
 					jQuery('#footer-tools__item--mute').show();
 				} else {
-					$log.log("not mtued");
-					$log.log(this.sounds[this.playing]);
+					$log.debug("not mtued");
+					$log.debug(this.sounds[this.playing]);
 					this.sounds[this.playing].stop();
 					// this.sounds[this.playing].fadeOut(1000);
 					this.muted = true;

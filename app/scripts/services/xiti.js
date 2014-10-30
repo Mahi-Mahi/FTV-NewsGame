@@ -4,7 +4,7 @@
 angular.module('newsGameApp').factory('Xiti', function(config, $log, prod, $timeout) {
 	return {
 		click: function(e, xtpage) {
-			// $log.log("xt_click(", xtpage);
+			// $log.debug("xt_click(", xtpage);
 			// "jaujard::home::home::home"
 			if (window.xt_click) {
 				window.xt_click(document, 'F', 9, "jaujard::" + xtpage);

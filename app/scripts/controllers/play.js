@@ -58,7 +58,7 @@ angular.module('newsGameApp')
 		// open Cuit source window
 		var openSourceThemeCallback = false;
 		$scope.openSource = function(id) {
-			// $log.log("openSource(" + id);
+			// $log.debug("openSource(" + id);
 			Sound.play('click');
 			$scope.closeWin('source');
 			$scope.currentSource = dataService.data.all.sources[id];
@@ -74,7 +74,7 @@ angular.module('newsGameApp')
 			if (tutoAction && !verifySourceThemeCallback) {
 				return;
 			}
-			if (!checkRemainingTime('verify-source-theme')) {
+			if (!checkRemainingTime('verify-source-theme') && !tutoAction) {
 				return;
 			}
 
@@ -140,7 +140,7 @@ angular.module('newsGameApp')
 		};
 
 		function addCuit(next, force, author, theme, sources, credibility) {
-			$log.log("addCuit", next, force, author, theme, credibility);
+			$log.debug("addCuit", next, force, author, theme, credibility);
 			if (!force && $scope.skipCuits) {
 				$timeout(function() {
 					addCuit(true);
@@ -195,13 +195,13 @@ angular.module('newsGameApp')
 		$scope.addCuit = addCuit;
 
 		$scope.showCuits = function(click) {
-			$log.log("showCuits");
+			$log.debug("showCuits");
 			if (click) {
 				Sound.play('click');
 			}
 			angular.forEach($scope.cuits, function(cuit) {
 				if (cuit.visible === false) {
-					$log.log("show", cuit);
+					$log.debug("show", cuit);
 					cuit.visible = true;
 				}
 			});
@@ -214,12 +214,12 @@ angular.module('newsGameApp')
 			if (tutoAction && !verifyCuitThemeCallback) {
 				return;
 			}
-			if (!checkRemainingTime('verify-cuit-theme')) {
+			if (!checkRemainingTime('verify-cuit-theme') && !tutoAction) {
 				return;
 			}
 
 			Sound.play('verification');
-			$log.log("verifyCuitTheme(" + cuit);
+			$log.debug("verifyCuitTheme(" + cuit);
 			selectedCuit = cuit;
 			cuit.themeVerified = true;
 			decrementTime('verify-cuit-theme', 'verify');
@@ -231,7 +231,7 @@ angular.module('newsGameApp')
 		// Verify Cuit Credibility ( + decrement time counter )
 		var verifyCuitCredibilityCallback = false;
 		$scope.verifyCuitCredibility = function(cuit) {
-			// $log.log("verifyCuitCredibility(" + cuit);
+			// $log.debug("verifyCuitCredibility(" + cuit);
 			if (tutoAction && !verifyCuitCredibilityCallback) {
 				return;
 			}
@@ -252,7 +252,7 @@ angular.module('newsGameApp')
 		};
 
 		function updateCuitCredibility(force) {
-			$log.log("updateCuitCredibility(", force);
+			$log.debug("updateCuitCredibility(", force);
 			var details = [
 				"J'ai fait quelques recherches et cette info est complètement bidon. Je vous déconseille de la publier !",
 				"Cette info n'est pas vraiment crédible. Ne la publiez que si vous n'avez rien d'autre.",
@@ -285,7 +285,7 @@ angular.module('newsGameApp')
 			if (!checkRemainingTime('verify-cuit-exclusivity')) {
 				return;
 			}
-			$log.log("verifyCuitExclusivity(" + cuit);
+			$log.debug("verifyCuitExclusivity(" + cuit);
 			Sound.play('verification');
 			selectedCuit = cuit;
 			$scope.selectedCuit = selectedCuit;
@@ -300,7 +300,7 @@ angular.module('newsGameApp')
 		};
 
 		function updateCuitExclusivity() {
-			$log.log("updateCuitExclusivity");
+			$log.debug("updateCuitExclusivity");
 			if (selectedContact.themes.indexOf(selectedCuit.theme) !== -1) {
 				if (selectedCuit.scoop) {
 					Sound.play('feedbackGood');
@@ -329,14 +329,14 @@ angular.module('newsGameApp')
 			var added = false;
 			angular.forEach($scope.$storage.contacts, function(contact, key) {
 				if (!added && (force || contact.id === selectedContact.id)) {
-					$log.log(contact.verifiedCuits);
+					$log.debug(contact.verifiedCuits);
 					if (!contact.verifiedCuits) {
 						$scope.$storage.contacts[key].verifiedCuits = [];
 					}
-					$log.log(contact.themes.indexOf(selectedCuit.theme));
-					$log.log(contact.verifiedCuits.indexOf(selectedCuit.id));
+					$log.debug(contact.themes.indexOf(selectedCuit.theme));
+					$log.debug(contact.verifiedCuits.indexOf(selectedCuit.id));
 					if (contact.themes.indexOf(selectedCuit.theme) !== -1 && contact.verifiedCuits.indexOf(selectedCuit.id) === -1) {
-						$log.log("added");
+						$log.debug("added");
 						$scope.$storage.contacts[key].verifiedCuits.push(selectedCuit.id);
 						added = true;
 					}
@@ -361,7 +361,7 @@ angular.module('newsGameApp')
 		$scope.currentContact = null;
 
 		function addContact(theme) {
-			$log.log("addContact(", theme);
+			$log.debug("addContact(", theme);
 			var contacts = utils.shuffle(Object.keys(dataService.data.all.contacts));
 			var added = false;
 			angular.forEach(contacts, function(contactIdx) {
@@ -395,7 +395,7 @@ angular.module('newsGameApp')
 
 		// open contact detail window
 		$scope.openContact = function(id) {
-			// $log.log("openContact(" + id);
+			// $log.debug("openContact(" + id);
 			Sound.play('click');
 			$scope.closeWin('contact');
 			$scope.currentContact = $scope.$storage.contacts[id];
@@ -408,7 +408,7 @@ angular.module('newsGameApp')
 		$scope.canCall = false;
 		$scope.callContact = function(contact) {
 			Sound.play('click');
-			$log.log("callContact(", contact.id);
+			$log.debug("callContact(", contact.id);
 			selectedContact = contact;
 			if (callContactAction) {
 				callContactAction();
@@ -425,7 +425,7 @@ angular.module('newsGameApp')
 
 		// open chat window
 		$scope.openChat = function(id) {
-			// $log.log("openChat(" + id);
+			// $log.debug("openChat(" + id);
 			Sound.play('click');
 			$scope.closeWin('chat');
 			$scope.currentchatContact = $scope.chat[id];
@@ -449,7 +449,7 @@ angular.module('newsGameApp')
 		}
 
 		function decrementTime(action, type, detail, extra) {
-			$log.log("decrementTime(", action, type, detail, extra);
+			$log.debug("decrementTime(", action, type, detail, extra);
 
 			// the cost of each actions are specified in /data/settings.json
 			var duration = dataService.data.settings.actionsCost[action];
@@ -465,7 +465,7 @@ angular.module('newsGameApp')
 				$scope.waiting.duration = duration;
 				$scope.waiting.level = 0;
 
-				$log.log($scope.waiting);
+				$log.debug($scope.waiting);
 
 				var stop;
 
@@ -509,7 +509,7 @@ angular.module('newsGameApp')
 					'z-index': 999
 				});
 			}, 2000);
-			$log.log($scope.remainingTime, " <= ", $scope.totalTime / 2);
+			$log.debug($scope.remainingTime, " <= ", $scope.totalTime / 2);
 			if ($scope.remainingTime + duration > $scope.totalTime / 2 && $scope.remainingTime <= $scope.totalTime / 2) {
 				// feedback('bad', "Plus que 50% du temps<br />Attention ! La journée est déjà à moitié écoulée ! N'oubliez pas de publier des informations ou vos lecteurs seront déçus.");
 			}
@@ -529,7 +529,7 @@ angular.module('newsGameApp')
 			$scope.promptNoCancel = true;
 			promptCallback = function() {
 
-				$log.log("endDay");
+				$log.debug("endDay");
 
 				$scope.closeWin('prompt');
 				promptCallback = null;
@@ -617,7 +617,7 @@ angular.module('newsGameApp')
 			}
 		};
 		$scope.openWin = function(id, options) {
-			$log.log("openWin(", id);
+			$log.debug("openWin(", id);
 			if (!$scope.windows[id].visible) {
 				if (jQuery('#' + id).data('kendoWindow')) {
 					jQuery('#' + id).data('kendoWindow').open();
@@ -863,7 +863,7 @@ angular.module('newsGameApp')
 		$scope.tuto = false;
 
 		function endTuto() {
-			$log.log("endTuto");
+			$log.debug("endTuto");
 			$scope.tuto = false;
 			tutoAction = null;
 		}
@@ -882,7 +882,7 @@ angular.module('newsGameApp')
 
 		// Level 1
 		scenarii.level1 = function() {
-			$log.log(">scenario1");
+			$log.debug(">scenario1");
 
 			tutoAction = true;
 
@@ -922,7 +922,7 @@ angular.module('newsGameApp')
 				$scope.closeWin('notepad');
 				$scope.openWin('themeSelector');
 				$scope.themeSelectorAction = function() {
-					$log.log("themeSelectorAction");
+					$log.debug("themeSelectorAction");
 					$scope.$storage.chosenTheme = $scope.selectedTheme;
 					$scope.$storage.chosenTheme = $scope.$storage.chosenTheme;
 					$scope.closeWin('themeSelector');
@@ -932,10 +932,10 @@ angular.module('newsGameApp')
 
 			addStep(chatDelay, function() {
 				if ($scope.debug) {
-					// var $choices = jQuery('#themeSelector :radio');
-					// $choices.eq(Math.round(Math.random() * $choices.length)).click();
-					// jQuery('#themeSelector button').click();
-					// $scope.$storage.chosenTheme = 'politique';
+					var $choices = jQuery('#themeSelector :radio');
+					$choices.eq(Math.round(Math.random() * $choices.length)).click();
+					jQuery('#themeSelector button').click();
+					$scope.$storage.chosenTheme = 'politique';
 				}
 			});
 
@@ -945,9 +945,11 @@ angular.module('newsGameApp')
 
 		scenarii.level1Phase2 = function() {
 
-			$log.log(">level1Phase2 : " + $scope.$storage.chosenTheme);
+			$log.debug(">level1Phase2 : " + $scope.$storage.chosenTheme);
 
 			steps = [];
+
+			tutoAction = true;
 
 			addChat(500, 'me', $scope.themes[$scope.$storage.chosenTheme] + " &nbsp;! Si je veux trouver des infos sur ce sujet-là, je fais comment ?");
 			addChat(chatDelay, 'other', "Tu ouvres grands tes yeux... et tu fais marcher ton cerveau ! En lisant les Cuitts, tu pourras déterminer de quoi ils parlent.");
@@ -969,7 +971,7 @@ angular.module('newsGameApp')
 
 			addStep(chatDelay, function() {
 				if ($scope.debug) {
-					jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.theme button').click();
+					// jQuery('#cuicuiter .cuit').not(".verified-theme").first().find('.theme button').click();
 				}
 			});
 
@@ -984,7 +986,7 @@ angular.module('newsGameApp')
 			$scope.tooltip.active = false;
 			verifyCuitThemeCallback = false;
 
-			$log.log(">level1Phase3");
+			$log.debug(">level1Phase3");
 
 			steps = [];
 
@@ -1030,7 +1032,7 @@ angular.module('newsGameApp')
 			$scope.tooltip.active = false;
 			verifyCuitThemeCallback = false;
 
-			$log.log(">level1Phase4");
+			$log.debug(">level1Phase4");
 
 			steps = [];
 
@@ -1081,7 +1083,7 @@ angular.module('newsGameApp')
 			$scope.tooltip.active = false;
 			verifyCuitThemeCallback = false;
 
-			$log.log(">level1Phase5");
+			$log.debug(">level1Phase5");
 
 			steps = [];
 
@@ -1131,7 +1133,7 @@ angular.module('newsGameApp')
 			verifyCuitThemeCallback = false;
 			openSourceThemeCallback = false;
 
-			$log.log(">level1Phase6");
+			$log.debug(">level1Phase6");
 
 			steps = [];
 
@@ -1161,7 +1163,7 @@ angular.module('newsGameApp')
 			$scope.tooltip.active = false;
 			verifySourceThemeCallback = false;
 
-			$log.log(">level1Phase7");
+			$log.debug(">level1Phase7");
 
 			steps = [];
 
@@ -1186,7 +1188,7 @@ angular.module('newsGameApp')
 
 		// Level 2
 		scenarii.level2 = function() {
-			$log.log(">scenario2");
+			$log.debug(">scenario2");
 
 			tutoAction = true;
 
@@ -1256,7 +1258,7 @@ angular.module('newsGameApp')
 					var i = 6; //2 + Math.round(Math.random() * 3);
 					var max = 10;
 					while (i && max) {
-						$log.log("debug", i, max);
+						$log.debug("debug", i, max);
 						addCuit(false, true);
 						var cuit = Math.floor(Math.random() * Object.keys($scope.cuits).length);
 						if (!$scope.cuits[cuit].published) {
@@ -1274,14 +1276,14 @@ angular.module('newsGameApp')
 		};
 
 		scenarii.level2End = function() {
-			$log.log(">level2End");
+			$log.debug(">level2End");
 
 			showScoring();
 		};
 
 		// Level 3
 		scenarii.level3 = function() {
-			$log.log(">scenario3");
+			$log.debug(">scenario3");
 
 			tutoAction = true;
 
@@ -1348,7 +1350,7 @@ angular.module('newsGameApp')
 		};
 
 		scenarii.level3Phase2 = function() {
-			$log.log(">scenario3Phase2");
+			$log.debug(">scenario3Phase2");
 			steps = [];
 			addChat(chatDelay, 'other', "Très bien ! Vous avez vu, ça parle de " + $scope.themes[selectedCuit.theme] + "... Ca pourrait intéresser nos lecteurs ! Mais il faut vérifier que l’info est bien crédible. C’est à ça que sert le nouveau bouton qui vient d’apparaître. Cliquez dessus.");
 
@@ -1374,7 +1376,7 @@ angular.module('newsGameApp')
 		};
 
 		scenarii.level3Phase3 = function() {
-			$log.log(">scenario3Phase3");
+			$log.debug(">scenario3Phase3");
 			steps = [];
 
 			addStep(50, function() {
@@ -1421,7 +1423,7 @@ angular.module('newsGameApp')
 		};
 
 		scenarii.level3Phase4 = function() {
-			$log.log(">scenario3Phase4");
+			$log.debug(">scenario3Phase4");
 			steps = [];
 
 			if (selectedContact.themes.indexOf(selectedCuit.theme) === -1) {
@@ -1483,13 +1485,13 @@ angular.module('newsGameApp')
 		};
 
 		scenarii.level3End = function() {
-			$log.log(">level3End");
+			$log.debug(">level3End");
 			showScoring();
 		};
 
 		// Level 4
 		scenarii.level4 = function() {
-			$log.log(">scenario4");
+			$log.debug(">scenario4");
 
 			tutoAction = true;
 
@@ -1532,7 +1534,7 @@ angular.module('newsGameApp')
 		};
 
 		scenarii.level4Phase2 = function() {
-			$log.log(">scenario4Phase2");
+			$log.debug(">scenario4Phase2");
 
 			steps = [];
 
@@ -1577,7 +1579,7 @@ angular.module('newsGameApp')
 		};
 
 		scenarii.level4Phase3 = function() {
-			$log.log(">scenario4Phase3");
+			$log.debug(">scenario4Phase3");
 			steps = [];
 
 			$scope.tooltip.active = false;
@@ -1616,7 +1618,7 @@ angular.module('newsGameApp')
 			doSteps();
 		};
 		scenarii.level4Phase4 = function() {
-			$log.log(">scenario4Phase4");
+			$log.debug(">scenario4Phase4");
 			steps = [];
 
 			$scope.tooltip.active = false;
@@ -1645,7 +1647,7 @@ angular.module('newsGameApp')
 		};
 
 		scenarii.level4Phase5 = function() {
-			$log.log(">scenario4Phase5");
+			$log.debug(">scenario4Phase5");
 			steps = [];
 
 			$scope.tooltip.active = false;
@@ -1674,7 +1676,7 @@ angular.module('newsGameApp')
 		};
 
 		scenarii.level4Phase6 = function() {
-			$log.log(">scenario4Phase6");
+			$log.debug(">scenario4Phase6");
 			steps = [];
 
 			$scope.tooltip.active = false;
@@ -1698,7 +1700,7 @@ angular.module('newsGameApp')
 		};
 
 		scenarii.level4End = function() {
-			$log.log(">level4End");
+			$log.debug(">level4End");
 			showScoring();
 		};
 
@@ -1714,7 +1716,7 @@ angular.module('newsGameApp')
 
 		// Level 2
 		fakes.level2 = function() {
-			$log.log("fakes.level2");
+			$log.debug("fakes.level2");
 			$scope.openWin('cuicuiter');
 			$scope.openWin('blog');
 			for (var i = 0; i < 6; i++) {
@@ -1725,7 +1727,7 @@ angular.module('newsGameApp')
 			i = 20; //2 + Math.round(Math.random() * 3);
 			var max = 40;
 			while (i && max) {
-				$log.log("fakes", i, max);
+				$log.debug("fakes", i, max);
 				addCuit(false, true);
 				var cuit = Math.floor(Math.random() * Object.keys($scope.cuits).length);
 				if (!$scope.cuits[cuit].published) {
@@ -1739,7 +1741,7 @@ angular.module('newsGameApp')
 		};
 		// Level 3
 		fakes.level3 = function() {
-			$log.log("fakes.level3");
+			$log.debug("fakes.level3");
 			$scope.openWin('cuicuiter');
 			$scope.openWin('blog');
 			for (var i = 0; i < 6; i++) {
@@ -1763,7 +1765,7 @@ angular.module('newsGameApp')
 		};
 		// Level 4
 		fakes.level4 = function() {
-			$log.log("fakes.level4");
+			$log.debug("fakes.level4");
 
 			$scope.score = 2000;
 
@@ -1806,7 +1808,7 @@ angular.module('newsGameApp')
 
 		// Level 2
 		plays.level2 = function() {
-			$log.log("plays.level2");
+			$log.debug("plays.level2");
 			$scope.openWin('cuicuiter');
 			$scope.openWin('blog');
 
@@ -1826,7 +1828,7 @@ angular.module('newsGameApp')
 		};
 		// Level 3
 		plays.level3 = function() {
-			$log.log("plays.level3");
+			$log.debug("plays.level3");
 
 			$scope.openWin('cuicuiter');
 			$scope.openWin('skoupe');
@@ -1845,7 +1847,7 @@ angular.module('newsGameApp')
 				$scope.$storage.savedAllContacts = $scope.$storage.allContacts;
 			}
 
-			$log.log($scope.$storage.contacts);
+			$log.debug($scope.$storage.contacts);
 
 			$scope.openWin('blog');
 
@@ -1865,15 +1867,15 @@ angular.module('newsGameApp')
 				}
 			});
 
-			$log.log(chosenThemedSources.concat(mandatoryThemedSources).concat(otherSources));
-			$log.log((chosenThemedSources.concat(mandatoryThemedSources).concat(otherSources)).length);
+			$log.debug(chosenThemedSources.concat(mandatoryThemedSources).concat(otherSources));
+			$log.debug((chosenThemedSources.concat(mandatoryThemedSources).concat(otherSources)).length);
 
 			addCuit(true, null, null, null, chosenThemedSources.concat(mandatoryThemedSources).concat(otherSources));
 		};
 
 		// Level 4
 		plays.level4 = function() {
-			$log.log("plays.level3");
+			$log.debug("plays.level3");
 			$scope.openWin('cuicuiter');
 			$scope.openWin('skoupe');
 
@@ -1920,7 +1922,7 @@ angular.module('newsGameApp')
 		};
 
 		function doPublishCuit(cuit) {
-			$log.log("publishCuit(", cuit);
+			$log.debug("publishCuit(", cuit);
 
 			var post = {
 				cuit: cuit,
@@ -1961,7 +1963,7 @@ angular.module('newsGameApp')
 
 			promptCallback = function() {
 
-				$log.log("unpublish(", $scope.currentPost.cuit.id);
+				$log.debug("unpublish(", $scope.currentPost.cuit.id);
 
 				angular.forEach($scope.cuits, function(c, idx) {
 					if (c.id === post.cuit.id) {
@@ -1994,7 +1996,7 @@ angular.module('newsGameApp')
 		};
 
 		$scope.publishDown = function(pos) {
-			$log.log("publishDown(", pos);
+			$log.debug("publishDown(", pos);
 			if (pos < $scope.posts.length - 1) {
 				var tmp = $scope.posts[pos + 1];
 				$scope.posts[pos + 1] = $scope.posts[pos];
@@ -2004,7 +2006,7 @@ angular.module('newsGameApp')
 		};
 
 		$scope.publishUp = function(pos) {
-			$log.log("publishUp(", pos);
+			$log.debug("publishUp(", pos);
 			var tmp = $scope.posts[pos - 1];
 			$scope.posts[pos - 1] = $scope.posts[pos];
 			$scope.posts[pos] = tmp;
@@ -2026,7 +2028,7 @@ angular.module('newsGameApp')
 				}
 			}
 			if ($scope.level === 3) {
-				$log.log([$scope.$storage.chosenTheme, $scope.$storage.mandatoryTheme], post.cuit.theme);
+				$log.debug([$scope.$storage.chosenTheme, $scope.$storage.mandatoryTheme], post.cuit.theme);
 				if ([$scope.$storage.chosenTheme, $scope.$storage.mandatoryTheme].indexOf(post.cuit.theme) !== -1) {
 					if (post.cuit.credibility > 1) {
 						feedback('good', dataService.data.settings.messages['level-3']['feedback-good-theme']);
@@ -2041,7 +2043,7 @@ angular.module('newsGameApp')
 		}
 
 		function feedback(type, detail) {
-			$log.log("feedback(", type, detail);
+			$log.debug("feedback(", type, detail);
 			$scope.feedback.type = type;
 			if (type === "good") {
 				Sound.play('feedbackGood');
@@ -2062,7 +2064,7 @@ angular.module('newsGameApp')
 
 			promptCallback = function() {
 
-				$log.log("endDay");
+				$log.debug("endDay");
 
 				$scope.closeWin('prompt');
 				promptCallback = null;
@@ -2118,7 +2120,7 @@ angular.module('newsGameApp')
 			if ($scope.level === 4) {
 				var base, multiplier, cuitScore, themes = [];
 				angular.forEach($scope.posts, function(post, idx) {
-					$log.log(idx, post.cuit.id, post.cuit.credibility, post.cuit.scoop);
+					$log.debug(idx, post.cuit.id, post.cuit.credibility, post.cuit.scoop);
 
 					base = 'select-cuit-credibility-' + post.cuit.credibility;
 					if (post.cuit.credibility > 0) {
@@ -2132,14 +2134,14 @@ angular.module('newsGameApp')
 						themes.push(post.cuit.theme);
 					}
 
-					$log.log(base, multiplier, cuitScore);
+					$log.debug(base, multiplier, cuitScore);
 
 					$scope.posts[idx].score = cuitScore;
 				});
-				$log.log(themes);
+				$log.debug(themes);
 				score = score * themes.length;
 			}
-			$log.log("score : " + score);
+			$log.debug("score : " + score);
 
 			if (scoring) {
 				if (score === 0) {
@@ -2170,7 +2172,7 @@ angular.module('newsGameApp')
 				}
 			}
 
-			$log.log($scope.scoreLevel);
+			$log.debug($scope.scoreLevel);
 
 		}
 
@@ -2179,8 +2181,8 @@ angular.module('newsGameApp')
 		*/
 
 		$timeout(function() {
-			$log.log($scope.fake);
-			$log.log($scope.chosenTheme);
+			$log.debug($scope.fake);
+			$log.debug($scope.chosenTheme);
 			updateScore();
 			if ($scope.fake) {
 				fake();
