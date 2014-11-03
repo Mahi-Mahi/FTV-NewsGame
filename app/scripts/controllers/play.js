@@ -656,7 +656,7 @@ angular.module('newsGameApp')
 			template: 'cuicuiter-main',
 			height: 505,
 			position: {
-				top: 25,
+				top: 35,
 				left: 20
 			}
 		});

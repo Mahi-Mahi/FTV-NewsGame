@@ -2727,7 +2727,7 @@ textarea {
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 10px;
+  top: 22px;
   left: 10px;
   z-index: 2;
 }
@@ -2788,7 +2788,7 @@ textarea {
 .top-social {
   display: block;
   position: absolute;
-  top: 20px;
+  top: 35px;
   right: 20px;
   z-index: 2;
 }
@@ -3071,7 +3071,7 @@ textarea {
   position: absolute;
   margin: 0;
   padding: 0;
-  top: 10px;
+  top: 35px;
   right: 10px;
   text-align: center;
   z-index: 3;
@@ -3521,7 +3521,7 @@ textarea {
   position: fixed;
   margin: 0;
   padding: 10px 0 10px 10px;
-  top: 10px;
+  top: 35px;
   right: 65px;
   width: 250px;
 }
