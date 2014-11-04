@@ -144,7 +144,7 @@ angular.module('newsGameApp')
 			if (!force && $scope.skipCuits) {
 				$timeout(function() {
 					addCuit(true);
-				}, (Math.random() * chatDelay * delayModifier) + 1800);
+				}, ((Math.random() * chatDelay) + 1800) * delayModifier);
 			} else {
 				var added = false;
 				// iterate through all cuits ( loaded from /data/all.json )
@@ -264,12 +264,13 @@ angular.module('newsGameApp')
 				decrementTime('verify-cuit-credibility', 'skoupe', details[selectedCuit.credibility], selectedCuit.credibility);
 				selectedCuit.credibilityVerified = true;
 
-				if (selectedCuit.credibility > 1) {
-					Sound.play('feedbackGood');
-				} else {
-					Sound.play('feedbackBad');
+				if (!force) {
+					if (selectedCuit.credibility > 1) {
+						Sound.play('feedbackGood');
+					} else {
+						Sound.play('feedbackBad');
+					}
 				}
-
 			} else {
 				decrementTime('verify-cuit-credibility', 'skoupe', "Je ne peux rien vous dire sur cette info… Sa thématique n'est pas ma spécialité.");
 			}
@@ -864,6 +865,7 @@ angular.module('newsGameApp')
 
 		function endTuto() {
 			$log.debug("endTuto");
+			$scope.skipCuits = false;
 			$scope.tuto = false;
 			tutoAction = null;
 		}
@@ -951,7 +953,7 @@ angular.module('newsGameApp')
 
 			tutoAction = true;
 
-			addChat(500, 'me', $scope.themes[$scope.$storage.chosenTheme] + " &nbsp;! Si je veux trouver des infos sur ce sujet-là, je fais comment ?");
+			addChat(500, 'me', $scope.themes[$scope.$storage.chosenTheme] + "&nbsp;! Si je veux trouver des infos sur ce sujet-là, je fais comment ?");
 			addChat(chatDelay, 'other', "Tu ouvres grands tes yeux... et tu fais marcher ton cerveau ! En lisant les Cuitts, tu pourras déterminer de quoi ils parlent.");
 
 			addChat(chatDelay, 'me', "Hum... pas facile !");
@@ -1250,7 +1252,7 @@ angular.module('newsGameApp')
 
 			addStep(5000, function() {
 				$scope.tooltip.active = false;
-				tutoAction = null;
+				endTuto();
 			});
 
 			addStep(chatDelay, function() {
@@ -1478,6 +1480,7 @@ angular.module('newsGameApp')
 					$scope.skipCuits = false;
 					verifyCuitCredibilityCallback = null;
 					callContactCallback = null;
+					endTuto();
 				});
 			}
 
@@ -1694,6 +1697,7 @@ angular.module('newsGameApp')
 			addChat(chatDelay, 'me', "Ah. On dirait bien que je vais devoir me débrouiller seul(e) !");
 			addStep(2500, function() {
 				$scope.closeWin('chat');
+				addCuit(true);
 				endTuto();
 			});
 			doSteps();

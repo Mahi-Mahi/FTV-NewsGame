@@ -40,7 +40,7 @@ angular.module('newsGameApp').factory('Sound', function(config, $log, prod) {
 		},
 		play: function(sound, bgd) {
 
-			// $log.debug("Sound.play(", sound, bgd);
+			$log.debug("Sound.play(", sound, bgd);
 			if (!prod && this.muteDev) {
 				return;
 			}

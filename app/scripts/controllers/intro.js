@@ -182,9 +182,10 @@ angular.module('newsGameApp')
 
 			steps = [];
 
-			var mandatory;
-			while (!mandatory || mandatory === $scope.$storage.selectedTheme) {
+			var mandatory = null;
+			while (!mandatory || mandatory === $scope.$storage.chosenTheme) {
 				mandatory = utils.shuffle(Object.keys(dataService.data.all.themes))[0];
+				$log.debug(mandatory, $scope.$storage.chosenTheme);
 			}
 			$scope.$storage.mandatoryTheme = mandatory;
 

@@ -96,11 +96,11 @@ angular.module('newsGameApp')
 
 		outro.level3 = function() {
 			var text;
-			$scope.characterName = "SoniaA2";
+			$scope.characterName = "Sonia";
 			if ($scope.$storage.scoreStatus === 'defeat') {
 				if ($scope.$storage.posts.length < 4) {
 					$scope.character = "SoniaA4";
-					text = "Vous n'êtes pas mauvais... Mais pas assez rapide !\n Vous n'avez pas publié assez de bonnes infos aujourd'hui, et maintenant c'est l'heure de rentrer chez vous. Allez, rentrez chez vous... et réessayez demain !";
+					text = "Vous n'avez pas publié assez de bonnes infos aujourd'hui, et maintenant c'est l'heure de rentrer chez vous. Allez, rentrez chez vous... et réessayez demain !";
 				} else {
 					$scope.character = "SoniaA5";
 					text = "Vous espérez faire une grande carrière de journaliste en publiant autant d'anêries ? Le moins que l'on puisse dire, c'est que je ne suis pas de cet avis ! Allez, oubliez cette mauvaise journée et essayez de faire mieux demain !";
@@ -118,7 +118,7 @@ angular.module('newsGameApp')
 		outro.level4 = function() {
 			var text;
 			var totalScore = $scope.$storage.scores['level-1'] + $scope.$storage.scores['level-2'] + $scope.$storage.scores['level-3'] + $scope.$storage.scores['level-4'];
-			$scope.characterName = "SoniaA2";
+			$scope.characterName = "Sonia";
 			if ($scope.$storage.scoreStatus === 'defeat') {
 				$scope.character = "SoniaB5";
 				text = "Oups.... On dirait que les subtilités du travail de rédacteur en chef vous échappent encore... Normal : ce n'est pas facile de sélectionner, de vérifier et de hiérarchiser l'information ! Si vous ne voulez pas que je revienne précipitemment de vacances pour mettre les points sur les i, vous devriez tenter à nouveau l'aventure...";
