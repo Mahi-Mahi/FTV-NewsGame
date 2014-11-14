@@ -56,6 +56,9 @@
 		font-weight: normal;
 		margin: 0;
 		padding:10px 0 0 0;
+		#credits & {
+			padding:20px 0;
+		}
 	}
 	p {
 		line-height: 1.6;
@@ -209,5 +212,13 @@
   100% { opacity:1; }
 }
 
-
+.bt-close-splash {
+	color:#fff;
+	cursor:pointer;
+	display: block;
+	font-size:em(40px);
+	position:absolute;
+	top:1em;
+	right:1em;
+}
 

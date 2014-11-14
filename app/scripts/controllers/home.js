@@ -2,7 +2,7 @@
 /* global buzz */
 
 angular.module('newsGameApp')
-	.controller('HomeCtrl', function($rootScope, $scope, $localStorage, $log, $location, prod, titleService, Xiti, Sound) {
+	.controller('HomeCtrl', function($rootScope, $scope, $localStorage, $log, $location, $timeout, prod, titleService, Xiti, Sound) {
 
 		$log.debug('Home');
 
@@ -37,4 +37,10 @@ angular.module('newsGameApp')
 		$log.debug($scope.$storage.level);
 		$log.debug($scope.$storage.scores);
 
+		$timeout(function() {
+			jQuery("#credits, .bt-close-splash").on('click', function(event) {
+				jQuery('#credits-body').toggleClass('ng-hide');
+				event.preventDefault();
+			});
+		}, 1000);
 	});
