@@ -1,2 +1,2 @@
 "use strict";
-angular.module("newsGameApp").constant("prod", true);
+angular.module("newsGameApp").constant("prod", false);
