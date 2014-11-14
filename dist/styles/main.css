@@ -3018,13 +3018,19 @@ textarea {
   padding: 10px 0 0 0;
 }
 
-/* line 60, ../../app/styles/_intro.scss */
+/* line 59, ../../app/styles/_intro.scss */
+
+#credits .splash__body__inner h3 {
+  padding: 20px 0;
+}
+
+/* line 63, ../../app/styles/_intro.scss */
 
 .splash__body__inner p {
   line-height: 1.6;
 }
 
-/* line 65, ../../app/styles/_intro.scss */
+/* line 68, ../../app/styles/_intro.scss */
 
 .logo-splash {
   background: url('/images/logo-splash.png') left top no-repeat;
@@ -3036,7 +3042,7 @@ textarea {
 }
 
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 65, ../../app/styles/_intro.scss */
+  /* line 68, ../../app/styles/_intro.scss */
 
   .logo-splash {
     background-image: url('/images/logo-splash-2x.png');
@@ -3045,7 +3051,7 @@ textarea {
 }
 
 @media (max-width: 1024px) {
-  /* line 65, ../../app/styles/_intro.scss */
+  /* line 68, ../../app/styles/_intro.scss */
 
   .logo-splash {
     background-size: 292px 300px;
@@ -3054,7 +3060,7 @@ textarea {
   }
 }
 
-/* line 80, ../../app/styles/_intro.scss */
+/* line 83, ../../app/styles/_intro.scss */
 
 .splash__body__inner__text {
   display: block;
@@ -3064,7 +3070,7 @@ textarea {
   font-size: 1.3333333333em;
 }
 
-/* line 88, ../../app/styles/_intro.scss */
+/* line 91, ../../app/styles/_intro.scss */
 
 .top-skip {
   display: block;
@@ -3077,7 +3083,7 @@ textarea {
   z-index: 3;
 }
 
-/* line 97, ../../app/styles/_intro.scss */
+/* line 100, ../../app/styles/_intro.scss */
 
 .top-skip a {
   background: none;
@@ -3092,14 +3098,14 @@ textarea {
   width: 45px;
 }
 
-/* line 112, ../../app/styles/_intro.scss */
+/* line 115, ../../app/styles/_intro.scss */
 
 .media {
   overflow: hidden;
   zoom: 1;
 }
 
-/* line 117, ../../app/styles/_intro.scss */
+/* line 120, ../../app/styles/_intro.scss */
 
 .dialogue {
   -moz-box-sizing: border-box;
@@ -3118,7 +3124,7 @@ textarea {
   font-size: 1.3333333333em;
 }
 
-/* line 133, ../../app/styles/_intro.scss */
+/* line 136, ../../app/styles/_intro.scss */
 
 .dialogue img {
   float: left;
@@ -3128,14 +3134,14 @@ textarea {
   width: 105px;
 }
 
-/* line 140, ../../app/styles/_intro.scss */
+/* line 143, ../../app/styles/_intro.scss */
 
 .dialogue .typed {
   display: block;
   padding: 10px;
 }
 
-/* line 144, ../../app/styles/_intro.scss */
+/* line 147, ../../app/styles/_intro.scss */
 
 .dialogue .skip {
   font-size: 1.6666666667em;
@@ -3151,7 +3157,7 @@ textarea {
   width: 25px;
 }
 
-/* line 156, ../../app/styles/_intro.scss */
+/* line 159, ../../app/styles/_intro.scss */
 
 .dialogue .skip:after {
   content: "\25B8";
@@ -3165,20 +3171,20 @@ textarea {
   top: -5px;
 }
 
-/* line 170, ../../app/styles/_intro.scss */
+/* line 173, ../../app/styles/_intro.scss */
 
 .me {
   text-align: right;
 }
 
-/* line 172, ../../app/styles/_intro.scss */
+/* line 175, ../../app/styles/_intro.scss */
 
 .me img {
   float: right;
   margin: 0 10px 0 10px;
 }
 
-/* line 178, ../../app/styles/_intro.scss */
+/* line 181, ../../app/styles/_intro.scss */
 
 .dialogue__name {
   -moz-box-sizing: border-box;
@@ -3198,13 +3204,13 @@ textarea {
   padding: 8px;
 }
 
-/* line 195, ../../app/styles/_intro.scss */
+/* line 198, ../../app/styles/_intro.scss */
 
 .me .dialogue__name {
   float: right;
 }
 
-/* line 200, ../../app/styles/_intro.scss */
+/* line 203, ../../app/styles/_intro.scss */
 
 #typed-cursor {
   opacity: 1;
@@ -3241,6 +3247,18 @@ textarea {
   100% {
     opacity: 1;
   }
+}
+
+/* line 215, ../../app/styles/_intro.scss */
+
+.bt-close-splash {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 3.3333333333em;
+  position: absolute;
+  top: 1em;
+  right: 1em;
 }
 
 /* line 1, ../../app/styles/_play.scss */

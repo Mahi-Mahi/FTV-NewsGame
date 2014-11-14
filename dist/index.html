@@ -1,4 +1,22 @@
-<!doctype html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]--><head><meta charset="utf-8"><title ng-bind="pageTitle + ' | Chasseur d'infos"></title><meta name="description" content="Chasseur d'infos - Deviendrez-vous le rédac'chef de demain ?"><meta name="viewport" content="width=1024"><link rel="icon" type="image/png" href="/favicon.png"><link href="http://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet" type="text/css"><link rel="stylesheet" href="styles/64c4f1f0.main.css"><link rel="stylesheet" href="bower_components/kendo-ui/styles/web/kendo.common.core.min.css"><!-- endbuild --><script type="text/javascript">// Variables eStat
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title ng-bind="pageTitle + ' | Chasseur d'infos"></title>
+		<meta name="description" content="Chasseur d'infos - Deviendrez-vous le rédac'chef de demain ?">
+		<meta name="viewport" content="width=1024">
+		<link rel="icon" type="image/png" href="/favicon.png">
+		<link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="styles/main.css">
+		<link rel="stylesheet" href="bower_components/kendo-ui/styles/web/kendo.common.core.min.css">
+		<!-- endbuild -->
+
+		<script type="text/javascript">
+		<!--//--><![CDATA[//><!--
+			// Variables eStat
 			var ftvi_portail = "xxx";
 			var ftvi_section = "xxx";
 			var ftvi_rubrique = "chapitre_Sous-chapitres_Sous-sous-chapitres_page";
@@ -12,7 +30,64 @@
 			var xt_form = "&f1=[xx]&f2=x";
 			var xt_mtcl = "";
 			var xt_npg = "";
-			//--><!]]></script><noscript><img width="1" height="1" alt="" src="http://logc238.xiti.com/hit.xiti?s=513950&s2=9&p=Serious Game::home::home::home"></noscript><body ng-app="newsGameApp" ng-class="[background]"><!-- Add your site or application content here --><div class="container" ng-view=""></div><!--[if lt IE 9]>
+			//--><!]]>
+		</script>
+		<noscript>
+			<img width="1" height="1" alt="" src="http://logc238.xiti.com/hit.xiti?s=513950&s2=9&p=Serious Game::home::home::home" >
+		</noscript>
+
+	</head>
+	<body ng-app="newsGameApp" ng-class="[background]">
+		<!-- Add your site or application content here -->
+		<div class="container" ng-view=""></div>
+
+		<!--[if lt IE 9]>
 		<script src="bower_components/es5-shim/es5-shim.js"></script>
 		<script src="bower_components/json3/lib/json3.min.js"></script>
-		<![endif]--><script src="scripts/3387beb4.vendor.js"></script><script src="scripts/17c17b47.scripts.js"></script><script type="text/javascript" src="http://static.francetv.fr/js/jquery.metanav-min.js"></script><script type="text/javascript" src="http://static.francetv.fr/js/audience-min.js"></script>
+		<![endif]-->
+
+		<!-- build:js scripts/vendor.js -->
+		<!-- bower:js -->
+		<script src="bower_components/jquery/jquery.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/json3/lib/json3.js"></script>
+		<script src="bower_components/angular-resource/angular-resource.js"></script>
+		<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+		<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+		<script src="bower_components/angular-route/angular-route.js"></script>
+		<script src="bower_components/kendo-ui/js/kendo.ui.core.min.js"></script>
+		<script src="bower_components/angular-kendo/build/angular-kendo.min.js"></script>
+		<script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
+		<script src="bower_components/angular-animate/angular-animate.js"></script>
+		<script src="bower_components/angular-cookie/angular-cookie.js"></script>
+		<script src="bower_components/ngstorage/ngStorage.js"></script>
+		<script src="bower_components/buzz/dist/buzz.js"></script>
+		<!-- endbower -->
+		<script src="bower_components/angular-ui/build/angular-ui.js"></script>
+		<!-- endbuild -->
+
+		<!-- build:js({.tmp,app}) scripts/scripts.js -->
+		<script src="scripts/app.js"></script>
+		<script src="scripts/services/config.js"></script>
+		<script src="scripts/services/app_config.js"></script>
+		<script src="scripts/services/dataservice.js"></script>
+		<script src="scripts/services/titleservice.js"></script>
+		<script src="scripts/services/utils.js"></script>
+		<script src="scripts/filters/duration.js"></script>
+		<script src="scripts/controllers/home.js"></script>
+		<script src="scripts/controllers/intro.js"></script>
+		<script src="scripts/controllers/play.js"></script>
+		<script src="scripts/controllers/outro.js"></script>
+		<script src="scripts/controllers/score.js"></script>
+		<script src="scripts/services/xiti.js"></script>
+		<script src="scripts/services/sound.js"></script>
+
+		<!-- endbuild -->
+
+		<script type="text/javascript" src="http://static.francetv.fr/js/jquery.metanav-min.js"></script>
+
+
+		<script type="text/javascript" src="http://static.francetv.fr/js/audience-min.js"></script>
+
+	</body>
+</html>

@@ -1,1 +1,14 @@
-<div ng-class="['dialogue', character]" ng-click="skipCurrentText()"><div class="dialogue__name">{{characterName}}</div><div class="media"><img src="" alt="" class="character" ng-src="images/character/{{character}}.png" ng-if="character && character != 'me' "> <img src="" alt="" class="character" ng-src="images/character/default-user-avatar.png" ng-if="character && character == 'me' "><div class="media"><div class="typed" ng-bind-html="typed"></div><a class="skip">Etape suivante</a></div></div></div>
+
+	<div ng-class="['dialogue', character]" ng-click="skipCurrentText()">
+		<div class="dialogue__name">
+			{{characterName}}
+		</div>
+		<div class="media">
+			<img src="" alt="" class="character" ng-src="images/character/{{character}}.png" ng-if="character && character != 'me' ">
+			<img src="" alt="" class="character" ng-src="images/character/default-user-avatar.png" ng-if="character && character == 'me' ">
+			<div class="media">
+				<div class="typed" ng-bind-html="typed"></div>
+				<a class="skip">Etape suivante</a>
+			</div>
+		</div>
+	</div>
