@@ -54,4 +54,24 @@ angular.module('newsGameApp')
 			$location.path('/play');
 		};
 
+		$scope.shareScore = function(type, extra) {
+			var text;
+			var url = "http://education.francetv.fr/serious-game/chasseurs-d-info-deviendrez-vous-le-redacteur-en-chef-de-demain-o12345";
+			var score = $scope.$storage.scores['level-1'] + $scope.$storage.scores['level-2'] + $scope.$storage.scores['level-3'] + $scope.$storage.scores['level-4'];
+
+			if (extra) {
+				text = "Journaliste en formation à Chasseur d'infos, j'ai réalisé un score de " + score + " points. Et vous ?";
+			} else {
+				text = "Chasseur d'infos / En tant que rédacteur en chef de l'International, j'ai réalisé un score de " + score + " points. Et vous ?";
+			}
+
+			if (type === 'twitter') {
+				window.open('https://twitter.com/share?url=' + url + '&text=' + encodeURI(text), 'sharetwitter', 'status=1,width=600,height=400,scrollbars=no');
+			}
+			if (type === 'facebook') {
+				window.open('http://www.facebook.com/sharer.php?u=' + url + '&text=' + encodeURI(text), 'sharefacebook', 'status=1,width=600,height=400,scrollbars=no');
+			}
+			return false;
+		};
+
 	});

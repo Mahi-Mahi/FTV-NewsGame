@@ -30,9 +30,9 @@
 						<div class="share" ng-if="$storage.level>1">
 							<span>Partager mon score</span>
 							<ul class="unstyled">
-								<li class="top-social__item"><a href="#" class="bt-twitter" target="_blank">Twitter</a></li>
-								<li class="top-social__item"><a href="#" class="bt-facebook" target="_blank">Facebook</a></li>
-								<li class="top-social__item"><a href="#" class="bt-googleplus" target="_blank">Google +</a></li>
+								<li class="top-social__item"><a class="bt-twitter" ng-click="shareScore('twitter')">Twitter</a></li>
+								<li class="top-social__item"><a class="bt-facebook" ng-click="shareScore('facebook')">Facebook</a></li>
+								<!-- <li class="top-social__item"><a href="#" class="bt-googleplus" target="_blank">Google +</a></li> -->
 							</ul>
 						</div>
 					</div>
@@ -64,9 +64,9 @@
 						<div class="share">
 							<span>Partager mon score</span>
 							<ul class="unstyled">
-								<li class="top-social__item"><a href="#" class="bt-twitter" target="_blank">Twitter</a></li>
-								<li class="top-social__item"><a href="#" class="bt-facebook" target="_blank">Facebook</a></li>
-								<li class="top-social__item"><a href="#" class="bt-googleplus" target="_blank">Google +</a></li>
+								<li class="top-social__item"><a class="bt-twitter" ng-click="shareScore('twitter', true)">Twitter</a></li>
+								<li class="top-social__item"><a class="bt-facebook" ng-click="shareScore('facebook', true)">Facebook</a></li>
+								<!-- <li class="top-social__item"><a href="#" class="bt-googleplus" target="_blank">Google +</a></li> -->
 							</ul>
 						</div>
 					</div>
