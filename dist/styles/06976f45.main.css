@@ -306,7 +306,7 @@ html .km-pane-wrapper .k-header {
 .k-column-menu .k-sprite,
 .k-grid-mobile .k-resize-handle-inner:before,
 .k-grid-mobile .k-resize-handle-inner:after {
-  background-image: url('/images/kendo/sprite.png');
+  background-image: url('../images/kendo/sprite.png');
   border-color: transparent;
 }
 
@@ -315,7 +315,7 @@ html .km-pane-wrapper .k-header {
 .k-mobile-list .k-check:checked,
 .k-mobile-list .k-edit-field [type=checkbox]:checked,
 .k-mobile-list .k-edit-field [type=radio]:checked {
-  background-image: url('/images/kendo/sprite.png');
+  background-image: url('../images/kendo/sprite.png');
   border-color: transparent;
 }
 
@@ -323,14 +323,14 @@ html .km-pane-wrapper .k-header {
 
 .k-loading,
 .k-state-hover .k-loading {
-  background-image: url('/images/kendo/loading.gif');
+  background-image: url('../images/kendo/loading.gif');
   background-position: 50% 50%;
 }
 
 /* line 142, ../../app/styles/_kendo.scss */
 
 .k-loading-image {
-  background-image: url('/images/kendo/loading-image.gif');
+  background-image: url('../images/kendo/loading-image.gif');
 }
 
 /* line 146, ../../app/styles/_kendo.scss */
@@ -815,7 +815,7 @@ div.k-imagebrowser-dropzone em,
 /* line 431, ../../app/styles/_kendo.scss */
 
 .k-tool-icon {
-  background-image: url('/images/kendo/sprite.png');
+  background-image: url('../images/kendo/sprite.png');
 }
 
 /* line 435, ../../app/styles/_kendo.scss */
@@ -899,7 +899,7 @@ div.k-imagebrowser-dropzone em {
 /* line 479, ../../app/styles/_kendo.scss */
 
 .k-progressbar-indeterminate {
-  background: url('/images/kendo/indeterminate.gif');
+  background: url('../images/kendo/indeterminate.gif');
 }
 
 /* line 483, ../../app/styles/_kendo.scss */
@@ -924,13 +924,13 @@ div.k-imagebrowser-dropzone em {
 /* line 495, ../../app/styles/_kendo.scss */
 
 .k-slider-horizontal .k-tick {
-  background-image: url('/images/kendo/slider-h.gif');
+  background-image: url('../images/kendo/slider-h.gif');
 }
 
 /* line 499, ../../app/styles/_kendo.scss */
 
 .k-slider-vertical .k-tick {
-  background-image: url('/images/kendo/slider-v.gif');
+  background-image: url('../images/kendo/slider-v.gif');
 }
 
 /* line 503, ../../app/styles/_kendo.scss */
@@ -1085,7 +1085,7 @@ div.k-imagebrowser-dropzone em {
 
 .k-tile .k-folder,
 .k-tile .k-file {
-  background-image: url('/images/kendo/imagebrowser.png');
+  background-image: url('../images/kendo/imagebrowser.png');
 }
 
 /* line 606, ../../app/styles/_kendo.scss */
@@ -1578,7 +1578,7 @@ html .km-pane-wrapper .km-widget,
   /* line 865, ../../app/styles/_kendo.scss */
 
   .km-pane-wrapper .k-icon {
-    background-image: url('/images/kendo/sprite_2x.png');
+    background-image: url('../images/kendo/sprite_2x.png');
     background-size: 21.2em 21em;
   }
 }
@@ -1972,7 +1972,7 @@ button:focus {
   .k-mobile-list .k-check:checked,
   .k-mobile-list .k-edit-field [type=checkbox]:checked,
   .k-mobile-list .k-edit-field [type=radio]:checked {
-    background-image: url('/images/kendo/sprite_2x.png');
+    background-image: url('../images/kendo/sprite_2x.png');
     background-size: 340px 336px;
   }
 
@@ -2129,13 +2129,13 @@ button:focus {
 
 #win-cuicuiter .k-window-title,
 #win-source .k-window-title {
-  background: url('/images/kendo/bg-win-cuicuiter-active-title.svg') center center no-repeat;
+  background: url('../images/kendo/bg-win-cuicuiter-active-title.svg') center center no-repeat;
 }
 
 /* line 1258, ../../app/styles/_kendo.scss */
 
 #win-source .k-window-title {
-  background: url('/images/kendo/bg-win-source-active-title.svg') center center no-repeat;
+  background: url('../images/kendo/bg-win-source-active-title.svg') center center no-repeat;
   height: 28px;
 }
 
@@ -2143,7 +2143,7 @@ button:focus {
 
 #win-cuicuiter.k-state-focused .k-header,
 #win-source.k-state-focused .k-header {
-  background: url('/images/kendo/bg-win-cuicuiter-active.png') center top no-repeat;
+  background: url('../images/kendo/bg-win-cuicuiter-active.png') center top no-repeat;
   background-size: cover;
 }
 
@@ -2156,13 +2156,13 @@ button:focus {
 /* line 1275, ../../app/styles/_kendo.scss */
 
 #win-chat .k-window-title {
-  background: url('/images/kendo/bg-win-chat-active-title.png') center center no-repeat;
+  background: url('../images/kendo/bg-win-chat-active-title.png') center center no-repeat;
 }
 
 /* line 1281, ../../app/styles/_kendo.scss */
 
 #win-chat.k-state-focused .k-header {
-  background: url('/images/kendo/bg-win-source-active.png') center top no-repeat;
+  background: url('../images/kendo/bg-win-source-active.png') center top no-repeat;
   background-size: cover;
 }
 
@@ -2175,13 +2175,13 @@ button:focus {
 /* line 1292, ../../app/styles/_kendo.scss */
 
 #win-skoupe .k-window-title {
-  background: url('/images/kendo/bg-win-skoupe-active-title.png') center center no-repeat;
+  background: url('../images/kendo/bg-win-skoupe-active-title.png') center center no-repeat;
 }
 
 /* line 1298, ../../app/styles/_kendo.scss */
 
 #win-skoupe.k-state-focused .k-header {
-  background: url('/images/kendo/bg-win-source-active.png') center top no-repeat;
+  background: url('../images/kendo/bg-win-source-active.png') center top no-repeat;
   background-size: cover;
 }
 
@@ -2194,13 +2194,13 @@ button:focus {
 /* line 1309, ../../app/styles/_kendo.scss */
 
 #win-contact .k-window-title {
-  background: url('/images/kendo/bg-win-contact-active-title.png') center center no-repeat;
+  background: url('../images/kendo/bg-win-contact-active-title.png') center center no-repeat;
 }
 
 /* line 1315, ../../app/styles/_kendo.scss */
 
 #win-contact.k-state-focused .k-header {
-  background: url('/images/kendo/bg-win-source-active.png') center top no-repeat;
+  background: url('../images/kendo/bg-win-source-active.png') center top no-repeat;
   background-size: cover;
 }
 
@@ -2213,13 +2213,13 @@ button:focus {
 /* line 1325, ../../app/styles/_kendo.scss */
 
 #win-notepad .k-window-title {
-  background: url('/images/kendo/bg-notepad-active-title.png') center center no-repeat;
+  background: url('../images/kendo/bg-notepad-active-title.png') center center no-repeat;
 }
 
 /* line 1331, ../../app/styles/_kendo.scss */
 
 #win-notepad.k-state-focused .k-header {
-  background: url('/images/kendo/bg-notepad-active.png') center top no-repeat;
+  background: url('../images/kendo/bg-notepad-active.png') center top no-repeat;
   background-size: cover;
 }
 
@@ -2232,7 +2232,7 @@ button:focus {
 /* line 1341, ../../app/styles/_kendo.scss */
 
 #win-blog .k-window-title {
-  background: url('/images/kendo/bg-win-blog-active-title.png') center center no-repeat;
+  background: url('../images/kendo/bg-win-blog-active-title.png') center center no-repeat;
   height: 33px;
   margin-top: -10px;
 }
@@ -2241,20 +2241,20 @@ button:focus {
 
 .play-level-3 #win-blog .k-window-title,
 .play-level-4 #win-blog .k-window-title {
-  background-image: url('/images/kendo/bg-win-blog-international-title.png');
+  background-image: url('../images/kendo/bg-win-blog-international-title.png');
 }
 
 /* line 1352, ../../app/styles/_kendo.scss */
 
 #win-blog.k-state-focused .k-header {
-  background: url('/images/kendo/bg-win-blog-active.png') center top no-repeat;
+  background: url('../images/kendo/bg-win-blog-active.png') center top no-repeat;
   background-size: cover;
 }
 
 /* line 1359, ../../app/styles/_kendo.scss */
 
 #win-publish .k-header {
-  background: url('/images/kendo/bg-win-publish-active.png') center top no-repeat;
+  background: url('../images/kendo/bg-win-publish-active.png') center top no-repeat;
   background-size: cover;
   opacity: .5;
 }
@@ -2262,7 +2262,7 @@ button:focus {
 /* line 1364, ../../app/styles/_kendo.scss */
 
 #win-publish .k-window-title {
-  background: url('/images/kendo/bg-publish-active-title.png') center center no-repeat;
+  background: url('../images/kendo/bg-publish-active-title.png') center center no-repeat;
   height: 37px;
   margin-top: -13px;
 }
@@ -2270,7 +2270,7 @@ button:focus {
 /* line 1372, ../../app/styles/_kendo.scss */
 
 #win-publish.k-state-focused .k-header {
-  background: url('/images/kendo/bg-win-publish-active.png') center top no-repeat;
+  background: url('../images/kendo/bg-win-publish-active.png') center top no-repeat;
   background-size: cover;
   opacity: 1;
 }
@@ -2278,7 +2278,7 @@ button:focus {
 /* line 1379, ../../app/styles/_kendo.scss */
 
 #publish {
-  background: url('/images/kendo//blog-title-bg-articles-a-la-une.png') left top no-repeat #e7e6e6 !important;
+  background: url('../images/kendo//blog-title-bg-articles-a-la-une.png') left top no-repeat #e7e6e6 !important;
   background-size: 100% !important;
 }
 
@@ -2476,63 +2476,63 @@ textarea {
 /* line 34, ../../app/styles/main.scss */
 
 body.home {
-  background: url('/images/background/home.jpg') 50% 50% no-repeat fixed;
+  background: url('../images/background/home.jpg') 50% 50% no-repeat fixed;
   background-size: cover;
 }
 
 /* line 34, ../../app/styles/main.scss */
 
 body.intro-level-1 {
-  background: url('/images/background/intro-level-1.jpg') 50% 50% no-repeat fixed;
+  background: url('../images/background/intro-level-1.jpg') 50% 50% no-repeat fixed;
   background-size: cover;
 }
 
 /* line 34, ../../app/styles/main.scss */
 
 body.intro-level-2 {
-  background: url('/images/background/intro-level-2.jpg') 50% 50% no-repeat fixed;
+  background: url('../images/background/intro-level-2.jpg') 50% 50% no-repeat fixed;
   background-size: cover;
 }
 
 /* line 34, ../../app/styles/main.scss */
 
 body.intro-level-3 {
-  background: url('/images/background/intro-level-3.jpg') 50% 50% no-repeat fixed;
+  background: url('../images/background/intro-level-3.jpg') 50% 50% no-repeat fixed;
   background-size: cover;
 }
 
 /* line 34, ../../app/styles/main.scss */
 
 body.intro-level-4 {
-  background: url('/images/background/intro-level-4.jpg') 50% 50% no-repeat fixed;
+  background: url('../images/background/intro-level-4.jpg') 50% 50% no-repeat fixed;
   background-size: cover;
 }
 
 /* line 34, ../../app/styles/main.scss */
 
 body.play-level-1 {
-  background: url('/images/background/play-level-1.jpg') 50% 50% no-repeat fixed;
+  background: url('../images/background/play-level-1.jpg') 50% 50% no-repeat fixed;
   background-size: cover;
 }
 
 /* line 34, ../../app/styles/main.scss */
 
 body.play-level-2 {
-  background: url('/images/background/play-level-2.jpg') 50% 50% no-repeat fixed;
+  background: url('../images/background/play-level-2.jpg') 50% 50% no-repeat fixed;
   background-size: cover;
 }
 
 /* line 34, ../../app/styles/main.scss */
 
 body.play-level-3 {
-  background: url('/images/background/play-level-3.jpg') 50% 50% no-repeat fixed;
+  background: url('../images/background/play-level-3.jpg') 50% 50% no-repeat fixed;
   background-size: cover;
 }
 
 /* line 34, ../../app/styles/main.scss */
 
 body.play-level-4 {
-  background: url('/images/background/play-level-4.jpg') 50% 50% no-repeat fixed;
+  background: url('../images/background/play-level-4.jpg') 50% 50% no-repeat fixed;
   background-size: cover;
 }
 
@@ -2886,7 +2886,7 @@ textarea {
 
 .bt-start,
 .bt-continue {
-  background: url('/images/svg/bt-start.svg') left top no-repeat;
+  background: url('../images/svg/bt-start.svg') left top no-repeat;
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -2902,14 +2902,14 @@ textarea {
 /* line 141, ../../app/styles/_home.scss */
 
 .bt-continue {
-  background-image: url('/images/svg/bt-continue.svg');
+  background-image: url('../images/svg/bt-continue.svg');
   margin: 0 0 0 40px;
 }
 
 /* line 147, ../../app/styles/_home.scss */
 
 .logo-francetv-education {
-  background: url('/images/svg/logo-france-tv-education.svg') left top no-repeat;
+  background: url('../images/svg/logo-france-tv-education.svg') left top no-repeat;
   display: block;
   height: 22px;
   margin: 0;
@@ -3033,7 +3033,7 @@ textarea {
 /* line 68, ../../app/styles/_intro.scss */
 
 .logo-splash {
-  background: url('/images/logo-splash.png') left top no-repeat;
+  background: url('../images/logo-splash.png') left top no-repeat;
   display: block;
   height: 378px;
   margin: 0 auto;
@@ -3045,7 +3045,7 @@ textarea {
   /* line 68, ../../app/styles/_intro.scss */
 
   .logo-splash {
-    background-image: url('/images/logo-splash-2x.png');
+    background-image: url('../images/logo-splash-2x.png');
     background-size: 369px 378px;
   }
 }
@@ -3595,14 +3595,14 @@ textarea {
 /* line 236, ../../app/styles/_play.scss */
 
 .feedback--good .feedback__title {
-  background: url('/images/feedback-good.svg') 10px 10px no-repeat #e7e6e6;
+  background: url('../images/feedback-good.svg') 10px 10px no-repeat #e7e6e6;
   color: #009245;
 }
 
 /* line 240, ../../app/styles/_play.scss */
 
 .feedback--bad .feedback__title {
-  background: url('/images/feedback-bad.svg') 10px 10px no-repeat #e7e6e6;
+  background: url('../images/feedback-bad.svg') 10px 10px no-repeat #e7e6e6;
   color: #904848;
 }
 
@@ -4287,28 +4287,28 @@ div.k-window-content#chat {
 /* line 738, ../../app/styles/_play.scss */
 
 .play-level-1 #scoring {
-  background: url('/images/background/intro-level-1.jpg') 50% 50% no-repeat fixed;
+  background: url('../images/background/intro-level-1.jpg') 50% 50% no-repeat fixed;
   background-size: cover;
 }
 
 /* line 738, ../../app/styles/_play.scss */
 
 .play-level-2 #scoring {
-  background: url('/images/background/intro-level-2.jpg') 50% 50% no-repeat fixed;
+  background: url('../images/background/intro-level-2.jpg') 50% 50% no-repeat fixed;
   background-size: cover;
 }
 
 /* line 738, ../../app/styles/_play.scss */
 
 .play-level-3 #scoring {
-  background: url('/images/background/intro-level-3.jpg') 50% 50% no-repeat fixed;
+  background: url('../images/background/intro-level-3.jpg') 50% 50% no-repeat fixed;
   background-size: cover;
 }
 
 /* line 738, ../../app/styles/_play.scss */
 
 .play-level-4 #scoring {
-  background: url('/images/background/intro-level-4.jpg') 50% 50% no-repeat fixed;
+  background: url('../images/background/intro-level-4.jpg') 50% 50% no-repeat fixed;
   background-size: cover;
 }
 
@@ -4328,7 +4328,7 @@ div.k-window-content#chat {
 /* line 756, ../../app/styles/_play.scss */
 
 #scoring.albert {
-  background: url('/images/background/outro-albert-londres.jpg') 50% 50% no-repeat fixed;
+  background: url('../images/background/outro-albert-londres.jpg') 50% 50% no-repeat fixed;
   background-size: cover;
 }
 
@@ -5090,7 +5090,7 @@ div.k-window-content#chat {
 /* line 1304, ../../app/styles/_play.scss */
 
 .stars {
-  background: url('/images/bg-stars.png') left top no-repeat;
+  background: url('../images/bg-stars.png') left top no-repeat;
   display: block;
   height: 8px;
   margin: 0 auto;
@@ -5110,7 +5110,7 @@ div.k-window-content#chat {
 /* line 1317, ../../app/styles/_play.scss */
 
 .waiting__inner__body .stars {
-  background-image: url('/images/bg-stars-large.png');
+  background-image: url('../images/bg-stars-large.png');
   height: 31px;
   width: 122px;
 }
@@ -5373,7 +5373,7 @@ div.k-window-content#chat {
 /* line 1471, ../../app/styles/_play.scss */
 
 .source-status {
-  background: url('/images/bg-credibility-status.png') left top no-repeat;
+  background: url('../images/bg-credibility-status.png') left top no-repeat;
   display: block;
   margin: 10px auto;
   padding: 0;
@@ -5506,7 +5506,7 @@ div.k-window-content#chat {
 /* line 1, ../../app/styles/_notepad.scss */
 
 #notepad {
-  background: url('/images/background/notepad.png') repeat;
+  background: url('../images/background/notepad.png') repeat;
 }
 
 /* line 5, ../../app/styles/_notepad.scss */
