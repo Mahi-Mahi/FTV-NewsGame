@@ -1,6 +1,5 @@
 "use strict";
 angular.module("newsGameApp").constant("config", {
-	"baseurl": "/media/modules/chasseurs-d-info",
 	"seoTitle": "Chasseur d'infos",
 	"sounds": {
 		click: 'sounds/click',

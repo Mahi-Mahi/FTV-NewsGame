@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('newsGameApp')
-	.controller('IntroCtrl', function($rootScope, $scope, $routeParams, $log, $location, $timeout, $interval, $q, dataService, titleService, Xiti, Sound, utils, $localStorage) {
+	.controller('IntroCtrl', function($rootScope, $scope, $routeParams, prod, baseurl, $log, $location, $timeout, $interval, $q, dataService, titleService, Xiti, Sound, utils, $localStorage) {
 
 		$log.debug('Intro');
 
@@ -32,6 +32,10 @@ angular.module('newsGameApp')
 
 		// debug config
 		var delayModifier = ($scope.debug ? 0.1 : 2);
+
+		$scope.goto = function(path) {
+			$location.path(path);
+		};
 
 		var steps = [];
 

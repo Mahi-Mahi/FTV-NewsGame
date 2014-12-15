@@ -1,4 +1,4 @@
-<h2 class="blog-title"><img src="/images/kendo/blog-title-articles-a-la-une.png" alt="Article à la une" /></h2>
+<h2 class="blog-title"><img src="./images/kendo/blog-title-articles-a-la-une.png" alt="Article à la une" /></h2>
 	<div class="blog__category clearfix">
 		<ul class="unstyled blog__category__list">
 			<li class="blog__category__item active">Accueil</li>
@@ -24,7 +24,7 @@
 						<li class="theme"><span class="theme-title">Thématique : </span> <span class="item-theme {{post.cuit.theme}}"><span class="visuallyhidden">{{themes[post.cuit.theme]}}</span></span></li>
 						<li class="source"><span class="source-title">Source : </span> {{post.cuit.author.name}}</li>
 					</ul>
-					<!-- <img src="/images/blog-default-image.png" alt="" /> -->
+					<!-- <img src="./images/blog-default-image.png" alt="" /> -->
 					<p class="grid-block__item--body">{{post.cuit.articleContent }}</p>
 					<div class="postActions">
 						<span class="remove" ng-click="unpublish(post)"><span class="visuallyhidden">X</span></span>
@@ -40,7 +40,7 @@
 						<li class="theme"><span class="theme-title">Thématique : </span> <span class="item-theme {{post.cuit.theme}}"><span class="visuallyhidden">{{themes[post.cuit.theme]}}</span></span></li>
 						<li class="source"><span class="source-title">Source : </span> {{post.cuit.author.name}}</li>
 					</ul>
-					<!-- <img src="/images/blog-default-image.png" alt="" /> -->
+					<!-- <img src="./images/blog-default-image.png" alt="" /> -->
 					<p>{{post.cuit.articleContent | limitTo: 80 }}</p>
 					<div class="postActions">
 						<span class="remove" ng-click="unpublish(post)"><span class="visuallyhidden">X</span></span>

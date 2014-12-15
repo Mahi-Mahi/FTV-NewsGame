@@ -63,7 +63,7 @@
 	</div>
 
 	<div class="top-skip" ng-if="level>1 && !skip && tuto">
-		<a href="/#/play/skip">Esc</a>
+		<a ng-click="goto('/play/skip')">Esc</a>
 		<span>pour <br />passer</span>
 	</div>
 
@@ -82,7 +82,7 @@
 					k-position="win.position"
 					k-width="win.width"
 					k-height="win.height"
-					k-content="{url: '/views/_'+win.template+'.html'}">
+					k-content="{url: './views/_'+win.template+'.html'}">
 		</div>
 	</div>
 
@@ -138,4 +138,4 @@
 </div>
 
 
-<div id="debug" ng-include="'/views/_debug.html'" ng-if="debug||fast"></div>
+<div id="debug" ng-include="'./views/_debug.html'" ng-if="debug||fast"></div>

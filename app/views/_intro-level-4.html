@@ -14,10 +14,10 @@
 	</div>
 
 	<div class="top-skip">
-		<a href="/#/play">Esc</a>
+		<a ng-click="goto('/play')">Esc</a>
 		<span>pour <br />passer</span>
 	</div>
 
-	<div ng-include="'/views/_intro-discussion.html'" ng-if="characterName"></div>
+	<div ng-include="'./views/_intro-discussion.html'" ng-if="characterName"></div>
 
 </div>

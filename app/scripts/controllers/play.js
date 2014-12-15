@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('newsGameApp')
-	.controller('PlayCtrl', function($document, $rootScope, $scope, $routeParams, $location, $log, prod, $timeout, $interval, dataService, titleService, Xiti, Sound, utils, $localStorage) {
+	.controller('PlayCtrl', function($document, $rootScope, $scope, $routeParams, $location, $log, prod, baseurl, $timeout, $interval, dataService, titleService, Xiti, Sound, utils, $localStorage) {
 
 		$scope.debug = ($routeParams.debug === 'debug');
 		$scope.fake = ($routeParams.debug === 'fake');
@@ -46,6 +46,10 @@ angular.module('newsGameApp')
 		$scope.showScoring = false;
 
 		$rootScope.background = 'play-level-' + $scope.level;
+
+		$scope.goto = function(path) {
+			$location.path(path);
+		};
 
 		/*
 		CuitCuiter

@@ -2,7 +2,7 @@
 /* global buzz */
 
 angular.module('newsGameApp')
-	.controller('HomeCtrl', function($rootScope, $scope, $localStorage, $log, $location, $timeout, prod, titleService, Xiti, Sound) {
+	.controller('HomeCtrl', function($rootScope, $scope, $localStorage, $log, $location, $timeout, prod, baseurl, titleService, Xiti, Sound) {
 
 		$log.debug('Home');
 
