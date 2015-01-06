@@ -17,7 +17,7 @@ angular.module('newsGameApp')
 
 		titleService.setTitle('Play');
 
-		Xiti.click(null, "Serious Game::play::level-" + $scope.$storage.level);
+		Xiti.click(null, "chasseurs-infos::play::level-" + $scope.$storage.level);
 
 		// debug config
 		var delayModifier = ($scope.debug ? 0.05 : 1) * ($routeParams.debug === 'fast' ? 0.5 : 1);

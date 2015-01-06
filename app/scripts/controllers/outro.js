@@ -18,7 +18,7 @@ angular.module('newsGameApp')
 			scores: {}
 		});
 
-		Xiti.click(null, "Serious Game::outro::level-" + $scope.$storage.level);
+		Xiti.click(null, "chasseurs-infos::outro::level-" + $scope.$storage.level);
 
 		var chatDelay = dataService.data.settings.chatDelay;
 		var chatInterval = dataService.data.settings.chatInterval;

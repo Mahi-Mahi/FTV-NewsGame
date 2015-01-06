@@ -1,5 +1,5 @@
 {
-	"chatDelay": 3500,
+	"chatDelay": 2500,
 	"chatInterval": 50,
 	"totalTime": {
 		"level-2": 360,

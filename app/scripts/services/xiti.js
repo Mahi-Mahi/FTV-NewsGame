@@ -7,10 +7,10 @@ angular.module('newsGameApp').factory('Xiti', function(config, $log, prod, $time
 			// $log.debug("xt_click(", xtpage);
 			// "jaujard::home::home::home"
 			if (window.xt_click) {
-				window.xt_click(document, 'F', 9, "jaujard::" + xtpage);
+				window.xt_click(document, 'F', 9, xtpage);
 			} else {
 				$timeout(function() {
-					window.xt_click(document, 'F', 9, "jaujard::" + xtpage);
+					window.xt_click(document, 'F', 9, xtpage);
 				}, 1000);
 			}
 		}

@@ -20,7 +20,7 @@ angular.module('newsGameApp')
 			scores: {}
 		});
 
-		Xiti.click(null, "Serious Game::intro::level-" + $scope.$storage.level);
+		Xiti.click(null, "chasseurs-infos::intro::level-" + $scope.$storage.level);
 
 		// all themes are loaded from /data/all.json
 		$scope.themes = dataService.data.all.themes;
@@ -31,7 +31,7 @@ angular.module('newsGameApp')
 		var chatInterval = dataService.data.settings.chatInterval;
 
 		// debug config
-		var delayModifier = ($scope.debug ? 0.1 : 2);
+		var delayModifier = ($scope.debug ? 0.1 : 1);
 
 		$scope.goto = function(path) {
 			$location.path(path);

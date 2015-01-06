@@ -16,7 +16,7 @@ angular.module('newsGameApp')
 			scores: {}
 		});
 
-		Xiti.click(null, "Serious Game::score::level-" + $scope.$storage.level);
+		Xiti.click(null, "chasseurs-infos::score::level-" + $scope.$storage.level);
 
 		$rootScope.background = 'intro-level-' + $scope.$storage.level;
 

@@ -32,7 +32,7 @@ angular.module('newsGameApp')
 			$location.path("/intro");
 		};
 
-		Xiti.click(null, "Serious Game::home");
+		Xiti.click(null, "chasseurs-infos::home");
 
 		$log.debug($scope.$storage.level);
 		$log.debug($scope.$storage.scores);
