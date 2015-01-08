@@ -1,0 +1,5790 @@
+@charset "UTF-8";
+
+/**
+ * Copyright 2014 Telerik AD
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* line 17, ../../app/styles/_kendo.scss */
+
+.k-in,
+.k-item,
+.k-window-action {
+  border-color: transparent;
+}
+
+/* line 21, ../../app/styles/_kendo.scss */
+
+.k-block,
+.k-widget {
+  background-color: #fff;
+}
+
+/* line 25, ../../app/styles/_kendo.scss */
+
+.k-block,
+.k-widget,
+.k-input,
+.k-textbox,
+.k-group,
+.k-content,
+.k-header,
+.k-editable-area,
+.k-separator,
+.k-colorpicker .k-i-arrow-s,
+.k-textbox > input,
+.k-autocomplete,
+.k-dropdown-wrap,
+.k-toolbar,
+.k-group-footer td,
+.k-grid-footer,
+.k-footer-template td,
+.k-state-default,
+.k-state-default .k-select,
+.k-state-disabled,
+.k-grid-header,
+.k-grid-header-wrap,
+.k-grid-header-locked,
+.k-grid-footer-locked,
+.k-grid-content-locked,
+.k-grid td,
+.k-grid td.k-state-selected,
+.k-grid-footer-wrap,
+.k-pager-wrap,
+.k-pager-wrap .k-link,
+.k-pager-refresh,
+.k-grouping-header,
+.k-grouping-header .k-group-indicator,
+.k-panelbar > .k-item > .k-link,
+.k-panel > .k-item > .k-link,
+.k-panelbar .k-panel,
+.k-panelbar .k-content,
+.k-calendar th,
+.k-slider-track,
+.k-splitbar,
+.k-dropzone-active,
+.k-tiles,
+.k-toolbar,
+.k-tooltip,
+.k-button-group .k-tool,
+.k-upload-files {
+  border-color: #c5c5c5;
+}
+
+/* line 29, ../../app/styles/_kendo.scss */
+
+.k-group,
+.k-toolbar,
+.k-grouping-header,
+.k-pager-wrap,
+.k-group-footer td,
+.k-grid-footer,
+.k-footer-template td,
+.k-widget .k-status,
+.k-calendar th,
+.k-dropzone-hovered,
+.k-widget.k-popup {
+  background-color: #ebebeb;
+}
+
+/* line 33, ../../app/styles/_kendo.scss */
+
+.k-grouping-row td,
+td.k-group-cell,
+.k-resize-handle-inner {
+  background-color: #e3e3e3;
+}
+
+/* line 37, ../../app/styles/_kendo.scss */
+
+.k-list-container {
+  border-color: #c5c5c5;
+  background-color: #e9e9e9;
+}
+
+/* line 42, ../../app/styles/_kendo.scss */
+
+.k-content,
+.k-editable-area,
+.k-panelbar > li.k-item,
+.k-panel > li.k-item,
+.k-tiles {
+  background-color: #fff;
+}
+
+/* line 46, ../../app/styles/_kendo.scss */
+
+.k-alt,
+.k-separator {
+  background-color: #f5f5f5;
+}
+
+/* line 50, ../../app/styles/_kendo.scss */
+
+.k-textbox,
+.k-autocomplete.k-header,
+.k-dropdown-wrap.k-state-active,
+.k-picker-wrap.k-state-active,
+.k-numeric-wrap.k-state-active {
+  border-color: #c5c5c5;
+  background-color: #e9e9e9;
+}
+
+/* line 55, ../../app/styles/_kendo.scss */
+
+.k-textbox > input,
+.k-autocomplete .k-input,
+.k-dropdown-wrap .k-input,
+.k-autocomplete.k-state-focused .k-input,
+.k-dropdown-wrap.k-state-focused .k-input,
+.k-picker-wrap.k-state-focused .k-input,
+.k-numeric-wrap.k-state-focused .k-input {
+  border-color: #c5c5c5;
+}
+
+/* line 59, ../../app/styles/_kendo.scss */
+
+input.k-textbox,
+textarea.k-textbox,
+input.k-textbox:hover,
+textarea.k-textbox:hover,
+.k-textbox > input {
+  background: 0;
+}
+
+/* line 63, ../../app/styles/_kendo.scss */
+
+.k-input,
+input.k-textbox,
+textarea.k-textbox,
+input.k-textbox:hover,
+textarea.k-textbox:hover,
+.k-textbox > input,
+.k-multiselect-wrap {
+  background-color: #fff;
+  color: #2e2e2e;
+}
+
+/* line 68, ../../app/styles/_kendo.scss */
+
+.k-input[readonly] {
+  background-color: #fff;
+  color: #2e2e2e;
+}
+
+/* line 73, ../../app/styles/_kendo.scss */
+
+.k-block,
+.k-widget,
+.k-popup,
+.k-content,
+.k-dropdown .k-input {
+  color: #2e2e2e;
+}
+
+/* line 77, ../../app/styles/_kendo.scss */
+
+.k-block {
+  color: #2e2e2e;
+}
+
+/* line 81, ../../app/styles/_kendo.scss */
+
+.k-link:link,
+.k-link:visited,
+.k-nav-current.k-state-hover .k-link {
+  color: #2e2e2e;
+}
+
+/* line 85, ../../app/styles/_kendo.scss */
+
+.k-tabstrip-items .k-link,
+.k-panelbar > li > .k-link {
+  color: #2e2e2e;
+}
+
+/* line 89, ../../app/styles/_kendo.scss */
+
+.k-header {
+  color: #2e2e2e;
+}
+
+/* line 93, ../../app/styles/_kendo.scss */
+
+.k-header,
+.k-grid-header,
+.k-toolbar,
+.k-dropdown-wrap,
+.k-picker-wrap,
+.k-numeric-wrap,
+.k-grouping-header,
+.k-pager-wrap,
+.k-textbox,
+.k-button,
+.k-progressbar,
+.k-draghandle,
+.k-autocomplete,
+.k-state-highlight,
+.k-tabstrip-items .k-item,
+.km-pane-wrapper > .km-pane > .km-view > .km-content {
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0, rgba(255, 255, 255, 0) 100%);
+  background-position: 50% 50%;
+  background-color: #e3e3e3;
+}
+
+/* line 103, ../../app/styles/_kendo.scss */
+
+.k-widget.k-tooltip {
+  background-image: url("textures/highlight.png");
+}
+
+/* line 107, ../../app/styles/_kendo.scss */
+
+.k-block,
+.k-header,
+.k-grid-header,
+.k-toolbar,
+.k-grouping-header,
+.k-pager-wrap,
+.k-button,
+.k-draghandle,
+html .km-pane-wrapper .k-header {
+  background-color: #e3e3e3;
+}
+
+/* line 111, ../../app/styles/_kendo.scss */
+
+.k-icon:hover,
+.k-state-hover .k-icon,
+.k-state-selected .k-icon,
+.k-state-focused .k-icon,
+.k-column-menu .k-state-hover .k-sprite,
+.k-column-menu .k-state-active .k-sprite {
+  opacity: 1;
+}
+
+/* line 115, ../../app/styles/_kendo.scss */
+
+.k-icon,
+.k-state-disabled .k-icon,
+.k-column-menu .k-sprite {
+  opacity: .8;
+}
+
+/* line 119, ../../app/styles/_kendo.scss */
+
+.k-mobile-list .k-check:checked,
+.k-mobile-list .k-edit-field [type=checkbox]:checked,
+.k-mobile-list .k-edit-field [type=radio]:checked {
+  opacity: .8;
+}
+
+/* line 123, ../../app/styles/_kendo.scss */
+
+.k-tool {
+  border-color: transparent;
+}
+
+/* line 127, ../../app/styles/_kendo.scss */
+
+.k-icon,
+.k-tool-icon,
+.k-grouping-dropclue,
+.k-drop-hint,
+.k-column-menu .k-sprite,
+.k-grid-mobile .k-resize-handle-inner:before,
+.k-grid-mobile .k-resize-handle-inner:after {
+  background-image: url('../images/kendo/sprite.png');
+  border-color: transparent;
+}
+
+/* line 132, ../../app/styles/_kendo.scss */
+
+.k-mobile-list .k-check:checked,
+.k-mobile-list .k-edit-field [type=checkbox]:checked,
+.k-mobile-list .k-edit-field [type=radio]:checked {
+  background-image: url('../images/kendo/sprite.png');
+  border-color: transparent;
+}
+
+/* line 137, ../../app/styles/_kendo.scss */
+
+.k-loading,
+.k-state-hover .k-loading {
+  background-image: url('../images/kendo/loading.gif');
+  background-position: 50% 50%;
+}
+
+/* line 142, ../../app/styles/_kendo.scss */
+
+.k-loading-image {
+  background-image: url('../images/kendo/loading-image.gif');
+}
+
+/* line 146, ../../app/styles/_kendo.scss */
+
+.k-loading-color {
+  background-color: #fff;
+}
+
+/* line 150, ../../app/styles/_kendo.scss */
+
+.k-button {
+  color: #2e2e2e;
+  border-color: #c5c5c5;
+  background-color: #e3e3e3;
+}
+
+/* line 156, ../../app/styles/_kendo.scss */
+
+.k-button:focus,
+.k-button.k-state-focused {
+  border-color: #c5c5c5;
+}
+
+/* line 160, ../../app/styles/_kendo.scss */
+
+.k-button:hover {
+  color: #2e2e2e;
+  border-color: #bcb4b0;
+  background-color: #bcb4b0;
+}
+
+/* line 166, ../../app/styles/_kendo.scss */
+
+.k-button:active {
+  color: #fff;
+  background-color: #f35800;
+  border-color: #f35800;
+}
+
+/* line 172, ../../app/styles/_kendo.scss */
+
+.k-button.k-state-disabled,
+.k-state-disabled .k-button,
+.k-state-disabled .k-button:hover,
+.k-button.k-state-disabled:hover,
+.k-state-disabled .k-button:active,
+.k-button.k-state-disabled:active {
+  color: #9f9e9e;
+  border-color: #c5c5c5;
+  background-color: #e3e3e3;
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0, rgba(255, 255, 255, 0) 100%);
+}
+
+/* line 183, ../../app/styles/_kendo.scss */
+
+.k-button:focus:not(.k-state-disabled):not([disabled]) {
+  box-shadow: inset 0 0 5px 1px #bcb4b0;
+}
+
+/* line 188, ../../app/styles/_kendo.scss */
+
+.k-button:focus:active:not(.k-state-disabled):not([disabled]) {
+  box-shadow: inset 0 0 3px 4px #df5100;
+}
+
+/* line 193, ../../app/styles/_kendo.scss */
+
+.k-draghandle {
+  border-color: #c5c5c5;
+  background-color: #fff;
+  box-shadow: none;
+}
+
+/* line 200, ../../app/styles/_kendo.scss */
+
+.k-draghandle:hover {
+  border-color: #bcb4b0;
+  background-color: #bcb4b0;
+  box-shadow: none;
+}
+
+/* line 207, ../../app/styles/_kendo.scss */
+
+.k-scheduler {
+  color: #2e2e2e;
+  background-color: #fff;
+}
+
+/* line 212, ../../app/styles/_kendo.scss */
+
+.k-scheduler-layout {
+  color: #2e2e2e;
+}
+
+/* line 216, ../../app/styles/_kendo.scss */
+
+.k-scheduler-datecolumn,
+.k-scheduler-groupcolumn {
+  background-color: #fff;
+  color: #2e2e2e;
+}
+
+/* line 221, ../../app/styles/_kendo.scss */
+
+.k-scheduler-times tr,
+.k-scheduler-times th,
+.k-scheduler-table td,
+.k-scheduler-header th,
+.k-scheduler-header-wrap,
+.k-scheduler-times {
+  border-color: #c5c5c5;
+}
+
+/* line 225, ../../app/styles/_kendo.scss */
+
+.k-nonwork-hour {
+  background-color: #f2f2f2;
+}
+
+/* line 229, ../../app/styles/_kendo.scss */
+
+.k-scheduler-table .k-today,
+.k-today > .k-scheduler-datecolumn,
+.k-today > .k-scheduler-groupcolumn {
+  background-color: #f8f8f8;
+}
+
+/* line 233, ../../app/styles/_kendo.scss */
+
+.k-scheduler-now-arrow {
+  border-left-color: #e20000;
+}
+
+/* line 237, ../../app/styles/_kendo.scss */
+
+.k-scheduler-now-line {
+  background-color: #e20000;
+}
+
+/* line 241, ../../app/styles/_kendo.scss */
+
+.k-event {
+  border-color: #ffdac1;
+  background: #ffdac1 0 -257px url("textures/highlight.png") repeat-x;
+  color: #2e2e2e;
+}
+
+/* line 247, ../../app/styles/_kendo.scss */
+
+.k-event-inverse {
+  color: #fff;
+}
+
+/* line 251, ../../app/styles/_kendo.scss */
+
+.k-event.k-state-selected {
+  background-position: 0 0;
+}
+
+/* line 255, ../../app/styles/_kendo.scss */
+
+.k-ie7 .k-event .k-resize-handle,
+.k-event .k-resize-handle:after {
+  background-color: #bababa;
+}
+
+/* line 259, ../../app/styles/_kendo.scss */
+
+.k-scheduler-marquee:before,
+.k-scheduler-marquee:after {
+  border-color: #f35800;
+}
+
+/* line 263, ../../app/styles/_kendo.scss */
+
+.k-panelbar .k-content,
+.k-panelbar .k-panel,
+.k-panelbar .k-item {
+  background-color: #fff;
+  color: #2e2e2e;
+  border-color: #c5c5c5;
+}
+
+/* line 269, ../../app/styles/_kendo.scss */
+
+.k-panelbar > li > .k-link {
+  color: #2e2e2e;
+}
+
+/* line 273, ../../app/styles/_kendo.scss */
+
+.k-panelbar > .k-item > .k-link {
+  border-color: #c5c5c5;
+}
+
+/* line 277, ../../app/styles/_kendo.scss */
+
+.k-panel > li.k-item {
+  background-color: #fff;
+}
+
+/* line 281, ../../app/styles/_kendo.scss */
+
+.k-state-active,
+.k-state-active:hover,
+.k-active-filter,
+.k-tabstrip .k-state-active {
+  background-color: #fff;
+  border-color: #f35800;
+  color: #2e2e2e;
+}
+
+/* line 287, ../../app/styles/_kendo.scss */
+
+.k-menu .k-state-hover > .k-state-active {
+  background-color: transparent;
+}
+
+/* line 291, ../../app/styles/_kendo.scss */
+
+.k-state-highlight {
+  background: #fff;
+  color: #2e2e2e;
+}
+
+/* line 296, ../../app/styles/_kendo.scss */
+
+.k-state-focused,
+.k-grouping-row .k-state-focused {
+  border-color: #bcb4b0;
+}
+
+/* line 300, ../../app/styles/_kendo.scss */
+
+.k-calendar .k-link {
+  color: #2e2e2e;
+}
+
+/* line 304, ../../app/styles/_kendo.scss */
+
+.k-calendar .k-footer {
+  padding: 0;
+}
+
+/* line 308, ../../app/styles/_kendo.scss */
+
+.k-calendar .k-footer .k-nav-today {
+  color: #2e2e2e;
+  text-decoration: none;
+  background-color: #fff;
+}
+
+/* line 314, ../../app/styles/_kendo.scss */
+
+.k-calendar .k-footer .k-nav-today:hover,
+.k-calendar .k-footer .k-nav-today.k-state-hover {
+  background-color: #fff;
+  text-decoration: underline;
+}
+
+/* line 319, ../../app/styles/_kendo.scss */
+
+.k-calendar .k-footer .k-nav-today:active {
+  background-color: #fff;
+}
+
+/* line 323, ../../app/styles/_kendo.scss */
+
+.k-calendar .k-link.k-nav-fast {
+  color: #2e2e2e;
+}
+
+/* line 327, ../../app/styles/_kendo.scss */
+
+.k-calendar .k-nav-fast.k-state-hover {
+  text-decoration: none;
+  background-color: #bcb4b0;
+  color: #2e2e2e;
+}
+
+/* line 333, ../../app/styles/_kendo.scss */
+
+.k-calendar .k-link.k-state-hover,
+.k-window-titlebar .k-link {
+  border-radius: 4px;
+}
+
+/* line 337, ../../app/styles/_kendo.scss */
+
+.k-calendar .k-footer .k-link {
+  border-radius: 0;
+}
+
+/* line 341, ../../app/styles/_kendo.scss */
+
+.k-calendar th {
+  background-color: #ebebeb;
+}
+
+/* line 345, ../../app/styles/_kendo.scss */
+
+.k-calendar-container.k-group {
+  border-color: #c5c5c5;
+}
+
+/* line 349, ../../app/styles/_kendo.scss */
+
+.k-state-selected,
+.k-state-selected:link,
+.k-state-selected:visited,
+.k-list > .k-state-selected,
+.k-list > .k-state-highlight,
+.k-panel > .k-state-selected,
+.k-ghost-splitbar-vertical,
+.k-ghost-splitbar-horizontal,
+.k-draghandle.k-state-selected:hover,
+.k-scheduler .k-scheduler-toolbar .k-state-selected,
+.k-scheduler .k-today.k-state-selected,
+.k-marquee-color {
+  color: #fff;
+  background-color: #f35800;
+  border-color: #f35800;
+}
+
+/* line 355, ../../app/styles/_kendo.scss */
+
+.k-marquee-text {
+  color: #fff;
+}
+
+/* line 359, ../../app/styles/_kendo.scss */
+
+.k-state-focused,
+.k-list > .k-state-focused,
+.k-listview > .k-state-focused,
+.k-grid-header th.k-state-focused,
+td.k-state-focused,
+.k-button.k-state-focused {
+  box-shadow: inset 0 0 5px 1px #bcb4b0;
+}
+
+/* line 364, ../../app/styles/_kendo.scss */
+
+.k-state-focused.k-state-selected,
+.k-list > .k-state-focused.k-state-selected,
+.k-listview > .k-state-focused.k-state-selected,
+td.k-state-focused.k-state-selected {
+  box-shadow: inset 0 0 3px 4px #df5100;
+}
+
+/* line 369, ../../app/styles/_kendo.scss */
+
+.k-ie8 .k-panelbar span.k-state-focused,
+.k-ie8 .k-menu li.k-state-focused,
+.k-ie8 .k-listview > .k-state-focused,
+.k-ie8 .k-grid-header th.k-state-focused,
+.k-ie8 td.k-state-focused,
+.k-ie8 .k-tool.k-state-hover,
+.k-ie8 .k-button:focus,
+.k-ie8 .k-button.k-state-focused,
+.k-ie7 .k-panelbar span.k-state-focused,
+.k-ie7 .k-menu li.k-state-focused,
+.k-ie7 .k-listview > .k-state-focused,
+.k-ie7 .k-grid-header th.k-state-focused,
+.k-ie7 td.k-state-focused,
+.k-ie7 .k-tool.k-state-hover,
+.k-ie7 .k-button:focus,
+.k-ie7 .k-button.k-state-focused {
+  background-color: #bcb4b0;
+}
+
+/* line 373, ../../app/styles/_kendo.scss */
+
+.k-list > .k-state-selected.k-state-focused {
+  box-shadow: none;
+}
+
+/* line 378, ../../app/styles/_kendo.scss */
+
+.k-state-selected > .k-link,
+.k-panelbar > li > .k-state-selected,
+.k-panelbar > li.k-state-default > .k-link.k-state-selected {
+  color: #fff;
+}
+
+/* line 382, ../../app/styles/_kendo.scss */
+
+.k-state-selected,
+.k-button:active,
+.k-draghandle.k-state-selected:hover {
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0) 100%);
+}
+
+/* line 390, ../../app/styles/_kendo.scss */
+
+.k-button:active,
+.k-draghandle.k-state-selected:hover {
+  background-position: 50% 50%;
+}
+
+/* line 394, ../../app/styles/_kendo.scss */
+
+.k-state-hover,
+.k-state-hover:hover,
+.k-splitbar-horizontal-hover:hover,
+.k-splitbar-vertical-hover:hover,
+.k-list > .k-state-hover,
+.k-scheduler .k-scheduler-toolbar ul li.k-state-hover,
+.k-pager-wrap .k-link:hover,
+.k-dropdown .k-state-focused,
+.k-imagebrowser-dropzone,
+.k-mobile-list .k-item > .k-link:active,
+.k-mobile-list .k-item > .k-label:active,
+.k-mobile-list .k-edit-label.k-check:active,
+.k-mobile-list .k-recur-view .k-check:active {
+  color: #2e2e2e;
+  background-color: #bcb4b0;
+  border-color: #bcb4b0;
+}
+
+/* line 400, ../../app/styles/_kendo.scss */
+
+.k-mobile-list .k-scheduler-timezones .k-edit-field:nth-child(2):active {
+  color: #2e2e2e;
+  background-color: #bcb4b0;
+  border-color: #bcb4b0;
+}
+
+/* line 406, ../../app/styles/_kendo.scss */
+
+.k-ie7 .k-window-titlebar .k-state-hover,
+.k-ie8 .k-window-titlebar .k-state-hover {
+  border-color: #bcb4b0;
+}
+
+/* line 410, ../../app/styles/_kendo.scss */
+
+.k-state-hover > .k-select,
+.k-state-focused > .k-select {
+  border-color: #bcb4b0;
+}
+
+/* line 414, ../../app/styles/_kendo.scss */
+
+.k-button:hover,
+.k-button:focus,
+.k-button.k-state-focused,
+.k-textbox:hover,
+.k-state-hover,
+.k-state-hover:hover,
+.k-pager-wrap .k-link:hover,
+.k-other-month.k-state-hover .k-link,
+div.k-imagebrowser-dropzone em,
+.k-draghandle:hover {
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0, rgba(255, 255, 255, 0) 100%);
+}
+
+/* line 422, ../../app/styles/_kendo.scss */
+
+.k-pager-wrap {
+  background-color: #e3e3e3;
+  color: #2e2e2e;
+}
+
+/* line 427, ../../app/styles/_kendo.scss */
+
+.k-autocomplete.k-state-active,
+.k-picker-wrap.k-state-active,
+.k-numeric-wrap.k-state-active,
+.k-dropdown-wrap.k-state-active,
+.k-state-active,
+.k-state-active:hover,
+.k-state-active > .k-link,
+.k-button:active,
+.k-panelbar > .k-item > .k-state-focused {
+  background-image: none;
+}
+
+/* line 431, ../../app/styles/_kendo.scss */
+
+.k-tool-icon {
+  background-image: url('../images/kendo/sprite.png');
+}
+
+/* line 435, ../../app/styles/_kendo.scss */
+
+.k-state-hover > .k-link,
+.k-other-month.k-state-hover .k-link,
+div.k-imagebrowser-dropzone em {
+  color: #2e2e2e;
+}
+
+/* line 439, ../../app/styles/_kendo.scss */
+
+.k-autocomplete.k-state-hover,
+.k-autocomplete.k-state-focused,
+.k-picker-wrap.k-state-hover,
+.k-picker-wrap.k-state-focused,
+.k-numeric-wrap.k-state-hover,
+.k-numeric-wrap.k-state-focused,
+.k-dropdown-wrap.k-state-hover,
+.k-dropdown-wrap.k-state-focused {
+  background-color: #bcb4b0;
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0, rgba(255, 255, 255, 0) 100%);
+  background-position: 50% 50%;
+  border-color: #bcb4b0;
+}
+
+/* line 450, ../../app/styles/_kendo.scss */
+
+.km-pane-wrapper .k-mobile-list input:not([type="checkbox"]):not([type="radio"]),
+.km-pane-wrapper .km-pane .k-mobile-list select:not([multiple]),
+.km-pane-wrapper .k-mobile-list textarea,
+.k-dropdown .k-state-focused .k-input {
+  color: #2e2e2e;
+}
+
+/* line 454, ../../app/styles/_kendo.scss */
+
+.k-dropdown .k-state-hover .k-input {
+  color: #2e2e2e;
+}
+
+/* line 458, ../../app/styles/_kendo.scss */
+
+.k-state-error {
+  border-color: #e20000;
+  background-color: #ff5252;
+  color: #fff;
+}
+
+/* line 464, ../../app/styles/_kendo.scss */
+
+.k-state-disabled {
+  filter: alpha(opacity=70);
+  opacity: .7;
+}
+
+/* line 469, ../../app/styles/_kendo.scss */
+
+.k-tile-empty.k-state-selected,
+.k-loading-mask.k-state-selected {
+  border-width: 0;
+  background-image: none;
+  background-color: transparent;
+}
+
+/* line 475, ../../app/styles/_kendo.scss */
+
+.k-state-disabled,
+.k-state-disabled .k-link,
+.k-state-disabled .k-button,
+.k-other-month,
+.k-other-month .k-link,
+.k-dropzone em,
+.k-dropzone .k-upload-status,
+.k-tile-empty strong,
+.k-slider .k-draghandle {
+  color: #9f9e9e;
+}
+
+/* line 479, ../../app/styles/_kendo.scss */
+
+.k-progressbar-indeterminate {
+  background: url('../images/kendo/indeterminate.gif');
+}
+
+/* line 483, ../../app/styles/_kendo.scss */
+
+.k-progressbar-indeterminate .k-progress-status-wrap,
+.k-progressbar-indeterminate .k-state-selected {
+  display: none;
+}
+
+/* line 487, ../../app/styles/_kendo.scss */
+
+.k-slider-track {
+  background-color: #c5c5c5;
+}
+
+/* line 491, ../../app/styles/_kendo.scss */
+
+.k-slider-selection {
+  background-color: #f35800;
+}
+
+/* line 495, ../../app/styles/_kendo.scss */
+
+.k-slider-horizontal .k-tick {
+  background-image: url('../images/kendo/slider-h.gif');
+}
+
+/* line 499, ../../app/styles/_kendo.scss */
+
+.k-slider-vertical .k-tick {
+  background-image: url('../images/kendo/slider-v.gif');
+}
+
+/* line 503, ../../app/styles/_kendo.scss */
+
+.k-widget.k-tooltip {
+  border-color: #c5c5c5;
+  background-color: #c6c6c6;
+  color: #282828;
+}
+
+/* line 509, ../../app/styles/_kendo.scss */
+
+.k-widget.k-tooltip-validation {
+  border-color: #ffe79e;
+  background-color: #fff4c9;
+  color: #635145;
+}
+
+/* line 515, ../../app/styles/_kendo.scss */
+
+.input-prepend .k-tooltip-validation,
+.input-append .k-tooltip-validation {
+  font-size: 12px;
+  position: relative;
+  top: 3px;
+}
+
+/* line 521, ../../app/styles/_kendo.scss */
+
+.k-callout-n {
+  border-bottom-color: #c5c5c5;
+}
+
+/* line 525, ../../app/styles/_kendo.scss */
+
+.k-callout-w {
+  border-right-color: #c5c5c5;
+}
+
+/* line 529, ../../app/styles/_kendo.scss */
+
+.k-callout-s {
+  border-top-color: #c5c5c5;
+}
+
+/* line 533, ../../app/styles/_kendo.scss */
+
+.k-callout-e {
+  border-left-color: #c5c5c5;
+}
+
+/* line 537, ../../app/styles/_kendo.scss */
+
+.k-tooltip-validation .k-callout-n {
+  border-bottom-color: #ffe79e;
+}
+
+/* line 541, ../../app/styles/_kendo.scss */
+
+.k-tooltip-validation .k-callout-w {
+  border-right-color: #ffe79e;
+}
+
+/* line 545, ../../app/styles/_kendo.scss */
+
+.k-tooltip-validation .k-callout-s {
+  border-top-color: #ffe79e;
+}
+
+/* line 549, ../../app/styles/_kendo.scss */
+
+.k-tooltip-validation .k-callout-e {
+  border-left-color: #ffe79e;
+}
+
+/* line 553, ../../app/styles/_kendo.scss */
+
+.k-splitbar {
+  background-color: #e3e3e3;
+}
+
+/* line 557, ../../app/styles/_kendo.scss */
+
+.k-restricted-size-vertical,
+.k-restricted-size-horizontal {
+  background-color: #fff;
+}
+
+/* line 561, ../../app/styles/_kendo.scss */
+
+.k-file {
+  background-color: #fff;
+  border-color: #c5c5c5;
+}
+
+/* line 566, ../../app/styles/_kendo.scss */
+
+.k-file-progress {
+  color: #06c;
+}
+
+/* line 570, ../../app/styles/_kendo.scss */
+
+.k-file-progress .k-progress {
+  background-color: #d0f8ff;
+}
+
+/* line 574, ../../app/styles/_kendo.scss */
+
+.k-file-success {
+  color: #28760b;
+}
+
+/* line 578, ../../app/styles/_kendo.scss */
+
+.k-file-success .k-progress {
+  background-color: #ddffd0;
+}
+
+/* line 582, ../../app/styles/_kendo.scss */
+
+.k-file-error {
+  color: #c00;
+}
+
+/* line 586, ../../app/styles/_kendo.scss */
+
+.k-file-error .k-progress {
+  background-color: #ffded7;
+}
+
+/* line 590, ../../app/styles/_kendo.scss */
+
+.k-tile {
+  border-color: #fff;
+}
+
+/* line 594, ../../app/styles/_kendo.scss */
+
+.k-textbox:hover,
+.k-tiles li.k-state-hover {
+  border-color: #bcb4b0;
+}
+
+/* line 598, ../../app/styles/_kendo.scss */
+
+.k-tiles li.k-state-selected {
+  border-color: #f35800;
+}
+
+/* line 602, ../../app/styles/_kendo.scss */
+
+.k-tile .k-folder,
+.k-tile .k-file {
+  background-image: url('../images/kendo/imagebrowser.png');
+}
+
+/* line 606, ../../app/styles/_kendo.scss */
+
+.k-widget,
+.k-button {
+  box-shadow: none;
+}
+
+/* line 611, ../../app/styles/_kendo.scss */
+
+.k-slider,
+.k-treeview,
+.k-upload {
+  box-shadow: none;
+}
+
+/* line 616, ../../app/styles/_kendo.scss */
+
+.k-state-hover {
+  box-shadow: none;
+}
+
+/* line 621, ../../app/styles/_kendo.scss */
+
+.k-autocomplete.k-state-focused,
+.k-dropdown-wrap.k-state-focused,
+.k-picker-wrap.k-state-focused,
+.k-numeric-wrap.k-state-focused {
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* line 626, ../../app/styles/_kendo.scss */
+
+.k-state-selected {
+  box-shadow: none;
+}
+
+/* line 631, ../../app/styles/_kendo.scss */
+
+.k-state-active {
+  box-shadow: none;
+}
+
+/* line 636, ../../app/styles/_kendo.scss */
+
+.k-grid td.k-state-selected.k-state-focused {
+  background-color: #ff5e03;
+}
+
+/* line 640, ../../app/styles/_kendo.scss */
+
+.k-popup,
+.k-menu .k-group,
+.k-grid .k-filter-options,
+.k-time-popup,
+.k-datepicker-calendar,
+.k-autocomplete.k-state-border-down,
+.k-autocomplete.k-state-border-up,
+.k-dropdown-wrap.k-state-active,
+.k-picker-wrap.k-state-active,
+.k-multiselect.k-state-focused,
+.k-imagebrowser .k-image,
+.k-tooltip {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* line 645, ../../app/styles/_kendo.scss */
+
+.k-window {
+  border: none !important;
+  box-shadow: 1px 1px 7px 1px rgba(128, 128, 128, 0.3);
+  background: #edeeee;
+}
+
+/* line 652, ../../app/styles/_kendo.scss */
+
+.k-window.k-state-focused {
+  box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* line 657, ../../app/styles/_kendo.scss */
+
+.k-window.k-window-maximized,
+.k-window-maximized .k-window-titlebar,
+.k-window-maximized .k-window-content {
+  border-radius: 0;
+}
+
+/* line 661, ../../app/styles/_kendo.scss */
+
+.k-shadow {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* line 666, ../../app/styles/_kendo.scss */
+
+.k-inset {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* line 671, ../../app/styles/_kendo.scss */
+
+.k-editor-inline ::selection {
+  background-color: #f35800;
+  text-shadow: none;
+  color: #fff;
+}
+
+/* line 677, ../../app/styles/_kendo.scss */
+
+.k-editor-inline ::-moz-selection {
+  background-color: #f35800;
+  text-shadow: none;
+  color: #fff;
+}
+
+/* line 683, ../../app/styles/_kendo.scss */
+
+.k-notification.k-notification-info {
+  background-color: #e5f5fa;
+  color: #0487c4;
+  border-color: #b7e1f0;
+}
+
+/* line 689, ../../app/styles/_kendo.scss */
+
+.k-notification.k-notification-success {
+  background-color: #eaf7ec;
+  color: #349946;
+  border-color: #c3e8ca;
+}
+
+/* line 695, ../../app/styles/_kendo.scss */
+
+.k-notification.k-notification-warning {
+  background-color: #fff4d9;
+  color: #0487c4;
+  border-color: #fff0c8;
+}
+
+/* line 701, ../../app/styles/_kendo.scss */
+
+.k-notification.k-notification-error {
+  background-color: #ffe0d9;
+  color: #ef470a;
+  border-color: #ffb7a8;
+}
+
+/* line 707, ../../app/styles/_kendo.scss */
+
+.k-block,
+.k-button,
+.k-textbox,
+.k-drag-clue,
+.k-touch-scrollbar,
+.k-window,
+.k-window-titleless .k-window-content,
+.k-window-action,
+.k-inline-block,
+.k-grid .k-filter-options,
+.k-grouping-header .k-group-indicator,
+.k-autocomplete,
+.k-multiselect,
+.k-combobox,
+.k-dropdown,
+.k-dropdown-wrap,
+.k-datepicker,
+.k-timepicker,
+.k-colorpicker,
+.k-datetimepicker,
+.k-notification,
+.k-numerictextbox,
+.k-picker-wrap,
+.k-numeric-wrap,
+.k-colorpicker,
+.k-list-container,
+.k-calendar-container,
+.k-calendar td,
+.k-calendar .k-link,
+.k-treeview .k-in,
+.k-editor-inline,
+.k-tooltip,
+.k-tile,
+.k-slider-track,
+.k-slider-selection,
+.k-upload {
+  border-radius: 4px;
+}
+
+/* line 711, ../../app/styles/_kendo.scss */
+
+.k-tool {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 716, ../../app/styles/_kendo.scss */
+
+.k-tool.k-group-start {
+  border-radius: 4px 0 0 4px;
+}
+
+/* line 720, ../../app/styles/_kendo.scss */
+
+.k-rtl .k-tool.k-group-start {
+  border-radius: 0 4px 4px 0;
+}
+
+/* line 724, ../../app/styles/_kendo.scss */
+
+.k-tool.k-group-end {
+  border-radius: 0 4px 4px 0;
+}
+
+/* line 728, ../../app/styles/_kendo.scss */
+
+.k-rtl .k-tool.k-group-end {
+  border-radius: 4px 0 0 4px;
+}
+
+/* line 732, ../../app/styles/_kendo.scss */
+
+.k-group-start.k-group-end.k-tool {
+  border-radius: 4px;
+}
+
+/* line 736, ../../app/styles/_kendo.scss */
+
+.k-calendar-container.k-state-border-up,
+.k-list-container.k-state-border-up,
+.k-autocomplete.k-state-border-up,
+.k-multiselect.k-state-border-up,
+.k-dropdown-wrap.k-state-border-up,
+.k-picker-wrap.k-state-border-up,
+.k-numeric-wrap.k-state-border-up,
+.k-window-content,
+.k-filter-menu {
+  border-radius: 0 0 4px 4px;
+}
+
+/* line 740, ../../app/styles/_kendo.scss */
+
+.k-autocomplete.k-state-border-up .k-input,
+.k-dropdown-wrap.k-state-border-up .k-input,
+.k-picker-wrap.k-state-border-up .k-input,
+.k-picker-wrap.k-state-border-up .k-selected-color,
+.k-numeric-wrap.k-state-border-up .k-input {
+  border-radius: 0 0 0 4px;
+}
+
+/* line 744, ../../app/styles/_kendo.scss */
+
+.k-multiselect.k-state-border-up .k-multiselect-wrap {
+  border-radius: 0 0 4px 4px;
+}
+
+/* line 748, ../../app/styles/_kendo.scss */
+
+.k-window-titlebar,
+.k-block > .k-header,
+.k-tabstrip-items .k-item,
+.k-panelbar .k-tabstrip-items .k-item,
+.k-tabstrip-items .k-link,
+.k-calendar-container.k-state-border-down,
+.k-list-container.k-state-border-down,
+.k-autocomplete.k-state-border-down,
+.k-multiselect.k-state-border-down,
+.k-dropdown-wrap.k-state-border-down,
+.k-picker-wrap.k-state-border-down,
+.k-numeric-wrap.k-state-border-down {
+  border-radius: 4px 4px 0 0;
+}
+
+/* line 752, ../../app/styles/_kendo.scss */
+
+.k-dropdown-wrap .k-input,
+.k-picker-wrap .k-input,
+.k-numeric-wrap .k-input {
+  border-radius: 3px 0 0 3px;
+}
+
+/* line 756, ../../app/styles/_kendo.scss */
+
+.k-rtl .k-dropdown-wrap .k-input,
+.k-rtl .k-picker-wrap .k-input,
+.k-rtl .k-numeric-wrap .k-input {
+  border-radius: 0 3px 3px 0;
+}
+
+/* line 760, ../../app/styles/_kendo.scss */
+
+.k-numeric-wrap .k-link {
+  border-radius: 0 3px 0 0;
+}
+
+/* line 764, ../../app/styles/_kendo.scss */
+
+.k-numeric-wrap .k-link + .k-link {
+  border-radius: 0 0 3px 0;
+}
+
+/* line 768, ../../app/styles/_kendo.scss */
+
+.k-colorpicker .k-selected-color {
+  border-radius: 3px 0 0 3px;
+}
+
+/* line 772, ../../app/styles/_kendo.scss */
+
+.k-rtl .k-colorpicker .k-selected-color {
+  border-radius: 0 3px 3px 0;
+}
+
+/* line 776, ../../app/styles/_kendo.scss */
+
+.k-autocomplete.k-state-border-down .k-input {
+  border-radius: 4px 4px 0 0;
+}
+
+/* line 780, ../../app/styles/_kendo.scss */
+
+.k-dropdown-wrap.k-state-border-down .k-input,
+.k-picker-wrap.k-state-border-down .k-input,
+.k-picker-wrap.k-state-border-down .k-selected-color,
+.k-numeric-wrap.k-state-border-down .k-input {
+  border-radius: 4px 0 0 0;
+}
+
+/* line 784, ../../app/styles/_kendo.scss */
+
+.k-numeric-wrap .k-link.k-state-selected {
+  background-color: #f35800;
+}
+
+/* line 788, ../../app/styles/_kendo.scss */
+
+.k-multiselect.k-state-border-down .k-multiselect-wrap {
+  border-radius: 3px 3px 0 0;
+}
+
+/* line 792, ../../app/styles/_kendo.scss */
+
+.k-dropdown-wrap .k-select,
+.k-picker-wrap .k-select,
+.k-numeric-wrap .k-select,
+.k-datetimepicker .k-select + .k-select,
+.k-list-container.k-state-border-right {
+  border-radius: 0 4px 4px 0;
+}
+
+/* line 796, ../../app/styles/_kendo.scss */
+
+.k-rtl .k-dropdown-wrap .k-select,
+.k-rtl .k-picker-wrap .k-select,
+.k-rtl .k-numeric-wrap .k-select,
+.k-rtl .k-datetimepicker .k-select + .k-select,
+.k-rtl .k-list-container.k-state-border-right {
+  border-radius: 4px 0 0 4px;
+}
+
+/* line 800, ../../app/styles/_kendo.scss */
+
+.k-numeric-wrap.k-expand-padding .k-input {
+  border-radius: 4px;
+}
+
+/* line 804, ../../app/styles/_kendo.scss */
+
+.k-textbox > input,
+.k-autocomplete .k-input,
+.k-multiselect-wrap {
+  border-radius: 3px;
+}
+
+/* line 808, ../../app/styles/_kendo.scss */
+
+.k-list .k-state-hover,
+.k-list .k-state-focused,
+.k-list .k-state-highlight,
+.k-list .k-state-selected,
+.k-dropzone {
+  border-radius: 3px;
+}
+
+/* line 812, ../../app/styles/_kendo.scss */
+
+.k-slider .k-button,
+.k-grid .k-slider .k-button {
+  border-radius: 13px;
+}
+
+/* line 816, ../../app/styles/_kendo.scss */
+
+.k-draghandle {
+  border-radius: 7px;
+}
+
+/* line 820, ../../app/styles/_kendo.scss */
+
+.k-scheduler-toolbar > ul li:first-child,
+.k-scheduler-toolbar > ul li:first-child .k-link {
+  border-radius: 4px 0 0 4px;
+}
+
+/* line 824, ../../app/styles/_kendo.scss */
+
+.k-rtl .k-scheduler-toolbar > ul li:first-child,
+.k-rtl .k-scheduler-toolbar > ul li:first-child .k-link,
+.km-view.k-popup-edit-form .k-scheduler-toolbar > ul li:last-child,
+.km-view.k-popup-edit-form .k-scheduler-toolbar > ul li:last-child .k-link {
+  border-radius: 0 4px 4px 0;
+}
+
+/* line 828, ../../app/styles/_kendo.scss */
+
+.k-scheduler-phone .k-scheduler-toolbar > ul li.k-nav-today,
+.k-scheduler-phone .k-scheduler-toolbar > ul li.k-nav-today .k-link,
+.k-edit-field > .k-scheduler-navigation {
+  border-radius: 4px;
+}
+
+/* line 832, ../../app/styles/_kendo.scss */
+
+.k-scheduler-toolbar .k-nav-next,
+.k-scheduler-toolbar ul + ul li:last-child,
+.k-scheduler-toolbar .k-nav-next .k-link,
+.k-scheduler-toolbar ul + ul li:last-child .k-link {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* line 837, ../../app/styles/_kendo.scss */
+
+.k-rtl .k-scheduler-toolbar .k-nav-next,
+.k-rtl .k-scheduler-toolbar ul + ul li:last-child,
+.k-rtl .k-scheduler-toolbar .k-nav-next .k-link,
+.k-rtl .k-scheduler-toolbar ul + ul li:last-child .k-link {
+  border-radius: 4px 0 0 4px;
+}
+
+/* line 841, ../../app/styles/_kendo.scss */
+
+.k-scheduler div.k-scheduler-footer ul li,
+.k-scheduler div.k-scheduler-footer .k-link {
+  border-radius: 4px;
+}
+
+/* line 845, ../../app/styles/_kendo.scss */
+
+.k-more-events,
+.k-event,
+.k-event .k-link {
+  border-radius: 3px;
+}
+
+/* line 849, ../../app/styles/_kendo.scss */
+
+.k-scheduler-mobile .k-event {
+  border-radius: 2px;
+}
+
+/* line 853, ../../app/styles/_kendo.scss */
+
+.k-grid-mobile .k-column-active + th.k-header {
+  border-left-color: #2e2e2e;
+}
+
+/* line 857, ../../app/styles/_kendo.scss */
+
+html .km-pane-wrapper .km-widget,
+.k-ie .km-pane-wrapper .k-widget,
+.k-ie .km-pane-wrapper .k-group,
+.k-ie .km-pane-wrapper .k-content,
+.k-ie .km-pane-wrapper .k-header,
+.k-ie .km-pane-wrapper .k-popup-edit-form .k-edit-field .k-button,
+.km-pane-wrapper .k-mobile-list .k-item,
+.km-pane-wrapper .k-mobile-list .k-edit-label,
+.km-pane-wrapper .k-mobile-list .k-edit-field {
+  color: #2e2e2e;
+}
+
+@media screen and (-ms-high-contrast: active) and (-ms-high-contrast: none) {
+  /* line 862, ../../app/styles/_kendo.scss */
+
+  div.km-pane-wrapper a {
+    color: #2e2e2e;
+  }
+
+  /* line 865, ../../app/styles/_kendo.scss */
+
+  .km-pane-wrapper .k-icon {
+    background-image: url('../images/kendo/sprite_2x.png');
+    background-size: 21.2em 21em;
+  }
+}
+
+/* line 871, ../../app/styles/_kendo.scss */
+
+.km-pane-wrapper .k-mobile-list .k-item,
+.km-pane-wrapper .k-mobile-list .k-edit-field,
+.km-pane-wrapper .k-mobile-list .k-recur-view > .k-edit-field .k-check {
+  background-color: #fff;
+  border-top: 1px solid #c5c5c5;
+}
+
+/* line 876, ../../app/styles/_kendo.scss */
+
+.km-pane-wrapper .k-mobile-list .k-item.k-state-selected {
+  background-color: #f35800;
+  border-top-color: #f35800;
+}
+
+/* line 881, ../../app/styles/_kendo.scss */
+
+.km-pane-wrapper .k-mobile-list .k-recur-view > .k-edit-field .k-check:first-child {
+  border-top-color: transparent;
+}
+
+/* line 885, ../../app/styles/_kendo.scss */
+
+.km-pane-wrapper .k-mobile-list .k-item:last-child {
+  box-shadow: inset 0 -1px 0 #c5c5c5;
+}
+
+/* line 890, ../../app/styles/_kendo.scss */
+
+.km-pane-wrapper .k-mobile-list > ul > li > .k-link,
+.km-pane-wrapper .k-mobile-list .k-recur-view > .k-edit-label:nth-child(3),
+.km-pane-wrapper #recurrence .km-scroll-container > .k-edit-label:first-child {
+  color: #797979;
+}
+
+/* line 894, ../../app/styles/_kendo.scss */
+
+.km-pane-wrapper .k-mobile-list > ul > li > .k-link {
+  border-bottom: 1px solid #c5c5c5;
+}
+
+/* line 898, ../../app/styles/_kendo.scss */
+
+.km-pane-wrapper .k-mobile-list .k-edit-field {
+  box-shadow: 0 1px 1px #c5c5c5;
+}
+
+/* line 903, ../../app/styles/_kendo.scss */
+
+.km-actionsheet .k-grid-delete,
+.km-actionsheet .k-scheduler-delete,
+.km-pane-wrapper .k-scheduler-delete,
+.km-pane-wrapper .k-filter-menu .k-button[type=reset] {
+  color: #fff;
+  border-color: #e20000;
+  background-color: red;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.15));
+}
+
+/* line 914, ../../app/styles/_kendo.scss */
+
+.km-actionsheet .k-grid-delete:active,
+.km-actionsheet .k-scheduler-delete:active,
+.km-pane-wrapper .k-scheduler-delete:active,
+.km-pane-wrapper .k-filter-menu .k-button[type=reset]:active {
+  background-color: #900;
+}
+
+/* line 918, ../../app/styles/_kendo.scss */
+
+.k-autocomplete.k-state-default,
+.k-picker-wrap.k-state-default,
+.k-numeric-wrap.k-state-default,
+.k-dropdown-wrap.k-state-default {
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0, rgba(255, 255, 255, 0) 100%);
+  background-position: 50% 50%;
+  background-color: #e9e9e9;
+  border-color: #c5c5c5;
+}
+
+/* line 929, ../../app/styles/_kendo.scss */
+
+.k-autocomplete.k-state-hover,
+.k-picker-wrap.k-state-hover,
+.k-numeric-wrap.k-state-hover,
+.k-dropdown-wrap.k-state-hover {
+  background-color: #bcb4b0;
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0, rgba(255, 255, 255, 0) 100%);
+  background-position: 50% 50%;
+  border-color: #bcb4b0;
+}
+
+/* line 940, ../../app/styles/_kendo.scss */
+
+.k-multiselect.k-header {
+  border-color: #c5c5c5;
+}
+
+/* line 944, ../../app/styles/_kendo.scss */
+
+.k-multiselect.k-header.k-state-hover {
+  border-color: #bcb4b0;
+}
+
+/* line 948, ../../app/styles/_kendo.scss */
+
+.k-autocomplete.k-state-focused,
+.k-picker-wrap.k-state-focused,
+.k-numeric-wrap.k-state-focused,
+.k-dropdown-wrap.k-state-focused,
+.k-multiselect.k-header.k-state-focused {
+  background-color: #bcb4b0;
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0, rgba(255, 255, 255, 0) 100%);
+  background-position: 50% 50%;
+  border-color: #bcb4b0;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* line 961, ../../app/styles/_kendo.scss */
+
+.k-list-container {
+  color: #2e2e2e;
+}
+
+/* line 965, ../../app/styles/_kendo.scss */
+
+.k-dropdown .k-input,
+.k-dropdown .k-state-focused .k-input,
+.k-menu .k-popup {
+  color: #2e2e2e;
+}
+
+/* line 969, ../../app/styles/_kendo.scss */
+
+.k-state-default > .k-select {
+  border-color: #c5c5c5;
+}
+
+/* line 973, ../../app/styles/_kendo.scss */
+
+.k-state-hover > .k-select {
+  border-color: #bcb4b0;
+}
+
+/* line 977, ../../app/styles/_kendo.scss */
+
+.k-state-focused > .k-select {
+  border-color: #bcb4b0;
+}
+
+/* line 981, ../../app/styles/_kendo.scss */
+
+.k-tabstrip-items .k-state-default .k-link,
+.k-panelbar > li.k-state-default > .k-link {
+  color: #2e2e2e;
+}
+
+/* line 985, ../../app/styles/_kendo.scss */
+
+.k-tabstrip-items .k-state-hover .k-link,
+.k-panelbar > li.k-state-hover > .k-link,
+.k-panelbar > li.k-state-default > .k-link.k-state-hover {
+  color: #2e2e2e;
+}
+
+/* line 989, ../../app/styles/_kendo.scss */
+
+.k-panelbar .k-state-focused.k-state-hover {
+  background: #bcb4b0;
+  box-shadow: none;
+}
+
+/* line 995, ../../app/styles/_kendo.scss */
+
+.k-tabstrip-items .k-state-default,
+.k-ie7 .k-tabstrip-items .k-state-default .k-loading {
+  border-color: #c5c5c5;
+}
+
+/* line 999, ../../app/styles/_kendo.scss */
+
+.k-tabstrip-items .k-state-hover,
+.k-ie7 .k-tabstrip-items .k-state-hover .k-loading {
+  border-color: #bcb4b0;
+}
+
+/* line 1003, ../../app/styles/_kendo.scss */
+
+.k-tabstrip-items .k-state-active,
+.k-ie7 .k-tabstrip-items .k-state-active .k-loading {
+  background-color: #fff;
+  background-image: none;
+  border-color: #f35800;
+}
+
+/* line 1009, ../../app/styles/_kendo.scss */
+
+.k-tabstrip .k-content.k-state-active {
+  background-color: #fff;
+  color: #2e2e2e;
+}
+
+/* line 1014, ../../app/styles/_kendo.scss */
+
+.k-menu.k-header,
+.k-menu .k-item {
+  border-color: #c5c5c5;
+}
+
+/* line 1018, ../../app/styles/_kendo.scss */
+
+.k-column-menu,
+.k-column-menu .k-item {
+  border-color: #c5c5c5;
+}
+
+/* line 1022, ../../app/styles/_kendo.scss */
+
+.k-column-menu .k-separator {
+  border-color: #c5c5c5;
+  background-color: transparent;
+}
+
+/* line 1027, ../../app/styles/_kendo.scss */
+
+.k-menu .k-group {
+  border-color: #c5c5c5;
+}
+
+/* line 1031, ../../app/styles/_kendo.scss */
+
+.k-grid-filter.k-state-active {
+  background-color: #fff;
+}
+
+/* line 1035, ../../app/styles/_kendo.scss */
+
+.k-grouping-row td,
+.k-group-footer td,
+.k-grid-footer td {
+  color: #2e2e2e;
+  border-color: #c5c5c5;
+  font-weight: bold;
+}
+
+/* line 1041, ../../app/styles/_kendo.scss */
+
+.k-grouping-header {
+  color: #2e2e2e;
+}
+
+/* line 1045, ../../app/styles/_kendo.scss */
+
+.k-grid td.k-state-focused {
+  box-shadow: inset 0 0 0 1px inset 0 0 5px 1px #bcb4b0;
+}
+
+/* line 1050, ../../app/styles/_kendo.scss */
+
+.k-header,
+.k-grid-header-wrap,
+.k-grid .k-grouping-header,
+.k-grid-header,
+.k-pager-wrap,
+.k-pager-wrap .k-textbox,
+.k-pager-wrap .k-link,
+.k-grouping-header .k-group-indicator {
+  border-color: #c5c5c5;
+}
+
+/* line 1054, ../../app/styles/_kendo.scss */
+
+.k-primary {
+  color: #fff;
+  border-color: #ef671a;
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, #f6813f 0, #f35a03 100%);
+  background-position: 50% 50%;
+  background-color: #f35800;
+  box-shadow: none;
+}
+
+/* line 1068, ../../app/styles/_kendo.scss */
+
+.k-primary:focus,
+.k-primary.k-state-focused {
+  color: #fff;
+  border-color: #e84200;
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, #f1713f 0, #ed4503 100%);
+  box-shadow: 0 0 3px 1px #e10000;
+}
+
+/* line 1080, ../../app/styles/_kendo.scss */
+
+.k-primary:hover {
+  color: #fff;
+  border-color: #ef671a;
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, #f1713f 0, #ed4503 100%);
+  background-color: #ed4300;
+  box-shadow: none;
+}
+
+/* line 1093, ../../app/styles/_kendo.scss */
+
+.k-primary:focus:active:not(.k-state-disabled):not([disabled]),
+.k-primary:focus:not(.k-state-disabled):not([disabled]) {
+  box-shadow: 0 0 3px 1px #e10000;
+}
+
+/* line 1098, ../../app/styles/_kendo.scss */
+
+.k-primary:active {
+  color: #fff;
+  border-color: #ef671a;
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, #f6813f 0, #f35a03 100%);
+  background-color: #f35800;
+  box-shadow: none;
+}
+
+/* line 1111, ../../app/styles/_kendo.scss */
+
+.k-primary.k-state-disabled,
+.k-state-disabled .k-primary,
+.k-primary.k-state-disabled:hover,
+.k-state-disabled .k-primary:hover,
+.k-primary.k-state-disabled:hover,
+.k-state-disabled .k-primary:active,
+.k-primary.k-state-disabled:active {
+  color: #fab58e;
+  border-color: #ef671a;
+  background-color: #f35800;
+  background-image: url("textures/highlight.png");
+  background-image: none, linear-gradient(to bottom, #f6813f 0, #f35a03 100%);
+  box-shadow: none;
+}
+
+/* line 1124, ../../app/styles/_kendo.scss */
+
+.k-pager-numbers .k-link,
+.k-treeview .k-in {
+  border-color: transparent;
+}
+
+/* line 1128, ../../app/styles/_kendo.scss */
+
+.k-treeview .k-icon,
+.k-scheduler-table .k-icon,
+.k-grid .k-hierarchy-cell .k-icon {
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+/* line 1133, ../../app/styles/_kendo.scss */
+
+.k-scheduler-table .k-state-hover .k-icon {
+  background-color: transparent;
+}
+
+/* line 1137, ../../app/styles/_kendo.scss */
+
+a:focus,
+button:focus {
+  outline: 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  /* line 1142, ../../app/styles/_kendo.scss */
+
+  .k-icon:not(.k-loading),
+  .k-grouping-dropclue,
+  .k-drop-hint,
+  .k-callout,
+  .k-tool-icon,
+  .k-state-hover .k-tool-icon,
+  .k-state-active .k-tool-icon,
+  .k-state-active.k-state-hover .k-tool-icon,
+  .k-state-selected .k-tool-icon,
+  .k-state-selected.k-state-hover .k-tool-icon,
+  .k-column-menu .k-sprite,
+  .k-mobile-list .k-check:checked,
+  .k-mobile-list .k-edit-field [type=checkbox]:checked,
+  .k-mobile-list .k-edit-field [type=radio]:checked {
+    background-image: url('../images/kendo/sprite_2x.png');
+    background-size: 340px 336px;
+  }
+
+  /* line 1146, ../../app/styles/_kendo.scss */
+
+  .k-dropdown-wrap .k-input,
+  .k-picker-wrap .k-input,
+  .k-numeric-wrap .k-input {
+    border-radius: 3px 0 0 3px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) {
+  /* line 1152, ../../app/styles/_kendo.scss */
+
+  .k-editor-toolbar-wrap .k-dropdown-wrap.k-state-focused,
+  .k-editor-toolbar-wrap .k-button-group .k-tool:focus {
+    border-color: #fff;
+  }
+}
+
+/* line 1161, ../../app/styles/_kendo.scss */
+
+.k-block > .k-header,
+.k-window-titlebar {
+  min-height: 40px !important;
+}
+
+/* line 1165, ../../app/styles/_kendo.scss */
+
+.k-window-titlebar {
+  background: #d7d8d8;
+  border: none !important;
+}
+
+/* line 1170, ../../app/styles/_kendo.scss */
+
+.k-window-titlebar .k-window-actions {
+  right: auto !important;
+  left: .3em !important;
+  padding-top: 0 !important;
+  top: 1.1em !important;
+}
+
+/* line 1177, ../../app/styles/_kendo.scss */
+
+.k-window-title {
+  display: block;
+  margin: -12px 0 0 0;
+  position: static !important;
+  left: auto !important;
+  text-align: center;
+  color: #34495e;
+  font-size: 1.3333333333em !important;
+}
+
+/* line 1187, ../../app/styles/_kendo.scss */
+
+.modal .k-window-actions {
+  display: none;
+}
+
+/* line 1191, ../../app/styles/_kendo.scss */
+
+.k-window {
+  background: none;
+}
+
+/* line 1195, ../../app/styles/_kendo.scss */
+
+.k-content {
+  background: #edeeee;
+}
+
+/* line 1197, ../../app/styles/_kendo.scss */
+
+.k-content h2 {
+  color: #95A5A6;
+  display: block;
+  font-size: 1.3333333333em;
+  margin: 0;
+  padding: .5em 0;
+}
+
+/* line 1204, ../../app/styles/_kendo.scss */
+
+.k-content .inner {
+  background: #fff;
+  border: 1px solid #cecdcd;
+  border-radius: 4px;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+/* line 1213, ../../app/styles/_kendo.scss */
+
+.k-i-close {
+  background-image: none !important;
+  background-color: #d35400 !important;
+  border: 1px solid #95a5a6 !important;
+  border-radius: 50% !important;
+  opacity: 1 !important;
+  height: 12px !important;
+  width: 12px !important;
+}
+
+/* line 1223, ../../app/styles/_kendo.scss */
+
+.blog-title {
+  height: 55px;
+}
+
+/* line 1225, ../../app/styles/_kendo.scss */
+
+.blog-title img {
+  display: block;
+  margin: 5px 0 0 12px;
+  padding: 0;
+}
+
+/* line 1234, ../../app/styles/_kendo.scss */
+
+.k-window-title {
+  text-indent: 100%;
+}
+
+/* line 1236, ../../app/styles/_kendo.scss */
+
+#win-prompt .k-window-title,
+#win-promptEndDay .k-window-title {
+  text-indent: 0;
+}
+
+/* line 1241, ../../app/styles/_kendo.scss */
+
+.k-window-title {
+  opacity: .5;
+}
+
+/* line 1243, ../../app/styles/_kendo.scss */
+
+.k-state-focused .k-window-title {
+  opacity: 1;
+}
+
+/* line 1249, ../../app/styles/_kendo.scss */
+
+#win-cuicuiter .k-header,
+#win-source .k-header {
+  background: #4890a8;
+}
+
+/* line 1252, ../../app/styles/_kendo.scss */
+
+#win-cuicuiter .k-window-title,
+#win-source .k-window-title {
+  background: url('../images/kendo/bg-win-cuicuiter-active-title.svg') center center no-repeat;
+}
+
+/* line 1258, ../../app/styles/_kendo.scss */
+
+#win-source .k-window-title {
+  background: url('../images/kendo/bg-win-source-active-title.svg') center center no-repeat;
+  height: 28px;
+}
+
+/* line 1265, ../../app/styles/_kendo.scss */
+
+#win-cuicuiter.k-state-focused .k-header,
+#win-source.k-state-focused .k-header {
+  background: url('../images/kendo/bg-win-cuicuiter-active.png') center top no-repeat;
+  background-size: cover;
+}
+
+/* line 1272, ../../app/styles/_kendo.scss */
+
+#win-chat .k-header {
+  background: #c286b4;
+}
+
+/* line 1275, ../../app/styles/_kendo.scss */
+
+#win-chat .k-window-title {
+  background: url('../images/kendo/bg-win-chat-active-title.png') center center no-repeat;
+}
+
+/* line 1281, ../../app/styles/_kendo.scss */
+
+#win-chat.k-state-focused .k-header {
+  background: url('../images/kendo/bg-win-source-active.png') center top no-repeat;
+  background-size: cover;
+}
+
+/* line 1288, ../../app/styles/_kendo.scss */
+
+#win-skoupe .k-header {
+  background: #c286b4;
+}
+
+/* line 1292, ../../app/styles/_kendo.scss */
+
+#win-skoupe .k-window-title {
+  background: url('../images/kendo/bg-win-skoupe-active-title.png') center center no-repeat;
+}
+
+/* line 1298, ../../app/styles/_kendo.scss */
+
+#win-skoupe.k-state-focused .k-header {
+  background: url('../images/kendo/bg-win-source-active.png') center top no-repeat;
+  background-size: cover;
+}
+
+/* line 1305, ../../app/styles/_kendo.scss */
+
+#win-contact .k-header {
+  background: #c286b4;
+}
+
+/* line 1309, ../../app/styles/_kendo.scss */
+
+#win-contact .k-window-title {
+  background: url('../images/kendo/bg-win-contact-active-title.png') center center no-repeat;
+}
+
+/* line 1315, ../../app/styles/_kendo.scss */
+
+#win-contact.k-state-focused .k-header {
+  background: url('../images/kendo/bg-win-source-active.png') center top no-repeat;
+  background-size: cover;
+}
+
+/* line 1322, ../../app/styles/_kendo.scss */
+
+#win-notepad .k-header {
+  background: #e6c887;
+}
+
+/* line 1325, ../../app/styles/_kendo.scss */
+
+#win-notepad .k-window-title {
+  background: url('../images/kendo/bg-notepad-active-title.png') center center no-repeat;
+}
+
+/* line 1331, ../../app/styles/_kendo.scss */
+
+#win-notepad.k-state-focused .k-header {
+  background: url('../images/kendo/bg-notepad-active.png') center top no-repeat;
+  background-size: cover;
+}
+
+/* line 1338, ../../app/styles/_kendo.scss */
+
+#win-blog .k-header {
+  background: #4790a8;
+}
+
+/* line 1341, ../../app/styles/_kendo.scss */
+
+#win-blog .k-window-title {
+  background: url('../images/kendo/bg-win-blog-active-title.png') center center no-repeat;
+  height: 33px;
+  margin-top: -10px;
+}
+
+/* line 1345, ../../app/styles/_kendo.scss */
+
+.play-level-3 #win-blog .k-window-title,
+.play-level-4 #win-blog .k-window-title {
+  background-image: url('../images/kendo/bg-win-blog-international-title.png');
+}
+
+/* line 1352, ../../app/styles/_kendo.scss */
+
+#win-blog.k-state-focused .k-header {
+  background: url('../images/kendo/bg-win-blog-active.png') center top no-repeat;
+  background-size: cover;
+}
+
+/* line 1359, ../../app/styles/_kendo.scss */
+
+#win-publish .k-header {
+  background: url('../images/kendo/bg-win-publish-active.png') center top no-repeat;
+  background-size: cover;
+  opacity: .5;
+}
+
+/* line 1364, ../../app/styles/_kendo.scss */
+
+#win-publish .k-window-title {
+  background: url('../images/kendo/bg-publish-active-title.png') center center no-repeat;
+  height: 37px;
+  margin-top: -13px;
+}
+
+/* line 1372, ../../app/styles/_kendo.scss */
+
+#win-publish.k-state-focused .k-header {
+  background: url('../images/kendo/bg-win-publish-active.png') center top no-repeat;
+  background-size: cover;
+  opacity: 1;
+}
+
+/* line 1379, ../../app/styles/_kendo.scss */
+
+#publish {
+  background: url('../images/kendo//blog-title-bg-articles-a-la-une.png') left top no-repeat #e7e6e6 !important;
+  background-size: 100% !important;
+}
+
+/* line 1384, ../../app/styles/_kendo.scss */
+
+.default-post-message {
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  background: #e6f5fb;
+  border-radius: 4px;
+  border: 1px dashed #8dd0ee;
+  color: #29abe2;
+  display: block;
+  font-size: .9em;
+  margin: 10px auto;
+  padding: 20px;
+  text-align: center;
+  width: 95%;
+}
+
+/* line 1398, ../../app/styles/_kendo.scss */
+
+.default-post-message p {
+  display: block;
+  font-size: 1.5833333333em;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+/* line 1404, ../../app/styles/_kendo.scss */
+
+.default-post-message strong {
+  display: block;
+  font-size: 5.5em;
+  line-height: 1;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+/* line 1411, ../../app/styles/_kendo.scss */
+
+.default-post-message span {
+  display: block;
+  font-size: 1.0833333333em;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 4, ../../app/styles/_button.scss */
+
+.bt {
+  background: #fff;
+  border: 2px solid #39b54a;
+  border-radius: 8px;
+  color: #39b54a;
+  display: block;
+  height: 16px;
+  margin: 0 auto;
+  padding: 5px 0 0 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  text-transform: uppercase;
+  width: auto;
+}
+
+/* line 19, ../../app/styles/_button.scss */
+
+.bt.showCuits {
+  margin-bottom: 10px;
+  padding: 5px 8px 0;
+  color: #d35400;
+  border-color: #d35400;
+}
+
+/* line 25, ../../app/styles/_button.scss */
+
+.bt span {
+  display: block;
+  margin: 0;
+  padding: 0 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* line 33, ../../app/styles/_button.scss */
+
+.metas .bt {
+  max-width: 150px;
+  width: 100%;
+}
+
+/* line 37, ../../app/styles/_button.scss */
+
+.bt small {
+  font-size: 0.8333333333em;
+}
+
+/* line 42, ../../app/styles/_button.scss */
+
+.bt--publish {
+  transition: all 0.5s ease;
+  background: #39b54a;
+  color: #fff;
+  float: right;
+  font-size: .8em;
+  margin: 0;
+}
+
+/* line 51, ../../app/styles/_button.scss */
+
+.bt--puslish--selected {
+  background: #95a5a6;
+  border-color: #95a5a6;
+  cursor: default;
+  pointer-events: none !important;
+}
+
+/* line 58, ../../app/styles/_button.scss */
+
+.bt--finish {
+  border-color: #b83e22;
+  background: #b83e22;
+  color: #fff;
+  font-size: 0.8333333333em;
+  padding: 5px 5px 0 5px;
+}
+
+/* line 64, ../../app/styles/_button.scss */
+
+.bt--finish:hover {
+  cursor: pointer;
+}
+
+/* line 69, ../../app/styles/_button.scss */
+
+.bt--nextlevel {
+  background: #fff;
+  border-color: #fff;
+  border-radius: 4px;
+  color: #e44f42;
+  font-size: 2em;
+  height: auto;
+  margin: 25px auto;
+  padding: 8px 8px 0 8px;
+  text-transform: none;
+}
+
+/* line 80, ../../app/styles/_button.scss */
+
+.score__actions .bt--nextlevel {
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLight';
+  src: url("../fonts/HelveticaNeueLight.eot");
+  src: url("../fonts/HelveticaNeueLight.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueLight.woff") format("woff"), url("../fonts/HelveticaNeueLight.ttf") format("truetype"), url("../fonts/HelveticaNeueLight.svg#3162d512a0b0767ee94e99606f47da13") format("svg");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?k7z3r2");
+  src: url("../fonts/icomoon.eot?#iefixk7z3r2") format("embedded-opentype"), url("../fonts/icomoon.woff?k7z3r2") format("woff"), url("../fonts/icomoon.ttf?k7z3r2") format("truetype"), url("../fonts/icomoon.svg?k7z3r2#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 30, ../../app/styles/main.scss */
+
+html {
+  font-size: 87.5%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  height: 100%;
+}
+
+/* line 31, ../../app/styles/main.scss */
+
+html,
+button,
+input,
+select,
+textarea {
+  font-family: 'HelveticaNeueLight', Helvetica, Verdana, sans-serif;
+  color: #333;
+}
+
+/* line 34, ../../app/styles/main.scss */
+
+body.home {
+  background: url('../images/background/home.jpg') 50% 50% no-repeat fixed;
+  background-size: cover;
+}
+
+/* line 34, ../../app/styles/main.scss */
+
+body.intro-level-1 {
+  background: url('../images/background/intro-level-1.jpg') 50% 50% no-repeat fixed;
+  background-size: cover;
+}
+
+/* line 34, ../../app/styles/main.scss */
+
+body.intro-level-2 {
+  background: url('../images/background/intro-level-2.jpg') 50% 50% no-repeat fixed;
+  background-size: cover;
+}
+
+/* line 34, ../../app/styles/main.scss */
+
+body.intro-level-3 {
+  background: url('../images/background/intro-level-3.jpg') 50% 50% no-repeat fixed;
+  background-size: cover;
+}
+
+/* line 34, ../../app/styles/main.scss */
+
+body.intro-level-4 {
+  background: url('../images/background/intro-level-4.jpg') 50% 50% no-repeat fixed;
+  background-size: cover;
+}
+
+/* line 34, ../../app/styles/main.scss */
+
+body.play-level-1 {
+  background: url('../images/background/play-level-1.jpg') 50% 50% no-repeat fixed;
+  background-size: cover;
+}
+
+/* line 34, ../../app/styles/main.scss */
+
+body.play-level-2 {
+  background: url('../images/background/play-level-2.jpg') 50% 50% no-repeat fixed;
+  background-size: cover;
+}
+
+/* line 34, ../../app/styles/main.scss */
+
+body.play-level-3 {
+  background: url('../images/background/play-level-3.jpg') 50% 50% no-repeat fixed;
+  background-size: cover;
+}
+
+/* line 34, ../../app/styles/main.scss */
+
+body.play-level-4 {
+  background: url('../images/background/play-level-4.jpg') 50% 50% no-repeat fixed;
+  background-size: cover;
+}
+
+/* line 41, ../../app/styles/main.scss */
+
+a {
+  transition: all 0.5s linear;
+  color: #29ABE2;
+  text-decoration: none;
+}
+
+/* line 42, ../../app/styles/main.scss */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 43, ../../app/styles/main.scss */
+
+ul,
+ol {
+  margin: 0 0 1em 0;
+  padding: 0 0 0 40px;
+}
+
+/* line 44, ../../app/styles/main.scss */
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+/* line 46, ../../app/styles/main.scss */
+
+form {
+  margin: 0;
+}
+
+/* line 47, ../../app/styles/main.scss */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 48, ../../app/styles/main.scss */
+
+label {
+  cursor: pointer;
+}
+
+/* line 49, ../../app/styles/main.scss */
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+/* line 50, ../../app/styles/main.scss */
+
+button {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 51, ../../app/styles/main.scss */
+
+button:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* line 52, ../../app/styles/main.scss */
+
+.oldie select,
+.oldie textarea {
+  vertical-align: middle;
+}
+
+/* line 53, ../../app/styles/main.scss */
+
+button,
+input {
+  line-height: normal;
+}
+
+/* line 54, ../../app/styles/main.scss */
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+/* line 55, ../../app/styles/main.scss */
+
+.oldie button,
+.oldie input {
+  overflow: visible;
+  vertical-align: middle;
+}
+
+/* line 56, ../../app/styles/main.scss */
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/* line 57, ../../app/styles/main.scss */
+
+.unstyled {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 58, ../../app/styles/main.scss */
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 59, ../../app/styles/main.scss */
+
+.clearfix {
+  zoom: 1;
+}
+
+/* line 60, ../../app/styles/main.scss */
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+/* line 61, ../../app/styles/main.scss */
+
+.clearfix:after {
+  clear: both;
+}
+
+/* line 62, ../../app/styles/main.scss */
+
+.left {
+  float: left;
+}
+
+/* line 66, ../../app/styles/main.scss */
+
+.right {
+  float: right;
+}
+
+/* line 70, ../../app/styles/main.scss */
+
+.media {
+  overflow: hidden;
+  zoom: 1;
+}
+
+/* line 75, ../../app/styles/main.scss */
+
+.templates {
+  display: none;
+}
+
+/* line 79, ../../app/styles/main.scss */
+
+.metanav {
+  display: none;
+}
+
+/* line 3, ../../app/styles/_home.scss */
+
+.credits {
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 22px;
+  left: 10px;
+  z-index: 2;
+}
+
+/* line 11, ../../app/styles/_home.scss */
+
+.credits a {
+  color: #fff;
+  display: block;
+  font: normal 2em 'Amatic SC', sans-serif;
+  height: 100%;
+  line-height: 2;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+/* line 24, ../../app/styles/_home.scss */
+
+.score__actions {
+  padding: 0 0 50px 0;
+}
+
+/* line 28, ../../app/styles/_home.scss */
+
+.share {
+  border-left: 1px solid #bfb7a6;
+  display: inline-block;
+  height: 40px;
+  line-height: 2;
+  margin: 0 0 0 40px;
+  padding: 0 0 0 40px;
+  vertical-align: top;
+}
+
+/* line 36, ../../app/styles/_home.scss */
+
+.share span,
+.share ul {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 40, ../../app/styles/_home.scss */
+
+.share span {
+  color: #bfb7a6;
+  font-size: 2em;
+}
+
+/* line 44, ../../app/styles/_home.scss */
+
+.share ul {
+  padding: 10px 0 0 10px;
+}
+
+/* line 49, ../../app/styles/_home.scss */
+
+.top-social {
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  z-index: 2;
+}
+
+/* line 57, ../../app/styles/_home.scss */
+
+.top-social__list {
+  text-align: right;
+}
+
+/* line 61, ../../app/styles/_home.scss */
+
+.top-social__item {
+  display: inline-block;
+  margin: 0 0 0 2px;
+  padding: 0;
+  vertical-align: top;
+}
+
+/* line 66, ../../app/styles/_home.scss */
+
+.top-social__item a {
+  display: block;
+  height: 25px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  width: 25px;
+}
+
+/* line 77, ../../app/styles/_home.scss */
+
+.top-social__item a:after {
+  color: #fff;
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  text-indent: 0;
+  background: none;
+  height: 25px;
+  width: 25px;
+}
+
+/* line 102, ../../app/styles/_home.scss */
+
+.top-social__item .bt-twitter:after {
+  content: "\43";
+}
+
+/* line 105, ../../app/styles/_home.scss */
+
+.top-social__item .bt-facebook:after {
+  content: "\42";
+}
+
+/* line 108, ../../app/styles/_home.scss */
+
+.top-social__item .bt-googleplus:after {
+  content: "\41";
+}
+
+/* line 115, ../../app/styles/_home.scss */
+
+.button-block {
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  bottom: 50px;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+}
+
+/* line 127, ../../app/styles/_home.scss */
+
+.bt-start,
+.bt-continue {
+  background: url('../images/svg/bt-start.svg') left top no-repeat;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  height: 86px;
+  width: 382px;
+  vertical-align: top;
+  color: #fff;
+  font: normal 2.5em 'Amatic SC', sans-serif;
+  line-height: 2.3;
+  text-transform: uppercase;
+}
+
+/* line 141, ../../app/styles/_home.scss */
+
+.bt-continue {
+  background-image: url('../images/svg/bt-continue.svg');
+  margin: 0 0 0 40px;
+}
+
+/* line 147, ../../app/styles/_home.scss */
+
+.logo-francetv-education {
+  background: url('../images/svg/logo-france-tv-education.svg') left top no-repeat;
+  display: block;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  width: 180px;
+  z-index: 2;
+}
+
+/* line 161, ../../app/styles/_home.scss */
+
+.logo-francetv-education a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 1, ../../app/styles/_intro.scss */
+
+.splash {
+  background: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+}
+
+/* line 9, ../../app/styles/_intro.scss */
+
+.splash.ng-hide {
+  opacity: 0;
+  z-index: -1;
+}
+
+/* line 15, ../../app/styles/_intro.scss */
+
+.splash__body {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 21, ../../app/styles/_intro.scss */
+
+.splash__body__inner {
+  color: #fff;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 26, ../../app/styles/_intro.scss */
+
+.splash__body__inner h2 {
+  color: #fff;
+  font: normal 1.8em 'Amatic SC', sans-serif;
+  margin: 0;
+  padding: 50px 0 0 0;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* line 34, ../../app/styles/_intro.scss */
+
+.splash__body__inner h2:before,
+.splash__body__inner h2:after {
+  border-top: 1px solid #fff;
+  content: "";
+  display: inline-block;
+  height: .1em;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+/* line 43, ../../app/styles/_intro.scss */
+
+.splash__body__inner h2:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+/* line 47, ../../app/styles/_intro.scss */
+
+.splash__body__inner h2:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+/* line 52, ../../app/styles/_intro.scss */
+
+.splash__body__inner h3 {
+  color: #fff;
+  display: block;
+  font-size: 1.6em;
+  font-weight: normal;
+  margin: 0;
+  padding: 10px 0 0 0;
+}
+
+/* line 59, ../../app/styles/_intro.scss */
+
+#credits .splash__body__inner h3 {
+  padding: 20px 0;
+}
+
+/* line 63, ../../app/styles/_intro.scss */
+
+.splash__body__inner p {
+  line-height: 1.6;
+}
+
+/* line 68, ../../app/styles/_intro.scss */
+
+.logo-splash {
+  background: url('../images/logo-splash.png') left top no-repeat;
+  display: block;
+  height: 378px;
+  margin: 0 auto;
+  padding: 0;
+  width: 369px;
+}
+
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  /* line 68, ../../app/styles/_intro.scss */
+
+  .logo-splash {
+    background-image: url('../images/logo-splash-2x.png');
+    background-size: 369px 378px;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* line 68, ../../app/styles/_intro.scss */
+
+  .logo-splash {
+    background-size: 292px 300px;
+    height: 300px;
+    width: 292px;
+  }
+}
+
+/* line 83, ../../app/styles/_intro.scss */
+
+.splash__body__inner__text {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 55%;
+  font-size: 1.3333333333em;
+}
+
+/* line 91, ../../app/styles/_intro.scss */
+
+.top-skip {
+  display: block;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 5px;
+  right: 10px;
+  text-align: center;
+  z-index: 3;
+}
+
+/* line 100, ../../app/styles/_intro.scss */
+
+.top-skip a {
+  background: none;
+  border-radius: 6px;
+  border: 1px solid #000;
+  color: #000;
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  margin: 0 0 2px 0;
+  padding: 0;
+  width: 45px;
+}
+
+/* line 115, ../../app/styles/_intro.scss */
+
+.media {
+  overflow: hidden;
+  zoom: 1;
+}
+
+/* line 120, ../../app/styles/_intro.scss */
+
+.dialogue {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  display: block;
+  min-height: 125px;
+  margin: 0 0 0 -49%;
+  padding: 10px;
+  width: 98%;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  color: #fff;
+  font-size: 1.3333333333em;
+}
+
+/* line 136, ../../app/styles/_intro.scss */
+
+.dialogue img {
+  float: left;
+  height: 105px;
+  margin: 0 10px 0 0;
+  padding: 0;
+  width: 105px;
+}
+
+/* line 143, ../../app/styles/_intro.scss */
+
+.dialogue .typed {
+  display: block;
+  padding: 10px;
+}
+
+/* line 147, ../../app/styles/_intro.scss */
+
+.dialogue .skip {
+  font-size: 1.6666666667em;
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 25px;
+}
+
+/* line 159, ../../app/styles/_intro.scss */
+
+.dialogue .skip:after {
+  content: "\25B8";
+  color: #fff;
+  display: block;
+  text-indent: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: -5px;
+}
+
+/* line 173, ../../app/styles/_intro.scss */
+
+.me {
+  text-align: right;
+}
+
+/* line 175, ../../app/styles/_intro.scss */
+
+.me img {
+  float: right;
+  margin: 0 10px 0 10px;
+}
+
+/* line 181, ../../app/styles/_intro.scss */
+
+.dialogue__name {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: 0 0 3px #afafaf;
+  background: #cecccf;
+  background: linear-gradient(#cecccf, #eceaeb 70%);
+  border-radius: 6px 6px 0 0;
+  color: #000;
+  display: block;
+  float: left;
+  font-size: 0.9166666667em;
+  display: block;
+  height: 30px;
+  margin: -40px 0 0 0;
+  overflow: hidden;
+  padding: 8px;
+}
+
+/* line 198, ../../app/styles/_intro.scss */
+
+.me .dialogue__name {
+  float: right;
+}
+
+/* line 203, ../../app/styles/_intro.scss */
+
+#typed-cursor {
+  opacity: 1;
+  font-weight: 100;
+  -webkit-animation: blink 0.7s infinite;
+  -ms-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+  -webkit-transform: translateZ(0);
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* line 215, ../../app/styles/_intro.scss */
+
+.bt-close-splash {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 3.3333333333em;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+/* line 1, ../../app/styles/_play.scss */
+
+#windows-bar {
+  z-index: 99999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 5px 5px 5px;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.7);
+  list-style: none;
+}
+
+/* line 11, ../../app/styles/_play.scss */
+
+#windows-bar li {
+  float: left;
+  margin: 0 0 0 6px;
+  padding: 0;
+}
+
+/* line 16, ../../app/styles/_play.scss */
+
+#windows-bar .k-button {
+  background: #e7e6e6 !important;
+  border-radius: 8px !important;
+  border: none !important;
+  position: relative;
+  height: 25px;
+  line-height: 2.4;
+  text-align: left !important;
+  padding: 0 0 0 30px !important;
+  width: 175px;
+}
+
+/* line 26, ../../app/styles/_play.scss */
+
+#windows-bar .k-button:before {
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.25em;
+}
+
+/* line 45, ../../app/styles/_play.scss */
+
+#windows-bar .visible .k-button {
+  background: #c2ccd1 !important;
+}
+
+/* line 47, ../../app/styles/_play.scss */
+
+#windows-bar .visible .k-button:after {
+  bottom: 100%;
+  left: 15px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-bottom-color: #c2ccd1;
+  border-width: 5px;
+  margin-left: -5px;
+}
+
+/* line 62, ../../app/styles/_play.scss */
+
+#windows-bar .cuicuiter .k-button:before {
+  background: #e7e6e6;
+  content: "\24";
+  color: #fff;
+  font-size: 1em;
+}
+
+/* line 68, ../../app/styles/_play.scss */
+
+#windows-bar .cuicuiter.visible .k-button:before {
+  background: #c2ccd1;
+}
+
+/* line 71, ../../app/styles/_play.scss */
+
+#windows-bar .skoupe .k-button:before {
+  background: none;
+  content: "\2c";
+  color: #189a99;
+}
+
+/* line 76, ../../app/styles/_play.scss */
+
+#windows-bar .notepad .k-button:before {
+  background: none;
+  content: "\3d";
+  color: #34485e;
+}
+
+/* line 81, ../../app/styles/_play.scss */
+
+#windows-bar .chat .k-button:before {
+  background: none;
+  content: "\2c";
+  color: #974a83;
+}
+
+/* line 86, ../../app/styles/_play.scss */
+
+#windows-bar .blog .k-button:before,
+#windows-bar .publish .k-button:before {
+  background: #29abe2;
+  content: "\f9";
+  color: #e7e6e6;
+  height: 17px;
+}
+
+/* line 92, ../../app/styles/_play.scss */
+
+#windows-bar .blog.visible .k-button:before,
+#windows-bar .publish.visible .k-button:before {
+  color: #c2ccd1;
+}
+
+/* line 97, ../../app/styles/_play.scss */
+
+.k-button:focus:active:not(.k-state-disabled):not([disabled]) {
+  box-shadow: none !important;
+}
+
+/* line 102, ../../app/styles/_play.scss */
+
+.timeline {
+  background: #e7e6e6;
+  border-radius: 4px;
+  box-shadow: rgba(128, 128, 128, 0.3) 1px 1px 7px 1px;
+  position: fixed;
+  margin: 0;
+  padding: 10px;
+  bottom: 50px;
+  left: 20px;
+}
+
+/* line 111, ../../app/styles/_play.scss */
+
+.timeline h2 {
+  display: block;
+  font-size: 1.1666666667em;
+  margin: 0;
+  padding: 5px 10px 0 0;
+}
+
+/* line 116, ../../app/styles/_play.scss */
+
+.timeline h2:before {
+  color: #f15a24;
+  content: "\27";
+  display: inline-block;
+  margin: -4px 0 0 0;
+  padding: 0 8px 0 0;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.25em;
+  vertical-align: top;
+}
+
+/* line 137, ../../app/styles/_play.scss */
+
+.timeline-row {
+  padding: 0 0 10px 0;
+}
+
+/* line 141, ../../app/styles/_play.scss */
+
+.gauge {
+  border: 1px solid #95a5a6;
+  border-radius: 8px;
+  margin: 0;
+  padding: 4px 4px 2px 4px;
+  width: 145px;
+}
+
+/* line 147, ../../app/styles/_play.scss */
+
+.gauge .gauge__inner {
+  background: #dbd9d6;
+  background: linear-gradient(to bottom, #b8b3af 0%, #dbd9d6 100%);
+  border-radius: 8px;
+  border-bottom: 1px solid #fff;
+}
+
+/* line 153, ../../app/styles/_play.scss */
+
+.gauge .fill {
+  border-radius: 8px;
+  border-bottom: 1px solid #fff;
+  height: 8px;
+}
+
+/* line 158, ../../app/styles/_play.scss */
+
+.waiting__inner__body .gauge {
+  border-color: #fff;
+}
+
+/* line 163, ../../app/styles/_play.scss */
+
+.fill {
+  width: 0;
+  max-width: 100%;
+}
+
+/* line 166, ../../app/styles/_play.scss */
+
+.green .fill {
+  background: #009245;
+}
+
+/* line 169, ../../app/styles/_play.scss */
+
+.lightgreen .fill {
+  background: #8cc63f;
+}
+
+/* line 172, ../../app/styles/_play.scss */
+
+.yellow .fill {
+  background: #fbb03b;
+}
+
+/* line 175, ../../app/styles/_play.scss */
+
+.orange .fill {
+  background: #f15a24;
+}
+
+/* line 178, ../../app/styles/_play.scss */
+
+.red .fill {
+  background: #ed1c24;
+}
+
+/* line 183, ../../app/styles/_play.scss */
+
+.remaining {
+  font-size: 1em;
+  padding: 2px 0 0 5px;
+}
+
+/* line 188, ../../app/styles/_play.scss */
+
+.widget-scoring {
+  background: #ccc;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  box-shadow: rgba(128, 128, 128, 0.3) 1px 1px 7px 1px;
+  position: fixed;
+  margin: 0;
+  padding: 10px 0 10px 10px;
+  top: 5px;
+  right: 65px;
+  width: 250px;
+}
+
+/* line 199, ../../app/styles/_play.scss */
+
+.widget-scoring h2 {
+  display: block;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 205, ../../app/styles/_play.scss */
+
+.widget-scoring .gauge {
+  border-color: #c6903a;
+  padding: 4px;
+}
+
+/* line 213, ../../app/styles/_play.scss */
+
+.feedback {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 90px;
+  right: 65px;
+  width: 260px;
+  z-index: 199999;
+}
+
+/* line 223, ../../app/styles/_play.scss */
+
+.feedback__title,
+.feedback__body {
+  background: #e7e6e6;
+  border-radius: 4px;
+  box-shadow: rgba(128, 128, 128, 0.3) 1px 1px 7px 1px;
+  display: block;
+  margin: 0 0 1px 0;
+  padding: 15px 10px;
+}
+
+/* line 232, ../../app/styles/_play.scss */
+
+.feedback__title {
+  font-size: 1.3333333333em;
+  padding: 15px 10px 15px 60px;
+  text-shadow: 0 0 5px rgba(128, 128, 128, 0.5);
+}
+
+/* line 236, ../../app/styles/_play.scss */
+
+.feedback--good .feedback__title {
+  background: url('../images/feedback-good.svg') 10px 10px no-repeat #e7e6e6;
+  color: #009245;
+}
+
+/* line 240, ../../app/styles/_play.scss */
+
+.feedback--bad .feedback__title {
+  background: url('../images/feedback-bad.svg') 10px 10px no-repeat #e7e6e6;
+  color: #904848;
+}
+
+/* line 246, ../../app/styles/_play.scss */
+
+.feedback__body {
+  background: #fff;
+  margin: 0;
+  font-size: 0.8333333333em;
+}
+
+/* line 252, ../../app/styles/_play.scss */
+
+.status {
+  position: absolute;
+  bottom: 100px;
+  left: 350px;
+  width: 300px;
+  height: 150px;
+  border: 1px solid #eee;
+}
+
+/* line 261, ../../app/styles/_play.scss */
+
+.cuits {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 265, ../../app/styles/_play.scss */
+
+.cuits .cuit {
+  height: auto;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+/* line 270, ../../app/styles/_play.scss */
+
+.cuits .cuit.visible {
+  max-height: 210px;
+}
+
+/* line 274, ../../app/styles/_play.scss */
+
+.cuits .source {
+  display: block;
+  padding: 5px 0px 10px;
+  margin: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 284, ../../app/styles/_play.scss */
+
+.source--disabled {
+  cursor: default;
+}
+
+/* line 288, ../../app/styles/_play.scss */
+
+.off {
+  display: inline;
+}
+
+/* line 292, ../../app/styles/_play.scss */
+
+.on {
+  display: none;
+}
+
+/* line 296, ../../app/styles/_play.scss */
+
+.metas {
+  display: table;
+  font-size: .9em;
+  table-layout: fixed;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 304, ../../app/styles/_play.scss */
+
+.metas li {
+  border-top: 1px solid #cecdcd;
+  border-right: 1px solid #cecdcd;
+  color: #95a5a6;
+  display: table-cell;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  vertical-align: top;
+}
+
+/* line 313, ../../app/styles/_play.scss */
+
+.metas li:last-child {
+  border-right: none;
+}
+
+/* line 317, ../../app/styles/_play.scss */
+
+.metas span {
+  padding: 10px 0 0 0;
+}
+
+/* line 320, ../../app/styles/_play.scss */
+
+.contact-skoupe .metas li {
+  text-align: left;
+}
+
+/* line 325, ../../app/styles/_play.scss */
+
+.actions {
+  list-style-type: none;
+}
+
+/* line 327, ../../app/styles/_play.scss */
+
+.actions li {
+  display: inline-block;
+  padding: 5px 10px;
+  vertical-align: top;
+}
+
+/* line 334, ../../app/styles/_play.scss */
+
+.actions {
+  display: none;
+}
+
+/* line 336, ../../app/styles/_play.scss */
+
+.toggle .actions {
+  display: block;
+}
+
+/* line 343, ../../app/styles/_play.scss */
+
+.verified-theme .theme .off {
+  display: none;
+}
+
+/* line 346, ../../app/styles/_play.scss */
+
+.verified-theme .theme .on {
+  display: inline;
+}
+
+/* line 352, ../../app/styles/_play.scss */
+
+.credibility {
+  display: none;
+}
+
+/* line 354, ../../app/styles/_play.scss */
+
+.verified-credibility .credibility .off {
+  display: none;
+}
+
+/* line 357, ../../app/styles/_play.scss */
+
+.verified-credibility .credibility .on {
+  display: inline;
+}
+
+/* line 363, ../../app/styles/_play.scss */
+
+.play-level-3 #source .verified-theme .credibility,
+.play-level-4 #source .verified-theme .credibility,
+.intro-level-3 .scoring__details__item .credibility,
+.intro-level-4 .scoring__details__item .credibility {
+  display: block !important;
+}
+
+/* line 371, ../../app/styles/_play.scss */
+
+.scoop-true {
+  color: #29abe2;
+  padding: 5px 0 0 0;
+}
+
+/* line 376, ../../app/styles/_play.scss */
+
+.scoop--false {
+  color: #ea7c73;
+  padding: 5px 0 0 0;
+}
+
+/* line 383, ../../app/styles/_play.scss */
+
+.verified-exclusivity .exclusivity .off {
+  display: none;
+}
+
+/* line 386, ../../app/styles/_play.scss */
+
+.verified-exclusivity .exclusivity .on {
+  display: inline;
+}
+
+/* line 390, ../../app/styles/_play.scss */
+
+.intro-level-4 .scoring__details__item .exclusivity {
+  display: block !important;
+}
+
+/* line 396, ../../app/styles/_play.scss */
+
+.play-level-1 .publish,
+.play-level-1 .credibility,
+.play-level-1 .exclusivity,
+.play-level-1 .timeline {
+  display: none !important;
+}
+
+/* line 401, ../../app/styles/_play.scss */
+
+.play-level-2 .credibility,
+.play-level-2 .exclusivity,
+.intro-level-2 .credibility,
+.intro-level-2 .exclusivity {
+  display: none !important;
+}
+
+/* line 406, ../../app/styles/_play.scss */
+
+.play-level-3 .verified-theme .credibility,
+.intro-level-3 .verified-theme .credibility {
+  display: table-cell !important;
+}
+
+/* line 409, ../../app/styles/_play.scss */
+
+.play-level-3 .exclusivity,
+.play-level-3 .credibility,
+.intro-level-3 .exclusivity,
+.intro-level-3 .credibility {
+  display: none !important;
+}
+
+/* line 415, ../../app/styles/_play.scss */
+
+.play-level-3 #new-contact {
+  display: none;
+}
+
+/* line 421, ../../app/styles/_play.scss */
+
+.play-level-4 .verified-theme .credibility,
+.play-level-4 .verified-theme .exclusivity,
+.intro-level-4 .verified-theme .credibility,
+.intro-level-4 .verified-theme .exclusivity {
+  display: table-cell !important;
+}
+
+/* line 429, ../../app/styles/_play.scss */
+
+.play-level-4 #scoring .verified-theme .credibility,
+.play-level-4 #scoring .verified-theme .exclusivity,
+.intro-level-4 #scoring .verified-theme .credibility,
+.intro-level-4 #scoring .verified-theme .exclusivity {
+  display: table-cell !important;
+}
+
+/* line 435, ../../app/styles/_play.scss */
+
+div.k-window-content#chat {
+  overflow: hidden;
+}
+
+/* line 440, ../../app/styles/_play.scss */
+
+#chat .inner {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* line 445, ../../app/styles/_play.scss */
+
+#chat .discussion {
+  list-style-type: none;
+  padding: 20px 0 0 0;
+}
+
+/* line 449, ../../app/styles/_play.scss */
+
+#chat li {
+  border-radius: 8px;
+  clear: both;
+  position: relative;
+  min-height: 20px;
+  padding: 12px 8px 8px 8px;
+  margin: 0 0 10px 0;
+  background: #fff;
+  float: left;
+  max-width: 75%;
+  font-size: 1.0833333333em;
+}
+
+/* line 461, ../../app/styles/_play.scss */
+
+#chat .other {
+  border: 2px solid #16a085;
+  color: #16a085;
+}
+
+/* line 464, ../../app/styles/_play.scss */
+
+#chat .other:after,
+#chat .other:before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* line 474, ../../app/styles/_play.scss */
+
+#chat .other:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-right-color: #ffffff;
+  border-width: 4px;
+  margin-top: -4px;
+}
+
+/* line 480, ../../app/styles/_play.scss */
+
+#chat .other:before {
+  border-color: rgba(22, 160, 133, 0);
+  border-right-color: #16a085;
+  border-width: 7px;
+  margin-top: -7px;
+}
+
+/* line 487, ../../app/styles/_play.scss */
+
+#chat .me {
+  border: 2px solid #f15a24;
+  color: #f15a24;
+  float: right;
+}
+
+/* line 491, ../../app/styles/_play.scss */
+
+#chat .me:after,
+#chat .me:before {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* line 501, ../../app/styles/_play.scss */
+
+#chat .me:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-left-color: #fff;
+  border-width: 4px;
+  margin-top: -4px;
+}
+
+/* line 507, ../../app/styles/_play.scss */
+
+#chat .me:before {
+  border-color: rgba(241, 90, 36, 0);
+  border-left-color: #f15a24;
+  border-width: 7px;
+  margin-top: -7px;
+}
+
+/* line 516, ../../app/styles/_play.scss */
+
+.contact__name {
+  display: block;
+  font-size: 1.3333333333em;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 522, ../../app/styles/_play.scss */
+
+.contact__name:before {
+  color: #cecdcd;
+  content: "\61";
+  display: inline-block;
+  margin: 0;
+  padding: 0 5px 0 0;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+/* line 542, ../../app/styles/_play.scss */
+
+.inner__body {
+  padding: 10px;
+}
+
+/* line 544, ../../app/styles/_play.scss */
+
+.inner__body h3 {
+  display: block;
+  font-size: 1.3333333333em;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 551, ../../app/styles/_play.scss */
+
+.inner__body p {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 1.1666666667em;
+}
+
+/* line 559, ../../app/styles/_play.scss */
+
+.inner__body--fullwidth {
+  padding: 10px 0;
+}
+
+/* line 561, ../../app/styles/_play.scss */
+
+#win-themeSelector .inner__body--fullwidth,
+#themeSelector .inner__body--fullwidth,
+#skoupe .inner__body--fullwidth {
+  padding: 0;
+}
+
+/* line 566, ../../app/styles/_play.scss */
+
+.inner-item {
+  border-bottom: 1px solid #cecdcd;
+  display: block;
+  padding: 5px;
+  margin: 0;
+}
+
+/* line 571, ../../app/styles/_play.scss */
+
+.inner-item:last-child {
+  border: none;
+}
+
+/* line 577, ../../app/styles/_play.scss */
+
+.contact-item * {
+  display: inline-block !important;
+  vertical-align: top;
+}
+
+/* line 581, ../../app/styles/_play.scss */
+
+.contact-item .call {
+  float: right;
+}
+
+/* line 583, ../../app/styles/_play.scss */
+
+.contact-item .call:before {
+  color: #39b54a;
+  content: "\61";
+  display: inline-block;
+  margin: 0;
+  padding: 0 5px 0 0;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+/* line 602, ../../app/styles/_play.scss */
+
+.contact-item .contact-item__name {
+  padding: 3px 5px 0 0;
+}
+
+/* line 610, ../../app/styles/_play.scss */
+
+.tuto .contact-item.disabled.canCall,
+.tuto .contact-skoupe.disabled.canCall {
+  background: #eee;
+}
+
+/* line 613, ../../app/styles/_play.scss */
+
+.contact-item.disabled.canCall .call,
+.contact-skoupe.disabled.canCall .call {
+  display: none;
+}
+
+/* line 619, ../../app/styles/_play.scss */
+
+.media .publish {
+  margin: 0 5px 0 0;
+  width: 150px;
+}
+
+/* line 624, ../../app/styles/_play.scss */
+
+.avatar {
+  border: 1px solid #cecdcd;
+  border-radius: 4px;
+  display: block;
+  float: left;
+  overflow: hidden;
+  margin: 0 10px 0 0;
+  padding: 0;
+  height: 60px;
+  width: 60px;
+}
+
+/* line 636, ../../app/styles/_play.scss */
+
+.call--contact {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 639, ../../app/styles/_play.scss */
+
+.call--contact:before {
+  color: #39b54a;
+  content: "\61";
+  display: inline-block;
+  margin: 0 0 5px 0;
+  padding: 0;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+/* line 659, ../../app/styles/_play.scss */
+
+.call--contact__disabled {
+  opacity: .3;
+}
+
+/* line 663, ../../app/styles/_play.scss */
+
+#tooltip {
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1.1666666667em;
+  position: absolute;
+  top: 200px;
+  left: 250px;
+  z-index: 99999;
+  background: rgba(46, 33, 20, 0.7);
+  margin: 0;
+  padding: 16px;
+  width: 320px;
+}
+
+/* line 675, ../../app/styles/_play.scss */
+
+#tooltip:after {
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-width: 20px;
+}
+
+/* line 684, ../../app/styles/_play.scss */
+
+#tooltip.bottom:after {
+  border-top-color: rgba(46, 33, 20, 0.7);
+  top: 100%;
+}
+
+/* line 688, ../../app/styles/_play.scss */
+
+#tooltip.top:after {
+  border-bottom-color: rgba(46, 33, 20, 0.7);
+  bottom: 100%;
+}
+
+/* line 692, ../../app/styles/_play.scss */
+
+#tooltip.right:after {
+  left: 280px;
+}
+
+/* line 695, ../../app/styles/_play.scss */
+
+#tooltip.left:after {
+  right: 280px;
+}
+
+/* line 698, ../../app/styles/_play.scss */
+
+#tooltip p {
+  display: block;
+  margin: 0;
+  min-height: 45px;
+  padding: 0;
+  position: relative;
+  width: 260px;
+}
+
+/* line 705, ../../app/styles/_play.scss */
+
+#tooltip p:after {
+  color: #29abe2;
+  content: "\75";
+  display: block;
+  margin: -22px 0 0 0;
+  padding: 0;
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 2.75em;
+}
+
+/* line 728, ../../app/styles/_play.scss */
+
+#scoring {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+  color: #fff;
+}
+
+/* line 738, ../../app/styles/_play.scss */
+
+.play-level-1 #scoring {
+  background: url('../images/background/intro-level-1.jpg') 50% 50% no-repeat fixed;
+  background-size: cover;
+}
+
+/* line 738, ../../app/styles/_play.scss */
+
+.play-level-2 #scoring {
+  background: url('../images/background/intro-level-2.jpg') 50% 50% no-repeat fixed;
+  background-size: cover;
+}
+
+/* line 738, ../../app/styles/_play.scss */
+
+.play-level-3 #scoring {
+  background: url('../images/background/intro-level-3.jpg') 50% 50% no-repeat fixed;
+  background-size: cover;
+}
+
+/* line 738, ../../app/styles/_play.scss */
+
+.play-level-4 #scoring {
+  background: url('../images/background/intro-level-4.jpg') 50% 50% no-repeat fixed;
+  background-size: cover;
+}
+
+/* line 745, ../../app/styles/_play.scss */
+
+.scoring-bg {
+  background: rgba(0, 0, 0, 0.7);
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+/* line 756, ../../app/styles/_play.scss */
+
+#scoring.albert {
+  background: url('../images/background/outro-albert-londres.jpg') 50% 50% no-repeat fixed;
+  background-size: cover;
+}
+
+/* line 761, ../../app/styles/_play.scss */
+
+.scoring__body {
+  display: block;
+  margin: 100px auto 0 auto;
+  padding: 0;
+  text-align: center;
+  width: 80%;
+}
+
+/* line 767, ../../app/styles/_play.scss */
+
+.scoring__body p {
+  display: block;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  font-size: 1.333em;
+}
+
+/* line 776, ../../app/styles/_play.scss */
+
+.scoring__body--defeat {
+  margin-top: 25px;
+}
+
+/* line 780, ../../app/styles/_play.scss */
+
+.scoring__title {
+  color: #bfb7a6;
+  font: normal 3.2em 'Amatic SC', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* line 788, ../../app/styles/_play.scss */
+
+.scoring__title:before,
+.scoring__title:after {
+  border-top: 1px solid #bfb7a6;
+  content: "";
+  display: inline-block;
+  height: .1em;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+/* line 797, ../../app/styles/_play.scss */
+
+.scoring__title:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+/* line 801, ../../app/styles/_play.scss */
+
+.scoring__title:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+/* line 807, ../../app/styles/_play.scss */
+
+.scoring__title--details {
+  font-size: 2em;
+}
+
+/* line 811, ../../app/styles/_play.scss */
+
+.scoring__subtitle {
+  color: #bfb7a6;
+  display: block;
+  font-size: 2.6666666667em;
+  margin: 0;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+/* line 820, ../../app/styles/_play.scss */
+
+.score__list,
+.scoring__details {
+  margin: 50px 0 0 -70px;
+}
+
+/* line 824, ../../app/styles/_play.scss */
+
+.score__item,
+.scoring__details__item {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0 0 0 70px;
+  position: relative;
+  width: 33%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 834, ../../app/styles/_play.scss */
+
+.scoring__details__item {
+  min-height: 300px;
+}
+
+/* line 838, ../../app/styles/_play.scss */
+
+.score__item__body {
+  border: 1px solid #fff;
+  border-radius: 8px;
+  display: block;
+  font-size: 1.2em;
+  height: 40px;
+  margin: 0 0 70px 0;
+  padding: 10px 5px 5px 5px;
+}
+
+@media (max-width: 980px) {
+  /* line 838, ../../app/styles/_play.scss */
+
+  .score__item__body {
+    font-size: 1em;
+  }
+}
+
+/* line 851, ../../app/styles/_play.scss */
+
+.score__item__body__inner {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 70%;
+}
+
+@media (max-width: 980px) {
+  /* line 851, ../../app/styles/_play.scss */
+
+  .score__item__body__inner {
+    width: 66%;
+  }
+}
+
+/* line 861, ../../app/styles/_play.scss */
+
+.score__item__result {
+  background: #4d443f;
+  border-radius: 8px;
+  display: block;
+  font-weight: bold;
+  font-size: 2em;
+  height: 70px;
+  line-height: 3;
+  padding: 0 5px;
+  position: absolute;
+  right: 0;
+  top: -10px;
+  text-align: center;
+  min-width: 70px;
+}
+
+@media (max-width: 980px) {
+  /* line 861, ../../app/styles/_play.scss */
+
+  .score__item__result {
+    font-size: 1.5em;
+    line-height: 4;
+  }
+}
+
+/* line 879, ../../app/styles/_play.scss */
+
+.score__item__currentlevel .score__item__result {
+  background: #e44f42;
+}
+
+/* line 882, ../../app/styles/_play.scss */
+
+.score__item__alllevel .score__item__result {
+  background: #369fe6;
+}
+
+/* line 888, ../../app/styles/_play.scss */
+
+.scoring__details__item .inner {
+  background: #fff;
+  border: 1px solid #cecdcd;
+  border-radius: 4px;
+  font-size: 0.8333333333em;
+  margin: 0;
+}
+
+/* line 895, ../../app/styles/_play.scss */
+
+.scoring__details__item .media {
+  text-align: left;
+}
+
+/* line 897, ../../app/styles/_play.scss */
+
+.scoring__details__item .media p {
+  color: #000;
+  font-size: 0.8333333333em;
+}
+
+/* line 902, ../../app/styles/_play.scss */
+
+.scoring__details__item .publish {
+  display: none;
+}
+
+/* line 905, ../../app/styles/_play.scss */
+
+.scoring__details__item .avatar {
+  height: 40px;
+  width: 40px;
+}
+
+/* line 909, ../../app/styles/_play.scss */
+
+.scoring__details__item .stars {
+  margin-top: 5px;
+}
+
+/* line 914, ../../app/styles/_play.scss */
+
+.scoring__body__content__text {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  color: #9a979a;
+  position: relative;
+  margin: 70px 25px 0 0;
+  padding: 25px;
+}
+
+/* line 921, ../../app/styles/_play.scss */
+
+.scoring__body__content__text:before {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-left-color: rgba(0, 0, 0, 0.7);
+  border-width: 20px;
+  margin-top: -20px;
+}
+
+/* line 935, ../../app/styles/_play.scss */
+
+.scoring__body__content__text p {
+  display: block;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+
+/* line 941, ../../app/styles/_play.scss */
+
+.scoring__body__content__text strong {
+  color: #fff;
+}
+
+/* line 944, ../../app/styles/_play.scss */
+
+.scoring__body__content__text em {
+  font-size: 1.6;
+  font-style: normal;
+}
+
+/* line 950, ../../app/styles/_play.scss */
+
+#cuicuiter .avatar {
+  cursor: pointer;
+}
+
+/* line 954, ../../app/styles/_play.scss */
+
+.scoring__body p.scoring__details__text {
+  color: #fff;
+  display: block;
+  font-size: 1.1em;
+  line-height: 1.3;
+  margin: 0;
+  padding: 15px 0;
+  text-align: left;
+}
+
+/* line 966, ../../app/styles/_play.scss */
+
+#prompt,
+#promptEndDay {
+  background: #d7d8d8 !important;
+  border-top: 1px solid #edeeee;
+  padding: 20px;
+  text-align: center;
+}
+
+/* line 971, ../../app/styles/_play.scss */
+
+#prompt p,
+#promptEndDay p {
+  display: block;
+  font-size: 1.1666666667em;
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+
+/* line 977, ../../app/styles/_play.scss */
+
+#prompt .bt,
+#promptEndDay .bt {
+  float: right;
+  font-size: .9em;
+  padding: 5px 8px 0 8px;
+}
+
+/* line 982, ../../app/styles/_play.scss */
+
+#prompt .bt--cancel,
+#promptEndDay .bt--cancel {
+  border-color: #d35400;
+  color: #d35400;
+  float: left;
+}
+
+/* line 990, ../../app/styles/_play.scss */
+
+#win-promptEndDay .bt {
+  float: none;
+}
+
+/* line 997, ../../app/styles/_play.scss */
+
+#blog,
+#publish {
+  background: #fff;
+  overflow-x: hidden;
+}
+
+/* line 1002, ../../app/styles/_play.scss */
+
+.blog-subtitle {
+  color: #29abe2;
+  display: block;
+  margin: 0;
+  padding: 3px 0 0 0;
+}
+
+/* line 1007, ../../app/styles/_play.scss */
+
+.blog-subtitle span {
+  font-size: 1.5em;
+  padding: 8px 0 0 5px;
+  display: inline-block;
+  vertical-align: top;
+  font-weight: normal;
+}
+
+/* line 1014, ../../app/styles/_play.scss */
+
+.blog-subtitle:before {
+  color: #29abe2;
+  content: "\60";
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 2.5em;
+  vertical-align: top;
+  width: 36px;
+  overflow: hidden;
+}
+
+/* line 1036, ../../app/styles/_play.scss */
+
+.blog-item {
+  background: #daf0f9;
+  border: 1px solid #29abe2;
+  border-radius: 4px;
+  color: #29abe2;
+  padding: 10px 20px 10px 10px;
+  position: relative;
+  margin: 0 5px 10px 5px;
+}
+
+/* line 1044, ../../app/styles/_play.scss */
+
+.blog-item .metas li {
+  border: none;
+  color: #29abe2;
+  display: inline-block;
+  font-size: 0.75em;
+  position: relative;
+  margin: 0;
+  padding: 0 3px;
+  vertical-align: top;
+}
+
+/* line 1053, ../../app/styles/_play.scss */
+
+.blog-item .metas li:before {
+  color: #29abe2;
+  content: "\2022";
+  display: inline-block;
+  margin: 0;
+  padding: 0 3px 0 0;
+}
+
+/* line 1060, ../../app/styles/_play.scss */
+
+.blog-item .metas li:first-child:before {
+  display: none;
+}
+
+/* line 1066, ../../app/styles/_play.scss */
+
+.postActions {
+  display: block;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  right: 5px;
+  top: 0;
+}
+
+/* line 1073, ../../app/styles/_play.scss */
+
+.postActions > span {
+  cursor: pointer;
+  display: block;
+  margin: 8px 0;
+  padding: 0;
+}
+
+/* line 1078, ../../app/styles/_play.scss */
+
+.postActions > span:before {
+  color: #29abe2;
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1em;
+  vertical-align: top;
+}
+
+/* line 1096, ../../app/styles/_play.scss */
+
+.postActions .remove:before {
+  content: "\e8";
+}
+
+/* line 1099, ../../app/styles/_play.scss */
+
+.postActions .up:before {
+  content: "(";
+}
+
+/* line 1102, ../../app/styles/_play.scss */
+
+.postActions .down:before {
+  content: "§";
+}
+
+/* line 1105, ../../app/styles/_play.scss */
+
+.grid-block__item--large .postActions {
+  top: 30px;
+}
+
+/* line 1112, ../../app/styles/_play.scss */
+
+.play-level-2 .postActions .up,
+.play-level-2 .postActions .down,
+.play-level-3 .postActions .up,
+.play-level-3 .postActions .down {
+  display: none;
+}
+
+/* line 1118, ../../app/styles/_play.scss */
+
+.blog-item-title {
+  color: #29abe2;
+  display: block;
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0 0 15px 0;
+}
+
+/* line 1126, ../../app/styles/_play.scss */
+
+.blog-copyright {
+  color: #b3b3b3;
+  padding: 0 10px 0 0;
+  text-align: right;
+}
+
+/* line 1134, ../../app/styles/_play.scss */
+
+.blog__category__list {
+  text-align: center;
+  position: relative;
+  top: -20px;
+}
+
+/* line 1138, ../../app/styles/_play.scss */
+
+.blog__category__list .active {
+  background: #566473;
+}
+
+/* line 1143, ../../app/styles/_play.scss */
+
+.blog__category__item {
+  background: #34495e;
+  border-bottom: 1px solid #d4d4d4;
+  color: #fff;
+  display: inline-block;
+  font-size: .7em;
+  height: 15px;
+  line-height: 2.5;
+  margin: 0 5px 0 0;
+  padding: 0 5px 5px 5px;
+  text-shadow: 0 0 3px #2c3d4d;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+
+/* line 1158, ../../app/styles/_play.scss */
+
+.grid {
+  overflow-x: hidden;
+}
+
+/* line 1160, ../../app/styles/_play.scss */
+
+.grid .metas li {
+  border: none;
+  color: #29abe2;
+  display: inline-block;
+  font-size: 0.75em;
+  position: relative;
+  margin: 0;
+  padding: 0 3px;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* line 1170, ../../app/styles/_play.scss */
+
+.grid .metas li:before {
+  color: #29abe2;
+  content: "\2022";
+  display: inline-block;
+  margin: 0;
+  padding: 0 3px 0 0;
+}
+
+/* line 1177, ../../app/styles/_play.scss */
+
+.grid .metas li:first-child:before {
+  display: none;
+}
+
+/* line 1181, ../../app/styles/_play.scss */
+
+.grid .metas li.source {
+  clear: both;
+  display: block;
+}
+
+/* line 1184, ../../app/styles/_play.scss */
+
+.grid .metas li.source:before {
+  display: none;
+}
+
+/* line 1190, ../../app/styles/_play.scss */
+
+.grid * {
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+}
+
+/* line 1196, ../../app/styles/_play.scss */
+
+.grid > * {
+  display: block;
+  padding: 0;
+  margin: 0 -20px;
+  text-align: left;
+  letter-spacing: -0.31em;
+  text-rendering: optimizespeed;
+}
+
+/* line 1205, ../../app/styles/_play.scss */
+
+.grid > * > * {
+  width: 100%;
+  display: inline-block;
+  padding: 0 15px;
+  vertical-align: top;
+  text-align: left;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+}
+
+/* line 1216, ../../app/styles/_play.scss */
+
+.grid2-1 > *:first-child {
+  width: 60%;
+}
+
+/* line 1220, ../../app/styles/_play.scss */
+
+.grid2-1 > *:last-child {
+  width: 39%;
+}
+
+/* line 1224, ../../app/styles/_play.scss */
+
+.grid3 > * {
+  width: 33.333%;
+}
+
+/* line 1228, ../../app/styles/_play.scss */
+
+.grid-block__item {
+  position: relative;
+  padding: 0 0 0 5px;
+  overflow: hidden;
+}
+
+/* line 1232, ../../app/styles/_play.scss */
+
+.grid-block__item img {
+  border: 1px solid #2caae2;
+  display: block;
+  height: auto;
+  margin: 5px 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 1242, ../../app/styles/_play.scss */
+
+.grid-block__item__title {
+  color: #000 !important;
+  display: block;
+  font-size: 1.1666666667em !important;
+  line-height: 1.3 !important;
+  margin: 0;
+  padding: 0 20px 0 0 !important;
+}
+
+/* line 1249, ../../app/styles/_play.scss */
+
+.grid-block__item--medium .grid-block__item__title {
+  font-size: 1.3333333333em !important;
+  border-top: 1px solid #666;
+  padding-top: 5px !important;
+}
+
+/* line 1254, ../../app/styles/_play.scss */
+
+.grid-block__item--large .grid-block__item__title {
+  font-size: 1.6666666667em !important;
+  padding-top: 5px !important;
+}
+
+/* line 1260, ../../app/styles/_play.scss */
+
+.grid-block__item--medium:first-child {
+  margin: 12px 0 0 0;
+}
+
+/* line 1265, ../../app/styles/_play.scss */
+
+.grid-block__item--small .metas li {
+  clear: none !important;
+  display: block !important;
+  padding: 0 !important;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  float: left;
+  width: 75px;
+}
+
+/* line 1274, ../../app/styles/_play.scss */
+
+.grid-block__item--small .metas li:before {
+  display: none;
+}
+
+/* line 1278, ../../app/styles/_play.scss */
+
+.grid-block__item--small .metas li.date,
+.grid-block__item--small .source-title,
+.grid-block__item--small .theme-title {
+  display: none !important;
+}
+
+/* line 1281, ../../app/styles/_play.scss */
+
+.grid-block__item--small .metas li.theme {
+  width: 12px;
+}
+
+/* line 1286, ../../app/styles/_play.scss */
+
+.grid-block__item__headline {
+  border-top: 1px solid #666;
+  position: relative;
+}
+
+/* line 1289, ../../app/styles/_play.scss */
+
+.grid-block__item__headline span {
+  background: #e7e6e6;
+  color: #29abe2;
+  display: block;
+  font-size: 0.8333333333em;
+  position: absolute;
+  padding: 0 5px 0 0;
+  text-transform: uppercase;
+  left: 0;
+  top: -6px;
+}
+
+/* line 1304, ../../app/styles/_play.scss */
+
+.stars {
+  background: url('../images/bg-stars.png') left top no-repeat;
+  display: block;
+  height: 8px;
+  margin: 0 auto;
+  padding: 0;
+  width: 27px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 100%;
+}
+
+/* line 1314, ../../app/styles/_play.scss */
+
+.cuits .stars {
+  margin: 8px auto 0 auto;
+}
+
+/* line 1317, ../../app/styles/_play.scss */
+
+.waiting__inner__body .stars {
+  background-image: url('../images/bg-stars-large.png');
+  height: 31px;
+  width: 122px;
+}
+
+/* line 1326, ../../app/styles/_play.scss */
+
+.stars--0 {
+  background-position: 0 0;
+}
+
+/* line 1328, ../../app/styles/_play.scss */
+
+.waiting__inner__body .stars--0 {
+  background-position: 0 0;
+}
+
+/* line 1332, ../../app/styles/_play.scss */
+
+.stars--negative--0 {
+  background-position: 0 0;
+}
+
+/* line 1326, ../../app/styles/_play.scss */
+
+.stars--1 {
+  background-position: 0 -8px;
+}
+
+/* line 1328, ../../app/styles/_play.scss */
+
+.waiting__inner__body .stars--1 {
+  background-position: 0 -124px;
+}
+
+/* line 1332, ../../app/styles/_play.scss */
+
+.stars--negative--1 {
+  background-position: 0 -31px;
+}
+
+/* line 1326, ../../app/styles/_play.scss */
+
+.stars--2 {
+  background-position: 0 -16px;
+}
+
+/* line 1328, ../../app/styles/_play.scss */
+
+.waiting__inner__body .stars--2 {
+  background-position: 0 -155px;
+}
+
+/* line 1332, ../../app/styles/_play.scss */
+
+.stars--negative--2 {
+  background-position: 0 -62px;
+}
+
+/* line 1326, ../../app/styles/_play.scss */
+
+.stars--3 {
+  background-position: 0 -24px;
+}
+
+/* line 1328, ../../app/styles/_play.scss */
+
+.waiting__inner__body .stars--3 {
+  background-position: 0 -186px;
+}
+
+/* line 1332, ../../app/styles/_play.scss */
+
+.stars--negative--3 {
+  background-position: 0 -93px;
+}
+
+/* line 1339, ../../app/styles/_play.scss */
+
+.starburst {
+  display: block;
+  width: 50px;
+  height: 50px;
+  -webkit-transform: rotate(-120deg);
+  -moz-transform: rotate(-120deg);
+  rotation: -120deg;
+  position: absolute;
+  top: -25px;
+  left: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.25em;
+}
+
+/* line 1352, ../../app/styles/_play.scss */
+
+.starburst span {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: #54bf80;
+  -webkit-transform: rotate(11.25deg);
+  -moz-transform: rotate(11.25deg);
+  rotation: 12.5deg;
+}
+
+/* line 1361, ../../app/styles/_play.scss */
+
+.starburst strong {
+  display: block;
+  font-weight: bold;
+  font-size: 1.25em;
+  letter-spacing: -1px;
+  padding: 10px 0 0 0;
+  line-height: .8;
+}
+
+/* line 1371, ../../app/styles/_play.scss */
+
+.starburst--minus span {
+  background: #e34f43;
+}
+
+/* line 1375, ../../app/styles/_play.scss */
+
+#waiting {
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  z-index: 100000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+/* line 1385, ../../app/styles/_play.scss */
+
+#waiting h2,
+#waiting span {
+  font-size: 1.6em;
+}
+
+/* line 1388, ../../app/styles/_play.scss */
+
+#waiting .title-checked {
+  color: #46c9ae;
+}
+
+/* line 1391, ../../app/styles/_play.scss */
+
+#waiting .title-unchecked {
+  color: #94a4a5;
+}
+
+/* line 1394, ../../app/styles/_play.scss */
+
+#waiting .title-checked--no-scoop {
+  color: #e74b3b;
+}
+
+/* line 1398, ../../app/styles/_play.scss */
+
+#waiting p {
+  font-size: 2.2em;
+}
+
+/* line 1402, ../../app/styles/_play.scss */
+
+#waiting .timer:before {
+  color: #fff;
+  content: "\27";
+  display: inline-block;
+  margin: -4px 0 0 0;
+  padding: 0 8px 0 0;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1em;
+  vertical-align: top;
+}
+
+/* line 1421, ../../app/styles/_play.scss */
+
+#waiting .gauge {
+  border-color: #fff;
+  margin: 0 auto;
+  padding: 4px 3px 4px 2px;
+}
+
+/* line 1426, ../../app/styles/_play.scss */
+
+#waiting .gauge__inner {
+  background: none;
+  border: none;
+}
+
+/* line 1430, ../../app/styles/_play.scss */
+
+#waiting .fill {
+  background: #fff;
+}
+
+/* line 1435, ../../app/styles/_play.scss */
+
+#fill-waiting {
+  -webkit-animation: expandWidth 2s linear;
+  -ms-animation: expandWidth 2s linear;
+  animation: expandWidth 2s linear;
+  -webkit-transform: translateZ(0);
+}
+
+/* line 1439, ../../app/styles/_play.scss */
+
+.waiting__inner {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 1445, ../../app/styles/_play.scss */
+
+.waiting__inner__body {
+  display: table-cell;
+  padding: 0 2em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 1450, ../../app/styles/_play.scss */
+
+.waiting__inner__body > div {
+  display: none;
+}
+
+/* line 1453, ../../app/styles/_play.scss */
+
+.waiting__inner__body .waiting-check-thematique {
+  display: block;
+}
+
+/* line 1460, ../../app/styles/_play.scss */
+
+.verify-cuit-theme .verify-cuit-theme,
+.verify-source-theme .verify-source-theme,
+.verify-cuit-credibility .verify-cuit-credibility,
+.verify-cuit-exclusivity .verify-cuit-exclusivity,
+.verify-source-theme .verify-source-theme,
+.verify-source-credibility .verify-source-credibility,
+.publish-cuit .publish-cuit {
+  display: block;
+}
+
+/* line 1471, ../../app/styles/_play.scss */
+
+.source-status {
+  background: url('../images/bg-credibility-status.png') left top no-repeat;
+  display: block;
+  margin: 10px auto;
+  padding: 0;
+  height: 30px;
+  width: 127px;
+}
+
+/* line 1480, ../../app/styles/_play.scss */
+
+.status-unchecked {
+  background-position: 0 0;
+}
+
+/* line 1484, ../../app/styles/_play.scss */
+
+.status-checked--1 {
+  background-position: 0 -30px;
+}
+
+/* line 1488, ../../app/styles/_play.scss */
+
+.status-checked--2 {
+  background-position: 0 -60px;
+}
+
+/* line 1494, ../../app/styles/_play.scss */
+
+.autosave {
+  color: #bfb7a6;
+  display: block;
+  font-size: 2em;
+  position: fixed;
+  padding: 0 0 0 30px;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99999;
+}
+
+/* line 1505, ../../app/styles/_play.scss */
+
+.autosave-loader {
+  font-size: 10px;
+  margin: 0;
+  text-indent: -9999em;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #bfb7a6;
+  background: linear-gradient(to right, #bfb7a6 10%, rgba(255, 255, 255, 0) 42%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-animation: loader 1.4s infinite linear;
+  animation: loader 1.4s infinite linear;
+}
+
+/* line 1523, ../../app/styles/_play.scss */
+
+.autosave-loader:before {
+  width: 50%;
+  height: 50%;
+  background: #bfb7a6;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+
+/* line 1533, ../../app/styles/_play.scss */
+
+.autosave-loader:after {
+  background: #000;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes expandWidth {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes loader {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+/* line 1, ../../app/styles/_notepad.scss */
+
+#notepad {
+  background: url('../images/background/notepad.png') repeat;
+}
+
+/* line 5, ../../app/styles/_notepad.scss */
+
+.notepad__title {
+  background: #34495e;
+  border-radius: 4px;
+  color: #f5ee90;
+  display: inline-block;
+  font-size: 1.1666666667em;
+  line-height: 1;
+  margin: 0;
+  padding: 5px 5px 3px 5px;
+  vertical-align: top;
+}
+
+/* line 17, ../../app/styles/_notepad.scss */
+
+.notepad__title--warning {
+  background: #d35400;
+}
+
+/* line 22, ../../app/styles/_notepad.scss */
+
+.notepad__list li,
+.thematique-list li {
+  color: #34495e;
+  display: block;
+  font-size: .9em;
+  min-height: 16px;
+  margin: 0;
+  padding: 0 0 0 20px;
+  position: relative;
+}
+
+/* line 30, ../../app/styles/_notepad.scss */
+
+.notepad__list li:before,
+.thematique-list li:before {
+  color: #29abe2;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1em;
+}
+
+/* line 50, ../../app/styles/_notepad.scss */
+
+.notepad__list .culture-sport-et-people:before,
+.thematique-list .culture-sport-et-people:before {
+  content: "\77";
+}
+
+/* line 53, ../../app/styles/_notepad.scss */
+
+.notepad__list .economie:before,
+.thematique-list .economie:before {
+  content: "\63";
+}
+
+/* line 56, ../../app/styles/_notepad.scss */
+
+.notepad__list .international:before,
+.thematique-list .international:before {
+  content: "\62";
+}
+
+/* line 59, ../../app/styles/_notepad.scss */
+
+.notepad__list .politique:before,
+.thematique-list .politique:before {
+  content: "\e600";
+}
+
+/* line 62, ../../app/styles/_notepad.scss */
+
+.notepad__list .science-technologie-et-jeux-video:before,
+.thematique-list .science-technologie-et-jeux-video:before {
+  content: "\78";
+}
+
+/* line 65, ../../app/styles/_notepad.scss */
+
+.notepad__list .societe:before,
+.thematique-list .societe:before {
+  content: "\76";
+}
+
+/* line 70, ../../app/styles/_notepad.scss */
+
+.item-theme {
+  color: #29abe2;
+  display: block;
+  font-size: 1em;
+  min-height: 16px;
+  margin: 0;
+  padding: 3px 0 0 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* line 80, ../../app/styles/_notepad.scss */
+
+.grid .item-theme {
+  display: inline-block;
+  padding: 0;
+  vertical-align: top;
+}
+
+/* line 85, ../../app/styles/_notepad.scss */
+
+.item-theme:before {
+  color: #29abe2;
+  display: inline-block;
+  margin: 0;
+  padding: 0 5px 0 0;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1em;
+}
+
+/* line 101, ../../app/styles/_notepad.scss */
+
+.item-theme.culture-sport-et-people:before {
+  content: "\77";
+}
+
+/* line 104, ../../app/styles/_notepad.scss */
+
+.item-theme.economie:before {
+  content: "\63";
+}
+
+/* line 107, ../../app/styles/_notepad.scss */
+
+.item-theme.international:before {
+  content: "\62";
+}
+
+/* line 110, ../../app/styles/_notepad.scss */
+
+.item-theme.politique:before {
+  content: "\e600";
+}
+
+/* line 113, ../../app/styles/_notepad.scss */
+
+.item-theme.science-technologie-et-jeux-video:before {
+  content: "\78";
+}
+
+/* line 116, ../../app/styles/_notepad.scss */
+
+.item-theme.societe:before {
+  content: "\76";
+}
+
+/* line 121, ../../app/styles/_notepad.scss */
+
+.theme-title {
+  display: inline-block;
+  padding: 0 !important;
+  vertical-align: top;
+}
+
+/* line 130, ../../app/styles/_notepad.scss */
+
+.thematique-list li {
+  color: #29abe2;
+  font-size: 1.0833333333em;
+  padding: 10px 0 5px 15px;
+}
+
+/* line 134, ../../app/styles/_notepad.scss */
+
+.thematique-list li:before {
+  left: 10px;
+  top: 10px;
+}
+
+/* line 139, ../../app/styles/_notepad.scss */
+
+.thematique-list [type="radio"]:not(:checked),
+.thematique-list [type="radio"]:checked {
+  position: absolute;
+  left: -999em;
+}
+
+/* line 144, ../../app/styles/_notepad.scss */
+
+.thematique-list [type="radio"]:not(:checked) + label,
+.thematique-list [type="radio"]:checked + label {
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+  display: block;
+}
+
+/* line 152, ../../app/styles/_notepad.scss */
+
+.thematique-list [type="radio"]:not(:checked) + label:before,
+.thematique-list [type="radio"]:checked + label:before {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #cecdcd;
+  background: #fff;
+  border-radius: 3px;
+}
+
+/* line 162, ../../app/styles/_notepad.scss */
+
+.thematique-list [type="radio"]:not(:checked) + label:after,
+.thematique-list [type="radio"]:checked + label:after {
+  content: 'X';
+  position: absolute;
+  top: 2px;
+  right: 13px;
+  font-size: 0.9166666667em;
+  color: #29abe2;
+  transition: all 0.2s;
+}
+
+/* line 171, ../../app/styles/_notepad.scss */
+
+.thematique-list [type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+/* line 175, ../../app/styles/_notepad.scss */
+
+.thematique-list [type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/* line 1, ../../app/styles/_debug.scss */
+
+#debug {
+  border: 1px #F00 solid;
+  background: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  position: absolute;
+  top: 50px;
+  left: 450px;
+  z-index: 999;
+  width: 400px;
+  padding: 10px;
+}
